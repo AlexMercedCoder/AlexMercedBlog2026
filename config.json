@@ -22,6 +22,19 @@
       "mode": "external",
       "external_url": "https://open.spotify.com/show/2PRDrWVpgDvKxN6n1oUsJF?si=17f014b84b314f7b",
       "label": "Podcast"
+    },
+    "giscus": {
+      "repo": "AlexMercedCoder/AlexMercedBlog2026",
+      "repoId": "R_kgDOQ54wbg",
+      "category": "General",
+      "categoryId": "DIC_kwDOQ54wbs4C09iy",
+      "mapping": "pathname",
+      "strict": "0",
+      "reactionsEnabled": "1",
+      "emitMetadata": "0",
+      "inputPosition": "bottom",
+      "theme": "preferred_color_scheme",
+      "lang": "en"
     }
   },
   "nav_links": [

@@ -300,7 +300,7 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     else if (config.features.events.mode === 'external') featureLinks += `<a href="${config.features.events.external_url}" target="_blank">${config.features.events.label} <small>↗</small></a> `;
 
     if (config.features.podcast.mode === 'internal') featureLinks += `<a href="/podcast/index.html">${config.features.podcast.label}</a> `;
-
+    else if (config.features.podcast.mode === 'external') featureLinks += `<a href="${config.features.podcast.external_url}" target="_blank">${config.features.podcast.label} <small>↗</small></a> `;
     // Support Link
     let supportLink = config.support_link ? `<a href="${config.support_link}" class="btn-support">Support Me ❤️</a>` : '';
 
@@ -612,6 +612,31 @@ async function build() {
                 // Reading Time
                 const readingTime = calculateReadingTime(content);
 
+                // Giscus Script Logic
+                let commentsSection = '';
+                if (config.features.giscus && config.features.giscus.repo) {
+                   const g = config.features.giscus;
+                   commentsSection = `
+                   <div style="margin-top: 4rem;">
+                       <script src="https://giscus.app/client.js"
+                            data-repo="${g.repo}"
+                            data-repo-id="${g.repoId}"
+                            data-category="${g.category}"
+                            data-category-id="${g.categoryId}"
+                            data-mapping="${g.mapping}"
+                            data-strict="${g.strict}"
+                            data-reactions-enabled="${g.reactionsEnabled}"
+                            data-emit-metadata="${g.emitMetadata}"
+                            data-input-position="${g.inputPosition}"
+                            data-theme="${g.theme}"
+                            data-lang="${g.lang}"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                   </div>
+                   `;
+                }
+
                 // Save Individual Post
                 const postHtml = renderLayout(`
                     <article>
@@ -619,6 +644,7 @@ async function build() {
                         <p class="meta"><small>${data.date} | ${readingTime} | ${data.tags ? data.tags.join(', ') : ''}</small></p>
                         <img src="${coverImage}" alt="Cover Image" style="margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
                         <div class="content">${html}</div>
+                        ${commentsSection}
                     </article>
                 `, data.title, config, css, seoData);
                 
