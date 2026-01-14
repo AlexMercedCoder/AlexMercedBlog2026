@@ -28,6 +28,44 @@ async function generateCoverImage(title, slug, theme) {
     const dir = path.join(DIST_DIR, 'assets', 'covers');
     await fs.ensureDir(dir);
     
+    // Text Wrapping Logic
+    const words = title.split(' ');
+    const lines = [];
+    let currentLine = words[0];
+
+    for (let i = 1; i < words.length; i++) {
+        if (currentLine.length + 1 + words[i].length < 25) { // Approx char limit for 64px font
+            currentLine += ' ' + words[i];
+        } else {
+            lines.push(currentLine);
+            currentLine = words[i];
+        }
+    }
+    lines.push(currentLine);
+
+    // Generate tspans
+    // Initial Y offset to center the block of text.
+    // Each line adds ~1.2em height.
+    // If we have N lines, total height is roughly N*1.2em.
+    // We want to start drawing so the center of the block is at 50%.
+    // A simple hack is to start at 50% minus half the total height, then add 1.2em per line.
+    
+    // Simplest approach: Start at 50% and use dy.
+    // First line gets a negative dy correction if there are multiple lines? 
+    // Actually, just standard vertical stacking centered around y="50%" is tricky with pure SVG without tspans math.
+    
+    // Better strategy for vertical centering of multi-line text:
+    // y="50%" is the baseline for the first line? No.
+    // usage: <text y="50%"> <tspan x="50%" dy="-0.6em">Line 1</tspan> <tspan x="50%" dy="1.2em">Line 2</tspan> </text>
+    
+    const lineHeight = 1.2; // em
+    const startDy = -((lines.length - 1) * lineHeight) / 2;
+    
+    const textContent = lines.map((line, index) => {
+        const dy = index === 0 ? `${startDy}em` : `${lineHeight}em`;
+        return `<tspan x="50%" dy="${dy}">${escapeXml(line)}</tspan>`;
+    }).join('');
+
     // SVG with Theme Gradient
     const svg = `
     <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
@@ -44,10 +82,10 @@ async function generateCoverImage(title, slug, theme) {
         <rect width="100%" height="100%" fill="url(#grid)" />
         
         <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Roboto', sans-serif" font-weight="bold" font-size="64" fill="${theme.colors.on_primary}">
-            ${escapeXml(title)}
+            ${textContent}
         </text>
         
-        <rect x="45%" y="60%" width="10%" height="6" fill="${theme.colors.tertiary || theme.colors.on_primary}" rx="3" />
+        <rect x="45%" y="85%" width="10%" height="6" fill="${theme.colors.tertiary || theme.colors.on_primary}" rx="3" />
     </svg>
     `;
     
