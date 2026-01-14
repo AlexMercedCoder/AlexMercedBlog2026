@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch build.js",
-    "build": "node build.js"
+    "dev": "concurrently \"node --watch build.js\" \"serve dist\"",
+    "build": "node build.js",
+    "serve": "serve dist"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,9 @@
     "fs-extra": "^11.3.3",
     "gray-matter": "^4.0.3",
     "marked": "^17.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "serve": "^14.2.5"
   }
 }

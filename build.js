@@ -381,6 +381,7 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     <title>${fullTitle}</title>
     <meta name="description" content="${description}">
     <link rel="canonical" href="${url}" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="${type}" />
