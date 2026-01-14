@@ -1,12 +1,12 @@
 {
-  "site_title": "My Solo Platform",
-  "site_description": "A place for my thoughts, events, and podcasts.",
-  "domain": "https://mysoloplatform.com",
+  "site_title": "Alex Merced's Data, Dev and AI Blog",
+  "site_description": "Alex talks technology, data, software development and AI",
+  "domain": "https://alexmerced.blog",
   "twitter_handle": "@alexmercedcoder",
   "custom_head_html": "<!-- Add Analytics Here -->",
   "author_name": "Alex Merced",
-  "support_link": "https://github.com/sponsors/alexmercedcoder",
-  "email_subscribe_form_url": "",
+  "support_link": "https://buymeacoffee.com/alexmerced",
+  "email_subscribe_form_url": "https://amdatalakehouse.substack.com/",
   "features": {
     "blog": {
       "mode": "internal",
@@ -14,13 +14,13 @@
       "label": "Blog"
     },
     "events": {
-      "mode": "internal",
-      "external_url": "",
+      "mode": "external",
+      "external_url": "https://luma.com/Techeventswithalex?k=c",
       "label": "Events"
     },
     "podcast": {
-      "mode": "internal",
-      "external_url": "",
+      "mode": "external",
+      "external_url": "https://open.spotify.com/show/2PRDrWVpgDvKxN6n1oUsJF?si=17f014b84b314f7b",
       "label": "Podcast"
     }
   },

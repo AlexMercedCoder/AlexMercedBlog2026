@@ -1,24 +1,24 @@
 ---
-title: Welcome to My Digital Garden
-hero_image: /assets/hero.jpg
+title: Welcome to Alex Merced's Data Lakehouse & AI Hub
+hero_image: /assets/AlexBlogBanner.png
 show_recent_blog_posts: true
 ---
 
-# Hello, World!
+# Data Engineering, Lakehouses, and the Future of AI
 
-This is the main page of my **SoloPlatform** site. It's powered purely by this Markdown file (`/content/home.md`) and the configuration settings.
+Welcome to my digital garden. This is where I share my deep dives, tutorials, and thoughts on the evolving data landscape. 
 
-## What is this place?
+As the Head of Developer Relations at Dremio and author of **Apache Iceberg: The Definitive Guide**, my mission is to make complex data architectures accessible to everyone.
 
-This is a static site generator designed for:
-- 📝 **Writing** (Blogs)
-- 📅 **Gathering** (Events)
-- 🎙️ **Speaking** (Podcasts)
+## What You'll Find Here
 
-All without a database.
+*   **Apache Iceberg & Polaris**: Comprehensive guides on open table formats and catalogs.
+*   **Data Lakehouse Architecture**: Strategies for building cost-effective, high-performance data platforms.
+*   **AI & RAG**: Exploring the intersection of data engineering and Large Language Models.
+*   **Dremio**: Tips and tricks for using the SQL Lakehouse Platform.
 
-> "Simplicity is the ultimate sophistication." - Leonardo da Vinci
+## Latest Updates
 
-## Support My Work
+Below you'll find my most recent articles. Feel free to explore the full [Blog](/blog/index.html), check out upcoming [Events](/events/index.html), or listen to the [Podcast](/podcast/index.html).
 
-If you enjoy this content, consider supporting me via the link in the navigation!
+> "Data is not just an asset; it's the language of modern innovation."

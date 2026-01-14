@@ -72,6 +72,23 @@ async function loadJSON(filepath) {
 
 // ... existing code ...
 
+async function getFiles(dir) {
+    let results = [];
+    const list = await fs.readdir(dir);
+    for (const file of list) {
+        const filePath = path.join(dir, file);
+        const stat = await fs.stat(filePath);
+        if (stat && stat.isDirectory()) {
+            const subResults = await getFiles(filePath);
+            results = results.concat(subResults);
+        } else {
+            results.push(filePath);
+        }
+    }
+    return results;
+}
+
+
 // --- Layout Template ---
 
 
@@ -464,6 +481,37 @@ async function build() {
     // Global Search Index
     const searchIndex = [];
 
+    // 3.5 Build Generic Pages (e.g. about.md)
+    const contentFiles = await fs.readdir(CONTENT_DIR);
+    for (const file of contentFiles) {
+        // Skip reserved folders/files
+        if (['blog', 'events', 'podcast', 'home.md'].includes(file)) continue;
+        if (!file.endsWith('.md')) continue;
+
+        const filePath = path.join(CONTENT_DIR, file);
+        const raw = await fs.readFile(filePath, 'utf-8');
+        const { content, data } = matter(raw);
+        const html = marked.parse(content);
+        const slug = file.replace('.md', '');
+
+        const pageHtml = renderLayout(`
+            <article>
+                <h1>${data.title}</h1>
+                <div class="content">${html}</div>
+            </article>
+        `, data.title, config, css, { 
+            path: `/${slug}.html`, 
+            description: data.description 
+        });
+
+        await fs.outputFile(path.join(DIST_DIR, `${slug}.html`), pageHtml);
+        console.log(`📄 Built Generic Page: ${slug}.html`);
+        
+        // Add to search index if desired? Maybe not for 'about' page or yes? 
+        // Let's add it.
+        searchIndex.push({ title: data.title, type: 'Page', url: `/${slug}.html`, description: data.description || '' });
+    }
+
     // 4. Build Home Page
     const homePath = path.join(CONTENT_DIR, 'home.md');
     let homeHtml = '<h1>Welcome</h1>';
@@ -492,20 +540,26 @@ async function build() {
         await fs.ensureDir(blogDist);
         
         if (await fs.pathExists(blogSrc)) {
-            const files = await fs.readdir(blogSrc);
+            const files = await getFiles(blogSrc);
             const posts = [];
             
-            for (const file of files) {
-                if (!file.endsWith('.md')) continue;
-                const raw = await fs.readFile(path.join(blogSrc, file), 'utf-8');
+            for (const filePath of files) {
+                if (!filePath.endsWith('.md')) continue;
+                // Calculate relative path for slug to preserve structure (e.g. "2020/post/index.md")
+                const relPath = path.relative(blogSrc, filePath);
+                // Slug removes extension
+                const slug = relPath.replace(/\.md$/, '');
+                
+                const raw = await fs.readFile(filePath, 'utf-8');
                 const { content, data } = matter(raw);
                 const html = marked.parse(content);
-                const slug = file.replace('.md', '');
                 
                 // Dynamic Cover Image
                 let coverImage = data.cover_image;
                 if (!coverImage) {
-                    coverImage = await generateCoverImage(data.title, slug, theme);
+                    // Use basename for cover generation to avoid path issues in filenames
+                    const safeName = path.basename(slug);
+                    coverImage = await generateCoverImage(data.title, safeName, theme);
                 }
                 
                 // SEO Data
@@ -714,24 +768,15 @@ async function build() {
     // Read generated files to populate sitemap (simple discovery of what we just built)
     // Actually, we can just walk the dist folder or use the lists we already have if we scoped them higher.
     // For simplicity/robustness, let's walk the dist folder for .html files.
-    async function getFiles(dir) {
-        let results = [];
-        const list = await fs.readdir(dir);
-        for (const file of list) {
-            const filePath = path.join(dir, file);
-            const stat = await fs.stat(filePath);
-            if (stat && stat.isDirectory()) {
-                // Recursive call
-                const subResults = await getFiles(filePath);
-                results = results.concat(subResults);
-            } else if (file.endsWith('.html')) {
-                results.push(filePath);
-            }
-        }
-        return results;
-    }
+    // Previously we had getFiles here, but it's now a helper function at top level
+    // We can just call it directory.
+    
+    // NOTE: getFiles is async and defined in helpers scope now.
 
-    const allHtml = await getFiles(DIST_DIR);
+
+
+    const allFiles = await getFiles(DIST_DIR);
+    const allHtml = allFiles.filter(f => f.endsWith('.html'));
     const uniqueUrls = new Set(sitemapUrls.map(u => u.loc));
 
     const xmlItems = sitemapUrls.map(u => `
