@@ -1,0 +1,36 @@
+{
+  "site_title": "My Solo Platform",
+  "site_description": "A place for my thoughts, events, and podcasts.",
+  "domain": "https://mysoloplatform.com",
+  "twitter_handle": "@alexmercedcoder",
+  "custom_head_html": "<!-- Add Analytics Here -->",
+  "author_name": "Alex Merced",
+  "support_link": "https://github.com/sponsors/alexmercedcoder",
+  "email_subscribe_form_url": "",
+  "features": {
+    "blog": {
+      "mode": "internal",
+      "external_url": "", 
+      "label": "Blog"
+    },
+    "events": {
+      "mode": "internal",
+      "external_url": "",
+      "label": "Events"
+    },
+    "podcast": {
+      "mode": "internal",
+      "external_url": "",
+      "label": "Podcast"
+    }
+  },
+  "nav_links": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about.html" }
+  ],
+  "social_links": {
+    "twitter": "https://twitter.com/alexmercedcoder",
+    "github": "https://github.com/alexmercedcoder",
+    "linkedin": "https://linkedin.com/in/alexmerced"
+  }
+}

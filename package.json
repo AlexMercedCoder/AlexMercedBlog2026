@@ -1,0 +1,20 @@
+{
+  "name": "soloplatform",
+  "version": "1.0.0",
+  "description": "**SoloPlatform** is a \"No-Backend\" content management template for independent creators. It allows you to manage a professional Blog, Event Calendar, and Podcast feed simply by editing Markdown files in this repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch build.js",
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "fs-extra": "^11.3.3",
+    "gray-matter": "^4.0.3",
+    "marked": "^17.0.1"
+  }
+}

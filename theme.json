@@ -1,0 +1,30 @@
+{
+  "colors": {
+    "primary": "#0A2647",
+    "on_primary": "#FFFFFF",
+    "primary_container": "#D4E1F5",
+    "on_primary_container": "#0A2647",
+    "secondary": "#2C74B3",
+    "on_secondary": "#FFFFFF",
+    "secondary_container": "#E3F2FD",
+    "on_secondary_container": "#103158",
+    "tertiary": "#205295",
+    "on_tertiary": "#FFFFFF",
+    "tertiary_container": "#E0E9F5",
+    "on_tertiary_container": "#0F2645",
+    "background": "#F4F6F8",
+    "on_background": "#051626",
+    "surface": "#F4F6F8",
+    "on_surface": "#051626",
+    "outline": "#8090A0"
+  },
+  "fonts": {
+    "heading": "'Roboto', sans-serif",
+    "body": "'Open Sans', sans-serif",
+    "monospace": "'Fira Code', monospace"
+  },
+  "scale": {
+    "border_radius": "12px",
+    "spacing_unit": "8px"
+  }
+}
