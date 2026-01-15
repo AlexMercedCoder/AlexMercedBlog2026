@@ -17,8 +17,3 @@ As the Head of Developer Relations at Dremio and author of [**Apache Iceberg: Th
 *   **AI & RAG**: Exploring the intersection of data engineering and Large Language Models.
 *   **Dremio**: Tips and tricks for using the Agentic Lakehouse Platform.
 
-## Latest Updates
-
-On this website you'll find my most recent articles, podcasts and events.
-
-> "Data is not just an asset; it's the language of modern innovation."
