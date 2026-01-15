@@ -291,6 +291,18 @@ function generateCSS(theme) {
       --max-width: 900px;
     }
 
+    [data-theme="dark"] {
+      --md-sys-color-primary: #D4E1F5;
+      --md-sys-color-on-primary: #0A2647;
+      --md-sys-color-primary-container: #2C4B70;
+      --md-sys-color-on-primary-container: #D4E1F5;
+      --md-sys-color-secondary: #8AB4F8;
+      --md-sys-color-secondary-container: #0A2647;
+      --md-sys-color-surface: #121212;
+      --md-sys-color-on-surface: #E2E2E2;
+      --md-sys-color-outline: #9CA3AF;
+    }
+
     /* Modern Reset */
     *, *::before, *::after { box-sizing: border-box; }
     body {
@@ -547,6 +559,17 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
         .btn-support { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); padding: 0.5rem 1rem; border-radius: 20px; }
         /* Card Style */
         .card { background: white; padding: 1.5rem; border-radius: var(--md-sys-shape-corner); box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+        
+        /* Mobile Menu */
+        #mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: inherit; }
+        #mobile-menu-dialog { border: none; border-radius: 12px; padding: 2rem; width: 90%; max-width: 400px; backdrop-filter: blur(5px); box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+        #mobile-menu-dialog::backdrop { background: rgba(0,0,0,0.4); }
+        #mobile-menu-dialog nav { display: flex; flex-direction: column; gap: 1rem; text-align: center; }
+
+        @media (max-width: 768px) {
+            header nav > a, header nav > .btn-support { display: none; }
+            #mobile-menu-btn { display: block; }
+        }
     </style>
 </head>
 <body>
@@ -558,6 +581,8 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
             ${navLinks}
             ${featureLinks}
             <button onclick="document.getElementById('searchDialog').showModal()" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:inherit;" aria-label="Search">🔍</button>
+            <button id="theme-toggle" onclick="toggleTheme()" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:inherit;" aria-label="Toggle Theme">🌓</button>
+            <button id="mobile-menu-btn" onclick="document.getElementById('mobile-menu-dialog').showModal()" aria-label="Menu">☰</button>
             ${supportLink}
         </nav>
     </header>
@@ -571,6 +596,17 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
             ${Object.entries(config.social_links || {}).map(([k, v]) => `<a href="${v}">${k}</a>`).join(' | ')}
         </div>
     </footer>
+    <dialog id="mobile-menu-dialog">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h2 style="margin:0; font-size:1.5rem;">Menu</h2>
+            <form method="dialog"><button style="background:none; border:none; cursor:pointer; font-size:1.2rem;">✕</button></form>
+        </div>
+        <nav>
+            ${navLinks}
+            ${featureLinks}
+            ${supportLink}
+        </nav>
+    </dialog>
     <dialog id="searchDialog" style="width: 90%; max-width: 600px; border-radius: 12px; border: none; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3); backdrop-filter: blur(5px);">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
             <h2 style="margin:0; font-size:1.5rem;">Search</h2>
@@ -579,6 +615,30 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
         <input type="text" id="searchInput" placeholder="Type to find posts, events..." style="width:100%; padding: 1rem; font-size: 1.1rem; border: 2px solid var(--md-sys-color-outline); border-radius: 8px; margin-bottom: 1rem; outline:none;">
         <div id="searchResults" style="max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem;"></div>
     </dialog>
+
+
+    <script>
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+        }
+
+        function toggleTheme() {
+            const current = html.getAttribute('data-theme');
+            if (current === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    </script>
 
     <script>
         const searchInput = document.getElementById('searchInput');
@@ -737,6 +797,12 @@ async function build() {
                 
                 const raw = await fs.readFile(filePath, 'utf-8');
                 const { content, data } = matter(raw);
+
+                // Draft Mode Check
+                const isDraft = data.draft === true;
+                const showDrafts = process.argv.includes('--drafts');
+                if (isDraft && !showDrafts) continue;
+
                 const html = marked.parse(content);
                 
                 // Dynamic Cover Image
