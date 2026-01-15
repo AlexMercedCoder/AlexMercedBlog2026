@@ -284,8 +284,10 @@ function generateCSS(theme) {
       --md-sys-typescale-body-font: ${theme.fonts.body};
       
       /* Scale */
-      --md-sys-shape-corner: ${theme.scale.border_radius};
-      --spacing: ${theme.scale.spacing_unit};
+      --md-sys-shape-corner: 12px;
+      --spacing: 8px;
+      
+      --card-bg: #FFFFFF;
       
       /* Widths */
       --max-width: 900px;
@@ -301,6 +303,7 @@ function generateCSS(theme) {
       --md-sys-color-surface: #121212;
       --md-sys-color-on-surface: #E2E2E2;
       --md-sys-color-outline: #9CA3AF;
+      --card-bg: #1E1E1E;
     }
 
     /* Modern Reset */
@@ -558,7 +561,7 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
         h1, h2, h3 { font-family: var(--md-sys-typescale-headline-font); }
         .btn-support { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); padding: 0.5rem 1rem; border-radius: 20px; }
         /* Card Style */
-        .card { background: white; padding: 1.5rem; border-radius: var(--md-sys-shape-corner); box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+        .card { background: var(--card-bg); padding: 1.5rem; border-radius: var(--md-sys-shape-corner); box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1rem; }
         
         /* Mobile Menu */
         #mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: inherit; }
@@ -593,7 +596,7 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     <footer>
         <p>&copy; ${new Date().getFullYear()} ${config.author_name}. Powered by SoloPlatform.</p>
         <div class="socials">
-            ${Object.entries(config.social_links || {}).map(([k, v]) => `<a href="${v}">${k}</a>`).join(' | ')}
+            ${Object.entries(config.social_links || {}).map(([k, v]) => `<a href="${v}">${k}</a>`).join(' | ')} | <a href="/feed.xml">RSS</a>
         </div>
     </footer>
     <dialog id="mobile-menu-dialog">
@@ -607,12 +610,12 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
             ${supportLink}
         </nav>
     </dialog>
-    <dialog id="searchDialog" style="width: 90%; max-width: 600px; border-radius: 12px; border: none; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3); backdrop-filter: blur(5px);">
+    <dialog id="searchDialog" style="width: 90%; max-width: 600px; border-radius: 12px; border: none; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3); backdrop-filter: blur(5px); background: var(--card-bg); color: var(--md-sys-color-on-surface);">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
             <h2 style="margin:0; font-size:1.5rem;">Search</h2>
-            <form method="dialog"><button style="background:none; border:none; cursor:pointer; font-size:1.2rem;">✕</button></form>
+            <form method="dialog"><button style="background:none; border:none; cursor:pointer; font-size:1.2rem; color:inherit;">✕</button></form>
         </div>
-        <input type="text" id="searchInput" placeholder="Type to find posts, events..." style="width:100%; padding: 1rem; font-size: 1.1rem; border: 2px solid var(--md-sys-color-outline); border-radius: 8px; margin-bottom: 1rem; outline:none;">
+        <input type="text" id="searchInput" placeholder="Type to find posts, events..." style="width:100%; padding: 1rem; font-size: 1.1rem; border: 2px solid var(--md-sys-color-outline); border-radius: 8px; margin-bottom: 1rem; outline:none; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface);">
         <div id="searchResults" style="max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem;"></div>
     </dialog>
 
@@ -670,15 +673,15 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
             if (results.length === 0) {
                 resultsDiv.innerHTML = '<p style="text-align:center;">No results found.</p>';
             } else {
-                resultsDiv.innerHTML = results.map(r => \`
-                    <div style="padding: 1rem; background: var(--md-sys-color-surface); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
+                resultsDiv.innerHTML = results.map(r => `
+                    <div style="padding: 1rem; background: var(--card-bg); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
                         <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem;">
-                            <span style="font-size:0.8rem; font-weight:bold; color:var(--md-sys-color-primary); text-transform:uppercase;">\${r.type}</span>
+                            <span style="font-size:0.8rem; font-weight:bold; color:var(--md-sys-color-primary); text-transform:uppercase;">${r.type}</span>
                         </div>
-                        <a href="\${r.url}" style="font-size: 1.1rem; font-weight: bold; text-decoration: none; color: inherit; display: block; margin-bottom:0.25rem;">\${r.title}</a>
-                        <p style="margin:0; font-size: 0.9rem; color: #666;">\${r.description.substring(0, 120).replace(new RegExp(q, 'gi'), m => '<mark style="background:#ffeb3b;color:black;">'+m+'</mark>')}...</p>
+                        <a href="${r.url}" style="font-size: 1.1rem; font-weight: bold; text-decoration: none; color: var(--md-sys-color-on-surface); display: block; margin-bottom:0.25rem;">${r.title}</a>
+                        <p style="margin:0; font-size: 0.9rem; color: var(--md-sys-color-outline);">${r.description.substring(0, 120).replace(new RegExp(q, 'gi'), m => '<mark style="background:#ffeb3b;color:black;">'+m+'</mark>')}...</p>
                     </div>
-                \`).join('');
+                `).join('');
             }
         });
     </script>
