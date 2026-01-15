@@ -719,6 +719,9 @@ async function build() {
     const config = await loadJSON(CONFIG_PATH);
     const theme = await loadJSON(THEME_PATH);
     const css = generateCSS(theme);
+
+    // 2.5 Load Content Early
+    const allPosts = await getAllPosts(config, theme);
     
     // 3. Copy Assets
     if (await fs.pathExists(PUBLIC_DIR)) {
@@ -776,6 +779,27 @@ async function build() {
         
         homeHtml = `${heroHtml} ${htmlContent}`;
     }
+
+    // Add Latest Posts
+    if (allPosts.length > 0) {
+        const latest = allPosts.slice(0, 2);
+        homeHtml += `
+            <div style="margin-top: 4rem; border-top: 1px solid var(--md-sys-color-outline); padding-top: 2rem;">
+                <h2>Latest Updates</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                    ${latest.map(p => `
+                        <div class="card">
+                             ${p.coverImage ? `<img src="${p.coverImage}" alt="${p.title}" style="width:100%;height:200px;object-fit:cover;">` : ''}
+                            <div style="padding:1rem;">
+                                <h3><a href="/blog/${p.slug}.html" style="text-decoration:none; color:inherit;">${p.title}</a></h3>
+                                <p><small>${p.dateObj.toDateString()}</small></p>
+                                <p>${p.description || ''}</p>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+    }
     
     const fullHomeHtml = renderLayout(homeHtml, 'Home', config, css, { path: '/' });
     await fs.outputFile(path.join(DIST_DIR, 'index.html'), fullHomeHtml);
@@ -789,39 +813,9 @@ async function build() {
         await fs.ensureDir(blogDist);
         
         if (await fs.pathExists(blogSrc)) {
-            const files = await getFiles(blogSrc);
-            const posts = [];
-            
-            // Pass 1: Gather Data
-            for (const filePath of files) {
-                if (!filePath.endsWith('.md')) continue;
-                const relPath = path.relative(blogSrc, filePath);
-                const slug = relPath.replace(/\.md$/, '');
-                
-                const raw = await fs.readFile(filePath, 'utf-8');
-                const { content, data } = matter(raw);
 
-                // Draft Mode Check
-                const isDraft = data.draft === true;
-                const showDrafts = process.argv.includes('--drafts');
-                if (isDraft && !showDrafts) continue;
-
-                const html = marked.parse(content);
-                
-                // Dynamic Cover Image
-                let coverImage = data.cover_image;
-                if (!coverImage) {
-                    const safeName = path.basename(slug);
-                    coverImage = await generateCoverImage(data.title, safeName, theme);
-                }
-                
-                const readingTime = calculateReadingTime(content);
-                
-                posts.push({ ...data, slug, dateObj: new Date(data.date), coverImage, readingTime, html, content });
-            }
-            
-            // Sort Posts
-            posts.sort((a, b) => b.dateObj - a.dateObj);
+            // Reuse pre-loaded posts
+            const posts = allPosts;
             
             // Pass 2: Render Pages with Related Posts
             for (const post of posts) {
@@ -1110,6 +1104,45 @@ Sitemap: ${domain}/sitemap.xml`;
     console.log('🔍 Built search.json');
 
     console.log('✅ Build Complete!');
+}
+
+async function getAllPosts(config, theme) {
+    const posts = [];
+    if (config.features.blog && config.features.blog.mode === 'internal') {
+        const blogSrc = path.join(CONTENT_DIR, 'blog');
+        if (await fs.pathExists(blogSrc)) {
+            const files = await getFiles(blogSrc);
+            for (const filePath of files) {
+                if (!filePath.endsWith('.md')) continue;
+                const relPath = path.relative(blogSrc, filePath);
+                const slug = relPath.replace(/\.md$/, '');
+                
+                const raw = await fs.readFile(filePath, 'utf-8');
+                const { content, data } = matter(raw);
+
+                // Draft Mode Check
+                const isDraft = data.draft === true;
+                const showDrafts = process.argv.includes('--drafts');
+                if (isDraft && !showDrafts) continue;
+
+                const html = marked.parse(content);
+                
+                // Dynamic Cover Image
+                let coverImage = data.cover_image;
+                if (!coverImage) {
+                    const safeName = path.basename(slug);
+                    coverImage = await generateCoverImage(data.title, safeName, theme);
+                }
+                
+                const readingTime = calculateReadingTime(content);
+                
+                posts.push({ ...data, slug, dateObj: new Date(data.date), coverImage, readingTime, html, content });
+            }
+            // Sort Posts
+            posts.sort((a, b) => b.dateObj - a.dateObj);
+        }
+    }
+    return posts;
 }
 
 build().catch(err => console.error(err));
