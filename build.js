@@ -673,15 +673,15 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
             if (results.length === 0) {
                 resultsDiv.innerHTML = '<p style="text-align:center;">No results found.</p>';
             } else {
-                resultsDiv.innerHTML = results.map(r => `
-                    <div style="padding: 1rem; background: var(--card-bg); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">
-                        <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem;">
-                            <span style="font-size:0.8rem; font-weight:bold; color:var(--md-sys-color-primary); text-transform:uppercase;">${r.type}</span>
-                        </div>
-                        <a href="${r.url}" style="font-size: 1.1rem; font-weight: bold; text-decoration: none; color: var(--md-sys-color-on-surface); display: block; margin-bottom:0.25rem;">${r.title}</a>
-                        <p style="margin:0; font-size: 0.9rem; color: var(--md-sys-color-outline);">${r.description.substring(0, 120).replace(new RegExp(q, 'gi'), m => '<mark style="background:#ffeb3b;color:black;">'+m+'</mark>')}...</p>
-                    </div>
-                `).join('');
+                resultsDiv.innerHTML = results.map(r => 
+                    '<div style="padding: 1rem; background: var(--card-bg); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">' +
+                        '<div style="display:flex; justify-content:space-between; margin-bottom:0.25rem;">' +
+                            '<span style="font-size:0.8rem; font-weight:bold; color:var(--md-sys-color-primary); text-transform:uppercase;">' + r.type + '</span>' +
+                        '</div>' +
+                        '<a href="' + r.url + '" style="font-size: 1.1rem; font-weight: bold; text-decoration: none; color: var(--md-sys-color-on-surface); display: block; margin-bottom:0.25rem;">' + r.title + '</a>' +
+                        '<p style="margin:0; font-size: 0.9rem; color: var(--md-sys-color-outline);">' + r.description.substring(0, 120).replace(new RegExp(q, 'gi'), m => '<mark style="background:#ffeb3b;color:black;">'+m+'</mark>') + '...</p>' +
+                    '</div>'
+                ).join('');
             }
         });
     </script>
