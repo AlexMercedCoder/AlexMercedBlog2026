@@ -1,6 +1,7 @@
 {
   "site_title": "Alex Merced's Data, Dev and AI Blog",
   "site_description": "Alex talks technology, data, software development and AI",
+  "posts_per_page": 10,
   "domain": "https://alexmerced.blog",
   "twitter_handle": "@alexmercedcoder",
   "custom_head_html": "<!-- Add Analytics Here -->",

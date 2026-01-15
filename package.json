@@ -16,6 +16,7 @@
   "dependencies": {
     "fs-extra": "^11.3.3",
     "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
     "marked": "^17.0.1"
   },
   "devDependencies": {

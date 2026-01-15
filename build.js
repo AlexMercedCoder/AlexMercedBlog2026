@@ -2,6 +2,22 @@ const fs = require('fs-extra');
 const path = require('path');
 const { marked } = require('marked');
 const matter = require('gray-matter');
+const hljs = require('highlight.js');
+
+marked.use({
+    renderer: {
+        code(token) {
+            // Handle both new (object) and old (string) marked renderer signatures
+            const code = typeof token === 'string' ? token : token.text;
+            const language = typeof token === 'string' ? arguments[1] : token.lang;
+            
+            const validLang = !!(language && hljs.getLanguage(language));
+            const highlighted = validLang ? hljs.highlight(code, { language }).value : hljs.highlightAuto(code).value;
+            const langClass = language ? `language-${language}` : '';
+            return `<div class="code-container"><button class="copy-btn" onclick="copyCode(this)">Copy</button><pre><code class="hljs ${langClass}">${highlighted}</code></pre></div>`;
+        }
+    }
+});
 
 // --- Configuration ---
 const CONFIG_PATH = './config.json';
@@ -126,6 +142,116 @@ async function getFiles(dir) {
     return results;
 }
 
+
+
+// --- Generators ---
+
+async function generateBlogRSS(posts, config) {
+    if (posts.length === 0) return;
+    const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>${config.site_title}</title>
+ <description>${config.site_description}</description>
+ <link>${config.domain}</link>
+ <language>en</language>
+ ${posts.map(p => `
+   <item>
+    <title>${escapeXml(p.title)}</title>
+    <link>${config.domain}/blog/${p.slug}.html</link>
+    <description>${escapeXml(p.description)}</description>
+    <pubDate>${p.dateObj.toUTCString()}</pubDate>
+   </item>
+ `).join('')}
+</channel>
+</rss>`;
+    await fs.outputFile(path.join(DIST_DIR, 'feed.xml'), rssXml);
+    console.log(`📡 Built Blog RSS Feed.`);
+}
+
+async function generateTagPages(posts, config, css) {
+    const tagsMap = {};
+    posts.forEach(p => {
+        if (p.tags && Array.isArray(p.tags)) {
+            p.tags.forEach(t => {
+                const tag = t.trim();
+                if (!tagsMap[tag]) tagsMap[tag] = [];
+                tagsMap[tag].push(p);
+            });
+        }
+    });
+
+    const tagsDir = path.join(DIST_DIR, 'tags');
+    await fs.ensureDir(tagsDir);
+
+    for (const [tag, tagPosts] of Object.entries(tagsMap)) {
+         tagPosts.sort((a, b) => b.dateObj - a.dateObj);
+         const listHtml = tagPosts.map(p => `
+            <div class="card">
+                <h2><a href="/blog/${p.slug}.html">${p.title}</a></h2>
+                <p class="meta"><small>${p.date}</small></p>
+            </div>
+        `).join('');
+        
+        const pageHtml = renderLayout(`<h1>Tag: ${tag}</h1>${listHtml}`, `Tag: ${tag}`, config, css, { path: `/tags/${tag}.html` });
+        await fs.outputFile(path.join(tagsDir, `${tag}.html`), pageHtml);
+    }
+    console.log(`🏷️ Built ${Object.keys(tagsMap).length} Tag Pages.`);
+}
+
+function getRelatedPosts(current, all) {
+    if (!current.tags || current.tags.length === 0) return [];
+    
+    return all
+        .filter(p => p.slug !== current.slug) // Exclude self
+        .map(p => {
+            const intersection = p.tags ? p.tags.filter(t => current.tags.includes(t)).length : 0;
+            return { post: p, score: intersection };
+        })
+        .filter(p => p.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3)
+        .map(p => p.post);
+}
+
+async function generatePaginatedIndex(posts, distDir, config, css) {
+    const perPage = config.posts_per_page || 10;
+    const totalPages = Math.ceil(posts.length / perPage);
+    
+    for (let i = 1; i <= totalPages; i++) {
+        const start = (i - 1) * perPage;
+        const chunk = posts.slice(start, start + perPage);
+        
+        const listHtml = chunk.map(p => `
+            <div class="card">
+                ${p.coverImage ? `<a href="/blog/${p.slug}.html"><img src="${p.coverImage}" style="height: 200px; object-fit: cover; width: 100%; margin: 0 0 1rem 0;" /></a>` : ''}
+                <h2><a href="/blog/${p.slug}.html">${p.title}</a></h2>
+                <p class="meta"><small>${p.date} • ${p.readingTime || ''}</small></p>
+            </div>
+        `).join('');
+        
+        const prevLink = i > 1 ? `<a href="${i === 2 ? '/blog/index.html' : `/blog/page/${i - 1}.html`}" class="btn-support" style="text-decoration:none;">← Previous</a>` : '';
+        const nextLink = i < totalPages ? `<a href="/blog/page/${i + 1}.html" class="btn-support" style="text-decoration:none;">Next →</a>` : '';
+        
+        const paginationHtml = `
+            <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                <div>${prevLink}</div>
+                <div>${nextLink}</div>
+            </div>
+             <p style="text-align: center; margin-top: 1rem; color: var(--md-sys-color-outline);">Page ${i} of ${totalPages}</p>
+        `;
+
+        const pageTitle = i === 1 ? 'Blog' : `Blog - Page ${i}`;
+        const filePath = i === 1 ? path.join(distDir, 'index.html') : path.join(distDir, 'page', `${i}.html`);
+        const seoUrl = i === 1 ? '/blog/index.html' : `/blog/page/${i}.html`;
+        
+        if (i > 1) await fs.ensureDir(path.join(distDir, 'page'));
+
+        const fullHtml = renderLayout(`<h1>${pageTitle}</h1>${listHtml}${paginationHtml}`, pageTitle, config, css, { path: seoUrl, description: `Blog posts page ${i}` });
+        await fs.outputFile(filePath, fullHtml);
+    }
+    console.log(`📝 Built Blog Index (${posts.length} posts, ${totalPages} pages).`);
+}
 
 // --- Layout Template ---
 
@@ -282,6 +408,9 @@ function generateCSS(theme) {
         main { padding: 0 1rem; }
         .card { padding: 1.5rem; }
     }
+
+    /* Highlight.js Atom One Dark */
+    pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string{color:#98c379}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-title.class_,.hljs-class .hljs-title{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline} .code-container{position:relative;} .copy-btn{position:absolute;top:5px;right:5px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#abb2bf;padding:2px 8px;border-radius:4px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;} .copy-btn:hover{background:rgba(255,255,255,0.2);color:white;} .copy-btn.copied{background:#98c379;color:black;border-color:#98c379;}
   `;
 }
 
@@ -487,11 +616,28 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
                             <span style="font-size:0.8rem; font-weight:bold; color:var(--md-sys-color-primary); text-transform:uppercase;">\${r.type}</span>
                         </div>
                         <a href="\${r.url}" style="font-size: 1.1rem; font-weight: bold; text-decoration: none; color: inherit; display: block; margin-bottom:0.25rem;">\${r.title}</a>
-                        <p style="margin:0; font-size: 0.9rem; color: #666;">\${r.description.substring(0, 80)}...</p>
+                        <p style="margin:0; font-size: 0.9rem; color: #666;">\${r.description.substring(0, 120).replace(new RegExp(q, 'gi'), m => '<mark style="background:#ffeb3b;color:black;">'+m+'</mark>')}...</p>
                     </div>
                 \`).join('');
             }
         });
+    </script>
+    <script>
+        function copyCode(btn) {
+            const pre = btn.nextElementSibling;
+            const code = pre.innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                btn.textContent = 'Error';
+            });
+        }
     </script>
 </body>
 </html>
@@ -573,6 +719,7 @@ async function build() {
     console.log('🏠 Built Home Page.');
 
     // 5. Build Blog (Internal Mode)
+    // 5. Build Blog (Internal Mode)
     if (config.features.blog && config.features.blog.mode === 'internal') {
         const blogSrc = path.join(CONTENT_DIR, 'blog');
         const blogDist = path.join(DIST_DIR, 'blog');
@@ -582,11 +729,10 @@ async function build() {
             const files = await getFiles(blogSrc);
             const posts = [];
             
+            // Pass 1: Gather Data
             for (const filePath of files) {
                 if (!filePath.endsWith('.md')) continue;
-                // Calculate relative path for slug to preserve structure (e.g. "2020/post/index.md")
                 const relPath = path.relative(blogSrc, filePath);
-                // Slug removes extension
                 const slug = relPath.replace(/\.md$/, '');
                 
                 const raw = await fs.readFile(filePath, 'utf-8');
@@ -596,22 +742,41 @@ async function build() {
                 // Dynamic Cover Image
                 let coverImage = data.cover_image;
                 if (!coverImage) {
-                    // Use basename for cover generation to avoid path issues in filenames
                     const safeName = path.basename(slug);
                     coverImage = await generateCoverImage(data.title, safeName, theme);
                 }
                 
-                // SEO Data
+                const readingTime = calculateReadingTime(content);
+                
+                posts.push({ ...data, slug, dateObj: new Date(data.date), coverImage, readingTime, html, content });
+            }
+            
+            // Sort Posts
+            posts.sort((a, b) => b.dateObj - a.dateObj);
+            
+            // Pass 2: Render Pages with Related Posts
+            for (const post of posts) {
+                const related = getRelatedPosts(post, posts);
+                const relatedHtml = related.length > 0 ? `
+                    <div style="margin-top: 4rem; border-top: 1px solid var(--md-sys-color-outline); padding-top: 2rem;">
+                        <h3>Check out these related posts:</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                            ${related.map(p => `
+                                <div class="card" style="padding: 1rem;">
+                                    <h4><a href="/blog/${p.slug}.html">${p.title}</a></h4>
+                                    <p class="meta"><small>${p.date}</small></p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>` : '';
+
                 const seoData = {
                     type: 'article',
-                    path: `/blog/${slug}.html`,
-                    image: coverImage,
-                    description: content.substring(0, 150).replace(/[#*`]/g, '') + '...', // Simple excerpt
-                    date: data.date
+                    path: `/blog/${post.slug}.html`,
+                    image: post.coverImage,
+                    description: post.content.substring(0, 150).replace(/[#*`]/g, '') + '...',
+                    date: post.date
                 };
-                
-                // Reading Time
-                const readingTime = calculateReadingTime(content);
 
                 // Giscus Script Logic
                 let commentsSection = '';
@@ -638,35 +803,25 @@ async function build() {
                    `;
                 }
 
-                // Save Individual Post
                 const postHtml = renderLayout(`
                     <article>
-                        <h1>${data.title}</h1>
-                        <p class="meta"><small>${data.date} | ${readingTime} | ${data.tags ? data.tags.join(', ') : ''}</small></p>
-                        <img src="${coverImage}" alt="Cover Image" style="margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-                        <div class="content">${html}</div>
+                        <h1>${post.title}</h1>
+                        <p class="meta"><small>${post.date} | ${post.readingTime} | ${post.tags ? post.tags.join(', ') : ''}</small></p>
+                        <img src="${post.coverImage}" alt="Cover Image" style="margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+                        <div class="content">${post.html}</div>
+                        ${relatedHtml}
                         ${commentsSection}
                     </article>
-                `, data.title, config, css, seoData);
+                `, post.title, config, css, seoData);
                 
-                await fs.outputFile(path.join(blogDist, `${slug}.html`), postHtml);
-                posts.push({ ...data, slug, dateObj: new Date(data.date), coverImage, readingTime });
-                searchIndex.push({ title: data.title, type: 'Blog', url: `/blog/${slug}.html`, description: seoData.description });
+                await fs.outputFile(path.join(blogDist, `${post.slug}.html`), postHtml);
+                searchIndex.push({ title: post.title, type: 'Blog', url: `/blog/${post.slug}.html`, description: seoData.description });
             }
             
-            // Build Blog Index
-            posts.sort((a, b) => b.dateObj - a.dateObj);
-            const listHtml = posts.map(p => `
-                <div class="card">
-                    ${p.coverImage ? `<a href="/blog/${p.slug}.html"><img src="${p.coverImage}" style="height: 200px; object-fit: cover; width: 100%; margin: 0 0 1rem 0;" /></a>` : ''}
-                    <h2><a href="/blog/${p.slug}.html">${p.title}</a></h2>
-                    <p class="meta"><small>${p.date} • ${p.readingTime || ''}</small></p>
-                </div>
-            `).join('');
-            
-            const indexHtml = renderLayout(`<h1>Blog</h1>${listHtml}`, 'Blog', config, css, { path: '/blog/index.html', description: 'Latest blog posts' });
-            await fs.outputFile(path.join(blogDist, 'index.html'), indexHtml);
-            console.log(`📝 Built Blog (${posts.length} posts).`);
+            // Pass 3: Build Indexes & Features
+            await generatePaginatedIndex(posts, blogDist, config, css);
+            await generateBlogRSS(posts, config);
+            await generateTagPages(posts, config, css);
         }
     }
 
