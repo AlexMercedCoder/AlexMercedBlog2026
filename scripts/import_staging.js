@@ -11,7 +11,9 @@ const PUBLIC_ASSETS_DIR = path.resolve(__dirname, '../public/assets/images/2026'
 const SERIES_MAP = {
     'data_modeling': { label: 'Data Modeling', tags: ['Data Modeling', 'Data Engineering', 'Architecture'] },
     'debp': { label: 'Data Engineering Best Practices', tags: ['Data Engineering', 'Best Practices', 'Pipelines'] },
-    'semantic_layer_seo': { label: 'Semantic Layer SEO', tags: ['Semantic Layer', 'Data Governance', 'BI'] }
+    'semantic_layer_seo': { label: 'Semantic Layer SEO', tags: ['Semantic Layer', 'Data Governance', 'BI'] },
+    'connector-blogs': { label: 'Dremio Connectors', tags: ['Dremio', 'Connectors', 'Data Integration'] },
+    'AI_FEATURE_BLOGS': { label: 'AI Features', tags: ['AI', 'Dremio', 'SQL'] }
 };
 
 async function main() {
@@ -30,7 +32,7 @@ async function main() {
     }
 
     const seriesList = await fs.readdir(STAGING_DIR);
-    let currentDate = new Date('2026-02-18');
+    let currentDate = new Date('2026-03-01');
 
     for (const series of seriesList) {
         const seriesPath = path.join(STAGING_DIR, series);
@@ -139,6 +141,9 @@ async function main() {
                     description = title; 
                 }
             }
+            // Safety: ensure no undefined values in frontmatter (YAML cannot serialize undefined)
+            if (!description) description = title;
+            if (!coverImage) coverImage = null;
 
             // Clean up old frontmatter fields we don't need
             const newFrontmatter = {
