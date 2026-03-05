@@ -13,7 +13,8 @@ const SERIES_MAP = {
     'debp': { label: 'Data Engineering Best Practices', tags: ['Data Engineering', 'Best Practices', 'Pipelines'] },
     'semantic_layer_seo': { label: 'Semantic Layer SEO', tags: ['Semantic Layer', 'Data Governance', 'BI'] },
     'connector-blogs': { label: 'Dremio Connectors', tags: ['Dremio', 'Connectors', 'Data Integration'] },
-    'AI_FEATURE_BLOGS': { label: 'AI Features', tags: ['AI', 'Dremio', 'SQL'] }
+    'AI_FEATURE_BLOGS': { label: 'AI Features', tags: ['AI', 'Dremio', 'SQL'] },
+    'aitoolblogs': { label: 'AI Coding Tools', tags: ['AI', 'Developer Tools', 'Coding'] }
 };
 
 async function main() {
@@ -32,7 +33,7 @@ async function main() {
     }
 
     const seriesList = await fs.readdir(STAGING_DIR);
-    let currentDate = new Date('2026-03-01');
+    let currentDate = new Date('2026-03-05');
 
     for (const series of seriesList) {
         const seriesPath = path.join(STAGING_DIR, series);
