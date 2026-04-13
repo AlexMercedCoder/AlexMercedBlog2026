@@ -15,7 +15,8 @@ const SERIES_MAP = {
     'connector-blogs': { label: 'Dremio Connectors', tags: ['Dremio', 'Connectors', 'Data Integration'] },
     'AI_FEATURE_BLOGS': { label: 'AI Features', tags: ['AI', 'Dremio', 'SQL'] },
     'aitoolblogs': { label: 'AI Coding Tools', tags: ['AI', 'Developer Tools', 'Coding'] },
-    'context-management-blogs': { label: 'Context Management', tags: ['AI', 'Context Management', 'Developer Tools'] }
+    'context-management-blogs': { label: 'Context Management', tags: ['AI', 'Context Management', 'Developer Tools'] },
+    'apache-lakehouse': { label: 'Apache Lakehouse', tags: ['Apache', 'Data Lakehouse', 'Iceberg', 'Parquet', 'Arrow', 'Polaris'] }
 };
 
 async function main() {
