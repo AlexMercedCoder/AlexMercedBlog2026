@@ -1,23 +1,28 @@
 const fs = require('fs-extra');
 const path = require('path');
-const { marked } = require('marked');
 const matter = require('gray-matter');
 const hljs = require('highlight.js');
 
-marked.use({
-    renderer: {
-        code(token) {
-            // Handle both new (object) and old (string) marked renderer signatures
-            const code = typeof token === 'string' ? token : token.text;
-            const language = typeof token === 'string' ? arguments[1] : token.lang;
-            
-            const validLang = !!(language && hljs.getLanguage(language));
-            const highlighted = validLang ? hljs.highlight(code, { language }).value : hljs.highlightAuto(code).value;
-            const langClass = language ? `language-${language}` : '';
-            return `<div class="code-container"><button class="copy-btn" onclick="copyCode(this)">Copy</button><pre><code class="hljs ${langClass}">${highlighted}</code></pre></div>`;
+let marked;
+
+async function setupMarked() {
+    const m = await import('marked');
+    marked = m.marked;
+    marked.use({
+        renderer: {
+            code(token) {
+                // Handle both new (object) and old (string) marked renderer signatures
+                const code = typeof token === 'string' ? token : token.text;
+                const language = typeof token === 'string' ? arguments[1] : token.lang;
+                
+                const validLang = !!(language && hljs.getLanguage(language));
+                const highlighted = validLang ? hljs.highlight(code, { language }).value : hljs.highlightAuto(code).value;
+                const langClass = language ? `language-${language}` : '';
+                return `<div class="code-container"><button class="copy-btn" onclick="copyCode(this)">Copy</button><pre><code class="hljs ${langClass}">${highlighted}</code></pre></div>`;
+            }
         }
-    }
-});
+    });
+}
 
 // --- Configuration ---
 const CONFIG_PATH = './config.json';
@@ -251,6 +256,15 @@ async function generatePaginatedIndex(posts, distDir, config, css) {
         await fs.outputFile(filePath, fullHtml);
     }
     console.log(`📝 Built Blog Index (${posts.length} posts, ${totalPages} pages).`);
+}
+
+async function generateLLMsTxt(posts, config) {
+    if (posts.length === 0) return;
+    const header = `# ${config.site_title}\n> ${config.site_description}\n> Support: ${config.support_link || config.domain}\n\n## Content Directory\n`;
+    const body = posts.map(p => `- [${p.title}](${config.domain}/blog/${p.slug}.html): ${p.description || "An article."}`).join('\n');
+    const content = header + body;
+    await fs.outputFile(path.join(DIST_DIR, 'llms.txt'), content);
+    console.log('🤖 Built llms.txt');
 }
 
 // --- Layout Template ---
@@ -710,6 +724,7 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
 // --- Main Build Function ---
 async function build() {
     console.log('🚀 Starting Build...');
+    await setupMarked();
 
     // 1. Prepare Paths
     await fs.ensureDir(DIST_DIR);
@@ -1095,9 +1110,13 @@ ${dynamicItems}
 
     const robotsTxt = `User-agent: *
 Allow: /
+Allow: /llms.txt
 Sitemap: ${domain}/sitemap.xml`;
     await fs.outputFile(path.join(DIST_DIR, 'robots.txt'), robotsTxt);
      console.log('🤖 Built robots.txt');
+
+    // Generate llms.txt
+    await generateLLMsTxt(allPosts, config);
 
     // 9. Client-Side Search Index
     await fs.outputFile(path.join(DIST_DIR, 'search.json'), JSON.stringify(searchIndex));
