@@ -2,8 +2,9 @@
 title: 'Conceptual, Logical, and Physical Data Models Explained'
 date: '2026-02-18'
 description: >-
-  !Three layers of data modeling from business concepts to database
-  implementation(/assets/images/2026/data_modeling/02-types-of-data-models/types-of-data-models....
+  Most data teams jump straight from a stakeholder request to creating database
+  tables. They skip the planning steps that prevent misalignment, redundancy,
+  a...
 author: Alex Merced
 tags:
   - Data Modeling

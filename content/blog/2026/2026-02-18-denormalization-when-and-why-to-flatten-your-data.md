@@ -2,8 +2,9 @@
 title: 'Denormalization: When and Why to Flatten Your Data'
 date: '2026-02-18'
 description: >-
-  !Normalized model with many interconnected tables vs. denormalized wide flat
-  table(/assets/images/2026/data_modeling/08-denormalization-when-why/denormalization...
+  Normalization is the first rule taught in database design. Eliminate
+  redundancy. Store each fact once. Use foreign keys. It's the right rule for
+  transactio...
 author: Alex Merced
 tags:
   - Data Modeling

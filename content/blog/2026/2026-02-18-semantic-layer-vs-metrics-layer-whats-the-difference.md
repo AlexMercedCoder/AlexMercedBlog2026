@@ -2,8 +2,9 @@
 title: 'Semantic Layer vs. Metrics Layer: What''s the Difference?'
 date: '2026-02-18'
 description: >-
-  !Semantic layer vs metrics layer — the metrics layer is a
-  subset(/assets/images/2026/semantic_layer_seo/03-semantic-layer-vs-metrics-layer/semantic-vs-metrics.p...
+  Both terms appear in every modern data architecture diagram. They're used
+  interchangeably in conference talks, Slack threads, and vendor marketing. And
+  alm...
 author: Alex Merced
 tags:
   - Semantic Layer

@@ -2,8 +2,9 @@
 title: 'Semantic Layer vs. Data Catalog: Complementary, Not Competing'
 date: '2026-02-18'
 description: >-
-  !Data catalog and semantic layer — complementary systems bridged
-  together(/assets/images/2026/semantic_layer_seo/04-semantic-layer-vs-data-catalog/catalog-vs-se...
+  "We already have a data catalog, so we don't need a semantic layer." This is
+  one of the most common misconceptions in modern data architecture. Catalogs
+  an...
 author: Alex Merced
 tags:
   - Semantic Layer

@@ -2,9 +2,9 @@
 title: 'Data Quality Is a Pipeline Problem, Not a Dashboard Problem'
 date: '2026-02-18'
 description: >-
-  !Data quality checks enforced at the pipeline validation stage before data
-  reaches
-  consumers(/assets/images/2026/debp/03-data-quality-first/data-quality-pipelin...
+  When an analyst finds null values in a revenue column, the typical response is
+  to add a calculated field in the BI tool: IF revenue IS NULL THEN 0. That
+  "f...
 author: Alex Merced
 tags:
   - Data Engineering

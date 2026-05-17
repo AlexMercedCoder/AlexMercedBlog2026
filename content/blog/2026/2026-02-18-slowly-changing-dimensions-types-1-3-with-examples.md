@@ -2,8 +2,9 @@
 title: 'Slowly Changing Dimensions: Types 1-3 with Examples'
 date: '2026-02-18'
 description: >-
-  !Dimension timeline showing attribute values changing across time
-  periods(/assets/images/2026/data_modeling/06-slowly-changing-dimensions/slowly-changing-dimens...
+  Dimensions change. A customer moves cities. A product gets reclassified. An
+  employee changes departments. How your data model handles these changes
+  determi...
 author: Alex Merced
 tags:
   - Data Modeling

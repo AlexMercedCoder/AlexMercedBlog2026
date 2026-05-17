@@ -2,8 +2,9 @@
 title: 'Idempotent Pipelines: Build Once, Run Safely Forever'
 date: '2026-02-18'
 description: >-
-  !Pipeline running multiple times and converging to the same
-  result(/assets/images/2026/debp/04-idempotent-pipelines/idempotent-pipeline.png)...
+  A pipeline runs, processes 100,000 records, and loads them into the target
+  table. Then it fails on a downstream step. The orchestrator retries the entire
+  j...
 author: Alex Merced
 tags:
   - Data Engineering

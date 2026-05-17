@@ -2,8 +2,9 @@
 title: What Is a Semantic Layer? A Complete Guide
 date: '2026-02-18'
 description: >-
-  !Semantic layer concept — translating raw data into business
-  terms(/assets/images/2026/semantic_layer_seo/01-what-is-a-semantic-layer/semantic-layer-concept.png...
+  Ask three teams in your company how they calculate "revenue" and you'll get
+  three answers. Sales counts bookings. Finance counts recognized revenue.
+  Market...
 author: Alex Merced
 tags:
   - Semantic Layer

@@ -2,9 +2,9 @@
 title: Partition and Organize Data for Performance
 date: '2026-02-18'
 description: >-
-  !Table data split into partitions by date with query scanning only the
-  relevant
-  partition(/assets/images/2026/debp/07-partition-and-organize/partition-overview....
+  A table with 500 million rows takes 45 seconds to query. After partitioning it
+  by date, the same query — filtering on a single day — returns in 2 seconds.
+  ...
 author: Alex Merced
 tags:
   - Data Engineering

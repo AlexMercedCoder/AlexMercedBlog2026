@@ -2,8 +2,9 @@
 title: 'Data Vault Modeling: Hubs, Links, and Satellites'
 date: '2026-02-18'
 description: >-
-  !Data Vault model showing Hubs, Links, and Satellites as interconnected
-  components(/assets/images/2026/data_modeling/09-data-vault-modeling/data-vault-overview....
+  Dimensional modeling works well when your source systems are stable and your
+  business questions are predictable. But what happens when sources change
+  const...
 author: Alex Merced
 tags:
   - Data Modeling

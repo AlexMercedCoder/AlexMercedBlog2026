@@ -2,9 +2,9 @@
 title: 'Dimensional Modeling: Facts, Dimensions, and Grains'
 date: '2026-02-18'
 description: >-
-  !Dimensional model showing a central fact table connected to surrounding
-  dimension
-  tables(/assets/images/2026/data_modeling/05-dimensional-modeling/dimensional-...
+  Dimensional modeling is the most widely used approach for organizing analytics
+  data. Developed by Ralph Kimball, it structures data into two types of
+  table...
 author: Alex Merced
 tags:
   - Data Modeling

@@ -2,8 +2,9 @@
 title: 'Data Engineering Best Practices: The Complete Checklist'
 date: '2026-02-18'
 description: >-
-  !Comprehensive data engineering checklist organized by categories with status
-  indicators(/assets/images/2026/debp/10-de-best-practices-checklist/de-checklist.pn...
+  Best practices documents are easy to write and hard to use. They list
+  principles without context, advice without prioritization, and rules without
+  explaini...
 author: Alex Merced
 tags:
   - Data Engineering

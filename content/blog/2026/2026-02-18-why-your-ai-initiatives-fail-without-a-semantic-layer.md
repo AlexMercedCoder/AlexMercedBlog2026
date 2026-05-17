@@ -2,8 +2,9 @@
 title: Why Your AI Initiatives Fail Without a Semantic Layer
 date: '2026-02-18'
 description: >-
-  !AI with vs without a semantic layer — failure modes and
-  fixes(/assets/images/2026/semantic_layer_seo/05-why-ai-fails-without-semantic-layer/ai-semantic-layer.p...
+  Your team builds an AI agent. It connects to your data warehouse. A product
+  manager types "What was revenue last quarter?" and gets a number. The number
+  is...
 author: Alex Merced
 tags:
   - Semantic Layer

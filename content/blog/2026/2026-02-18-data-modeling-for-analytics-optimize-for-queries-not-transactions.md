@@ -2,8 +2,9 @@
 title: 'Data Modeling for Analytics: Optimize for Queries, Not Transactions'
 date: '2026-02-18'
 description: >-
-  !OLTP normalized model vs. OLAP denormalized model side by
-  side(/assets/images/2026/data_modeling/07-data-modeling-for-analytics/analytics-data-modeling.png)...
+  The data model that runs your production application is almost never the right
+  model for analytics. Transactional systems are designed for fast writes —
+  in...
 author: Alex Merced
 tags:
   - Data Modeling

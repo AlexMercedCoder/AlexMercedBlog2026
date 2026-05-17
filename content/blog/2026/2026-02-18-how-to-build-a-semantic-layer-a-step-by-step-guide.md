@@ -2,8 +2,9 @@
 title: 'How to Build a Semantic Layer: A Step-by-Step Guide'
 date: '2026-02-18'
 description: >-
-  !Building a semantic layer — Bronze, Silver, and Gold
-  tiers(/assets/images/2026/semantic_layer_seo/02-how-to-build-semantic-layer/build-semantic-layer.png)...
+  Most teams start building a semantic layer the wrong way: they open their BI
+  tool, create a few calculated fields, and call it done. Six months later,
+  thre...
 author: Alex Merced
 tags:
   - Semantic Layer

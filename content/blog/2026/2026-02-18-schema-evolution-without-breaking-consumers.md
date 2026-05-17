@@ -2,8 +2,9 @@
 title: Schema Evolution Without Breaking Consumers
 date: '2026-02-18'
 description: >-
-  !Schema as a contract between producers and consumers with version
-  tracking(/assets/images/2026/debp/05-schema-evolution/schema-contract.png)...
+  A source team renames a column from user_id to customer_id. Twelve hours
+  later, five dashboards show blank values, two ML pipelines fail, and the data
+  engi...
 author: Alex Merced
 tags:
   - Data Engineering

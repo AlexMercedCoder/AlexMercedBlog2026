@@ -2,9 +2,9 @@
 title: 'Testing Data Pipelines: What to Validate and When'
 date: '2026-02-18'
 description: >-
-  !Data pipeline testing pyramid with schema tests at the base, contract tests
-  in the middle, and regression tests at the
-  top(/assets/images/2026/debp/08-testing-...
+  Ask an application developer how they test their code and they'll describe
+  unit tests, integration tests, CI/CD pipelines, and coverage metrics. Ask a
+  data...
 author: Alex Merced
 tags:
   - Data Engineering

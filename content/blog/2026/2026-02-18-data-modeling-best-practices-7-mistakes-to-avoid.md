@@ -2,8 +2,9 @@
 title: 'Data Modeling Best Practices: 7 Mistakes to Avoid'
 date: '2026-02-18'
 description: >-
-  !Checklist of data modeling quality markers with warning symbols on common
-  mistakes(/assets/images/2026/data_modeling/10-data-modeling-best-practices/best-pract...
+  A bad data model doesn't announce itself. It hides behind slow dashboards,
+  conflicting numbers, confused analysts, and AI agents that generate wrong SQL.
+  B...
 author: Alex Merced
 tags:
   - Data Modeling

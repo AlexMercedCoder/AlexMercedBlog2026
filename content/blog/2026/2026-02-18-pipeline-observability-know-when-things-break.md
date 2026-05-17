@@ -2,8 +2,9 @@
 title: 'Pipeline Observability: Know When Things Break'
 date: '2026-02-18'
 description: >-
-  !Pipeline observability dashboard showing metrics, logs, and data
-  lineage(/assets/images/2026/debp/09-observability-monitoring/observability-dashboard.png)...
+  An analyst messages you on Slack: "The revenue numbers look wrong. Is the
+  pipeline broken?" You check the orchestrator — all green. You check the target
+  ta...
 author: Alex Merced
 tags:
   - Data Engineering

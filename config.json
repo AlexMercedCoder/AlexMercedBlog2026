@@ -6,6 +6,12 @@
   "twitter_handle": "@alexmercedcoder",
   "custom_head_html": "<!-- Add Analytics Here -->",
   "author_name": "Alex Merced",
+  "author_url": "https://alexmercedcoder.dev",
+  "author_sameAs": [
+    "https://twitter.com/alexmercedcoder",
+    "https://linkedin.com/in/alexmerced",
+    "https://github.com/alexmercedcoder"
+  ],
   "support_link": "https://buymeacoffee.com/alexmerced",
   "email_subscribe_form_url": "https://amdatalakehouse.substack.com/",
   "features": {

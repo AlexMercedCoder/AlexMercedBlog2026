@@ -2,9 +2,9 @@
 title: How to Design Reliable Data Pipelines
 date: '2026-02-18'
 description: >-
-  !Data pipeline architecture with four layers flowing from ingestion through
-  staging, transformation, and
-  serving(/assets/images/2026/debp/02-design-data-pipelin...
+  Most pipeline failures aren't caused by bad code. They're caused by no
+  architecture. A script that reads from an API, transforms JSON, and writes to
+  a data...
 author: Alex Merced
 tags:
   - Data Engineering

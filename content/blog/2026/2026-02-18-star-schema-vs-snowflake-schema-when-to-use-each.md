@@ -2,8 +2,9 @@
 title: 'Star Schema vs. Snowflake Schema: When to Use Each'
 date: '2026-02-18'
 description: >-
-  !Star schema with central fact table surrounded by denormalized dimension
-  tables(/assets/images/2026/data_modeling/03-star-schema-vs-snowflake/star-vs-snowflake...
+  Both star schemas and snowflake schemas are dimensional models. They both
+  organize data into fact tables (measurable events) and dimension tables
+  (context ...
 author: Alex Merced
 tags:
   - Data Modeling

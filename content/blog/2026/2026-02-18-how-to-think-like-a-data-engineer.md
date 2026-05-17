@@ -2,9 +2,9 @@
 title: How to Think Like a Data Engineer
 date: '2026-02-18'
 description: >-
-  !Data flowing through a system of interconnected pipeline stages from sources
-  to
-  consumers(/assets/images/2026/debp/01-think-like-data-engineer/data-engineer-mi...
+  The median lifespan of a popular data tool is about three years. The tool you
+  master today may be deprecated or replaced by the time your next project
+  ship...
 author: Alex Merced
 tags:
   - Data Engineering

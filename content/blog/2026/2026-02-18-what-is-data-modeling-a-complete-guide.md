@@ -2,8 +2,9 @@
 title: What Is Data Modeling? A Complete Guide
 date: '2026-02-18'
 description: >-
-  !Data entities connected by relationship lines forming a structured data
-  model(/assets/images/2026/data_modeling/01-what-is-data-modeling/data-modeling-overview...
+  Every database, data warehouse, and data lakehouse starts with the same
+  question: how should this data be organized? Data modeling answers that
+  question by...
 author: Alex Merced
 tags:
   - Data Modeling

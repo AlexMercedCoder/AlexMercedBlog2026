@@ -2,8 +2,9 @@
 title: 'Data Virtualization and the Semantic Layer: Query Without Copying'
 date: '2026-02-18'
 description: >-
-  !Data virtualization — connecting sources to a unified semantic layer without
-  copying(/assets/images/2026/semantic_layer_seo/07-data-virtualization-semantic-lay...
+  Every data pipeline you build to move data from one system to another costs
+  you three things: time to build it, money to run it, and freshness you lose
+  whi...
 author: Alex Merced
 tags:
   - Semantic Layer

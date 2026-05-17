@@ -2,8 +2,9 @@
 title: 'Semantic Layer Best Practices: 7 Mistakes to Avoid'
 date: '2026-02-18'
 description: >-
-  !Semantic layer best practices checklist — checks and
-  mistakes(/assets/images/2026/semantic_layer_seo/10-semantic-layer-best-practices/best-practices.png)...
+  Semantic layers don't fail because the technology is wrong. They fail because
+  of design decisions made in the first two weeks — choices that seem
+  reasonabl...
 author: Alex Merced
 tags:
   - Semantic Layer

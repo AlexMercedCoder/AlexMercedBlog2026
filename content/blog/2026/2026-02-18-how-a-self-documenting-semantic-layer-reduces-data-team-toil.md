@@ -2,8 +2,9 @@
 title: How a Self-Documenting Semantic Layer Reduces Data Team Toil
 date: '2026-02-18'
 description: >-
-  !Self-documenting semantic layer — AI generating descriptions and labels
-  automatically(/assets/images/2026/semantic_layer_seo/09-self-documenting-semantic-layer...
+  Every data team knows documentation is important. And almost every data team
+  has a backlog of undocumented tables, unlabeled columns, and outdated
+  descript...
 author: Alex Merced
 tags:
   - Semantic Layer

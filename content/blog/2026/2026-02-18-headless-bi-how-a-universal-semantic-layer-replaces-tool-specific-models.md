@@ -2,8 +2,9 @@
 title: 'Headless BI: How a Universal Semantic Layer Replaces Tool-Specific Models'
 date: '2026-02-18'
 description: >-
-  !Headless BI — one semantic layer serving all
-  consumers(/assets/images/2026/semantic_layer_seo/08-headless-bi-semantic-layer/headless-bi.png)...
+  Your organization uses Tableau for executive dashboards, Power BI for
+  operational reports, and Python notebooks for data science. Revenue is defined
+  in Tab...
 author: Alex Merced
 tags:
   - Semantic Layer

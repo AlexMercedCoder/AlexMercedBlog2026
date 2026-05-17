@@ -198,7 +198,7 @@ async function generateTagPages(posts, config, css) {
             </div>
         `).join('');
         
-        const pageHtml = renderLayout(`<h1>Tag: ${tag}</h1>${listHtml}`, `Tag: ${tag}`, config, css, { path: `/tags/${tag}.html` });
+        const pageHtml = renderLayout(`<h1>Tag: ${tag}</h1>${listHtml}`, `Tag: ${tag}`, config, css, { path: `/tags/${tag}.html`, noindex: true });
         await fs.outputFile(path.join(tagsDir, `${tag}.html`), pageHtml);
     }
     console.log(`🏷️ Built ${Object.keys(tagsMap).length} Tag Pages.`);
@@ -249,10 +249,12 @@ async function generatePaginatedIndex(posts, distDir, config, css) {
         const pageTitle = i === 1 ? 'Blog' : `Blog - Page ${i}`;
         const filePath = i === 1 ? path.join(distDir, 'index.html') : path.join(distDir, 'page', `${i}.html`);
         const seoUrl = i === 1 ? '/blog/index.html' : `/blog/page/${i}.html`;
+        const prevUrl = i > 1 ? (i === 2 ? `${config.domain}/blog/index.html` : `${config.domain}/blog/page/${i - 1}.html`) : null;
+        const nextUrl = i < totalPages ? `${config.domain}/blog/page/${i + 1}.html` : null;
         
         if (i > 1) await fs.ensureDir(path.join(distDir, 'page'));
 
-        const fullHtml = renderLayout(`<h1>${pageTitle}</h1>${listHtml}${paginationHtml}`, pageTitle, config, css, { path: seoUrl, description: `Blog posts page ${i}` });
+        const fullHtml = renderLayout(`<h1>${pageTitle}</h1>${listHtml}${paginationHtml}`, pageTitle, config, css, { path: seoUrl, description: `Blog posts page ${i}`, prevUrl, nextUrl });
         await fs.outputFile(filePath, fullHtml);
     }
     console.log(`📝 Built Blog Index (${posts.length} posts, ${totalPages} pages).`);
@@ -482,6 +484,14 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     const image = seo.image ? (seo.image.startsWith('http') ? seo.image : `${config.domain}${seo.image}`) : '';
     const type = seo.type || 'website';
     const publishedTime = seo.date ? new Date(seo.date).toISOString() : '';
+    const modifiedTime = seo.updatedDate ? new Date(seo.updatedDate).toISOString() : publishedTime;
+
+    const authorObj = {
+        "@type": "Person",
+        "name": config.author_name,
+        ...(config.author_url ? { "url": config.author_url } : {}),
+        ...(config.author_sameAs && config.author_sameAs.length ? { "sameAs": config.author_sameAs } : {})
+    };
 
     let jsonLd = {
         "@context": "https://schema.org",
@@ -489,10 +499,7 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
         "url": url,
         "name": fullTitle,
         "description": description,
-        "author": {
-            "@type": "Person",
-            "name": config.author_name
-        }
+        "author": authorObj
     };
 
     if (type === 'article') {
@@ -503,9 +510,9 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
             "headline": pageTitle,
             "description": description,
             "image": image,
-            "author": { "@type": "Person", "name": config.author_name },
+            "author": authorObj,
             "datePublished": publishedTime,
-            "dateModified": publishedTime
+            "dateModified": modifiedTime
         };
     } else if (type === 'event') {
         jsonLd = {
@@ -537,9 +544,12 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${fullTitle}</title>
-    <meta name="description" content="${description}">
+    ${seo.noindex ? '<meta name="robots" content="noindex, follow" />' : ''}
+    <meta name="description" content="${description.replace(/"/g, '&quot;')}">
     <link rel="canonical" href="${url}" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    ${seo.prevUrl ? `<link rel="prev" href="${seo.prevUrl}" />` : ''}
+    ${seo.nextUrl ? `<link rel="next" href="${seo.nextUrl}" />` : ''}
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="${type}" />
@@ -848,12 +858,19 @@ async function build() {
                         </div>
                     </div>` : '';
 
+                // Smart description: prefer frontmatter, then first clean text block (skip leading images/comments)
+                const autoDesc = post.content
+                    .replace(/^(\s*<!--.*?-->\s*|\s*!\[.*?\]\(.*?\)\s*)+/s, '')
+                    .replace(/[#*`!\[\]]/g, '')
+                    .trim()
+                    .substring(0, 155) + '...';
                 const seoData = {
                     type: 'article',
                     path: `/blog/${post.slug}.html`,
                     image: post.coverImage,
-                    description: post.content.substring(0, 150).replace(/[#*`]/g, '') + '...',
-                    date: post.date
+                    description: post.description || autoDesc,
+                    date: post.date,
+                    updatedDate: post.updated || null
                 };
 
                 // Giscus Script Logic
@@ -1052,10 +1069,9 @@ async function build() {
     const domain = config.domain || 'https://example.com';
     const today = new Date().toISOString();
     
-    // Collect specific URLs
+    // Collect specific URLs (only canonical root, not /index.html duplicate)
     const sitemapUrls = [
-        { loc: `${domain}/`, priority: '1.0' },
-        { loc: `${domain}/index.html`, priority: '0.8' }
+        { loc: `${domain}/`, priority: '1.0' }
     ];
 
     // Helper to add Feature Indexes
@@ -1084,9 +1100,11 @@ async function build() {
     <priority>${u.priority}</priority>
   </url>`).join('');
 
-    // Add all other HTML files not explicitly added
+    // Add all other HTML files not explicitly added (exclude tag pages — low-value, noindexed)
     const dynamicItems = allHtml.map(p => {
         const relPath = path.relative(DIST_DIR, p).replace(/\\/g, '/');
+        // Skip tag pages (noindexed), skip root index.html (canonical is /)
+        if (relPath.startsWith('tags/') || relPath === 'index.html') return '';
         const url = `${domain}/${relPath}`;
         if (!uniqueUrls.has(url)) {
             return `

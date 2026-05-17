@@ -2,9 +2,9 @@
 title: 'Data Modeling for the Lakehouse: What Changes'
 date: '2026-02-18'
 description: >-
-  !Traditional data warehouse model vs. open lakehouse model with flexible
-  schema and
-  views(/assets/images/2026/data_modeling/04-data-modeling-lakehouse/lakehouse...
+  Traditional data modeling assumed you controlled the database. You defined
+  schemas up front, enforced foreign keys at write time, and optimized with
+  indexe...
 author: Alex Merced
 tags:
   - Data Modeling

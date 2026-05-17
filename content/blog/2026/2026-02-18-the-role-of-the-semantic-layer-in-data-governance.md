@@ -2,8 +2,9 @@
 title: The Role of the Semantic Layer in Data Governance
 date: '2026-02-18'
 description: >-
-  !Data governance through a semantic layer — centralized policies and
-  documentation(/assets/images/2026/semantic_layer_seo/06-semantic-layer-data-governance/gove...
+  Most organizations have a data governance policy. It lives in a Confluence
+  page. It defines who owns what data, what terms mean, and who should have
+  access...
 author: Alex Merced
 tags:
   - Semantic Layer
