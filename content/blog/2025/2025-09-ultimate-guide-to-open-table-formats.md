@@ -9,8 +9,7 @@ tags:
 - Agentic AI
 - Apache Iceberg
 - Delta Lake
-title: The Ultimate Guide to Open Table Formats - Iceberg, Delta Lake, Hudi, Paimon,
-  and DuckLake
+title: The Ultimate Guide to Open Table Formats - Iceberg, Delta Lake, Hudi, Paimon, and DuckLake
 ---
 
 **Get Data Lakehouse Books:**

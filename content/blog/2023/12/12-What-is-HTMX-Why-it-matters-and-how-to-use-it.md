@@ -2,8 +2,7 @@
 author: Alex Merced
 category: HTML
 date: '2023-11-30'
-description: The framework that is getting all the buzz about reducing the javascript
-  you need to write
+description: The framework that is getting all the buzz about reducing the javascript you need to write
 tags:
 - HTML
 - Javascript

@@ -2,8 +2,7 @@
 date: '2022-02-19T12:12:03.284Z'
 description: How to write Markdown and where you can use it
 tags: []
-title: Understanding RPC (tour of API protocols, gRPC nodejs walkthrough, and Apache
-  Arrow Flight)
+title: Understanding RPC (tour of API protocols, gRPC nodejs walkthrough, and Apache Arrow Flight)
 ---
 
 ## The World of Protocols

@@ -8,8 +8,7 @@ tags:
 - Databases
 - Data Lakes
 - Data Lakehouses
-title: Introduction to Data Engineering Concepts | ETL vs ELT – Understanding Data
-  Pipelines
+title: Introduction to Data Engineering Concepts | ETL vs ELT – Understanding Data Pipelines
 ---
 
 ## Free Resources  

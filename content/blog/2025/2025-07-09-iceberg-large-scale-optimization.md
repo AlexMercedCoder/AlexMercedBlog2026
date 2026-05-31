@@ -2,8 +2,7 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-09-09'
-description: Learn how to scale Apache Iceberg table optimizations across large datasets
-  using parallelism, checkpointing, and fail recovery to ensure reliability and performance.
+description: Learn how to scale Apache Iceberg table optimizations across large datasets using parallelism, checkpointing, and fail recovery to ensure reliability and performance.
 tags:
 - Apache Iceberg
 - Optimization
@@ -11,7 +10,7 @@ tags:
 - Parallelism
 - Resilience
 - Data Engineering
-title: Managing Large-Scale Optimizations : Parallelism, Checkpointing, and Fail Recovery
+title: Managing Large-Scale Optimizations  – Parallelism, Checkpointing, and Fail Recovery
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  

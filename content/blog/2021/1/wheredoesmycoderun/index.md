@@ -2,8 +2,7 @@
 date: '2021-01-21T12:12:03.284Z'
 description: Making Code Happen
 tags: []
-title: Where Does My Code Run? - Compilers, Interpreters, Transpilers and Virtual
-  Machines
+title: Where Does My Code Run? - Compilers, Interpreters, Transpilers and Virtual Machines
 ---
 
 ## Machine Code

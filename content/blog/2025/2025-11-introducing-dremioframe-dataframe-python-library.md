@@ -2,9 +2,7 @@
 author: Alex Merced
 category: Data Engineering
 date: '2025-11-29'
-description: Discover dremioframe, a new Python library that offers a DataFrame-like
-  experience for interacting with Dremio's data lakehouse platform. Learn how to leverage
-  its intuitive API to streamline your data engineering workflows.
+description: Discover dremioframe, a new Python library that offers a DataFrame-like experience for interacting with Dremio's data lakehouse platform. Learn how to leverage its intuitive API to streamline your data engineering workflows.
 tags:
 - Dremio
 - Data Engineering

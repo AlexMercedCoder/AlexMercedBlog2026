@@ -7,8 +7,7 @@ tags:
 - data lakehouse
 - data engineering
 - apache parquet
-title: All About  Parquet Part 03 - Parquet File Structure | Pages, Row Groups, and
-  Columns
+title: All About  Parquet Part 03 - Parquet File Structure | Pages, Row Groups, and Columns
 ---
 
 - [Free Copy of Apache Iceberg the Definitive Guide](https://hello.dremio.com/wp-apache-iceberg-the-definitive-guide-reg.html?utm_source=alexmerced&utm_medium=external_blog&utm_campaign=allaboutparquet)

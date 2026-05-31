@@ -2,14 +2,13 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-07-22'
-description: Learn how standard compaction works in Apache Iceberg and why bin packing
-  your data files is essential for maintaining query performance and cost efficiency.
+description: Learn how standard compaction works in Apache Iceberg and why bin packing your data files is essential for maintaining query performance and cost efficiency.
 tags:
 - Apache Iceberg
 - Data Optimization
 - Table Maintenance
 - Compaction
-title: The Basics of Compaction : Bin Packing Your Data for Efficiency
+title: The Basics of Compaction  – Bin Packing Your Data for Efficiency
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  

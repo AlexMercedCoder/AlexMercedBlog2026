@@ -2,8 +2,7 @@
 author: Alex Merced
 category: Data Engineering
 date: '2025-10-17'
-description: Exploring paths to a universal lakehouse catalog that supports multiple
-  data formats and engines, building on Apache Iceberg's success.
+description: Exploring paths to a universal lakehouse catalog that supports multiple data formats and engines, building on Apache Iceberg's success.
 tags:
 - Data Lakehouse
 - Data Engineering

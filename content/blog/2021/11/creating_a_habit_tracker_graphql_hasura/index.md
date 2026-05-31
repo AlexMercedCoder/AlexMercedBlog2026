@@ -2,8 +2,7 @@
 date: '2021-11-16T12:12:03.284Z'
 description: GraphQL Made Easy
 tags: []
-title: Creating a GraphQL Based Habit Tracker with Hasura and React (GraphQL/Hasura
-  101)
+title: Creating a GraphQL Based Habit Tracker with Hasura and React (GraphQL/Hasura 101)
 ---
 
 ## What is GraphQL?

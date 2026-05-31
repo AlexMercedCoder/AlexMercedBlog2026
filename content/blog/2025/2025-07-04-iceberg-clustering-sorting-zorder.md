@@ -2,16 +2,14 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-08-05'
-description: Improve query performance in Apache Iceberg by organizing your data layout
-  with sorting and Z-order clustering. Learn how to reduce scan cost and improve filter
-  effectiveness.
+description: Improve query performance in Apache Iceberg by organizing your data layout with sorting and Z-order clustering. Learn how to reduce scan cost and improve filter effectiveness.
 tags:
 - Apache Iceberg
 - Clustering
 - Sorting
 - Z-order
 - Query Optimization
-title: Smarter Data Layout : Sorting and Clustering Iceberg Tables
+title: Smarter Data Layout  – Sorting and Clustering Iceberg Tables
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  

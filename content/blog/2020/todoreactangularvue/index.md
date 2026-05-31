@@ -2,8 +2,7 @@
 date: '2020-11-17T22:12:03.284Z'
 description: Same app... different frontend frameworks
 tags: []
-title: 1 Backend, 5 Frontends - Todo List with Rails, React, Angular, Vue, Svelte,
-  and jQuery
+title: 1 Backend, 5 Frontends - Todo List with Rails, React, Angular, Vue, Svelte, and jQuery
 ---
 
 ## Why are we doing this?

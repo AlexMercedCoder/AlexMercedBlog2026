@@ -2,16 +2,14 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-09-02'
-description: Partition evolution in Apache Iceberg is a powerful feature, but if not
-  managed carefully, it can introduce fragmentation and impact compaction performance.
-  Learn how to handle it effectively.
+description: Partition evolution in Apache Iceberg is a powerful feature, but if not managed carefully, it can introduce fragmentation and impact compaction performance. Learn how to handle it effectively.
 tags:
 - Apache Iceberg
 - Partition Evolution
 - Table Optimization
 - Compaction
 - Data Engineering
-title: Hidden Pitfalls : Compaction and Partition Evolution in Apache Iceberg
+title: Hidden Pitfalls  – Compaction and Partition Evolution in Apache Iceberg
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  

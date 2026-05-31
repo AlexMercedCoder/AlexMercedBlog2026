@@ -2,8 +2,7 @@
 author: Alex Merced
 category: AI
 date: '2025-02-01'
-description: A guide on building AI applications with LangChain, a framework for developing
-  AI applications powered by Large Language Models (LLMs).
+description: A guide on building AI applications with LangChain, a framework for developing AI applications powered by Large Language Models (LLMs).
 tags:
 - AI
 - langchain

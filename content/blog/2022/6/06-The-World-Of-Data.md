@@ -8,8 +8,7 @@ tags:
 - database
 - data warehouse
 - data lakehouse
-title: Introduction to The World of Data - (OLTP, OLAP, Data Warehouses, Data Lakes
-  and more)
+title: Introduction to The World of Data - (OLTP, OLAP, Data Warehouses, Data Lakes and more)
 ---
 
 In this article, I hope to paint a picture of the modern data world and when done you should have a decent understanding of the roles of Data Engineers, Data Analysts and Data Scientists and the technologies that empower them.

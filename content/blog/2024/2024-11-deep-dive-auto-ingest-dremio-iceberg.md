@@ -2,8 +2,7 @@
 author: Alex Merced
 category: Data Lakehouse
 date: '2024-11-15'
-description: Auto ingesting data from JSON, CSV, and Parquet files into Apache Iceberg
-  Tables
+description: Auto ingesting data from JSON, CSV, and Parquet files into Apache Iceberg Tables
 tags:
 - data lakehouse
 - data engineering

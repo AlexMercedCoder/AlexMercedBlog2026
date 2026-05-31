@@ -2,14 +2,12 @@
 author: Alex Merced
 category: Data Lakehouse
 date: '2024-01-03'
-description: This is where the combined power of Dremio’s Lakehouse Management features
-  and Project Nessie's catalog-level versioning comes into play.
+description: This is where the combined power of Dremio’s Lakehouse Management features and Project Nessie's catalog-level versioning comes into play.
 tags:
 - Data Lakehouse
 - Data Lake
 - Apache Iceberg
-title: Apache Iceberg, Git-Like Catalog Versioning and Data Lakehouse Management -
-  Pillars of a Robust Data Lakehouse Platform
+title: Apache Iceberg, Git-Like Catalog Versioning and Data Lakehouse Management - Pillars of a Robust Data Lakehouse Platform
 ---
 
 Managing vast amounts of data efficiently and effectively is crucial for any organization aiming to leverage its data for strategic decisions. The key to unlocking this potential lies in advanced data management practices, particularly in versioning and catalog management. This is where the combined power of Dremio’s Lakehouse Management features and Project Nessie's catalog-level versioning comes into play.

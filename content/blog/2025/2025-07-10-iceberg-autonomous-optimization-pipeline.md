@@ -2,9 +2,7 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-09-16'
-description: Learn how to automate compaction, snapshot expiration, and layout optimization
-  in Apache Iceberg using metadata-driven triggers and orchestration tools for a self-healing
-  lakehouse.
+description: Learn how to automate compaction, snapshot expiration, and layout optimization in Apache Iceberg using metadata-driven triggers and orchestration tools for a self-healing lakehouse.
 tags:
 - Apache Iceberg
 - Automation
@@ -12,7 +10,7 @@ tags:
 - Metadata
 - Lakehouse Optimization
 - Data Engineering
-title: The Endgame : Building an Autonomous Optimization Pipeline for Apache Iceberg
+title: The Endgame  – Building an Autonomous Optimization Pipeline for Apache Iceberg
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  

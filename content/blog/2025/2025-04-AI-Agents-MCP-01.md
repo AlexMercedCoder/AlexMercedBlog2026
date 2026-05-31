@@ -9,8 +9,7 @@ tags:
 - Python
 - MCP
 - AI Agents
-title: A Journey from AI to LLMs and MCP - 1 - What Is AI and How It Evolved Into
-  LLMs
+title: A Journey from AI to LLMs and MCP - 1 - What Is AI and How It Evolved Into LLMs
 ---
 
 ## Free Resources  

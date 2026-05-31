@@ -2,15 +2,14 @@
 author: Alex Merced
 category: AI
 date: '2025-04-14'
-description: Sampling and Prompts in MCP : Making Agent Workflows Smarter and Safer
+description: Sampling and Prompts in MCP  – Making Agent Workflows Smarter and Safer
 tags:
 - AI
 - ML
 - Python
 - MCP
 - AI Agents
-title: A Journey from AI to LLMs and MCP - 10 - Sampling and Prompts in MCP : Making
-  Agent Workflows Smarter and Safer
+title: A Journey from AI to LLMs and MCP - 10 - Sampling and Prompts in MCP  – Making Agent Workflows Smarter and Safer
 ---
 
 ## Free Resources  

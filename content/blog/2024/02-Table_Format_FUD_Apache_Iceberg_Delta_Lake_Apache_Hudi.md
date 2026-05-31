@@ -9,8 +9,7 @@ tags:
 - Apache Iceberg
 - Delta Lake
 - Apache Hudi
-title: Table Format FUD - Thinking Through the Table Format Conversion (Apache Iceberg,
-  Apache Hudi, Delta Lake)
+title: Table Format FUD - Thinking Through the Table Format Conversion (Apache Iceberg, Apache Hudi, Delta Lake)
 ---
 
 ## Context

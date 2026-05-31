@@ -7,8 +7,7 @@ tags:
 - devOps
 - Continuous Integration
 - Continuous Deployment
-title: Orchestrating Airflow DAGs with GitHub Actions - A Lightweight Approach to
-  Data Curation Across Spark, Dremio, and Snowflake
+title: Orchestrating Airflow DAGs with GitHub Actions - A Lightweight Approach to Data Curation Across Spark, Dremio, and Snowflake
 ---
 
 - [Free Copy of Apache Iceberg the Definitive Guide](https://hello.dremio.com/wp-apache-iceberg-the-definitive-guide-reg.html?utm_source=alexmerced&utm_medium=external_blog&utm_campaign=githubactionsairflow)

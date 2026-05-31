@@ -2,14 +2,13 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-07-15'
-description: Learn how Apache Iceberg tables can degrade over time without optimization
-  and what issues this causes for performance, cost, and governance.
+description: Learn how Apache Iceberg tables can degrade over time without optimization and what issues this causes for performance, cost, and governance.
 tags:
 - Apache Iceberg
 - Data Lakehouse
 - Optimization
 - Table Maintenance
-title: The Cost of Neglect : How Apache Iceberg Tables Degrade Without Optimization
+title: The Cost of Neglect  – How Apache Iceberg Tables Degrade Without Optimization
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  

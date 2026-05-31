@@ -2,8 +2,7 @@
 author: Alex Merced
 category: Data Engineering
 date: '2025-10-21'
-description: Dive into the world of commercial Iceberg catalogs and discover how they
-  enhance data lakehouse architectures for modern data engineering.
+description: Dive into the world of commercial Iceberg catalogs and discover how they enhance data lakehouse architectures for modern data engineering.
 tags:
 - Data Lakehouse
 - Data Engineering

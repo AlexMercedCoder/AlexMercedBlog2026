@@ -8,8 +8,7 @@ tags:
 - Databases
 - Data Lakes
 - Data Lakehouses
-title: Introduction to Data Engineering Concepts | Understanding Data Sources and
-  Ingestion
+title: Introduction to Data Engineering Concepts | Understanding Data Sources and Ingestion
 ---
 
 ## Free Resources  

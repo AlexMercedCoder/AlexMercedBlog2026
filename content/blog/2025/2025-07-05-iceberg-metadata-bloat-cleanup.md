@@ -2,8 +2,7 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-08-12'
-description: Learn how to prevent and clean up metadata bloat in Apache Iceberg by
-  expiring snapshots and rewriting manifests for better performance and manageability.
+description: Learn how to prevent and clean up metadata bloat in Apache Iceberg by expiring snapshots and rewriting manifests for better performance and manageability.
 tags:
 - Apache Iceberg
 - Metadata Optimization

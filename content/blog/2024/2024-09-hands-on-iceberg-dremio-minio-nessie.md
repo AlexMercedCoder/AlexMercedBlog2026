@@ -6,8 +6,7 @@ description: The Evolving Data Lakehouse World
 tags:
 - data lakehouse
 - data engineering
-title: Hands-on with Apache Iceberg on Your Laptop - Deep Dive with Apache Spark,
-  Nessie, Minio, Dremio, Polars and Seaborn
+title: Hands-on with Apache Iceberg on Your Laptop - Deep Dive with Apache Spark, Nessie, Minio, Dremio, Polars and Seaborn
 ---
 
 - [Free Copy of Apache Iceberg: The Definitive Guide](https://hello.dremio.com/wp-apache-iceberg-the-definitive-guide-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=introiceberg&utm_content=alexmerced&utm_term=external_blog)

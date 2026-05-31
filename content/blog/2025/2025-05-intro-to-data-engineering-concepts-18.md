@@ -8,8 +8,7 @@ tags:
 - Databases
 - Data Lakes
 - Data Lakehouses
-title: Introduction to Data Engineering Concepts | The Power of Dremio in the Modern
-  Lakehouse
+title: Introduction to Data Engineering Concepts | The Power of Dremio in the Modern Lakehouse
 ---
 
 ## Free Resources  

@@ -2,8 +2,7 @@
 date: '2021-09-25T12:12:03.284Z'
 description: Graph Databases are Cool
 tags: []
-title: How to use Neo4j Graph Database in your Node Project (Express, Koa, Fastify,
-  etc.)
+title: How to use Neo4j Graph Database in your Node Project (Express, Koa, Fastify, etc.)
 ---
 
 If you haven't seen it before, I highly recommend first watch this video from fireship on [7 Different Database Paradigms](https://www.youtube.com/watch?v=W2Z7fbCLSTw).

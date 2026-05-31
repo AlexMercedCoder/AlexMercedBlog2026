@@ -2,8 +2,7 @@
 date: '2021-05-03T12:12:03.284Z'
 description: The Joys of Docker
 tags: []
-title: Using Docker & Docker Compose to Create an Express/Neo4J Dev Environment(Intro
-  to Graph Databases)
+title: Using Docker & Docker Compose to Create an Express/Neo4J Dev Environment(Intro to Graph Databases)
 ---
 
 ## Previous Content on Docker

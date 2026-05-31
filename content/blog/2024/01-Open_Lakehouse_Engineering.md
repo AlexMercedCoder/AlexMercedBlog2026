@@ -7,8 +7,7 @@ tags:
 - Data Lakehouse
 - Data Lake
 - Apache Iceberg
-title: Open Lakehouse Engineering/Apache Iceberg Lakehouse Engineering - A Directory
-  of Resources
+title: Open Lakehouse Engineering/Apache Iceberg Lakehouse Engineering - A Directory of Resources
 ---
 
 The concept of the **Open Lakehouse** has emerged as a beacon of flexibility and innovation. An Open Lakehouse represents a specialized form data lakehouse (bringing data warehouse like functionality/performance to data on a data lake), uniquely characterized by its commitment to open standards and technologies. At the core of this paradigm are tools like Apache Iceberg, Nessie, and Apache Arrow, which collectively empower organizations to build highly efficient, scalable, and interoperable data ecosystems.

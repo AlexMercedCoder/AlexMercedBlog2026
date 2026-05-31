@@ -2,15 +2,13 @@
 author: Alex Merced
 category: Data Engineering
 date: '2025-10-23'
-description: A curated guide to mastering Apache Iceberg, data lakehouse architectures,
-  and the emerging field of Agentic AI for data professionals.
+description: A curated guide to mastering Apache Iceberg, data lakehouse architectures, and the emerging field of Agentic AI for data professionals.
 tags:
 - Data Lakehouse
 - Data Engineering
 - Apache Iceberg
 - Apache Polaris
-title: 2025-2026 Guide to Learning about Apache Iceberg, Data Lakehouse & Agentic
-  AI
+title: 2025-2026 Guide to Learning about Apache Iceberg, Data Lakehouse & Agentic AI
 ---
 
 The data world is evolving fast. Just a few years ago, building a modern analytics stack meant stitching together tools, ETL pipelines, and compromises. Today, open standards like Apache Iceberg, modular architectures like the data lakehouse, and emerging patterns like Agentic AI are reshaping how teams store, manage, and use data.

@@ -2,16 +2,14 @@
 author: Alex Merced
 category: Data Engineering
 date: '2025-01-02'
-description: A personal story of how I built Pangolin Catalog over a holiday break
-  using an AI-powered IDE.
+description: A personal story of how I built Pangolin Catalog over a holiday break using an AI-powered IDE.
 tags:
 - data lakehouse
 - data engineering
 - apache iceberg
 - apache polaris
 - open source
-title: Building Pangolin - My Holiday Break, an AI IDE, and a Lakehouse Catalog for
-  the Curious
+title: Building Pangolin - My Holiday Break, an AI IDE, and a Lakehouse Catalog for the Curious
 ---
 
 **Get Data Lakehouse Books:**

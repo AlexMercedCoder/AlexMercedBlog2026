@@ -8,8 +8,7 @@ tags:
 - Databases
 - Data Lakes
 - Data Lakehouses
-title: Introduction to Data Engineering Concepts | Cloud Data Platforms and the Modern
-  Stack
+title: Introduction to Data Engineering Concepts | Cloud Data Platforms and the Modern Stack
 ---
 
 ## Free Resources  

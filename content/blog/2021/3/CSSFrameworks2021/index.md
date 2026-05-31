@@ -2,8 +2,7 @@
 date: '2021-03-28T12:12:03.284Z'
 description: Lots of them
 tags: []
-title: Ultimate 2021 List of CSS Frameworks and Component Libraries for Angular, React,
-  Vue and Svelte
+title: Ultimate 2021 List of CSS Frameworks and Component Libraries for Angular, React, Vue and Svelte
 ---
 
 Styling can be tricky and sometimes it's nice to have some handy CSS classes, Web Components or CSS Classes at the ready to create attractive responsive designs. Below I've aggregated some of the best options in many categories.

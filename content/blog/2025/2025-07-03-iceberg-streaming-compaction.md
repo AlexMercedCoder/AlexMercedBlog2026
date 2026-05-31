@@ -2,9 +2,7 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-07-29'
-description: Learn how to design fast, incremental compaction strategies in Apache
-  Iceberg to support high-throughput streaming pipelines without disrupting freshness
-  or performance.
+description: Learn how to design fast, incremental compaction strategies in Apache Iceberg to support high-throughput streaming pipelines without disrupting freshness or performance.
 tags:
 - Apache Iceberg
 - Data Optimization

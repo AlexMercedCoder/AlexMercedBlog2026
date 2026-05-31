@@ -6,8 +6,7 @@ description: The Evolving Data Lakehouse World
 tags:
 - data lakehouse
 - data engineering
-title: Why Data Analysts, Engineers, Architects and Scientists Should Care about Dremio
-  and Apache Iceberg
+title: Why Data Analysts, Engineers, Architects and Scientists Should Care about Dremio and Apache Iceberg
 ---
 
 - [Free Copy of Apache Iceberg: The Definitive Guide](https://hello.dremio.com/wp-apache-iceberg-the-definitive-guide-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=whypros&utm_content=alexmerced&utm_term=external_blog)

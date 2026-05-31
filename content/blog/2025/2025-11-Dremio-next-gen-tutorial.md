@@ -9,8 +9,7 @@ tags:
 - Apache Iceberg
 - Apache Polaris
 - Dremio
-title: Comprehensive Hands-on Walk Through of Dremio Cloud Next Gen (Hands-on with
-  Free Trial)
+title: Comprehensive Hands-on Walk Through of Dremio Cloud Next Gen (Hands-on with Free Trial)
 ---
 
 [Video Playlist of this Walkthough](https://www.youtube.com/playlist?list=PL-gIUf9e9CCvY0bcRBGu2SzFFR-yJGIB6)

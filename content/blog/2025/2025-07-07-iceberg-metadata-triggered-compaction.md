@@ -2,9 +2,7 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-08-26'
-description: Discover how to use Apache Iceberg's metadata tables to proactively detect
-  small files, bloated manifests, and table fragmentation - so you can trigger compaction
-  only when it's needed.
+description: Discover how to use Apache Iceberg's metadata tables to proactively detect small files, bloated manifests, and table fragmentation - so you can trigger compaction only when it's needed.
 tags:
 - Apache Iceberg
 - Metadata Tables

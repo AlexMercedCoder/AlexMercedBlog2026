@@ -2,9 +2,7 @@
 author: Alex Merced
 category: Data Engineering
 date: '2025-12-05'
-description: Discover DremioFrame and IceFrame, two new Python libraries that simplify
-  working with Dremio and Apache Iceberg. Learn how these tools streamline data management
-  and enhance productivity for modern data teams.
+description: Discover DremioFrame and IceFrame, two new Python libraries that simplify working with Dremio and Apache Iceberg. Learn how these tools streamline data management and enhance productivity for modern data teams.
 tags:
 - Dremio
 - Data Engineering

@@ -2,8 +2,7 @@
 author: Alex Merced
 category: Data Engineering
 date: '2025-10-14'
-description: 'What''s Coming in Apache Iceberg v4: A Deep Dive into the Future of
-  Open Table Formats'
+description: 'What''s Coming in Apache Iceberg v4: A Deep Dive into the Future of Open Table Formats'
 tags:
 - Data Lakehouse
 - Data Engineering

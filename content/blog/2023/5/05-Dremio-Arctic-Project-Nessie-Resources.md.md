@@ -7,8 +7,7 @@ tags:
 - data engineering
 - data lakehouse
 - dremio
-title: Resources for Learning more about Catalog level versioning with Project Nessie
-  & Dremio Arctic (Rollbacks, Branching, Tagging and Multi-Table Txns)
+title: Resources for Learning more about Catalog level versioning with Project Nessie & Dremio Arctic (Rollbacks, Branching, Tagging and Multi-Table Txns)
 ---
 
 Data Quality, Governance, Observability, and Disaster Recovery are issues that are still trying to discover best practices in the world of the data lakehouse. A new trend is rising, borrowing from the practices used by software developers to manage these issues with code bases. This trend is called "Data as Code". Many of the practices this trend is trying to bring to the Lakehouse include:

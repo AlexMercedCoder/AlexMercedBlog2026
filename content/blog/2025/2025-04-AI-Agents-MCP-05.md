@@ -2,15 +2,14 @@
 author: Alex Merced
 category: AI
 date: '2025-04-09'
-description: AI Agent Frameworks : Benefits and Limitations
+description: AI Agent Frameworks  – Benefits and Limitations
 tags:
 - AI
 - ML
 - Python
 - MCP
 - AI Agents
-title: A Journey from AI to LLMs and MCP - 5 - AI Agent Frameworks : Benefits and
-  Limitations
+title: A Journey from AI to LLMs and MCP - 5 - AI Agent Frameworks  – Benefits and Limitations
 ---
 
 ## Free Resources  

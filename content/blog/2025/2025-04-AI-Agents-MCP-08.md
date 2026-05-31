@@ -2,15 +2,14 @@
 author: Alex Merced
 category: AI
 date: '2025-04-12'
-description: Resources in MCP : Serving Relevant Data Securely to LLMs
+description: Resources in MCP  – Serving Relevant Data Securely to LLMs
 tags:
 - AI
 - ML
 - Python
 - MCP
 - AI Agents
-title: A Journey from AI to LLMs and MCP - 8 - Resources in MCP : Serving Relevant
-  Data Securely to LLMs
+title: A Journey from AI to LLMs and MCP - 8 - Resources in MCP  – Serving Relevant Data Securely to LLMs
 ---
 
 ## Free Resources  

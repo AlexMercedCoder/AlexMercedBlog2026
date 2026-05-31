@@ -7,8 +7,7 @@ tags:
 - data lakehouse
 - data engineering
 - Python
-title: Exploring Data Operations with PySpark, Pandas, DuckDB, Polars, and DataFusion
-  in a Python Notebook
+title: Exploring Data Operations with PySpark, Pandas, DuckDB, Polars, and DataFusion in a Python Notebook
 ---
 
 - [Apache Iceberg Crash Course: What is a Data Lakehouse and a Table Format?](https://www.dremio.com/blog/apache-iceberg-crash-course-what-is-a-data-lakehouse-and-a-table-format/?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=pythondata&utm_content=alexmerced&utm_term=external_blog)

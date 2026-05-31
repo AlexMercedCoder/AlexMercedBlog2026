@@ -2,15 +2,14 @@
 author: Alex Merced
 category: AI
 date: '2025-04-11'
-description: Under the Hood : The Architecture of MCP and Its Core Components
+description: Under the Hood  – The Architecture of MCP and Its Core Components
 tags:
 - AI
 - ML
 - Python
 - MCP
 - AI Agents
-title: A Journey from AI to LLMs and MCP - 7 - Under the Hood : The Architecture of
-  MCP and Its Core Components
+title: A Journey from AI to LLMs and MCP - 7 - Under the Hood  – The Architecture of MCP and Its Core Components
 ---
 
 # A Journey from AI to LLMs and MCP - 7 - Under the Hood : The Architecture of MCP and Its Core Components

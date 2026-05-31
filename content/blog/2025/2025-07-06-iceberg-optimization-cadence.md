@@ -2,8 +2,7 @@
 author: Alex Merced
 category: Apache Iceberg
 date: '2025-08-19'
-description: Learn how to design an effective schedule for compaction and snapshot
-  expiration in Apache Iceberg to balance cost, performance, and data freshness.
+description: Learn how to design an effective schedule for compaction and snapshot expiration in Apache Iceberg to balance cost, performance, and data freshness.
 tags:
 - Apache Iceberg
 - Table Optimization
