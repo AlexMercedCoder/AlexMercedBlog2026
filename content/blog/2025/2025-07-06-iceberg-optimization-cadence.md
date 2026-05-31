@@ -22,7 +22,7 @@ title: Designing the Ideal Cadence for Compaction and Snapshot Expiration
 
 # Designing the Ideal Cadence for Compaction and Snapshot Expiration
 
-In previous posts, we explored how compaction and snapshot expiration keep Apache Iceberg tables performant and lean. But these actions aren’t one-and-done—they need to be **scheduled strategically** to balance compute cost, data freshness, and operational safety.
+In previous posts, we explored how compaction and snapshot expiration keep Apache Iceberg tables performant and lean. But these actions aren’t one-and-done - they need to be **scheduled strategically** to balance compute cost, data freshness, and operational safety.
 
 In this post, we’ll look at how to design a **cadence** for compaction and snapshot expiration based on your workload patterns, data criticality, and infrastructure constraints.
 
@@ -89,7 +89,7 @@ Ideally:
 
 ## Monitoring and Adjusting Over Time
 
-Cadence isn’t static—adjust based on:
+Cadence isn’t static - adjust based on:
 - Changing ingestion rates
 - New query patterns
 - Storage trends
@@ -104,4 +104,4 @@ An effective compaction and snapshot expiration cadence keeps your Iceberg table
 - Respect operational and governance needs
 - Be flexible and monitorable
 
-In the next post, we’ll look at how to use **Iceberg’s metadata tables** to dynamically determine *when* optimization is needed—so you can make it event-driven instead of fixed-schedule.
+In the next post, we’ll look at how to use **Iceberg’s metadata tables** to dynamically determine *when* optimization is needed - so you can make it event-driven instead of fixed-schedule.

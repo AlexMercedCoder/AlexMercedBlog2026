@@ -9,7 +9,7 @@ tags:
 - Data Lakehouse
 - Optimization
 - Table Maintenance
-title: The Cost of Neglect — How Apache Iceberg Tables Degrade Without Optimization
+title: The Cost of Neglect : How Apache Iceberg Tables Degrade Without Optimization
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  
@@ -19,15 +19,15 @@ title: The Cost of Neglect — How Apache Iceberg Tables Degrade Without Optimiz
 - **[Iceberg Lakehouse Engineering Video Playlist](https://youtube.com/playlist?list=PLsLAVBjQJO0p0Yq1fLkoHvt2lEJj5pcYe&si=WTSnqjXZv6Glkc3y)**  
 - **[Ultimate Apache Iceberg Resource Guide](https://medium.com/data-engineering-with-dremio/ultimate-directory-of-apache-iceberg-resources-e3e02efac62e)** 
 
-# The Cost of Neglect — How Apache Iceberg Tables Degrade Without Optimization
+# The Cost of Neglect : How Apache Iceberg Tables Degrade Without Optimization
 
-Apache Iceberg offers powerful features for managing large-scale datasets with reliability, versioning, and schema evolution. But like any robust system, Iceberg tables require care and maintenance. Without ongoing optimization, even the most well-designed Iceberg table can degrade—causing query slowdowns, ballooning metadata, and rising infrastructure costs.
+Apache Iceberg offers powerful features for managing large-scale datasets with reliability, versioning, and schema evolution. But like any robust system, Iceberg tables require care and maintenance. Without ongoing optimization, even the most well-designed Iceberg table can degrade - causing query slowdowns, ballooning metadata, and rising infrastructure costs.
 
 This post kicks off a 10-part series on **Apache Iceberg Table Optimization**, beginning with a look at *what happens when you don’t optimize* and why it matters.
 
 ## Why Do Iceberg Tables Degrade?
 
-At its core, Iceberg uses a **table metadata layer** to track the location and structure of physical files (data files, manifests, and manifest lists). Over time, various ingestion patterns—batch loads, streaming micro-batches, late-arriving records—can lead to an accumulation of inefficiencies:
+At its core, Iceberg uses a **table metadata layer** to track the location and structure of physical files (data files, manifests, and manifest lists). Over time, various ingestion patterns: batch loads, streaming micro-batches, late-arriving records, can lead to an accumulation of inefficiencies:
 
 ### 1. **Small Files Problem**
 Each write operation typically creates a new data file. In streaming or frequent ingestion pipelines, this can lead to thousands of tiny files that:
@@ -74,6 +74,6 @@ Most of these issues stem from a lack of:
 
 ## Looking Ahead
 
-The good news is that Apache Iceberg provides powerful tools to fix these issues—with the right strategy. In the next posts, we’ll break down each optimization method, starting with standard compaction and how to implement it effectively.
+The good news is that Apache Iceberg provides powerful tools to fix these issues - with the right strategy. In the next posts, we’ll break down each optimization method, starting with standard compaction and how to implement it effectively.
 
-Stay tuned for Part 2: **The Basics of Compaction — Bin Packing Your Data for Efficiency**
+Stay tuned for Part 2: **The Basics of Compaction : Bin Packing Your Data for Efficiency**

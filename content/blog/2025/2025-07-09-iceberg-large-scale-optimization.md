@@ -11,7 +11,7 @@ tags:
 - Parallelism
 - Resilience
 - Data Engineering
-title: Managing Large-Scale Optimizations — Parallelism, Checkpointing, and Fail Recovery
+title: Managing Large-Scale Optimizations : Parallelism, Checkpointing, and Fail Recovery
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  
@@ -21,9 +21,9 @@ title: Managing Large-Scale Optimizations — Parallelism, Checkpointing, and Fa
 - **[Iceberg Lakehouse Engineering Video Playlist](https://youtube.com/playlist?list=PLsLAVBjQJO0p0Yq1fLkoHvt2lEJj5pcYe&si=WTSnqjXZv6Glkc3y)**  
 - **[Ultimate Apache Iceberg Resource Guide](https://medium.com/data-engineering-with-dremio/ultimate-directory-of-apache-iceberg-resources-e3e02efac62e)** 
 
-# Managing Large-Scale Optimizations — Parallelism, Checkpointing, and Fail Recovery
+# Managing Large-Scale Optimizations : Parallelism, Checkpointing, and Fail Recovery
 
-When working with Apache Iceberg at scale, optimization jobs can become heavy and time-consuming. Rewriting thousands of files, scanning massive partitions, and coordinating metadata updates requires careful execution planning—especially in environments with limited compute or strict SLAs.
+When working with Apache Iceberg at scale, optimization jobs can become heavy and time-consuming. Rewriting thousands of files, scanning massive partitions, and coordinating metadata updates requires careful execution planning - especially in environments with limited compute or strict SLAs.
 
 In this post, we’ll look at strategies for making compaction and metadata cleanup operations **scalable, resilient, and efficient**, including:
 - Tuning parallelism
@@ -101,7 +101,7 @@ Iceberg supports partial progress mode in Spark:
 ```scala
 .option("partial-progress.enabled", "true")
 ```
-This allows successfully compacted partitions to commit, even if others fail—making retries cheaper and safer.
+This allows successfully compacted partitions to commit, even if others fail, making retries cheaper and safer.
 
 In Flink, this is handled more granularly via stateful streaming checkpointing.
 
@@ -156,4 +156,4 @@ Scaling Iceberg optimization jobs requires thoughtful execution planning:
 
 - Automate retries and monitor outcomes
 
-In the final post of this series, we’ll bring it all together—showing how to build a fully autonomous optimization pipeline using orchestration, metadata triggers, and smart defaults.
+In the final post of this series, we’ll bring it all together - showing how to build a fully autonomous optimization pipeline using orchestration, metadata triggers, and smart defaults.

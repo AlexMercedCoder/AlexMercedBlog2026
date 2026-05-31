@@ -14,7 +14,7 @@ cover_image: >-
   /assets/images/2026/semantic_layer_seo/05-why-ai-fails-without-semantic-layer/ai-hallucination.png
 draft: false
 ---
-![AI with vs without a semantic layer — failure modes and fixes](/assets/images/2026/semantic_layer_seo/05-why-ai-fails-without-semantic-layer/ai-semantic-layer.png)
+![AI with vs without a semantic layer : failure modes and fixes](/assets/images/2026/semantic_layer_seo/05-why-ai-fails-without-semantic-layer/ai-semantic-layer.png)
 
 Your team builds an AI agent. It connects to your data warehouse. A product manager types "What was revenue last quarter?" and gets a number. The number is wrong. Nobody knows it's wrong until Finance runs the same query manually and gets a different result.
 
@@ -30,7 +30,7 @@ A semantic layer provides those definitions. Without one, AI analytics is a demo
 
 ## Five Ways AI Goes Wrong Without a Semantic Layer
 
-![AI agent confused by raw data — hallucinating metrics and joins](/assets/images/2026/semantic_layer_seo/05-why-ai-fails-without-semantic-layer/ai-hallucination.png)
+![AI agent confused by raw data : hallucinating metrics and joins](/assets/images/2026/semantic_layer_seo/05-why-ai-fails-without-semantic-layer/ai-hallucination.png)
 
 ### Metric Hallucination
 

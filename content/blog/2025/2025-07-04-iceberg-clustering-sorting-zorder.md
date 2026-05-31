@@ -11,7 +11,7 @@ tags:
 - Sorting
 - Z-order
 - Query Optimization
-title: Smarter Data Layout — Sorting and Clustering Iceberg Tables
+title: Smarter Data Layout : Sorting and Clustering Iceberg Tables
 ---
 
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=optimization_blogs&utm_content=alexmerced&utm_term=external_blog)**  
@@ -21,7 +21,7 @@ title: Smarter Data Layout — Sorting and Clustering Iceberg Tables
 - **[Iceberg Lakehouse Engineering Video Playlist](https://youtube.com/playlist?list=PLsLAVBjQJO0p0Yq1fLkoHvt2lEJj5pcYe&si=WTSnqjXZv6Glkc3y)**  
 - **[Ultimate Apache Iceberg Resource Guide](https://medium.com/data-engineering-with-dremio/ultimate-directory-of-apache-iceberg-resources-e3e02efac62e)** 
 
-# Smarter Data Layout — Sorting and Clustering Iceberg Tables
+# Smarter Data Layout : Sorting and Clustering Iceberg Tables
 
 So far in this series, we've focused on optimizing file sizes to reduce metadata and scan overhead. But **how data is laid out within those files** can be just as important as the size of the files themselves.
 
@@ -29,7 +29,7 @@ In this post, we'll explore **clustering techniques in Apache Iceberg**, includi
 
 ## Why Clustering Matters
 
-Imagine a query that filters on a `customer_id`. If your data is randomly distributed, every file needs to be scanned. But if the data is sorted or clustered, the engine can skip over entire files or row groups — reducing I/O and speeding up execution.
+Imagine a query that filters on a `customer_id`. If your data is randomly distributed, every file needs to be scanned. But if the data is sorted or clustered, the engine can skip over entire files or row groups , reducing I/O and speeding up execution.
 
 Clustering benefits:
 - Fewer files and rows scanned
