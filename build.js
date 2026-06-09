@@ -571,6 +571,18 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     ${JSON.stringify(jsonLd)}
     </script>
 
+    <!-- WebSite Schema (back-reference to alexmerced.com) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Alex Merced's Blog",
+      "url": "https://alexmerced.blog",
+      "author": { "@id": "https://alexmerced.com/#alexmerced" },
+      "publisher": { "@id": "https://alexmerced.com/#alexmerced" }
+    }
+    </script>
+
     ${config.custom_head_html || ''}
 
     <style>
@@ -901,7 +913,7 @@ async function build() {
                 const postHtml = renderLayout(`
                     <article>
                         <h1>${post.title}</h1>
-                        <p class="meta"><small>${post.date} | ${post.readingTime} | ${post.tags ? post.tags.join(', ') : ''}</small></p>
+                        <p class="meta"><small>By <a href="https://alexmerced.com/about" style="color:inherit;">Alex Merced</a> | ${post.date} | ${post.readingTime} | ${post.tags ? post.tags.join(', ') : ''}</small></p>
                         <img src="${post.coverImage}" alt="Cover Image" style="margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
                         <div class="content">${post.html}</div>
                         ${relatedHtml}
@@ -1129,6 +1141,26 @@ ${dynamicItems}
     const robotsTxt = `User-agent: *
 Allow: /
 Allow: /llms.txt
+
+# AI crawler allowances
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: ${domain}/sitemap.xml`;
     await fs.outputFile(path.join(DIST_DIR, 'robots.txt'), robotsTxt);
      console.log('🤖 Built robots.txt');
