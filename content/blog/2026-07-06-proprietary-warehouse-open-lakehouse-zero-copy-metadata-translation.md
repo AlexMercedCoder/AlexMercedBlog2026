@@ -15,7 +15,7 @@ The best 2026 playbook is not built around a slogan. It is built around staged m
 
 That is the Dremio-positive direction: migration should not end with data trapped in a different proprietary box. It should end with an open lakehouse that supports many engines, governed semantic access, and fast analytical workloads.
 
-![Papercut staged migration from proprietary warehouse through metadata translation to open Iceberg lakehouse](./diagram-1.png)
+![Papercut staged migration from proprietary warehouse through metadata translation to open Iceberg lakehouse](/assets/blog/week-2026-07-06/proprietary-warehouse-open-lakehouse-zero-copy-metadata-translation-diagram-1.png)
 
 ## Why Warehouse Migrations Fail
 
@@ -93,7 +93,7 @@ The seventh stage is optimization. Add acceleration, compaction, table maintenan
 
 The eighth stage is retirement. Turn off old jobs and warehouses only after dependencies are confirmed.
 
-![Papercut validation loop showing source snapshot, metadata translation, Iceberg registration, comparison, reconciliation, and rollback](./diagram-2.png)
+![Papercut validation loop showing source snapshot, metadata translation, Iceberg registration, comparison, reconciliation, and rollback](/assets/blog/week-2026-07-06/proprietary-warehouse-open-lakehouse-zero-copy-metadata-translation-diagram-2.png)
 
 ## Validation Is the Migration
 
@@ -153,7 +153,7 @@ Temporary or low-use tables may be retired.
 
 The goal is not ideological zero-copy. The goal is an intentional reduction in unnecessary copying.
 
-![Papercut open lakehouse target state with Iceberg tables, catalog, query federation, semantic layer, BI, notebooks, and agents](./diagram-3.png)
+![Papercut open lakehouse target state with Iceberg tables, catalog, query federation, semantic layer, BI, notebooks, and agents](/assets/blog/week-2026-07-06/proprietary-warehouse-open-lakehouse-zero-copy-metadata-translation-diagram-3.png)
 
 ## The Dremio-Positive Reading
 
