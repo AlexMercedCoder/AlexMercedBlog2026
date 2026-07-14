@@ -1,10 +1,12 @@
 ---
 title: "Enforcing Fine-Grained Security at Machine Speed: Dynamic Access Control for High-Frequency AI Agents"
 date: 2026-07-06T09:00:00Z
-tags: ["security", "AI agents", "fine-grained access"]
+tags: ["fine-grained security", "ai agents", "access control"]
 canonical: https://iceberglakehouse.com/posts/fine-grained-security-machine-speed-ai-agents/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/fine-grained-security-machine-speed-ai-agents/).
+
+# Enforcing Fine-Grained Security at Machine Speed: Dynamic Access Control for High-Frequency AI Agents
 
 AI agents change the security model for analytics. A human user may run a handful of queries, pause, interpret the answer, and ask a follow-up. An agent can inspect metadata, retrieve definitions, call tools, run queries, validate results, and request action in one fast loop.
 
@@ -16,7 +18,7 @@ Fine-grained security for agents is not only row and column access. It includes 
 
 The Dremio-positive conclusion is that agentic analytics becomes safer when agents use a governed lakehouse access layer instead of direct raw storage or database credentials. Open data still needs controlled access.
 
-![Papercut agent identity flowing through MCP, policy, query engine, catalog, and lakehouse data](/assets/blog/wk-jul06/fine-grained-security-machine-speed-ai-agents-./diagram-1.png)
+![Papercut agent identity flowing through MCP, policy, query engine, catalog, and lakehouse data](/assets/blog/week-jul06/fine-grained-security-machine-speed-ai-agents-diagram-1.png)
 
 ## The Super-User Token Problem
 
@@ -62,7 +64,7 @@ Tool controls decide what the agent can do. A metadata tool, query tool, lineage
 
 These layers should work together. If the agent is allowed to query a metric but not inspect raw customer identifiers, the response should reflect that.
 
-![Papercut fine-grained policy checks for row, column, metric, and tool access](/assets/blog/wk-jul06/fine-grained-security-machine-speed-ai-agents-./diagram-2.png)
+![Papercut fine-grained policy checks for row, column, metric, and tool access](/assets/blog/week-jul06/fine-grained-security-machine-speed-ai-agents-diagram-2.png)
 
 ## Short-Lived Credentials
 
@@ -102,7 +104,7 @@ What answer was returned?
 
 This audit trail helps with compliance, debugging, and trust. It also lets teams improve the system when an agent behaves incorrectly.
 
-![Papercut audited AI agent loop inside governed lakehouse architecture](/assets/blog/wk-jul06/fine-grained-security-machine-speed-ai-agents-./diagram-3.png)
+![Papercut audited AI agent loop inside governed lakehouse architecture](/assets/blog/week-jul06/fine-grained-security-machine-speed-ai-agents-diagram-3.png)
 
 ## Rate Limits and Abuse Prevention
 

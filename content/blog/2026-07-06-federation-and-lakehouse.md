@@ -1,10 +1,12 @@
 ---
 title: "Federation and the Lakehouse: Two Roads to Unified Data Access, and How to Know Which One to Take"
 date: 2026-07-06T09:00:00Z
-tags: ["query federation", "lakehouse", "data unification"]
+tags: ["data federation", "data lakehouse", "unified access"]
 canonical: https://iceberglakehouse.com/posts/federation-and-lakehouse/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/federation-and-lakehouse/).
+
+# Federation and the Lakehouse: Two Roads to Unified Data Access, and How to Know Which One to Take
 
 *By Alex Merced, Head of Developer Relations at Dremio*
 

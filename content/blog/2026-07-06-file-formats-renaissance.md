@@ -1,10 +1,12 @@
 ---
 title: "The File Format Renaissance: Parquet, Lance, Vortex, Nimble, BtrBlocks, and the New Physics of Columnar Storage"
 date: 2026-07-06T09:00:00Z
-tags: ["file formats", "Parquet", "Lance", "Vortex", "columnar"]
+tags: ["parquet", "lance", "vortex", "columnar storage"]
 canonical: https://iceberglakehouse.com/posts/file-formats-renaissance/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/file-formats-renaissance/).
+
+# The File Format Renaissance: Parquet, Lance, Vortex, Nimble, BtrBlocks, and the New Physics of Columnar Storage
 
 *By Alex Merced, Head of Developer Relations at Dremio*
 

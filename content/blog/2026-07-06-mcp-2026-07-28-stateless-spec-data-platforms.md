@@ -1,10 +1,12 @@
 ---
 title: "The 2026-07-28 Model Context Protocol Release Candidate: What the Stateless Spec Means for Data Platforms"
 date: 2026-07-06T09:00:00Z
-tags: ["MCP", "AI agents", "data platforms", "stateless"]
+tags: ["model context protocol", "mcp", "data platforms"]
 canonical: https://iceberglakehouse.com/posts/mcp-2026-07-28-stateless-spec-data-platforms/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/mcp-2026-07-28-stateless-spec-data-platforms/).
+
+# The 2026-07-28 Model Context Protocol Release Candidate: What the Stateless Spec Means for Data Platforms
 
 The date in this topic matters. Today is July 6, 2026. A release candidate dated July 28, 2026 is still in the future. That means this article should not describe the release candidate as published or summarize details that are not public yet.
 
@@ -14,7 +16,7 @@ The important point is that MCP is an interface layer. It can standardize how ag
 
 That is why the Dremio-positive conclusion is architectural. MCP can make agent interfaces more standard, but an Agentic Lakehouse supplies the governed data context those interfaces need.
 
-![Papercut MCP host, client, stateless server pool, and lakehouse resources architecture](/assets/blog/wk-jul06/mcp-2026-07-28-stateless-spec-data-platforms-./diagram-1.png)
+![Papercut MCP host, client, stateless server pool, and lakehouse resources architecture](/assets/blog/week-jul06/mcp-2026-07-28-stateless-spec-data-platforms-diagram-1.png)
 
 ## What MCP Already Standardizes
 
@@ -56,7 +58,7 @@ Stateless MCP patterns should make identity propagation explicit. The server sho
 
 This is where lakehouse governance becomes central. The tool call should flow through catalog, semantic, and query controls rather than bypass them.
 
-![Papercut tool call lifecycle with identity, consent, policy, query, result, and audit](/assets/blog/wk-jul06/mcp-2026-07-28-stateless-spec-data-platforms-./diagram-2.png)
+![Papercut tool call lifecycle with identity, consent, policy, query, result, and audit](/assets/blog/week-jul06/mcp-2026-07-28-stateless-spec-data-platforms-diagram-2.png)
 
 ## Auditability at Tool Speed
 
@@ -114,7 +116,7 @@ Above that are MCP tools, APIs, and agent interfaces.
 
 The order matters. MCP should expose governed capabilities from the layers below it. It should not become a shortcut around them.
 
-![Papercut Agentic Lakehouse stack with MCP interface layer above governed tools, semantic layer, query, catalog, Iceberg tables, and storage](/assets/blog/wk-jul06/mcp-2026-07-28-stateless-spec-data-platforms-./diagram-3.png)
+![Papercut Agentic Lakehouse stack with MCP interface layer above governed tools, semantic layer, query, catalog, Iceberg tables, and storage](/assets/blog/week-jul06/mcp-2026-07-28-stateless-spec-data-platforms-diagram-3.png)
 
 ## Why Dremio Fits This Pattern
 

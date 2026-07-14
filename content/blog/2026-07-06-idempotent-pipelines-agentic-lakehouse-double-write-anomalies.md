@@ -1,10 +1,12 @@
 ---
 title: "Designing Idempotent Pipelines in the Agentic Lakehouse: Eliminating Double-Write Anomalies"
 date: 2026-07-06T09:00:00Z
-tags: ["idempotency", "AI agents", "pipelines", "lakehouse"]
+tags: ["idempotent pipelines", "agentic lakehouse", "double-write"]
 canonical: https://iceberglakehouse.com/posts/idempotent-pipelines-agentic-lakehouse-double-write-anomalies/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/idempotent-pipelines-agentic-lakehouse-double-write-anomalies/).
+
+# Designing Idempotent Pipelines in the Agentic Lakehouse: Eliminating Double-Write Anomalies
 
 Agents retry. Networks fail. Jobs time out after doing some work. APIs return ambiguous responses. Schedulers run the same workflow twice. A human clicks rerun. A model decides to repair a pipeline that is already being repaired.
 
@@ -16,7 +18,7 @@ Agentic pipelines raise the stakes because automated systems can retry and chain
 
 The Dremio-positive conclusion is that reliable agentic lakehouse operations need open tables plus governed orchestration, semantic validation, and queryable evidence. The table format gives a foundation. The platform turns it into an operating model.
 
-![Papercut duplicate write failure path versus idempotent retry path in a lakehouse pipeline](/assets/blog/wk-jul06/idempotent-pipelines-agentic-lakehouse-double-write-anomalies-./diagram-1.png)
+![Papercut duplicate write failure path versus idempotent retry path in a lakehouse pipeline](/assets/blog/week-jul06/idempotent-pipelines-agentic-lakehouse-double-write-anomalies-diagram-1.png)
 
 ## Table Transactions Are Not Workflow Idempotency
 
@@ -56,7 +58,7 @@ For append workflows, records can include the operation ID or a deterministic ev
 
 Without a stable operation ID, retries become guesswork.
 
-![Papercut operation ID and intent log pattern for idempotent lakehouse pipelines](/assets/blog/wk-jul06/idempotent-pipelines-agentic-lakehouse-double-write-anomalies-./diagram-2.png)
+![Papercut operation ID and intent log pattern for idempotent lakehouse pipelines](/assets/blog/week-jul06/idempotent-pipelines-agentic-lakehouse-double-write-anomalies-diagram-2.png)
 
 ## Intent Logs
 
@@ -84,7 +86,7 @@ Iceberg snapshots help because publication can be represented as a new table sta
 
 For agentic pipelines, validation should include semantic checks. Did the business metric change within expected bounds? Did the row count match the source? Did duplicate keys appear? Did lineage update?
 
-![Papercut validation loop over Iceberg snapshots and semantic metrics](/assets/blog/wk-jul06/idempotent-pipelines-agentic-lakehouse-double-write-anomalies-./diagram-3.png)
+![Papercut validation loop over Iceberg snapshots and semantic metrics](/assets/blog/week-jul06/idempotent-pipelines-agentic-lakehouse-double-write-anomalies-diagram-3.png)
 
 ## External Side Effects
 

@@ -1,10 +1,12 @@
 ---
 title: "The Who, What, and Why of Semantic Layers: The Layer That Decides Whether Your Numbers Can Be Trusted"
 date: 2026-07-06T09:00:00Z
-tags: ["semantic layer", "data engineering", "AI agents"]
+tags: ["semantic layers", "analytics", "data governance"]
 canonical: https://iceberglakehouse.com/posts/who-what-why-semantic-layers/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/who-what-why-semantic-layers/).
+
+# The Who, What, and Why of Semantic Layers: The Layer That Decides Whether Your Numbers Can Be Trusted
 
 *By Alex Merced, Head of Developer Relations at Dremio*
 

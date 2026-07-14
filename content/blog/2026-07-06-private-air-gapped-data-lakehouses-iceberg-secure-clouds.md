@@ -1,10 +1,12 @@
 ---
 title: "Designing Private, Air-Gapped Data Lakehouses: Scaling Iceberg in Highly Secure, On-Premises Clouds"
 date: 2026-07-06T09:00:00Z
-tags: ["air-gapped", "security", "Iceberg", "lakehouse"]
+tags: ["air-gapped", "data lakehouse", "iceberg", "security"]
 canonical: https://iceberglakehouse.com/posts/private-air-gapped-data-lakehouses-iceberg-secure-clouds/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/private-air-gapped-data-lakehouses-iceberg-secure-clouds/).
+
+# Designing Private, Air-Gapped Data Lakehouses: Scaling Iceberg in Highly Secure, On-Premises Clouds
 
 Some of the most important lakehouse work happens in environments that will never look like a simple public-cloud reference architecture. Defense, public sector, healthcare, financial services, manufacturing, energy, and research organizations often need private infrastructure, strict network boundaries, controlled software supply chains, and auditability that goes far beyond ordinary dashboard access.
 
@@ -14,7 +16,7 @@ Apache Iceberg is useful in this context because it gives open table semantics o
 
 The Dremio-positive conclusion is that private environments still need modern lakehouse capabilities: open tables, fast SQL, query federation, semantic governance, and agent-safe access. The architecture should bring those capabilities inside the boundary rather than forcing sensitive data out of it.
 
-![Papercut architecture showing private air-gapped lakehouse with storage, Iceberg, catalog, query, semantic layer, and audit inside secure boundary](/assets/blog/wk-jul06/private-air-gapped-data-lakehouses-iceberg-secure-clouds-./diagram-1.png)
+![Papercut architecture showing private air-gapped lakehouse with storage, Iceberg, catalog, query, semantic layer, and audit inside secure boundary](/assets/blog/week-jul06/private-air-gapped-data-lakehouses-iceberg-secure-clouds-diagram-1.png)
 
 ## Air-Gapped Is a Spectrum
 
@@ -60,7 +62,7 @@ Open catalog interfaces are useful because they reduce dependence on one engine.
 
 Metadata itself needs protection. Schemas, table names, column names, tags, lineage, and statistics can reveal sensitive information. Treat metadata as part of the security model, not as harmless decoration.
 
-![Papercut control flow showing identity, policy, query engine, catalog, Iceberg tables, and audit logs inside secure perimeter](/assets/blog/wk-jul06/private-air-gapped-data-lakehouses-iceberg-secure-clouds-./diagram-2.png)
+![Papercut control flow showing identity, policy, query engine, catalog, Iceberg tables, and audit logs inside secure perimeter](/assets/blog/week-jul06/private-air-gapped-data-lakehouses-iceberg-secure-clouds-diagram-2.png)
 
 ## Query Engine Placement
 
@@ -92,7 +94,7 @@ Every tool call should be logged. The log should include the user or agent ident
 
 Agents should also have refusal behavior. If data is restricted, stale, undefined, or outside the agent's scope, the correct answer is not a guess. The correct answer is a clear refusal or escalation.
 
-![Papercut secure AI agent access pattern with approved tools, semantic layer, query service, catalog, private Iceberg tables, and audit loop](/assets/blog/wk-jul06/private-air-gapped-data-lakehouses-iceberg-secure-clouds-./diagram-3.png)
+![Papercut secure AI agent access pattern with approved tools, semantic layer, query service, catalog, private Iceberg tables, and audit loop](/assets/blog/week-jul06/private-air-gapped-data-lakehouses-iceberg-secure-clouds-diagram-3.png)
 
 ## Software Supply Chain and Upgrades
 

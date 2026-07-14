@@ -1,10 +1,12 @@
 ---
 title: "Personal Context vs. Shared Context: A Deep Dive Into How Humans and Organizations Should Feed Their AI Agents"
 date: 2026-07-06T09:00:00Z
-tags: ["AI agents", "context", "personal knowledge"]
+tags: ["personal context", "shared context", "ai agents"]
 canonical: https://iceberglakehouse.com/posts/personal-vs-shared-context/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/personal-vs-shared-context/).
+
+# Personal Context vs. Shared Context: A Deep Dive Into How Humans and Organizations Should Feed Their AI Agents
 
 *By Alex Merced, Head of Developer Relations at Dremio*
 

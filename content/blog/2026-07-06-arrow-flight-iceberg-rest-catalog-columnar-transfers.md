@@ -1,10 +1,12 @@
 ---
 title: "High-Performance Columnar Transfers: Combining Apache Arrow Flight and Iceberg REST Catalogs"
 date: 2026-07-06T09:00:00Z
-tags: ["Apache Arrow", "Apache Iceberg", "REST Catalog", "columnar"]
+tags: ["arrow flight", "iceberg rest catalog", "columnar transfers"]
 canonical: https://iceberglakehouse.com/posts/arrow-flight-iceberg-rest-catalog-columnar-transfers/
 ---
 > **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/arrow-flight-iceberg-rest-catalog-columnar-transfers/).
+
+# High-Performance Columnar Transfers: Combining Apache Arrow Flight and Iceberg REST Catalogs
 
 Modern lakehouse architecture is easier to reason about when you separate two questions. The first question is how a system discovers and governs a table. The second question is how data moves once a query has something to return.
 
@@ -16,7 +18,7 @@ The open lakehouse is moving in the opposite direction. Iceberg standardizes tab
 
 That is a healthy direction for analytics, BI, data science, and AI agents.
 
-![Papercut architecture showing REST catalog control plane and Arrow Flight data plane](/assets/blog/wk-jul06/arrow-flight-iceberg-rest-catalog-columnar-transfers-./diagram-1.png)
+![Papercut architecture showing REST catalog control plane and Arrow Flight data plane](/assets/blog/week-jul06/arrow-flight-iceberg-rest-catalog-columnar-transfers-diagram-1.png)
 
 ## Control Plane and Data Plane
 
@@ -77,7 +79,7 @@ The useful architecture is not "REST Catalog plus Flight equals one product." It
 
 That composability has practical benefits. A catalog can evolve without forcing every client to change its result transport. A transport service can improve throughput without changing table metadata semantics. Query engines can focus on planning and execution while using open protocols at the edges. Clients can consume columnar results without being tied to one storage engine's private wire format.
 
-![Papercut query lifecycle showing catalog lookup, authorization, planning, columnar transfer, and result use](/assets/blog/wk-jul06/arrow-flight-iceberg-rest-catalog-columnar-transfers-./diagram-2.png)
+![Papercut query lifecycle showing catalog lookup, authorization, planning, columnar transfer, and result use](/assets/blog/week-jul06/arrow-flight-iceberg-rest-catalog-columnar-transfers-diagram-2.png)
 
 ## Where This Helps BI, Notebooks, and Agents
 
@@ -133,7 +135,7 @@ This does not mean every implementation is interchangeable. Real systems differ 
 
 For architects, the key question is not "Is every layer open?" The better question is "Can I change or add engines, clients, catalogs, and governance services without rebuilding my whole data platform?" If the answer is yes, the architecture is healthier.
 
-![Papercut stack showing storage, Iceberg, REST catalog, query engine, Arrow Flight, semantic layer, and clients](/assets/blog/wk-jul06/arrow-flight-iceberg-rest-catalog-columnar-transfers-./diagram-3.png)
+![Papercut stack showing storage, Iceberg, REST catalog, query engine, Arrow Flight, semantic layer, and clients](/assets/blog/week-jul06/arrow-flight-iceberg-rest-catalog-columnar-transfers-diagram-3.png)
 
 ## A Practical Implementation Pattern
 
