@@ -112,7 +112,16 @@ async function generateCoverImage(title, slug, theme) {
     
     const filePath = path.join(dir, `${slug}.svg`);
     await fs.writeFile(filePath, svg);
-    return `/assets/covers/${slug}.svg`;
+
+    // Convert to PNG for OG card compatibility (many crawlers ignore SVG og:image)
+    try {
+        const { execSync } = require('child_process');
+        execSync(`convert -background none "${filePath}" "${path.join(dir, `${slug}.png`)}"`, { stdio: 'ignore' });
+        await fs.remove(filePath);
+        return `/assets/covers/${slug}.png`;
+    } catch (e) {
+        return `/assets/covers/${slug}.svg`;
+    }
 }
 
 function calculateReadingTime(content) {
@@ -481,7 +490,9 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     const fullTitle = `${pageTitle} | ${config.site_title}`;
     const description = seo.description || config.site_description;
     const url = seo.path ? `${config.domain}${seo.path}` : config.domain;
-    const image = seo.image ? (seo.image.startsWith('http') ? seo.image : `${config.domain}${seo.image}`) : '';
+    const image = seo.image
+        ? (seo.image.startsWith('http') ? seo.image : `${config.domain}${seo.image}`)
+        : `${config.domain}/og-image.png`;
     const type = seo.type || 'website';
     const publishedTime = seo.date ? new Date(seo.date).toISOString() : '';
     const modifiedTime = seo.updatedDate ? new Date(seo.updatedDate).toISOString() : publishedTime;
