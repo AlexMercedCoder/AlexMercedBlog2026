@@ -2,7 +2,9 @@
 title: "Row vs. Column: How Storage Layout Shapes Everything"
 date: 2026-04-29T13:01:00Z
 tags: ["query-engine", "database"]
----\n<!-- Meta Description: Row stores keep records together for fast transactions. Column stores keep field values together for fast analytics. Here is how each layout works and when to use it. -->
+---
+
+<!-- Meta Description: Row stores keep records together for fast transactions. Column stores keep field values together for fast analytics. Here is how each layout works and when to use it. -->
 <!-- Primary Keyword: columnar vs row storage -->
 <!-- Secondary Keywords: column-oriented database, row store performance, data storage layout -->
 

@@ -2,7 +2,9 @@
 title: "How Query Engines Think: The Tradeoffs Behind Every Data System"
 date: 2026-04-29T13:00:00Z
 tags: ["query-engine", "database"]
----\n<!-- Meta Description: Every database is a collection of engineering tradeoffs. Learn the 9 design decisions that shape how query engines store, index, and process your data. -->
+---
+
+<!-- Meta Description: Every database is a collection of engineering tradeoffs. Learn the 9 design decisions that shape how query engines store, index, and process your data. -->
 <!-- Primary Keyword: query engine design -->
 <!-- Secondary Keywords: database tradeoffs, query optimization, OLTP vs OLAP -->
 
