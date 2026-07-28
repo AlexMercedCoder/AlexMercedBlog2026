@@ -642,6 +642,7 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     </main>
     <footer>
         <p>&copy; ${new Date().getFullYear()} ${config.author_name}. Powered by SoloPlatform.</p>
+        <p style="font-size:0.8rem;opacity:0.7;margin-top:0.25rem;">The views, thoughts, and opinions expressed on this site belong solely to Alex Merced and do not represent the views of any organization or employer.</p>
         <div class="socials">
             ${Object.entries(config.social_links || {}).map(([k, v]) => `<a href="${v}">${k}</a>`).join(' | ')} | <a href="/feed.xml">RSS</a>
         </div>
