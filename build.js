@@ -589,8 +589,8 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
       "@type": "WebSite",
       "name": "Alex Merced's Blog",
       "url": "https://alexmerced.blog",
-      "author": { "@id": "https://alexmerced.com/#alexmerced" },
-      "publisher": { "@id": "https://alexmerced.com/#alexmerced" }
+      "author": { "@type": "Person", "@id": "https://alexmerced.com/#alexmerced", "name": "Alex Merced", "url": "https://alexmerced.com" },
+      "publisher": { "@type": "Person", "@id": "https://alexmerced.com/#alexmerced", "name": "Alex Merced", "url": "https://alexmerced.com" }
     }
     </script>
 
