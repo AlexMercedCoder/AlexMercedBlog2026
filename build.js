@@ -2125,6 +2125,7 @@ async function build() {
     let showRecent = true;
     let heroImage = null;
     let heroAlt = '';
+    let booksCount = null;
 
     if (await fs.pathExists(homePath)) {
         const fileContent = await fs.readFile(homePath, 'utf-8');
@@ -2132,6 +2133,7 @@ async function build() {
         showRecent = data.show_recent_blog_posts !== false;
         heroImage = data.hero_image || null;
         heroAlt = data.hero_image_alt || '';
+        booksCount = data.books_count !== undefined && data.books_count !== null ? String(data.books_count) : null;
 
         // Promote the document's own H1 into the hero so each page keeps exactly one <h1>.
         let md = content;
@@ -2181,7 +2183,7 @@ async function build() {
                     <div class="hero__stats">
                         <p class="hero__stat"><b>${allPosts.length}</b><span>published posts</span></p>
                         <p class="hero__stat"><b>${totalTags}</b><span>topics covered</span></p>
-                        <p class="hero__stat"><b>3</b><span>published books</span></p>
+                        ${booksCount ? `<p class="hero__stat"><b>${escapeHtml(booksCount)}</b><span>published books</span></p>` : ''}
                     </div>
                 </div>
             </div>
