@@ -214,21 +214,53 @@ async function generateCoverImage(title, slug, theme) {
     }
 }
 
-// Build a lighter derivative of the home banner so the hero does not ship a 2.5MB PNG.
-async function generateHeroArt() {
-    const src = path.join(PUBLIC_DIR, 'assets', 'AlexBlogBanner.png');
-    if (!await fs.pathExists(src)) return null;
+// Build lighter derivatives of the home banner so the hero does not ship the
+// full-size original. Dimensions are read from the file, so swapping in art of a
+// different shape needs no code change: drop the file in /public/assets and point
+// `hero_image` in content/home.md at it.
+const HERO_MAX_WIDTH = 1400;
+
+async function generateHeroArt(heroImagePath) {
+    if (!heroImagePath) return null;
+    const rel = heroImagePath.replace(/^\//, '');
+    const src = path.join(PUBLIC_DIR, rel);
+    if (!await fs.pathExists(src)) {
+        console.warn(`⚠️  hero_image not found: ${heroImagePath} (looked in ${PUBLIC_DIR})`);
+        return null;
+    }
+
+    const { execSync } = require('child_process');
+
+    // Intrinsic size drives the width/height attributes and the CSS aspect-ratio.
+    let natural = null;
+    try {
+        const out = execSync(`identify -format "%w %h" "${src}[0]"`, { encoding: 'utf-8' }).trim().split(/\s+/);
+        const w = parseInt(out[0], 10), h = parseInt(out[1], 10);
+        if (w > 0 && h > 0) natural = { w, h };
+    } catch (e) { /* identify unavailable; fall through */ }
+
     const outDir = path.join(DIST_DIR, 'assets');
     await fs.ensureDir(outDir);
+
     try {
-        const { execSync } = require('child_process');
         const webp = path.join(outDir, 'hero-banner.webp');
-        execSync(`convert "${src}" -resize 1400x -strip -quality 80 "${webp}"`, { stdio: 'ignore' });
         const jpg = path.join(outDir, 'hero-banner.jpg');
-        execSync(`convert "${src}" -resize 1400x -strip -quality 82 "${jpg}"`, { stdio: 'ignore' });
-        return { webp: '/assets/hero-banner.webp', fallback: '/assets/hero-banner.jpg', width: 1400, height: 933 };
+        // The trailing '>' shrinks only, so smaller source art is never upscaled.
+        execSync(`convert "${src}[0]" -resize '${HERO_MAX_WIDTH}x>' -strip -quality 80 "${webp}"`, { stdio: 'ignore' });
+        execSync(`convert "${src}[0]" -resize '${HERO_MAX_WIDTH}x>' -strip -quality 82 "${jpg}"`, { stdio: 'ignore' });
+
+        const width = natural ? Math.min(HERO_MAX_WIDTH, natural.w) : HERO_MAX_WIDTH;
+        const height = natural ? Math.round(width * (natural.h / natural.w)) : null;
+        return { webp: '/assets/hero-banner.webp', fallback: '/assets/hero-banner.jpg', width, height, natural };
     } catch (e) {
-        return { webp: null, fallback: '/assets/AlexBlogBanner.png', width: 1536, height: 1024 };
+        // No ImageMagick: serve the original untouched.
+        return {
+            webp: null,
+            fallback: heroImagePath,
+            width: natural ? natural.w : null,
+            height: natural ? natural.h : null,
+            natural
+        };
     }
 }
 
@@ -872,7 +904,9 @@ main { display: block; flex: 1 0 auto; }
   box-shadow: var(--shadow-2);
   transform: rotate(-0.6deg);
 }
-.hero__art img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+/* --hero-ratio is set inline from the source image's intrinsic size, so art of
+   any shape is shown uncropped. */
+.hero__art img { width: 100%; aspect-ratio: var(--hero-ratio, 3 / 2); object-fit: cover; }
 .hero__stats {
   display: flex;
   flex-wrap: wrap;
@@ -2047,8 +2081,6 @@ async function build() {
         await fs.copy(PUBLIC_DIR, DIST_DIR);
         console.log('📂 Copied public assets.');
     }
-    const heroArt = await generateHeroArt();
-
     // Global Search Index
     const searchIndex = [];
 
@@ -2087,11 +2119,15 @@ async function build() {
     let heroTitle = escapeHtml(config.site_title);
     let homeProse = '';
     let showRecent = true;
+    let heroImage = null;
+    let heroAlt = '';
 
     if (await fs.pathExists(homePath)) {
         const fileContent = await fs.readFile(homePath, 'utf-8');
         const { content, data } = matter(fileContent);
         showRecent = data.show_recent_blog_posts !== false;
+        heroImage = data.hero_image || null;
+        heroAlt = data.hero_image_alt || '';
 
         // Promote the document's own H1 into the hero so each page keeps exactly one <h1>.
         let md = content;
@@ -2105,11 +2141,20 @@ async function build() {
         homeProse = marked.parse(md);
     }
 
+    const heroArt = await generateHeroArt(heroImage);
+    // Decorative unless home.md supplies hero_image_alt.
+    const dims = [
+        heroArt && heroArt.width ? `width="${heroArt.width}"` : '',
+        heroArt && heroArt.height ? `height="${heroArt.height}"` : ''
+    ].filter(Boolean).join(' ');
+    const ratioStyle = heroArt && heroArt.natural
+        ? ` style="--hero-ratio: ${heroArt.natural.w} / ${heroArt.natural.h}"`
+        : '';
     const artHtml = heroArt ? `
-        <div class="hero__art reveal">
+        <div class="hero__art reveal"${ratioStyle}>
             <picture>
                 ${heroArt.webp ? `<source srcset="${heroArt.webp}" type="image/webp">` : ''}
-                <img src="${heroArt.fallback}" alt="Illustration of Alex Merced writing at a laptop by a window overlooking green hills" width="${heroArt.width}" height="${heroArt.height}" fetchpriority="high" decoding="async">
+                <img src="${heroArt.fallback}" alt="${escapeHtml(heroAlt)}" ${dims} fetchpriority="high" decoding="async">
             </picture>
         </div>` : '';
 
