@@ -1,7 +1,7 @@
 ---
 title: Welcome to Alex Merced's Data Lakehouse & AI Hub
-hero_image: /assets/AlexBlogBanner.png
-hero_image_alt: "Illustration of Alex Merced working at a laptop by a window, with data charts overlaid on the glass and a valley of city lights at dusk beyond it."
+hero_image: /assets/AlexBlogBannerNight.png
+hero_image_alt: "Illustration of Alex Merced working at a laptop at night, with glowing teal data charts drawn across the window and a valley of city lights below the mountains beyond it."
 show_recent_blog_posts: true
 ---
 

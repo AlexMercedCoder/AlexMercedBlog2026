@@ -871,8 +871,12 @@ main { display: block; flex: 1 0 auto; }
   align-items: center;
 }
 @media (min-width: 62rem) {
-  .hero__inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); }
+  .hero__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 }
+/* Art and stats share the aside so a wide, short banner does not leave the
+   column half empty next to a tall headline. */
+.hero__aside { display: grid; gap: var(--space-6); align-content: center; }
+.hero__aside .hero__stats { margin-top: 0; }
 .hero__title {
   font-size: var(--step-5);
   margin-top: var(--space-4);
@@ -2163,7 +2167,7 @@ async function build() {
     let homeHtml = `
         <section class="hero">
             <div class="shell hero__inner">
-                <div>
+                <div class="hero__copy">
                     <p class="eyebrow">Data engineering · Lakehouse · AI</p>
                     <h1 class="hero__title">${heroTitle}</h1>
                     <p class="hero__lede">${escapeHtml(config.site_description)}</p>
@@ -2171,13 +2175,15 @@ async function build() {
                         <a class="btn btn--primary" href="/blog/index.html">Read the blog</a>
                         <a class="btn btn--ghost" href="/about.html">About Alex</a>
                     </div>
+                </div>
+                <div class="hero__aside">
+                    ${artHtml}
                     <div class="hero__stats">
                         <p class="hero__stat"><b>${allPosts.length}</b><span>published posts</span></p>
                         <p class="hero__stat"><b>${totalTags}</b><span>topics covered</span></p>
                         <p class="hero__stat"><b>3</b><span>published books</span></p>
                     </div>
                 </div>
-                ${artHtml}
             </div>
         </section>
         <div class="shell page">
