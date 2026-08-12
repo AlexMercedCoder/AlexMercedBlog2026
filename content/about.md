@@ -1,9 +1,27 @@
 ---
 title: About Me
 description: Learn more about Alex Merced, Head of Developer Relations at Dremio.
+eyebrow: About the author
+elsewhere_title: Find me elsewhere
+elsewhere:
+  - url: https://alexmerced.com
+    label: AlexMerced.com
+    note: The official portal, and the best place to start.
+  - url: https://whoisalexmerced.com
+    label: WhoIsAlexMerced.com
+    note: The longer story behind the technologist, educator and advocate.
+  - url: https://alexmerceddata.com
+    label: AlexMercedData.com
+    note: Data lakehouse, Apache Iceberg and AI education.
+  - url: https://alexmercedcoder.dev
+    label: AlexMercedCoder.dev
+    note: Building and teaching Iceberg, lakehouse and agentic AI tooling.
+  - url: https://alexmercedmedia.com
+    label: AlexMercedMedia.com
+    note: The hub for developer relations work, media and writing.
 ---
 
-![Alex Merced Banner](/assets/AlexBlogBanner.png)
+![Illustration of Alex Merced working at a laptop at night, with glowing teal data charts drawn across the window and a valley of city lights below the mountains beyond it.](/assets/AlexBlogBannerNight.webp)
 
 Alex Merced is the Head of Developer Relations at Dremio, where he educates, entertains, and enlightens audiences about modern data lakehouse architecture and open-source innovation. He runs DataLakehouseHub.com, a resource hub for engineers and practitioners navigating the growing lakehouse ecosystem.
 

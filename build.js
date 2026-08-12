@@ -302,6 +302,33 @@ function renderTagChips(tags, limit) {
     return `<ul class="chips">${list.map(t => `<li><a class="chip" href="/tags/${encodeURIComponent(tagSlug(t))}.html">${escapeHtml(t)}</a></li>`).join('')}</ul>`;
 }
 
+// Renders an `elsewhere:` frontmatter list as a grid of outbound link cards.
+// Each entry: { url, label?, note? } — label defaults to the bare hostname.
+function renderLinkGrid(entries, heading) {
+    if (!Array.isArray(entries) || entries.length === 0) return '';
+    const cards = entries.map(e => {
+        const url = typeof e === 'string' ? e : e.url;
+        if (!url) return '';
+        let label = (typeof e === 'object' && e.label) || '';
+        if (!label) {
+            try { label = new URL(url).hostname.replace(/^www\./, ''); } catch (err) { label = url; }
+        }
+        const note = (typeof e === 'object' && e.note) ? e.note : '';
+        return `<li>
+            <a class="link-card" href="${escapeHtml(url)}" target="_blank" rel="noopener">
+                <span class="link-card__title">${escapeHtml(label)}<span class="link-card__arrow" aria-hidden="true">↗</span></span>
+                ${note ? `<span class="link-card__note">${escapeHtml(note)}</span>` : ''}
+            </a>
+        </li>`;
+    }).filter(Boolean).join('');
+
+    const id = 'elsewhere-title';
+    return `<section class="article-foot" aria-labelledby="${id}">
+        <h2 id="${id}">${escapeHtml(heading || 'Find me elsewhere')}</h2>
+        <ul class="link-grid">${cards}</ul>
+    </section>`;
+}
+
 function renderPostCard(p, opts = {}) {
     const { featured = false, showExcerpt = true, level = 'h3' } = opts;
     const heading = featured ? 'h2' : level;
@@ -1353,6 +1380,55 @@ main { display: block; flex: 1 0 auto; }
   .card--featured .card__body { flex: 1 1 auto; padding: var(--space-6); gap: var(--space-4); justify-content: center; }
 }
 
+/* --- Outbound link cards (about page "elsewhere") ------------------------ */
+.link-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+}
+.link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  height: 100%;
+  padding: var(--space-4) var(--space-5);
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+  transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out), border-color var(--dur) var(--ease);
+}
+.link-card:hover, .link-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+  border-color: color-mix(in srgb, var(--brand) 45%, var(--rule));
+}
+.link-card__title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+  color: var(--brand);
+}
+.link-card__arrow { font-size: 0.8em; opacity: 0.7; transition: transform var(--dur-fast) var(--ease); }
+.link-card:hover .link-card__arrow { transform: translate(2px, -2px); }
+.link-card__note {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+@media (prefers-reduced-motion: reduce) {
+  .link-card:hover { transform: none; }
+  .link-card:hover .link-card__arrow { transform: none; }
+}
+
 /* --- Simple stacked list (tag pages) ------------------------------------ */
 .stack { list-style: none; padding: 0; display: grid; gap: 0; }
 .stack-item {
@@ -2102,9 +2178,10 @@ async function build() {
         const slug = file.replace('.md', '');
 
         const body = `
-            ${renderPageHead({ eyebrow: 'Page', title: escapeHtml(data.title), lede: data.description ? escapeHtml(data.description) : '' })}
+            ${renderPageHead({ eyebrow: escapeHtml(data.eyebrow || 'Page'), title: escapeHtml(data.title), lede: data.description ? escapeHtml(data.description) : '' })}
             <div class="shell page">
                 <div class="prose">${html}</div>
+                ${renderLinkGrid(data.elsewhere, data.elsewhere_title)}
             </div>`;
 
         const pageHtml = renderLayout(body, data.title, config, assets, {
