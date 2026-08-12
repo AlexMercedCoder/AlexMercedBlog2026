@@ -1,30 +1,108 @@
 {
-  "colors": {
-    "primary": "#0A2647",
-    "on_primary": "#FFFFFF",
-    "primary_container": "#D4E1F5",
-    "on_primary_container": "#0A2647",
-    "secondary": "#2C74B3",
-    "on_secondary": "#FFFFFF",
-    "secondary_container": "#E3F2FD",
-    "on_secondary_container": "#103158",
-    "tertiary": "#205295",
-    "on_tertiary": "#FFFFFF",
-    "tertiary_container": "#E0E9F5",
-    "on_tertiary_container": "#0F2645",
-    "background": "#F4F6F8",
-    "on_background": "#051626",
-    "surface": "#F4F6F8",
-    "on_surface": "#051626",
-    "outline": "#8090A0"
-  },
+  "_comment": "Design tokens for the site. 'colors' also feeds the generated OG cover images in build.js.",
+
   "fonts": {
-    "heading": "'Roboto', sans-serif",
-    "body": "'Open Sans', sans-serif",
-    "monospace": "'Fira Code', monospace"
+    "google_url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=JetBrains+Mono:wght@400;500&display=swap",
+    "display": "'Fraunces', 'Iowan Old Style', Georgia, serif",
+    "body": "'Source Serif 4', 'Iowan Old Style', Georgia, 'Times New Roman', serif",
+    "ui": "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    "monospace": "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
+    "cover": "Georgia, 'DejaVu Serif', 'Liberation Serif', serif"
   },
+
+  "light": {
+    "bg": "#F7F4EE",
+    "bg_tint": "#F1ECE3",
+    "surface": "#FFFFFF",
+    "surface_2": "#FBF9F5",
+    "ink": "#161A22",
+    "ink_soft": "#333B49",
+    "ink_muted": "#5B6472",
+    "brand": "#0B5563",
+    "brand_hover": "#073B45",
+    "brand_soft": "rgba(11, 85, 99, 0.09)",
+    "accent": "#C2410C",
+    "accent_text": "#A6350A",
+    "accent_soft": "rgba(194, 65, 12, 0.10)",
+    "rule": "rgba(22, 26, 34, 0.12)",
+    "rule_strong": "rgba(22, 26, 34, 0.22)",
+    "shadow_1": "0 1px 2px rgba(22, 26, 34, 0.05), 0 2px 8px rgba(22, 26, 34, 0.04)",
+    "shadow_2": "0 2px 4px rgba(22, 26, 34, 0.06), 0 12px 28px rgba(22, 26, 34, 0.09)",
+    "selection": "rgba(194, 65, 12, 0.20)"
+  },
+
+  "dark": {
+    "bg": "#0D1117",
+    "bg_tint": "#111823",
+    "surface": "#151B24",
+    "surface_2": "#1A2230",
+    "ink": "#E9E6E0",
+    "ink_soft": "#C7CEDA",
+    "ink_muted": "#9BA6B5",
+    "brand": "#5FD4DA",
+    "brand_hover": "#8FE6EA",
+    "brand_soft": "rgba(95, 212, 218, 0.12)",
+    "accent": "#F5A05F",
+    "accent_text": "#F5A05F",
+    "accent_soft": "rgba(245, 160, 95, 0.14)",
+    "rule": "rgba(233, 230, 224, 0.14)",
+    "rule_strong": "rgba(233, 230, 224, 0.26)",
+    "shadow_1": "0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.35)",
+    "shadow_2": "0 2px 6px rgba(0, 0, 0, 0.55), 0 16px 36px rgba(0, 0, 0, 0.45)",
+    "selection": "rgba(95, 212, 218, 0.26)"
+  },
+
+  "code": {
+    "bg": "#0F141C",
+    "bg_header": "#131A24",
+    "rule": "rgba(201, 212, 227, 0.16)",
+    "text": "#C9D4E3",
+    "comment": "#7E8DA3",
+    "keyword": "#F2A0BE",
+    "string": "#8FDCA8",
+    "number": "#F5C173",
+    "title": "#7FD1E8",
+    "type": "#F0C987",
+    "variable": "#F5A05F",
+    "punctuation": "#9BA6B5"
+  },
+
   "scale": {
-    "border_radius": "12px",
-    "spacing_unit": "8px"
+    "radius_sm": "6px",
+    "radius": "12px",
+    "radius_lg": "20px",
+    "radius_pill": "999px",
+    "measure": "68ch",
+    "measure_wide": "78ch",
+    "shell": "72rem",
+    "article": "48rem"
+  },
+
+  "motion": {
+    "fast": "140ms",
+    "base": "240ms",
+    "slow": "620ms",
+    "ease": "cubic-bezier(0.22, 0.61, 0.36, 1)",
+    "ease_out": "cubic-bezier(0.16, 1, 0.3, 1)"
+  },
+
+  "colors": {
+    "primary": "#0B5563",
+    "on_primary": "#F7F4EE",
+    "primary_container": "#D9E7EA",
+    "on_primary_container": "#073B45",
+    "secondary": "#123B52",
+    "on_secondary": "#F7F4EE",
+    "secondary_container": "#E3EDEF",
+    "on_secondary_container": "#0B3543",
+    "tertiary": "#C2410C",
+    "on_tertiary": "#FFFFFF",
+    "tertiary_container": "#F7E4D8",
+    "on_tertiary_container": "#7A2707",
+    "background": "#F7F4EE",
+    "on_background": "#161A22",
+    "surface": "#FFFFFF",
+    "on_surface": "#161A22",
+    "outline": "#5B6472"
   }
 }

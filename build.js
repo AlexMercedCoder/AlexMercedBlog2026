@@ -1,9 +1,21 @@
 const fs = require('fs-extra');
 const path = require('path');
+const crypto = require('crypto');
 const matter = require('gray-matter');
 const hljs = require('highlight.js');
 
 let marked;
+
+function headingSlug(raw) {
+    return String(raw)
+        .replace(/<[^>]*>/g, '')
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-{2,}/g, '-')
+        .replace(/^-|-$/g, '');
+}
 
 async function setupMarked() {
     const m = await import('marked');
@@ -14,11 +26,35 @@ async function setupMarked() {
                 // Handle both new (object) and old (string) marked renderer signatures
                 const code = typeof token === 'string' ? token : token.text;
                 const language = typeof token === 'string' ? arguments[1] : token.lang;
-                
+
                 const validLang = !!(language && hljs.getLanguage(language));
                 const highlighted = validLang ? hljs.highlight(code, { language }).value : hljs.highlightAuto(code).value;
                 const langClass = language ? `language-${language}` : '';
-                return `<div class="code-container"><button class="copy-btn" onclick="copyCode(this)">Copy</button><pre><code class="hljs ${langClass}">${highlighted}</code></pre></div>`;
+                const label = (language || '').split(/\s+/)[0];
+                // Order matters: the copy button must stay the immediate previous sibling of <pre>.
+                return `<div class="code-block"${label ? ` data-lang="${escapeHtml(label)}"` : ''}><button class="copy-btn" type="button" onclick="copyCode(this)">Copy</button><pre><code class="hljs ${langClass}">${highlighted}</code></pre></div>`;
+            },
+            heading(token) {
+                const depth = token.depth;
+                let inner;
+                try {
+                    inner = this.parser.parseInline(token.tokens);
+                } catch (e) {
+                    inner = escapeHtml(token.text);
+                }
+                // The page template owns the single <h1>, so body headings start at h2.
+                const level = Math.min(6, Math.max(2, depth === 1 ? 2 : depth));
+                const id = headingSlug(token.text);
+                if (!id) return `<h${level}>${inner}</h${level}>`;
+                return `<h${level} id="${id}">${inner}<a class="heading-anchor" href="#${id}" aria-label="Permalink to this section">#</a></h${level}>`;
+            }
+        },
+        hooks: {
+            // Wrap tables so wide technical tables scroll instead of blowing out the layout.
+            postprocess(html) {
+                return html
+                    .replace(/<table>/g, '<div class="table-wrap"><table>')
+                    .replace(/<\/table>/g, '</table></div>');
             }
         }
     });
@@ -30,6 +66,10 @@ const THEME_PATH = './theme.json';
 const CONTENT_DIR = './content';
 const PUBLIC_DIR = './public';
 const DIST_DIR = './dist';
+
+// Dev convenience: `node build.js --limit=8` builds a small slice for fast design iteration.
+const LIMIT_ARG = process.argv.find(a => a.startsWith('--limit='));
+const POST_LIMIT = LIMIT_ARG ? parseInt(LIMIT_ARG.split('=')[1], 10) : null;
 
 // --- Helpers ---
 function escapeXml(unsafe) {
@@ -45,12 +85,74 @@ function escapeXml(unsafe) {
     });
 }
 
+function escapeHtml(unsafe) {
+    if (unsafe === undefined || unsafe === null) return "";
+    return String(unsafe).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+}
+
+function tagSlug(tag) {
+    return String(tag).trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'tag';
+}
+
+// Pull a readable preview out of a post body, skipping the furniture that tops
+// most articles (HTML comments, cross-post notes, headings, byline lines).
+function excerpt(post, n = 180) {
+    if (post.description) return post.description;
+    const src = String(post.content || '')
+        .replace(/<!--[\s\S]*?-->/g, ' ')
+        .replace(/```[\s\S]*?```/g, ' ')
+        .replace(/^\s*>.*$/gm, ' ')                       // blockquotes (cross-post notices)
+        .replace(/^#{1,6}\s+.*$/gm, ' ')                  // headings
+        .replace(/^\s*\**_?By\s+Alex\s+Merced\b.*$/gim, ' ') // byline lines
+        .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+        .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+        .replace(/^\s*[-*+]\s+/gm, ' ')
+        .replace(/[*_`>|#]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+    if (src.length <= n) return src;
+    return src.slice(0, n).replace(/\s+\S*$/, '') + '…';
+}
+
+// Posts repeat their title as a leading H1; the page header already renders it.
+function stripDuplicateTitle(md, title) {
+    const m = md.match(/^[ \t]*#[ \t]+(.+?)[ \t]*$/m);
+    if (!m || !title) return md;
+    const norm = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    return norm(m[1]) === norm(title) ? md.replace(m[0], '') : md;
+}
+
+// Give the opening paragraph an editorial lead-in, but only when it is real body
+// copy sitting at the top level (not a cross-post notice or a byline).
+function markLeadIn(html) {
+    // Only top-level paragraphs are candidates; skip short ones and byline lines.
+    const re = /(^|<\/(?:blockquote|h[1-6]|pre|div|ul|ol|table|figure)>)(\s*)<p>([\s\S]*?)<\/p>/g;
+    let m;
+    while ((m = re.exec(html)) !== null) {
+        const inner = m[3];
+        const text = inner.replace(/<[^>]*>/g, '').trim();
+        if (text.length < 140) continue;
+        if (/^\**_?by\s+alex\s+merced/i.test(text)) continue;
+        return html.slice(0, m.index) + m[1] + m[2] + `<p class="lead-in">${inner}</p>` + html.slice(m.index + m[0].length);
+    }
+    return html;
+}
+
+function formatDate(d) {
+    if (!(d instanceof Date) || isNaN(d)) return '';
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+}
+
+function isoDate(d) {
+    if (!(d instanceof Date) || isNaN(d)) return '';
+    return d.toISOString().slice(0, 10);
+}
+
 async function generateCoverImage(title, slug, theme) {
     const dir = path.join(DIST_DIR, 'assets', 'covers');
     await fs.ensureDir(dir);
-    
-    // Text Wrapping Logic
-    const words = title.split(' ');
+
+    const words = String(title || 'Untitled').split(' ');
     const lines = [];
     let currentLine = words[0];
 
@@ -64,52 +166,40 @@ async function generateCoverImage(title, slug, theme) {
     }
     lines.push(currentLine);
 
-    // Generate tspans
-    // Initial Y offset to center the block of text.
-    // Each line adds ~1.2em height.
-    // If we have N lines, total height is roughly N*1.2em.
-    // We want to start drawing so the center of the block is at 50%.
-    // A simple hack is to start at 50% minus half the total height, then add 1.2em per line.
-    
-    // Simplest approach: Start at 50% and use dy.
-    // First line gets a negative dy correction if there are multiple lines? 
-    // Actually, just standard vertical stacking centered around y="50%" is tricky with pure SVG without tspans math.
-    
-    // Better strategy for vertical centering of multi-line text:
-    // y="50%" is the baseline for the first line? No.
-    // usage: <text y="50%"> <tspan x="50%" dy="-0.6em">Line 1</tspan> <tspan x="50%" dy="1.2em">Line 2</tspan> </text>
-    
     const lineHeight = 1.2; // em
     const startDy = -((lines.length - 1) * lineHeight) / 2;
-    
+
     const textContent = lines.map((line, index) => {
         const dy = index === 0 ? `${startDy}em` : `${lineHeight}em`;
         return `<tspan x="50%" dy="${dy}">${escapeXml(line)}</tspan>`;
     }).join('');
 
-    // SVG with Theme Gradient
+    const coverFont = (theme.fonts && theme.fonts.cover) || "Georgia, serif";
+
     const svg = `
     <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:${theme.colors.primary};stop-opacity:1" />
-                <stop offset="100%" style="stop-color:${theme.colors.secondary};stop-opacity:1" />
+                <stop offset="0%" style="stop-color:${theme.colors.secondary};stop-opacity:1" />
+                <stop offset="55%" style="stop-color:${theme.colors.primary};stop-opacity:1" />
+                <stop offset="100%" style="stop-color:${theme.colors.on_tertiary_container};stop-opacity:1" />
             </linearGradient>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="${theme.colors.on_primary}" stroke-width="1" opacity="0.1"/>
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="${theme.colors.on_primary}" stroke-width="1" opacity="0.08"/>
             </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
         <rect width="100%" height="100%" fill="url(#grid)" />
-        
-        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Roboto', sans-serif" font-weight="bold" font-size="64" fill="${theme.colors.on_primary}">
+
+        <text x="50%" y="47%" dominant-baseline="middle" text-anchor="middle" font-family="${escapeXml(coverFont)}" font-weight="bold" font-size="64" fill="${theme.colors.on_primary}">
             ${textContent}
         </text>
-        
-        <rect x="45%" y="85%" width="10%" height="6" fill="${theme.colors.tertiary || theme.colors.on_primary}" rx="3" />
+
+        <rect x="45%" y="82%" width="10%" height="6" fill="${theme.colors.tertiary || theme.colors.on_primary}" rx="3" />
+        <text x="50%" y="90%" text-anchor="middle" font-family="${escapeXml(coverFont)}" font-size="26" letter-spacing="4" fill="${theme.colors.on_primary}" opacity="0.72">alexmerced.blog</text>
     </svg>
     `;
-    
+
     const filePath = path.join(dir, `${slug}.svg`);
     await fs.writeFile(filePath, svg);
 
@@ -124,6 +214,24 @@ async function generateCoverImage(title, slug, theme) {
     }
 }
 
+// Build a lighter derivative of the home banner so the hero does not ship a 2.5MB PNG.
+async function generateHeroArt() {
+    const src = path.join(PUBLIC_DIR, 'assets', 'AlexBlogBanner.png');
+    if (!await fs.pathExists(src)) return null;
+    const outDir = path.join(DIST_DIR, 'assets');
+    await fs.ensureDir(outDir);
+    try {
+        const { execSync } = require('child_process');
+        const webp = path.join(outDir, 'hero-banner.webp');
+        execSync(`convert "${src}" -resize 1400x -strip -quality 80 "${webp}"`, { stdio: 'ignore' });
+        const jpg = path.join(outDir, 'hero-banner.jpg');
+        execSync(`convert "${src}" -resize 1400x -strip -quality 82 "${jpg}"`, { stdio: 'ignore' });
+        return { webp: '/assets/hero-banner.webp', fallback: '/assets/hero-banner.jpg', width: 1400, height: 933 };
+    } catch (e) {
+        return { webp: null, fallback: '/assets/AlexBlogBanner.png', width: 1536, height: 1024 };
+    }
+}
+
 function calculateReadingTime(content) {
     const wordsPerMinute = 200;
     const words = content.replace(/[#*`]/g, '').split(/\s+/).length;
@@ -132,13 +240,11 @@ function calculateReadingTime(content) {
 }
 
 async function loadJSON(filepath) {
-  if (await fs.pathExists(filepath)) {
-    return fs.readJSON(filepath);
-  }
-  return {};
+    if (await fs.pathExists(filepath)) {
+        return fs.readJSON(filepath);
+    }
+    return {};
 }
-
-// ... existing code ...
 
 async function getFiles(dir) {
     let results = [];
@@ -156,7 +262,30 @@ async function getFiles(dir) {
     return results;
 }
 
+// --- Shared UI partials ---
 
+function renderTagChips(tags, limit) {
+    if (!tags || !Array.isArray(tags) || tags.length === 0) return '';
+    const list = limit ? tags.slice(0, limit) : tags;
+    return `<ul class="chips">${list.map(t => `<li><a class="chip" href="/tags/${encodeURIComponent(tagSlug(t))}.html">${escapeHtml(t)}</a></li>`).join('')}</ul>`;
+}
+
+function renderPostCard(p, opts = {}) {
+    const { featured = false, showExcerpt = true, level = 'h3' } = opts;
+    const heading = featured ? 'h2' : level;
+    return `<article class="card${featured ? ' card--featured' : ''} reveal">
+        <a class="card__media" href="/blog/${p.slug}.html" tabindex="-1" aria-hidden="true">
+            <img src="${p.coverImage}" alt="" width="1200" height="630" ${featured ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} decoding="async">
+        </a>
+        <div class="card__body">
+            ${featured ? '<p class="card__kicker">Latest post</p>' : ''}
+            <${heading} class="card__title"><a href="/blog/${p.slug}.html">${escapeHtml(p.title)}</a></${heading}>
+            ${showExcerpt ? `<p class="card__excerpt">${escapeHtml(excerpt(p, featured ? 220 : 140))}</p>` : ''}
+            <p class="card__meta"><time datetime="${isoDate(p.dateObj)}">${formatDate(p.dateObj)}</time><span class="dot"></span>${escapeHtml(p.readingTime || '')}</p>
+            ${renderTagChips(p.tags, 3)}
+        </div>
+    </article>`;
+}
 
 // --- Generators ---
 
@@ -183,14 +312,14 @@ async function generateBlogRSS(posts, config) {
     console.log(`📡 Built Blog RSS Feed.`);
 }
 
-async function generateTagPages(posts, config, css) {
+async function generateTagPages(posts, config, assets) {
     const tagsMap = {};
     posts.forEach(p => {
         if (p.tags && Array.isArray(p.tags)) {
             p.tags.forEach(t => {
-                const tag = t.trim();
-                if (!tagsMap[tag]) tagsMap[tag] = [];
-                tagsMap[tag].push(p);
+                const slug = tagSlug(t);
+                if (!tagsMap[slug]) tagsMap[slug] = { label: String(t).trim(), posts: [] };
+                if (!tagsMap[slug].posts.includes(p)) tagsMap[slug].posts.push(p);
             });
         }
     });
@@ -198,24 +327,36 @@ async function generateTagPages(posts, config, css) {
     const tagsDir = path.join(DIST_DIR, 'tags');
     await fs.ensureDir(tagsDir);
 
-    for (const [tag, tagPosts] of Object.entries(tagsMap)) {
-         tagPosts.sort((a, b) => b.dateObj - a.dateObj);
-         const listHtml = tagPosts.map(p => `
-            <div class="card">
-                <h2><a href="/blog/${p.slug}.html">${p.title}</a></h2>
-                <p class="meta"><small>${p.date}</small></p>
-            </div>
+    for (const [slug, entry] of Object.entries(tagsMap)) {
+        const tagPosts = entry.posts.slice().sort((a, b) => b.dateObj - a.dateObj);
+        const listHtml = tagPosts.map(p => `
+            <li class="stack-item reveal">
+                <p class="stack-item__meta"><time datetime="${isoDate(p.dateObj)}">${formatDate(p.dateObj)}</time><span class="dot"></span>${escapeHtml(p.readingTime || '')}</p>
+                <h2 class="stack-item__title"><a href="/blog/${p.slug}.html">${escapeHtml(p.title)}</a></h2>
+                <p class="stack-item__excerpt">${escapeHtml(excerpt(p, 150))}</p>
+            </li>
         `).join('');
-        
-        const pageHtml = renderLayout(`<h1>Tag: ${tag}</h1>${listHtml}`, `Tag: ${tag}`, config, css, { path: `/tags/${tag}.html`, noindex: true });
-        await fs.outputFile(path.join(tagsDir, `${tag}.html`), pageHtml);
+
+        const body = `
+            ${renderPageHead({
+                eyebrow: 'Topic',
+                title: escapeHtml(entry.label),
+                lede: `${tagPosts.length} ${tagPosts.length === 1 ? 'post' : 'posts'} tagged “${escapeHtml(entry.label)}”.`
+            })}
+            <div class="shell page">
+                <ol class="stack">${listHtml}</ol>
+                <p class="page__back"><a class="link-back" href="/blog/index.html">Browse all posts</a></p>
+            </div>`;
+
+        const pageHtml = renderLayout(body, entry.label, config, assets, { path: `/tags/${slug}.html`, noindex: true, description: `Posts tagged ${entry.label}.` });
+        await fs.outputFile(path.join(tagsDir, `${slug}.html`), pageHtml);
     }
     console.log(`🏷️ Built ${Object.keys(tagsMap).length} Tag Pages.`);
 }
 
 function getRelatedPosts(current, all) {
     if (!current.tags || current.tags.length === 0) return [];
-    
+
     return all
         .filter(p => p.slug !== current.slug) // Exclude self
         .map(p => {
@@ -228,42 +369,53 @@ function getRelatedPosts(current, all) {
         .map(p => p.post);
 }
 
-async function generatePaginatedIndex(posts, distDir, config, css) {
+async function generatePaginatedIndex(posts, distDir, config, assets) {
     const perPage = config.posts_per_page || 10;
-    const totalPages = Math.ceil(posts.length / perPage);
-    
+    const totalPages = Math.max(1, Math.ceil(posts.length / perPage));
+
     for (let i = 1; i <= totalPages; i++) {
         const start = (i - 1) * perPage;
         const chunk = posts.slice(start, start + perPage);
-        
-        const listHtml = chunk.map(p => `
-            <div class="card">
-                ${p.coverImage ? `<a href="/blog/${p.slug}.html"><img src="${p.coverImage}" style="height: 200px; object-fit: cover; width: 100%; margin: 0 0 1rem 0;" /></a>` : ''}
-                <h2><a href="/blog/${p.slug}.html">${p.title}</a></h2>
-                <p class="meta"><small>${p.date} • ${p.readingTime || ''}</small></p>
-            </div>
-        `).join('');
-        
-        const prevLink = i > 1 ? `<a href="${i === 2 ? '/blog/index.html' : `/blog/page/${i - 1}.html`}" class="btn-support" style="text-decoration:none;">← Previous</a>` : '';
-        const nextLink = i < totalPages ? `<a href="/blog/page/${i + 1}.html" class="btn-support" style="text-decoration:none;">Next →</a>` : '';
-        
-        const paginationHtml = `
-            <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
-                <div>${prevLink}</div>
-                <div>${nextLink}</div>
-            </div>
-             <p style="text-align: center; margin-top: 1rem; color: var(--md-sys-color-outline);">Page ${i} of ${totalPages}</p>
-        `;
 
-        const pageTitle = i === 1 ? 'Blog' : `Blog - Page ${i}`;
+        // Page 1 leads with a featured post, then a grid. Later pages are a uniform grid.
+        const featured = i === 1 ? chunk[0] : null;
+        const rest = i === 1 ? chunk.slice(1) : chunk;
+
+        const featuredHtml = featured ? `<div class="featured">${renderPostCard(featured, { featured: true })}</div>` : '';
+        const gridHtml = rest.length ? `<div class="grid grid--cards">${rest.map(p => renderPostCard(p)).join('')}</div>` : '';
+
+        const prevHref = i === 2 ? '/blog/index.html' : `/blog/page/${i - 1}.html`;
+        const prevLink = i > 1 ? `<a class="pager__link" rel="prev" href="${prevHref}"><span aria-hidden="true">←</span> Newer posts</a>` : '<span></span>';
+        const nextLink = i < totalPages ? `<a class="pager__link" rel="next" href="/blog/page/${i + 1}.html">Older posts <span aria-hidden="true">→</span></a>` : '<span></span>';
+
+        const paginationHtml = `
+            <nav class="pager" aria-label="Pagination">
+                ${prevLink}
+                <p class="pager__status">Page ${i} of ${totalPages}</p>
+                ${nextLink}
+            </nav>`;
+
+        const pageTitle = i === 1 ? 'Blog' : `Blog, page ${i}`;
         const filePath = i === 1 ? path.join(distDir, 'index.html') : path.join(distDir, 'page', `${i}.html`);
         const seoUrl = i === 1 ? '/blog/index.html' : `/blog/page/${i}.html`;
         const prevUrl = i > 1 ? (i === 2 ? `${config.domain}/blog/index.html` : `${config.domain}/blog/page/${i - 1}.html`) : null;
         const nextUrl = i < totalPages ? `${config.domain}/blog/page/${i + 1}.html` : null;
-        
+
         if (i > 1) await fs.ensureDir(path.join(distDir, 'page'));
 
-        const fullHtml = renderLayout(`<h1>${pageTitle}</h1>${listHtml}${paginationHtml}`, pageTitle, config, css, { path: seoUrl, description: `Blog posts page ${i}`, prevUrl, nextUrl });
+        const body = `
+            ${renderPageHead({
+                eyebrow: 'The archive',
+                title: i === 1 ? 'Writing' : `Writing, page ${i}`,
+                lede: `${posts.length} posts on Apache Iceberg, lakehouse architecture, data engineering and applied AI.`
+            })}
+            <div class="shell page">
+                ${featuredHtml}
+                ${gridHtml}
+                ${paginationHtml}
+            </div>`;
+
+        const fullHtml = renderLayout(body, pageTitle, config, assets, { path: seoUrl, description: `Articles on data lakehouses, Apache Iceberg and AI. Page ${i} of ${totalPages}.`, prevUrl, nextUrl });
         await fs.outputFile(filePath, fullHtml);
     }
     console.log(`📝 Built Blog Index (${posts.length} posts, ${totalPages} pages).`);
@@ -278,210 +430,1181 @@ async function generateLLMsTxt(posts, config) {
     console.log('🤖 Built llms.txt');
 }
 
-// --- Layout Template ---
+// --- Design System (single stylesheet, emitted to /styles.css) ---
 
+function themeVars(t) {
+    return `
+      --bg: ${t.bg};
+      --bg-tint: ${t.bg_tint};
+      --surface: ${t.surface};
+      --surface-2: ${t.surface_2};
+      --ink: ${t.ink};
+      --ink-soft: ${t.ink_soft};
+      --ink-muted: ${t.ink_muted};
+      --brand: ${t.brand};
+      --brand-hover: ${t.brand_hover};
+      --brand-soft: ${t.brand_soft};
+      --accent: ${t.accent};
+      --accent-text: ${t.accent_text};
+      --accent-soft: ${t.accent_soft};
+      --rule: ${t.rule};
+      --rule-strong: ${t.rule_strong};
+      --shadow-1: ${t.shadow_1};
+      --shadow-2: ${t.shadow_2};
+      --selection: ${t.selection};`;
+}
 
 function generateCSS(theme) {
-  if (!theme || !theme.colors) return '';
-  
-  // Extract font names for Google Fonts Import
-  const headingFontName = theme.fonts.heading.split(',')[0].replace(/['"]/g, '').trim();
-  const bodyFontName = theme.fonts.body.split(',')[0].replace(/['"]/g, '').trim();
-  const googleFontsUrl = `https://fonts.googleapis.com/css2?family=${headingFontName}:wght@400;700&family=${bodyFontName}:wght@300;400;600&display=swap`;
+    const f = theme.fonts || {};
+    const s = theme.scale || {};
+    const mo = theme.motion || {};
+    const c = theme.code || {};
+    const light = theme.light || {};
+    const dark = theme.dark || {};
 
-  return `
-    @import url('${googleFontsUrl}');
+    // A tiny inline SVG grain used to keep large gradient areas from looking flat.
+    const grain = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")`;
 
-    :root {
-      /* Colors */
-      --md-sys-color-primary: ${theme.colors.primary};
-      --md-sys-color-on-primary: ${theme.colors.on_primary};
-      --md-sys-color-primary-container: ${theme.colors.primary_container};
-      --md-sys-color-on-primary-container: ${theme.colors.on_primary_container};
-      --md-sys-color-secondary: ${theme.colors.secondary};
-      --md-sys-color-secondary-container: ${theme.colors.secondary_container};
-      --md-sys-color-surface: ${theme.colors.surface};
-      --md-sys-color-on-surface: ${theme.colors.on_surface};
-      --md-sys-color-outline: ${theme.colors.outline};
-      
-      /* Fonts */
-      --md-sys-typescale-headline-font: ${theme.fonts.heading};
-      --md-sys-typescale-body-font: ${theme.fonts.body};
-      
-      /* Scale */
-      --md-sys-shape-corner: 12px;
-      --spacing: 8px;
-      
-      --card-bg: #FFFFFF;
-      
-      /* Widths */
-      --max-width: 900px;
-    }
+    return `@charset "UTF-8";
+/* ==========================================================================
+   alexmerced.blog design system
+   Layers: tokens → reset → typography → layout → components → utilities
+   ========================================================================== */
 
-    [data-theme="dark"] {
-      --md-sys-color-primary: #D4E1F5;
-      --md-sys-color-on-primary: #0A2647;
-      --md-sys-color-primary-container: #2C4B70;
-      --md-sys-color-on-primary-container: #D4E1F5;
-      --md-sys-color-secondary: #8AB4F8;
-      --md-sys-color-secondary-container: #0A2647;
-      --md-sys-color-surface: #121212;
-      --md-sys-color-on-surface: #E2E2E2;
-      --md-sys-color-outline: #9CA3AF;
-      --card-bg: #1E1E1E;
-    }
+/* --- Tokens: type, space, radii, motion ---------------------------------- */
+:root {
+  color-scheme: light;
 
-    /* Modern Reset */
-    *, *::before, *::after { box-sizing: border-box; }
-    body {
-        font-family: var(--md-sys-typescale-body-font);
-        background-color: var(--md-sys-color-surface);
-        color: var(--md-sys-color-on-surface);
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-    }
+  --font-display: ${f.display};
+  --font-body: ${f.body};
+  --font-ui: ${f.ui};
+  --font-mono: ${f.monospace};
 
-    /* Layout */
-    header {
-        background: var(--md-sys-color-surface);
-        color: var(--md-sys-color-on-surface);
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        backdrop-filter: blur(10px);
-    }
-    
-    header .brand h1 { margin: 0; font-size: 1.5rem; color: var(--md-sys-color-primary); }
+  /* Fluid type scale (1.0625rem → 1.1875rem base, ~1.24 ratio) */
+  --step--2: clamp(0.75rem, 0.73rem + 0.10vw, 0.8125rem);
+  --step--1: clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem);
+  --step-0:  clamp(1.0625rem, 1.02rem + 0.22vw, 1.1875rem);
+  --step-1:  clamp(1.25rem, 1.18rem + 0.34vw, 1.4375rem);
+  --step-2:  clamp(1.5rem, 1.37rem + 0.62vw, 1.875rem);
+  --step-3:  clamp(1.8125rem, 1.58rem + 1.10vw, 2.5rem);
+  --step-4:  clamp(2.125rem, 1.72rem + 1.95vw, 3.25rem);
+  --step-5:  clamp(2.5rem, 1.85rem + 3.10vw, 4.25rem);
 
-    nav { display: flex; align-items: center; gap: 1.5rem; }
-    nav a { 
-        text-decoration: none; 
-        color: var(--md-sys-color-on-surface); 
-        font-weight: 500; 
-        transition: color 0.2s;
-    }
-    nav a:hover { color: var(--md-sys-color-primary); }
+  /* Spacing (0.5rem base, geometric) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
 
-    main {
-        max-width: var(--max-width);
-        margin: 3rem auto;
-        padding: 0 1.5rem;
-        min-height: 80vh;
-    }
+  --radius-sm: ${s.radius_sm || '6px'};
+  --radius: ${s.radius || '12px'};
+  --radius-lg: ${s.radius_lg || '20px'};
+  --radius-pill: ${s.radius_pill || '999px'};
 
-    footer {
-        background: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-        text-align: center;
-        padding: 3rem 1rem;
-        margin-top: 4rem;
-    }
-    
-    /* Typography */
-    h1, h2, h3, h4 { font-family: var(--md-sys-typescale-headline-font); color: var(--md-sys-color-on-surface); line-height: 1.2; }
-    h1 { font-size: 3rem; margin-bottom: 1.5rem; color: var(--md-sys-color-primary); }
-    h2 { font-size: 2rem; margin-top: 2.5rem; margin-bottom: 1rem; }
-    p { margin-bottom: 1.5rem; font-size: 1.125rem; }
-    a { color: var(--md-sys-color-primary); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    a:hover { color: var(--md-sys-color-secondary); }
+  --measure: ${s.measure || '68ch'};
+  --measure-wide: ${s.measure_wide || '78ch'};
+  --w-shell: ${s.shell || '72rem'};
+  --w-article: ${s.article || '48rem'};
 
-    /* Components */
-    img { max-width: 100%; height: auto; border-radius: var(--md-sys-shape-corner); display: block; margin: 2rem 0; }
-    
-    blockquote {
-        margin: 2rem 0;
-        padding-left: 1.5rem;
-        border-left: 4px solid var(--md-sys-color-primary);
-        font-style: italic;
-        color: var(--md-sys-color-secondary);
-    }
+  --dur-fast: ${mo.fast || '140ms'};
+  --dur: ${mo.base || '240ms'};
+  --dur-slow: ${mo.slow || '620ms'};
+  --ease: ${mo.ease || 'cubic-bezier(0.22,0.61,0.36,1)'};
+  --ease-out: ${mo.ease_out || 'cubic-bezier(0.16,1,0.3,1)'};
 
-    .btn-support {
-        display: inline-block;
-        background: var(--md-sys-color-primary);
-        color: var(--md-sys-color-on-primary) !important;
-        padding: 0.6rem 1.2rem;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-support:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        color: var(--md-sys-color-on-primary);
-    }
+  --grain: ${grain};
 
-    .card {
-        background: white;
-        border: 1px solid rgba(0,0,0,0.05);
-        padding: 2rem;
-        border-radius: var(--md-sys-shape-corner);
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        margin-bottom: 1.5rem;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-    .card h2 { margin-top: 0; font-size: 1.75rem; }
-    .card h2 a { text-decoration: none; color: inherit; }
-    .card h2 a:hover { color: var(--md-sys-color-primary); }
+  /* Brand badge keeps the same saturated gradient in both themes. */
+  --mark-from: ${(theme.colors && theme.colors.primary) || '#0B5563'};
+  --mark-to: ${(theme.colors && theme.colors.on_tertiary_container) || '#7A2707'};
 
-    /* Meta text */
-    .meta { font-size: 0.9rem; color: var(--md-sys-color-outline); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+  /* Code surface is intentionally dark in both themes for stable contrast. */
+  --code-bg: ${c.bg};
+  --code-bg-header: ${c.bg_header};
+  --code-rule: ${c.rule};
+  --code-text: ${c.text};
+  --code-comment: ${c.comment};
+  --code-keyword: ${c.keyword};
+  --code-string: ${c.string};
+  --code-number: ${c.number};
+  --code-title: ${c.title};
+  --code-type: ${c.type};
+  --code-variable: ${c.variable};
+  --code-punct: ${c.punctuation};
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        h1 { font-size: 2.5rem; }
-        header { flex-direction: column; gap: 1rem; padding: 1.5rem; }
-        nav { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-        main { padding: 0 1rem; }
-        .card { padding: 1.5rem; }
-    }
+  /* --- Colour: light (default) --- */
+${themeVars(light)}
+}
 
-    /* Highlight.js Atom One Dark */
-    pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string{color:#98c379}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-title.class_,.hljs-class .hljs-title{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline} .code-container{position:relative;} .copy-btn{position:absolute;top:5px;right:5px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#abb2bf;padding:2px 8px;border-radius:4px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;} .copy-btn:hover{background:rgba(255,255,255,0.2);color:white;} .copy-btn.copied{background:#98c379;color:black;border-color:#98c379;}
-  `;
+/* Follow the OS unless the reader has made an explicit choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+${themeVars(dark)}
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+${themeVars(dark)}
+}
+:root[data-theme="light"] { color-scheme: light; }
+
+/* --- Reset --------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+body {
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.72;
+  font-optical-sizing: auto;
+  color: var(--ink);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+img, picture, svg, video, canvas { display: block; max-width: 100%; height: auto; }
+button, input, select, textarea { font: inherit; color: inherit; }
+::selection { background: var(--selection); }
+:where(a) { color: var(--brand); }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+:where(button, a):focus-visible { outline-color: var(--accent); }
+
+/* --- Typography ---------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+h1 { font-size: var(--step-4); letter-spacing: -0.028em; line-height: 1.06; }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
+h4 { font-size: var(--step-1); }
+strong, b { font-weight: 600; }
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.lede {
+  font-size: var(--step-1);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+.dot {
+  display: inline-block;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
+  margin: 0 0.6em;
+  vertical-align: 0.22em;
+}
+
+/* --- Layout -------------------------------------------------------------- */
+.shell {
+  width: 100%;
+  max-width: var(--w-shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+main { display: block; flex: 1 0 auto; }
+.page { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.page--tight { padding-block: clamp(2rem, 4vw, 3rem); }
+.page__back { margin-top: var(--space-7); }
+
+.skip-link {
+  position: absolute;
+  left: var(--space-4); top: var(--space-2);
+  z-index: 200;
+  transform: translateY(-160%);
+  background: var(--brand);
+  color: var(--bg);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: transform var(--dur) var(--ease);
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* --- Reading progress ---------------------------------------------------- */
+.progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 120;
+  background: transparent;
+  pointer-events: none;
+}
+.progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  transition: width 90ms linear;
+}
+
+/* --- Masthead ------------------------------------------------------------ */
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.masthead.is-stuck {
+  border-bottom-color: var(--rule);
+  box-shadow: 0 6px 24px -18px rgba(0,0,0,0.5);
+}
+.masthead__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 4.25rem;
+  padding-block: 0.75rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  border-radius: var(--radius-sm);
+}
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 2.1rem; height: 2.1rem;
+  flex: 0 0 auto;
+  border-radius: 9px;
+  background: linear-gradient(140deg, var(--mark-from), var(--mark-to));
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  box-shadow: var(--shadow-1);
+}
+.brand__text { max-width: 22ch; }
+.brand__short { display: none; }
+.brand:hover .brand__text, .brand:hover .brand__short { color: var(--brand); }
+/* The full site title is too tall for a sticky mobile bar; use the wordmark. */
+@media (max-width: 40rem) {
+  .brand__text { display: none; }
+  .brand__short { display: inline; }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-ui);
+}
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 2.75rem;
+  padding: 0 0.7rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease);
+}
+.nav__link:hover { color: var(--brand); background: var(--brand-soft); }
+.nav__link sup { font-size: 0.7em; opacity: 0.65; }
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 2.75rem; height: 2.75rem;
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.icon-btn:hover { color: var(--brand); background: var(--brand-soft); border-color: var(--rule); }
+.icon-btn svg { width: 1.15rem; height: 1.15rem; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.nav__cta { margin-left: 0.35rem; }
+#menu-btn { display: none; }
+
+/* --- Buttons ------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.875rem;
+  padding: 0.6rem 1.25rem;
+  font-family: var(--font-ui);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur) var(--ease), background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.btn--primary { background: var(--brand); color: var(--bg); box-shadow: var(--shadow-1); }
+.btn--primary:hover { background: var(--brand-hover); color: var(--bg); transform: translateY(-1px); box-shadow: var(--shadow-2); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.btn--ghost:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-soft); }
+.btn-support { /* legacy hook kept for safety */ }
+
+/* --- Hero (home) --------------------------------------------------------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4.5rem);
+  background:
+    radial-gradient(120% 90% at 8% 0%, var(--brand-soft), transparent 60%),
+    radial-gradient(90% 80% at 95% 10%, var(--accent-soft), transparent 62%),
+    linear-gradient(180deg, var(--bg-tint), var(--bg));
+  border-bottom: 1px solid var(--rule);
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  z-index: -2;
+  background-image: var(--grain);
+  background-size: 140px 140px;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+}
+:root[data-theme="dark"] .hero::before { mix-blend-mode: screen; opacity: 0.05; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero::before { mix-blend-mode: screen; opacity: 0.05; }
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand), var(--accent), transparent);
+  opacity: 0.55;
+}
+.hero__inner {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+@media (min-width: 62rem) {
+  .hero__inner { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); }
+}
+.hero__title {
+  font-size: var(--step-5);
+  margin-top: var(--space-4);
+  font-weight: 800;
+}
+.hero__title em {
+  font-style: italic;
+  color: var(--brand);
+}
+.hero__lede {
+  margin-top: var(--space-5);
+  max-width: 46ch;
+  font-size: var(--step-1);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.hero__art {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow-2);
+  transform: rotate(-0.6deg);
+}
+.hero__art img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5) var(--space-7);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-ui);
+}
+.hero__stat b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.hero__stat span { font-size: var(--step--1); color: var(--ink-muted); }
+
+/* --- Page head band (blog index, tags, generic pages) -------------------- */
+.page-head {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(2.75rem, 6vw, 4.5rem);
+  background:
+    radial-gradient(110% 140% at 0% 0%, var(--brand-soft), transparent 55%),
+    linear-gradient(180deg, var(--bg-tint), var(--bg));
+  border-bottom: 1px solid var(--rule);
+}
+.page-head__inner { max-width: 46rem; }
+.page-head h1 { margin-top: var(--space-3); }
+.page-head .lede { margin-top: var(--space-4); max-width: 46ch; }
+
+/* --- Post header --------------------------------------------------------- */
+.post-head {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(2rem, 4vw, 3rem);
+  background:
+    radial-gradient(100% 120% at 100% 0%, var(--accent-soft), transparent 58%),
+    radial-gradient(90% 110% at 0% 10%, var(--brand-soft), transparent 55%),
+    linear-gradient(180deg, var(--bg-tint), var(--bg));
+  border-bottom: 1px solid var(--rule);
+}
+/* Shares the prose measure so the header and body copy sit on the same axis,
+   while the title itself is allowed to run a little wider. */
+.post-head__inner {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+.post-head h1 {
+  margin-top: var(--space-4);
+  max-width: calc(var(--measure) + 7rem);
+}
+.byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin-top: var(--space-5);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+.byline a { color: var(--ink-soft); text-decoration-color: var(--rule-strong); }
+.byline a:hover { color: var(--brand); }
+.byline__author { font-weight: 600; color: var(--ink-soft); }
+
+/* --- Chips / tags -------------------------------------------------------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.9rem;
+  padding: 0.2rem 0.7rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  transition: color var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.chip:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-soft); }
+.chips--head { margin-top: var(--space-2); }
+
+/* --- Long-form prose ----------------------------------------------------- */
+.prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+/* Left-aligned variant, used where prose sits under a left-aligned hero. */
+.prose--flush { margin-inline: 0; }
+.prose > * + * { margin-top: 1.35em; }
+.prose p { text-wrap: pretty; }
+.prose h2 {
+  margin-top: 2.6em;
+  padding-top: 0.2em;
+  font-size: var(--step-2);
+}
+.prose h3 { margin-top: 2.1em; font-size: var(--step-1); }
+.prose h4 { margin-top: 1.9em; font-size: var(--step-0); font-family: var(--font-ui); font-weight: 700; letter-spacing: 0.01em; }
+.prose h2 + *, .prose h3 + *, .prose h4 + * { margin-top: 0.85em; }
+.prose h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  margin-top: 0.5em;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+/* Lead-in treatment, applied at build time only to a genuine opening paragraph. */
+.prose .lead-in {
+  font-size: 1.16em;
+  line-height: 1.62;
+  color: var(--ink-soft);
+}
+.prose .lead-in::first-letter {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.32em;
+  color: var(--brand);
+}
+
+.prose a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: color-mix(in srgb, var(--brand) 45%, transparent);
+  transition: color var(--dur-fast) var(--ease), text-decoration-color var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease);
+}
+.prose a:hover {
+  color: var(--brand-hover);
+  text-decoration-color: currentColor;
+  background: var(--brand-soft);
+}
+
+.prose ul, .prose ol { padding-left: 1.35em; }
+.prose li + li { margin-top: 0.5em; }
+.prose li::marker { color: var(--accent-text); font-weight: 600; }
+.prose ul { list-style: none; padding-left: 1.5em; }
+.prose ul > li { position: relative; }
+.prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.1em;
+  top: 0.72em;
+  width: 0.42em; height: 0.42em;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.75;
+}
+.prose ul ul, .prose ol ol, .prose ul ol, .prose ol ul { margin-top: 0.5em; }
+
+.prose blockquote {
+  margin-inline: 0;
+  padding: 0.2em 0 0.2em 1.5em;
+  border-left: 3px solid var(--accent);
+  font-size: 1.06em;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.prose blockquote p + p { margin-top: 0.8em; }
+.prose blockquote cite, .prose figcaption {
+  display: block;
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+.prose figure { margin-inline: 0; }
+.prose figcaption { margin-top: 0.75em; text-align: center; }
+.prose img {
+  border-radius: var(--radius);
+  border: 1px solid var(--rule);
+  margin-inline: auto;
+}
+.prose hr {
+  border: 0;
+  height: auto;
+  margin-block: 2.6em;
+  text-align: center;
+  color: var(--ink-muted);
+}
+.prose hr::before {
+  content: "* * *";
+  letter-spacing: 0.8em;
+  font-size: 0.9em;
+}
+.heading-anchor {
+  margin-left: 0.4em;
+  font-family: var(--font-ui);
+  font-size: 0.7em;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.prose :is(h2, h3, h4):hover .heading-anchor,
+.heading-anchor:focus-visible { opacity: 1; }
+.heading-anchor:hover { color: var(--accent-text); }
+
+/* Tables scroll rather than break the measure. */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+.prose th, .prose td {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+.prose thead th {
+  background: var(--surface-2);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.prose tbody tr:last-child td { border-bottom: 0; }
+
+/* --- Code --------------------------------------------------------------- */
+:not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+  background: var(--brand-soft);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  word-break: break-word;
+}
+.prose a code { color: inherit; }
+
+.code-block {
+  position: relative;
+  min-width: 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--code-rule);
+  background: var(--code-bg);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+.prose > .code-block { margin-top: 1.8em; margin-bottom: 1.8em; }
+@media (min-width: 64rem) {
+  /* Let code breathe past the reading measure without touching the page edge. */
+  .prose--article > .code-block {
+    width: calc(100% + 5rem);
+    margin-inline: -2.5rem;
+  }
+}
+.code-block::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0; left: 0;
+  padding: 0.3rem 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--code-comment);
+  background: var(--code-bg-header);
+  border-right: 1px solid var(--code-rule);
+  border-bottom: 1px solid var(--code-rule);
+  border-bottom-right-radius: var(--radius-sm);
+}
+.code-block:not([data-lang])::before { content: none; }
+.code-block pre {
+  margin: 0;
+  padding: 2.4rem 1.15rem 1.15rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--code-comment) transparent;
+  scrollbar-width: thin;
+}
+.code-block:not([data-lang]) pre { padding-top: 2.6rem; }
+.code-block pre::-webkit-scrollbar { height: 10px; }
+.code-block pre::-webkit-scrollbar-track { background: transparent; }
+.code-block pre::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--code-comment) 55%, transparent);
+  border-radius: var(--radius-pill);
+}
+.code-block code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.66;
+  font-variant-ligatures: none;
+  tab-size: 2;
+  color: var(--code-text);
+  background: none;
+  padding: 0;
+  border: 0;
+}
+@media (min-width: 40rem) { .code-block code { font-size: 0.875rem; } }
+.copy-btn {
+  position: absolute;
+  top: 0.4rem; right: 0.5rem;
+  z-index: 2;
+  min-height: 1.85rem;
+  padding: 0.2rem 0.65rem;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--code-comment);
+  background: color-mix(in srgb, var(--code-bg-header) 88%, transparent);
+  border: 1px solid var(--code-rule);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.code-block:hover .copy-btn, .copy-btn:focus-visible { opacity: 1; }
+.copy-btn:hover { color: var(--code-text); border-color: var(--code-text); }
+.copy-btn.copied { color: var(--code-string); border-color: var(--code-string); opacity: 1; }
+
+/* highlight.js token colours tuned for --code-bg */
+.hljs { color: var(--code-text); background: transparent; }
+.hljs-comment, .hljs-quote { color: var(--code-comment); font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-doctag, .hljs-formula, .hljs-subst, .hljs-deletion { color: var(--code-keyword); }
+.hljs-string, .hljs-regexp, .hljs-addition, .hljs-meta .hljs-string, .hljs-template-tag { color: var(--code-string); }
+.hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet { color: var(--code-number); }
+.hljs-title, .hljs-title.function_, .hljs-name, .hljs-section, .hljs-selector-id { color: var(--code-title); }
+.hljs-type, .hljs-title.class_, .hljs-class .hljs-title, .hljs-built_in { color: var(--code-type); }
+.hljs-attr, .hljs-attribute, .hljs-variable, .hljs-template-variable, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-params { color: var(--code-variable); }
+.hljs-meta, .hljs-punctuation, .hljs-operator { color: var(--code-punct); }
+.hljs-link { color: var(--code-title); text-decoration: underline; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: 700; }
+
+/* --- Cards & grids ------------------------------------------------------- */
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--rule);
+}
+.section-head h2 { font-size: var(--step-2); }
+.section-head a {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--brand);
+}
+.section-head a:hover { text-decoration: underline; }
+
+.grid { display: grid; gap: var(--space-5); }
+.grid--cards { grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr)); }
+.grid--related { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out), border-color var(--dur) var(--ease);
+}
+.card:hover, .card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2);
+  border-color: color-mix(in srgb, var(--brand) 40%, var(--rule));
+}
+.card__media { display: block; overflow: hidden; background: var(--surface-2); }
+.card__media img {
+  width: 100%;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+.card:hover .card__media img { transform: scale(1.03); }
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+.card__kicker {
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.card__title { font-size: var(--step-1); line-height: 1.2; text-wrap: pretty; }
+.card__title a { color: var(--ink); text-decoration: none; }
+.card__title a:hover { color: var(--brand); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+.card__excerpt { font-size: 0.9375em; line-height: 1.6; color: var(--ink-muted); }
+.card__meta {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+  margin-top: auto;
+}
+
+.featured { margin-bottom: var(--space-6); }
+.card--featured { border-radius: var(--radius-lg); }
+.card--featured .card__title { font-size: var(--step-3); }
+.card--featured .card__excerpt { font-size: 1em; color: var(--ink-soft); }
+@media (min-width: 52rem) {
+  .card--featured { flex-direction: row; align-items: center; }
+  .card--featured .card__media { flex: 0 0 44%; align-self: stretch; display: grid; align-items: center; }
+  .card--featured .card__body { flex: 1 1 auto; padding: var(--space-6); gap: var(--space-4); justify-content: center; }
+}
+
+/* --- Simple stacked list (tag pages) ------------------------------------ */
+.stack { list-style: none; padding: 0; display: grid; gap: 0; }
+.stack-item {
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--rule);
+}
+.stack-item:first-child { padding-top: 0; }
+.stack-item__meta {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+.stack-item__title { margin-top: var(--space-2); font-size: var(--step-1); }
+.stack-item__title a { color: var(--ink); text-decoration: none; }
+.stack-item__title a:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 0.2em; }
+.stack-item__excerpt { margin-top: var(--space-2); color: var(--ink-muted); font-size: 0.9375em; }
+.link-back {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 600;
+  text-decoration: none;
+}
+.link-back:hover { text-decoration: underline; }
+
+/* --- Article furniture --------------------------------------------------- */
+.article { max-width: var(--w-article); margin-inline: auto; }
+.article-foot {
+  max-width: var(--w-article);
+  margin: var(--space-8) auto 0;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--rule);
+}
+.article-foot h2 { font-size: var(--step-1); margin-bottom: var(--space-5); }
+.comments { max-width: var(--w-article); margin: var(--space-8) auto 0; }
+
+/* --- Pager --------------------------------------------------------------- */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-ui);
+}
+.pager__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-pill);
+  color: var(--ink);
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease);
+}
+.pager__link:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-soft); }
+.pager__status { font-size: var(--step--1); color: var(--ink-muted); text-align: center; }
+@media (max-width: 34rem) {
+  .pager { flex-wrap: wrap; justify-content: center; }
+  .pager__status { order: 3; width: 100%; }
+}
+
+/* --- Subscribe CTA ------------------------------------------------------- */
+.cta {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--space-9);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  background:
+    radial-gradient(90% 130% at 100% 0%, var(--accent-soft), transparent 58%),
+    radial-gradient(80% 120% at 0% 100%, var(--brand-soft), transparent 55%),
+    var(--bg-tint);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+.cta__text { max-width: 46ch; }
+.cta h2 { font-size: var(--step-2); }
+.cta p { margin-top: var(--space-3); color: var(--ink-soft); }
+
+/* --- Footer -------------------------------------------------------------- */
+.footer {
+  padding-block: var(--space-8) var(--space-6);
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+.footer__grid {
+  display: grid;
+  gap: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 48rem) {
+  .footer__grid { grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: var(--space-7); }
+}
+.footer__blurb { max-width: 42ch; line-height: 1.7; margin-top: 1rem; }
+.footer h2 {
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-3);
+}
+.footer ul { list-style: none; padding: 0; display: grid; gap: 0.4rem; }
+.footer a { color: var(--ink-muted); text-decoration: none; }
+.footer a:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 0.2em; }
+.footer__legal { padding-top: var(--space-5); display: grid; gap: var(--space-3); }
+.footer__disclaimer { max-width: 68ch; opacity: 0.85; }
+
+/* --- Dialogs (menu + search) -------------------------------------------- */
+dialog {
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  padding: 0;
+}
+dialog::backdrop {
+  background: rgba(9, 12, 18, 0.55);
+  backdrop-filter: blur(3px);
+}
+.dialog {
+  width: min(92vw, 34rem);
+  max-height: min(85vh, 44rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dialog__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--rule);
+}
+.dialog__head h2 { font-size: var(--step-1); }
+.dialog__body { padding: var(--space-5); overflow-y: auto; }
+.dialog__nav { display: grid; gap: 0.25rem; }
+.dialog__nav .nav__link { min-height: 3rem; padding-inline: 0.9rem; font-size: 1.0625rem; }
+.dialog__nav .btn { margin-top: var(--space-4); }
+.search-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-ui);
+  font-size: 1.0625rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  outline: none;
+}
+.search-input:focus-visible { border-color: var(--brand); outline: 2px solid var(--accent); outline-offset: 1px; }
+.search-results { display: grid; gap: 0.5rem; margin-top: var(--space-4); }
+.search-hint { font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-muted); margin-top: var(--space-4); }
+.search-result {
+  display: block;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  transition: border-color var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease);
+}
+.search-result:hover, .search-result:focus-visible { border-color: var(--brand); background: var(--brand-soft); }
+.search-result__type {
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.search-result__title { display: block; margin-top: 0.2rem; font-family: var(--font-display); font-weight: 700; color: var(--ink); }
+.search-result__desc { margin-top: 0.25rem; font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-muted); }
+.search-result mark { background: var(--accent-soft); color: var(--ink); border-radius: 3px; padding: 0 2px; }
+
+/* --- Motion ------------------------------------------------------------- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+}
+.js .reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal, .js .reveal.is-in { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .card:hover, .btn--primary:hover { transform: none; }
+  .card:hover .card__media img { transform: none; }
+  .progress__bar { transition: none; }
+}
+
+/* --- Small screens ------------------------------------------------------ */
+@media (max-width: 60rem) {
+  .nav__link, .nav__cta { display: none; }
+  #menu-btn { display: grid; }
+  .brand__text { font-size: 1rem; }
+}
+@media (max-width: 30rem) {
+  .hero__art { transform: none; }
+}
+
+/* --- Print -------------------------------------------------------------- */
+@media print {
+  .masthead, .progress, .cta, .footer, .comments, dialog, .copy-btn { display: none !important; }
+  body { background: #fff; color: #000; }
+  .prose { max-width: none; }
+}
+`;
 }
 
 // --- Layout Template ---
-// Simple function to wrap content in full HTML document
-// --- Layout Template ---
-function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
-    const navLinks = config.nav_links.map(l => `<a href="${l.url}">${l.label}</a>`).join(' ');
-    
-    // Feature Links based on Config
-    let featureLinks = '';
-    if (config.features.blog.mode === 'internal') featureLinks += `<a href="/blog/index.html">${config.features.blog.label}</a> `;
-    else if (config.features.blog.mode === 'external') featureLinks += `<a href="${config.features.blog.external_url}" target="_blank">${config.features.blog.label} <small>↗</small></a> `;
 
-    if (config.features.events.mode === 'internal') featureLinks += `<a href="/events/index.html">${config.features.events.label}</a> `;
-    else if (config.features.events.mode === 'external') featureLinks += `<a href="${config.features.events.external_url}" target="_blank">${config.features.events.label} <small>↗</small></a> `;
+function renderPageHead({ eyebrow, title, lede }) {
+    return `<section class="page-head">
+        <div class="shell">
+            <div class="page-head__inner">
+                ${eyebrow ? `<p class="eyebrow">${eyebrow}</p>` : ''}
+                <h1>${title}</h1>
+                ${lede ? `<p class="lede">${lede}</p>` : ''}
+            </div>
+        </div>
+    </section>`;
+}
 
-    if (config.features.podcast.mode === 'internal') featureLinks += `<a href="/podcast/index.html">${config.features.podcast.label}</a> `;
-    else if (config.features.podcast.mode === 'external') featureLinks += `<a href="${config.features.podcast.external_url}" target="_blank">${config.features.podcast.label} <small>↗</small></a> `;
-    // Support Link
-    let supportLink = config.support_link ? `<a href="${config.support_link}" class="btn-support">Support Me ❤️</a>` : '';
+const ICONS = {
+    search: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+    theme: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></svg>',
+    menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+    close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+};
 
-    // Subscribe Section Logic
+function buildNavItems(config) {
+    const items = [];
+    (config.nav_links || []).forEach(l => items.push({ label: l.label, url: l.url }));
+
+    ['blog', 'events', 'podcast'].forEach(key => {
+        const feat = config.features && config.features[key];
+        if (!feat) return;
+        if (feat.mode === 'internal') items.push({ label: feat.label, url: `/${key}/index.html` });
+        else if (feat.mode === 'external') items.push({ label: feat.label, url: feat.external_url, external: true });
+    });
+    return items;
+}
+
+function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
+    const navItems = buildNavItems(config);
+    const navHtml = navItems.map(i =>
+        `<a class="nav__link" href="${i.url}"${i.external ? ' target="_blank" rel="noopener"' : ''}>${escapeHtml(i.label)}${i.external ? '<sup aria-hidden="true">↗</sup>' : ''}</a>`
+    ).join('');
+
+    const supportLink = config.support_link
+        ? `<a class="btn btn--primary nav__cta" href="${config.support_link}" target="_blank" rel="noopener">Support my work</a>`
+        : '';
+
+    // Subscribe band sits between <main> and the footer so it reads as site furniture, not content.
     let subscribeSection = '';
     if (config.email_subscribe_form_url) {
         subscribeSection = `
-        <section class="card" style="margin-top: 2rem; border: 2px solid var(--md-sys-color-primary);">
-            <h3>📬 Join the Mailing List</h3>
-            <p>Get updates directly to your inbox.</p>
-            <div style="text-align: center;">
-                <a href="${config.email_subscribe_form_url}" target="_blank" class="btn-support" style="text-decoration:none;">Subscribe Now</a>
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="shell cta__inner">
+                <div class="cta__text">
+                    <p class="eyebrow">Newsletter</p>
+                    <h2 id="cta-title">Get new posts in your inbox</h2>
+                    <p>Deep dives on Apache Iceberg, lakehouse architecture and applied AI. No spam, unsubscribe anytime.</p>
+                </div>
+                <a class="btn btn--primary" href="${config.email_subscribe_form_url}" target="_blank" rel="noopener">Subscribe</a>
             </div>
         </section>`;
     }
@@ -537,10 +1660,10 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
             "location": {
                 "@type": "Place",
                 "name": seo.location,
-                "address": seo.location 
+                "address": seo.location
             },
             "image": [image],
-             "organizer": {
+            "organizer": {
                 "@type": "Person",
                 "name": config.author_name,
                 "url": config.domain
@@ -548,8 +1671,11 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
         };
     }
 
-    return `
-<!DOCTYPE html>
+    const SOCIAL_LABELS = { twitter: 'Twitter', x: 'X', github: 'GitHub', linkedin: 'LinkedIn', youtube: 'YouTube', mastodon: 'Mastodon', bluesky: 'Bluesky' };
+    const socialEntries = Object.entries(config.social_links || {})
+        .map(([k, v]) => [SOCIAL_LABELS[k.toLowerCase()] || (k.charAt(0).toUpperCase() + k.slice(1)), v]);
+
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -557,11 +1683,35 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     <title>${fullTitle}</title>
     ${seo.noindex ? '<meta name="robots" content="noindex, follow" />' : ''}
     <meta name="description" content="${description.replace(/"/g, '&quot;')}">
+    <meta name="author" content="${escapeHtml(config.author_name)}">
+    <meta name="theme-color" content="${(assets.themeColorLight)}" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="${(assets.themeColorDark)}" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="${url}" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="${escapeHtml(config.site_title)} RSS" href="/feed.xml">
     ${seo.prevUrl ? `<link rel="prev" href="${seo.prevUrl}" />` : ''}
     ${seo.nextUrl ? `<link rel="next" href="${seo.nextUrl}" />` : ''}
-    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="${assets.fontsUrl}">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="${assets.cssHref}">
+
+    <!-- Set the theme before first paint so there is no flash. -->
+    <script>
+      (function () {
+        var r = document.documentElement;
+        r.classList.add('js');
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') r.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="${type}" />
     <meta property="og:url" content="${url}" />
@@ -595,164 +1745,275 @@ function renderLayout(bodyContent, pageTitle, config, cssContent, seo = {}) {
     </script>
 
     ${config.custom_head_html || ''}
-
-    <style>
-        ${cssContent}
-        /* Basic Reset & Layout */
-        body { font-family: var(--md-sys-typescale-body-font); background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface); margin: 0; padding: 0; }
-        header { padding: 2rem; background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); display: flex; justify-content: space-between; align-items: center; }
-        nav a { margin-left: 1rem; text-decoration: none; color: inherit; font-weight: bold; }
-        main { max-width: 800px; margin: 2rem auto; padding: 1rem; }
-        footer { text-align: center; padding: 2rem; border-top: 1px solid #ccc; margin-top: 2rem; }
-        img { max-width: 100%; height: auto; border-radius: var(--md-sys-shape-corner); }
-        h1, h2, h3 { font-family: var(--md-sys-typescale-headline-font); }
-        .btn-support { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); padding: 0.5rem 1rem; border-radius: 20px; }
-        /* Card Style */
-        .card { background: var(--card-bg); padding: 1.5rem; border-radius: var(--md-sys-shape-corner); box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 1rem; }
-        
-        /* Mobile Menu */
-        #mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: inherit; }
-        #mobile-menu-dialog { border: none; border-radius: 12px; padding: 2rem; width: 90%; max-width: 400px; backdrop-filter: blur(5px); box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
-        #mobile-menu-dialog::backdrop { background: rgba(0,0,0,0.4); }
-        #mobile-menu-dialog nav { display: flex; flex-direction: column; gap: 1rem; text-align: center; }
-
-        @media (max-width: 768px) {
-            header nav > a, header nav > .btn-support { display: none; }
-            #mobile-menu-btn { display: block; }
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="brand">
-            <h1><a href="/" style="text-decoration:none; color:inherit;">${config.site_title}</a></h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+    ${seo.progress ? '<div class="progress" aria-hidden="true"><div class="progress__bar" id="progress-bar"></div></div>' : ''}
+
+    <header class="masthead" id="masthead">
+        <div class="shell masthead__inner">
+            <a class="brand" href="/">
+                <span class="brand__mark" aria-hidden="true">AM</span>
+                <span class="brand__text">${escapeHtml(config.site_title)}</span>
+                <span class="brand__short" aria-hidden="true">alexmerced.blog</span>
+            </a>
+            <nav class="nav" aria-label="Main">
+                ${navHtml}
+                <button class="icon-btn" type="button" id="search-btn" aria-label="Search the site">${ICONS.search}</button>
+                <button class="icon-btn" type="button" id="theme-btn" aria-label="Switch colour theme">${ICONS.theme}</button>
+                <button class="icon-btn" type="button" id="menu-btn" aria-label="Open menu" aria-haspopup="dialog">${ICONS.menu}</button>
+                ${supportLink}
+            </nav>
         </div>
-        <nav>
-            ${navLinks}
-            ${featureLinks}
-            <button onclick="document.getElementById('searchDialog').showModal()" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:inherit;" aria-label="Search">🔍</button>
-            <button id="theme-toggle" onclick="toggleTheme()" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:inherit;" aria-label="Toggle Theme">🌓</button>
-            <button id="mobile-menu-btn" onclick="document.getElementById('mobile-menu-dialog').showModal()" aria-label="Menu">☰</button>
-            ${supportLink}
-        </nav>
     </header>
-    <main>
+
+    <main id="main">
         ${bodyContent}
-        ${subscribeSection}
     </main>
-    <footer>
-        <p>&copy; ${new Date().getFullYear()} ${config.author_name}. Powered by SoloPlatform.</p>
-        <p style="font-size:0.8rem;opacity:0.7;margin-top:0.25rem;">The views, thoughts, and opinions expressed on this site belong solely to Alex Merced and do not represent the views of any organization or employer.</p>
-        <div class="socials">
-            ${Object.entries(config.social_links || {}).map(([k, v]) => `<a href="${v}">${k}</a>`).join(' | ')} | <a href="/feed.xml">RSS</a>
+
+    ${subscribeSection}
+
+    <footer class="footer">
+        <div class="shell">
+            <div class="footer__grid">
+                <div>
+                    <a class="brand" href="/">
+                        <span class="brand__mark" aria-hidden="true">AM</span>
+                        <span class="brand__text">${escapeHtml(config.site_title)}</span>
+                    </a>
+                    <p class="footer__blurb">${escapeHtml(config.site_description)}</p>
+                </div>
+                <div>
+                    <h2>Explore</h2>
+                    <ul>
+                        ${navItems.map(i => `<li><a href="${i.url}"${i.external ? ' target="_blank" rel="noopener"' : ''}>${escapeHtml(i.label)}</a></li>`).join('')}
+                        <li><a href="/feed.xml">RSS feed</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Elsewhere</h2>
+                    <ul>
+                        ${socialEntries.map(([label, v]) => `<li><a href="${v}" target="_blank" rel="noopener">${escapeHtml(label)}</a></li>`).join('')}
+                        ${config.support_link ? `<li><a href="${config.support_link}" target="_blank" rel="noopener">Buy me a coffee</a></li>` : ''}
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__legal">
+                <p>&copy; ${new Date().getFullYear()} ${escapeHtml(config.author_name)}. Built with SoloPlatform.</p>
+                <p class="footer__disclaimer">The views, thoughts, and opinions expressed on this site belong solely to Alex Merced and do not represent the views of any organization or employer.</p>
+            </div>
         </div>
     </footer>
-    <dialog id="mobile-menu-dialog">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-            <h2 style="margin:0; font-size:1.5rem;">Menu</h2>
-            <form method="dialog"><button style="background:none; border:none; cursor:pointer; font-size:1.2rem;">✕</button></form>
+
+    <dialog id="menu-dialog" aria-label="Site menu">
+        <div class="dialog">
+            <div class="dialog__head">
+                <h2>Menu</h2>
+                <button class="icon-btn" type="button" data-close-dialog aria-label="Close menu">${ICONS.close}</button>
+            </div>
+            <div class="dialog__body">
+                <nav class="dialog__nav" aria-label="Site">
+                    ${navItems.map(i => `<a class="nav__link" href="${i.url}"${i.external ? ' target="_blank" rel="noopener"' : ''}>${escapeHtml(i.label)}${i.external ? '<sup aria-hidden="true">↗</sup>' : ''}</a>`).join('')}
+                    ${config.support_link ? `<a class="btn btn--primary" href="${config.support_link}" target="_blank" rel="noopener">Support my work</a>` : ''}
+                </nav>
+            </div>
         </div>
-        <nav>
-            ${navLinks}
-            ${featureLinks}
-            ${supportLink}
-        </nav>
-    </dialog>
-    <dialog id="searchDialog" style="width: 90%; max-width: 600px; border-radius: 12px; border: none; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3); backdrop-filter: blur(5px); background: var(--card-bg); color: var(--md-sys-color-on-surface);">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-            <h2 style="margin:0; font-size:1.5rem;">Search</h2>
-            <form method="dialog"><button style="background:none; border:none; cursor:pointer; font-size:1.2rem; color:inherit;">✕</button></form>
-        </div>
-        <input type="text" id="searchInput" placeholder="Type to find posts, events..." style="width:100%; padding: 1rem; font-size: 1.1rem; border: 2px solid var(--md-sys-color-outline); border-radius: 8px; margin-bottom: 1rem; outline:none; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface);">
-        <div id="searchResults" style="max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.5rem;"></div>
     </dialog>
 
+    <dialog id="search-dialog" aria-label="Search">
+        <div class="dialog">
+            <div class="dialog__head">
+                <h2>Search</h2>
+                <button class="icon-btn" type="button" data-close-dialog aria-label="Close search">${ICONS.close}</button>
+            </div>
+            <div class="dialog__body">
+                <label class="visually-hidden" for="search-input">Search posts and pages</label>
+                <input class="search-input" type="search" id="search-input" placeholder="Search posts, pages, topics…" autocomplete="off">
+                <div class="search-results" id="search-results"></div>
+                <p class="search-hint" id="search-hint">Type at least two characters.</p>
+            </div>
+        </div>
+    </dialog>
 
     <script>
-        // Theme Toggle Logic
-        const themeBtn = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            html.setAttribute('data-theme', 'dark');
-        }
+    (function () {
+      var root = document.documentElement;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-        function toggleTheme() {
-            const current = html.getAttribute('data-theme');
-            if (current === 'dark') {
-                html.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-    </script>
-
-    <script>
-        const searchInput = document.getElementById('searchInput');
-        let searchIndex = null;
-        
-        searchInput.addEventListener('input', async (e) => {
-            const q = e.target.value.toLowerCase();
-            const resultsDiv = document.getElementById('searchResults');
-            
-            if (q.length < 2) { 
-                resultsDiv.innerHTML = '<p style="color:#888; text-align:center;">Type 2+ characters...</p>'; 
-                return; 
-            }
-            
-            if (!searchIndex) {
-                 try {
-                    searchIndex = await fetch('/search.json').then(r => r.json());
-                 } catch (err) {
-                    console.error('Failed to load search index');
-                    return;
-                 }
-            }
-            
-            const results = searchIndex.filter(i => 
-                (i.title && i.title.toLowerCase().includes(q)) || 
-                (i.description && i.description.toLowerCase().includes(q))
-            );
-            
-            if (results.length === 0) {
-                resultsDiv.innerHTML = '<p style="text-align:center;">No results found.</p>';
-            } else {
-                resultsDiv.innerHTML = results.map(r => 
-                    '<div style="padding: 1rem; background: var(--card-bg); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;">' +
-                        '<div style="display:flex; justify-content:space-between; margin-bottom:0.25rem;">' +
-                            '<span style="font-size:0.8rem; font-weight:bold; color:var(--md-sys-color-primary); text-transform:uppercase;">' + r.type + '</span>' +
-                        '</div>' +
-                        '<a href="' + r.url + '" style="font-size: 1.1rem; font-weight: bold; text-decoration: none; color: var(--md-sys-color-on-surface); display: block; margin-bottom:0.25rem;">' + r.title + '</a>' +
-                        '<p style="margin:0; font-size: 0.9rem; color: var(--md-sys-color-outline);">' + r.description.substring(0, 120).replace(new RegExp(q, 'gi'), m => '<mark style="background:#ffeb3b;color:black;">'+m+'</mark>') + '...</p>' +
-                    '</div>'
-                ).join('');
-            }
+      /* Theme toggle: cycles between light and dark, remembering the choice. */
+      function currentTheme() {
+        var attr = root.getAttribute('data-theme');
+        if (attr) return attr;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      var themeBtn = document.getElementById('theme-btn');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+          var next = currentTheme() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          themeBtn.setAttribute('aria-label', next === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
         });
-    </script>
-    <script>
-        function copyCode(btn) {
-            const pre = btn.nextElementSibling;
-            const code = pre.innerText;
-            navigator.clipboard.writeText(code).then(() => {
-                btn.textContent = 'Copied!';
-                btn.classList.add('copied');
-                setTimeout(() => {
-                    btn.textContent = 'Copy';
-                    btn.classList.remove('copied');
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy:', err);
-                btn.textContent = 'Error';
-            });
+      }
+
+      /* Dialogs */
+      function wire(btnId, dialogId, onOpen) {
+        var btn = document.getElementById(btnId);
+        var dlg = document.getElementById(dialogId);
+        if (!btn || !dlg) return;
+        btn.addEventListener('click', function () {
+          if (typeof dlg.showModal === 'function') dlg.showModal();
+          else dlg.setAttribute('open', '');
+          if (onOpen) onOpen(dlg);
+        });
+        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+      }
+      wire('menu-btn', 'menu-dialog');
+      wire('search-btn', 'search-dialog', function () {
+        var i = document.getElementById('search-input');
+        if (i) i.focus();
+      });
+      document.querySelectorAll('[data-close-dialog]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var d = b.closest('dialog');
+          if (d) d.close();
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        var tag = (document.activeElement && document.activeElement.tagName) || '';
+        if ((e.key === '/' || (e.key === 'k' && (e.metaKey || e.ctrlKey))) && !/^(INPUT|TEXTAREA|SELECT)$/.test(tag)) {
+          var d = document.getElementById('search-dialog');
+          if (d && !d.open) { e.preventDefault(); d.showModal(); var i = document.getElementById('search-input'); if (i) i.focus(); }
         }
+      });
+
+      /* Masthead shadow once scrolled */
+      var mast = document.getElementById('masthead');
+      if (mast) {
+        var onScroll = function () { mast.classList.toggle('is-stuck', window.scrollY > 8); };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+
+      /* Reading progress */
+      var bar = document.getElementById('progress-bar');
+      if (bar) {
+        var tick = function () {
+          var h = document.documentElement.scrollHeight - window.innerHeight;
+          var pct = h > 0 ? Math.min(100, Math.max(0, (window.scrollY / h) * 100)) : 0;
+          bar.style.width = pct.toFixed(2) + '%';
+        };
+        var queued = false;
+        var raf = function () {
+          if (queued) return;
+          queued = true;
+          window.requestAnimationFrame(function () { queued = false; tick(); });
+        };
+        tick();
+        window.addEventListener('scroll', raf, { passive: true });
+        window.addEventListener('resize', raf);
+      }
+
+      /* Reveal on scroll. Everything is force-shown after a moment so a stalled
+         observer can never leave content permanently invisible. */
+      var reveals = document.querySelectorAll('.reveal');
+      if (reveals.length) {
+        var showAll = function () { reveals.forEach(function (el) { el.classList.add('is-in'); }); };
+        if (reduce.matches || !('IntersectionObserver' in window)) {
+          showAll();
+        } else {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-in');
+                io.unobserve(entry.target);
+              }
+            });
+          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+          reveals.forEach(function (el) { io.observe(el); });
+          setTimeout(showAll, 2000);
+        }
+      }
+    })();
+
+    function copyCode(btn) {
+      var pre = btn.nextElementSibling;
+      if (!pre) return;
+      var code = pre.innerText;
+      navigator.clipboard.writeText(code).then(function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(function () {
+        btn.textContent = 'Error';
+      });
+    }
+    </script>
+
+    <script>
+    (function () {
+      var input = document.getElementById('search-input');
+      if (!input) return;
+      var resultsDiv = document.getElementById('search-results');
+      var hint = document.getElementById('search-hint');
+      var index = null;
+
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+      function escRe(s) { return s.replace(/[.*+?^\${}()|[\\]\\\\]/g, '\\\\$&'); }
+
+      var t;
+      input.addEventListener('input', function (e) {
+        clearTimeout(t);
+        t = setTimeout(function () { run(e.target.value.trim().toLowerCase()); }, 120);
+      });
+
+      async function run(q) {
+        if (q.length < 2) {
+          resultsDiv.innerHTML = '';
+          hint.textContent = 'Type at least two characters.';
+          return;
+        }
+        if (!index) {
+          hint.textContent = 'Loading index…';
+          try {
+            index = await fetch('/search.json').then(function (r) { return r.json(); });
+          } catch (err) {
+            hint.textContent = 'Search is unavailable right now.';
+            return;
+          }
+        }
+        var hits = index.filter(function (i) {
+          return (i.title && i.title.toLowerCase().indexOf(q) > -1) ||
+                 (i.description && i.description.toLowerCase().indexOf(q) > -1);
+        });
+        if (!hits.length) {
+          resultsDiv.innerHTML = '';
+          hint.textContent = 'No results for “' + esc(q) + '”.';
+          return;
+        }
+        var shown = hits.slice(0, 30);
+        hint.textContent = hits.length + (hits.length === 1 ? ' result' : ' results') + (hits.length > shown.length ? ' (showing 30)' : '');
+        var re = new RegExp('(' + escRe(q) + ')', 'gi');
+        resultsDiv.innerHTML = shown.map(function (r) {
+          var desc = esc(String(r.description || '').substring(0, 140)).replace(re, '<mark>$1</mark>');
+          return '<a class="search-result" href="' + esc(r.url) + '">' +
+                   '<span class="search-result__type">' + esc(r.type) + '</span>' +
+                   '<span class="search-result__title">' + esc(r.title).replace(re, '<mark>$1</mark>') + '</span>' +
+                   '<span class="search-result__desc">' + desc + '</span>' +
+                 '</a>';
+        }).join('');
+      }
+    })();
     </script>
 </body>
-</html>
-    `;
+</html>`;
 }
 
 // --- Main Build Function ---
@@ -763,21 +2024,31 @@ async function build() {
     // 1. Prepare Paths
     await fs.ensureDir(DIST_DIR);
     await fs.emptyDir(DIST_DIR);
-    
+
     // 2. Load Configs
     const config = await loadJSON(CONFIG_PATH);
     const theme = await loadJSON(THEME_PATH);
     const css = generateCSS(theme);
+    const cssHash = crypto.createHash('sha1').update(css).digest('hex').slice(0, 10);
+    const assets = {
+        cssHref: `/styles.css?v=${cssHash}`,
+        fontsUrl: (theme.fonts && theme.fonts.google_url) || '',
+        themeColorLight: (theme.light && theme.light.bg) || '#ffffff',
+        themeColorDark: (theme.dark && theme.dark.bg) || '#0d1117'
+    };
+    await fs.outputFile(path.join(DIST_DIR, 'styles.css'), css);
+    console.log(`🎨 Built styles.css (${(css.length / 1024).toFixed(1)} kB).`);
 
     // 2.5 Load Content Early
     const allPosts = await getAllPosts(config, theme);
-    
+
     // 3. Copy Assets
     if (await fs.pathExists(PUBLIC_DIR)) {
         await fs.copy(PUBLIC_DIR, DIST_DIR);
         console.log('📂 Copied public assets.');
     }
-    
+    const heroArt = await generateHeroArt();
+
     // Global Search Index
     const searchIndex = [];
 
@@ -794,93 +2065,119 @@ async function build() {
         const html = marked.parse(content);
         const slug = file.replace('.md', '');
 
-        const pageHtml = renderLayout(`
-            <article>
-                <h1>${data.title}</h1>
-                <div class="content">${html}</div>
-            </article>
-        `, data.title, config, css, { 
-            path: `/${slug}.html`, 
-            description: data.description 
+        const body = `
+            ${renderPageHead({ eyebrow: 'Page', title: escapeHtml(data.title), lede: data.description ? escapeHtml(data.description) : '' })}
+            <div class="shell page">
+                <div class="prose">${html}</div>
+            </div>`;
+
+        const pageHtml = renderLayout(body, data.title, config, assets, {
+            path: `/${slug}.html`,
+            description: data.description
         });
 
         await fs.outputFile(path.join(DIST_DIR, `${slug}.html`), pageHtml);
         console.log(`📄 Built Generic Page: ${slug}.html`);
-        
-        // Add to search index if desired? Maybe not for 'about' page or yes? 
-        // Let's add it.
+
         searchIndex.push({ title: data.title, type: 'Page', url: `/${slug}.html`, description: data.description || '' });
     }
 
     // 4. Build Home Page
     const homePath = path.join(CONTENT_DIR, 'home.md');
-    let homeHtml = '<h1>Welcome</h1>';
+    let heroTitle = escapeHtml(config.site_title);
+    let homeProse = '';
+    let showRecent = true;
+
     if (await fs.pathExists(homePath)) {
         const fileContent = await fs.readFile(homePath, 'utf-8');
-        const { content, data } = matter(fileContent); // data is frontmatter
-        const htmlContent = marked.parse(content);
-        
-        // Add Hero if exists
-        let heroHtml = '';
-        if (data.hero_image) {
-            heroHtml = `<div class="hero"><img src="${data.hero_image}" alt="Hero Image"></div>`;
+        const { content, data } = matter(fileContent);
+        showRecent = data.show_recent_blog_posts !== false;
+
+        // Promote the document's own H1 into the hero so each page keeps exactly one <h1>.
+        let md = content;
+        const h1 = md.match(/^[ \t]*#[ \t]+(.+?)[ \t]*$/m);
+        if (h1) {
+            heroTitle = escapeHtml(h1[1]);
+            md = md.replace(h1[0], '');
+        } else if (data.title) {
+            heroTitle = escapeHtml(data.title);
         }
-        
-        homeHtml = `${heroHtml} ${htmlContent}`;
+        homeProse = marked.parse(md);
     }
 
-    // Add Latest Posts
-    if (allPosts.length > 0) {
-        const latest = allPosts.slice(0, 2);
-        homeHtml += `
-            <div style="margin-top: 4rem; border-top: 1px solid var(--md-sys-color-outline); padding-top: 2rem;">
-                <h2>Latest Updates</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-                    ${latest.map(p => `
-                        <div class="card">
-                             ${p.coverImage ? `<img src="${p.coverImage}" alt="${p.title}" style="width:100%;height:200px;object-fit:cover;">` : ''}
-                            <div style="padding:1rem;">
-                                <h3><a href="/blog/${p.slug}.html" style="text-decoration:none; color:inherit;">${p.title}</a></h3>
-                                <p><small>${p.dateObj.toDateString()}</small></p>
-                                <p>${p.description || ''}</p>
-                            </div>
-                        </div>
-                    `).join('')}
+    const artHtml = heroArt ? `
+        <div class="hero__art reveal">
+            <picture>
+                ${heroArt.webp ? `<source srcset="${heroArt.webp}" type="image/webp">` : ''}
+                <img src="${heroArt.fallback}" alt="Illustration of Alex Merced writing at a laptop by a window overlooking green hills" width="${heroArt.width}" height="${heroArt.height}" fetchpriority="high" decoding="async">
+            </picture>
+        </div>` : '';
+
+    const totalTags = new Set(allPosts.flatMap(p => (p.tags || []).map(tagSlug))).size;
+
+    let homeHtml = `
+        <section class="hero">
+            <div class="shell hero__inner">
+                <div>
+                    <p class="eyebrow">Data engineering · Lakehouse · AI</p>
+                    <h1 class="hero__title">${heroTitle}</h1>
+                    <p class="hero__lede">${escapeHtml(config.site_description)}</p>
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="/blog/index.html">Read the blog</a>
+                        <a class="btn btn--ghost" href="/about.html">About Alex</a>
+                    </div>
+                    <div class="hero__stats">
+                        <p class="hero__stat"><b>${allPosts.length}</b><span>published posts</span></p>
+                        <p class="hero__stat"><b>${totalTags}</b><span>topics covered</span></p>
+                        <p class="hero__stat"><b>3</b><span>published books</span></p>
+                    </div>
                 </div>
-            </div>`;
+                ${artHtml}
+            </div>
+        </section>
+        <div class="shell page">
+            <div class="prose prose--flush">${homeProse}</div>
+        </div>`;
+
+    if (showRecent && allPosts.length > 0) {
+        const latest = allPosts.slice(0, 3);
+        homeHtml += `
+            <section class="shell page page--tight" aria-labelledby="latest-title">
+                <div class="section-head">
+                    <h2 id="latest-title">Latest writing</h2>
+                    <a href="/blog/index.html">All ${allPosts.length} posts →</a>
+                </div>
+                <div class="grid grid--cards">
+                    ${latest.map(p => renderPostCard(p)).join('')}
+                </div>
+            </section>`;
     }
-    
-    const fullHomeHtml = renderLayout(homeHtml, 'Home', config, css, { path: '/' });
+
+    const fullHomeHtml = renderLayout(homeHtml, 'Home', config, assets, { path: '/' });
     await fs.outputFile(path.join(DIST_DIR, 'index.html'), fullHomeHtml);
     console.log('🏠 Built Home Page.');
 
-    // 5. Build Blog (Internal Mode)
     // 5. Build Blog (Internal Mode)
     if (config.features.blog && config.features.blog.mode === 'internal') {
         const blogSrc = path.join(CONTENT_DIR, 'blog');
         const blogDist = path.join(DIST_DIR, 'blog');
         await fs.ensureDir(blogDist);
-        
+
         if (await fs.pathExists(blogSrc)) {
 
             // Reuse pre-loaded posts
             const posts = allPosts;
-            
+
             // Pass 2: Render Pages with Related Posts
             for (const post of posts) {
                 const related = getRelatedPosts(post, posts);
                 const relatedHtml = related.length > 0 ? `
-                    <div style="margin-top: 4rem; border-top: 1px solid var(--md-sys-color-outline); padding-top: 2rem;">
-                        <h3>Check out these related posts:</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                            ${related.map(p => `
-                                <div class="card" style="padding: 1rem;">
-                                    <h4><a href="/blog/${p.slug}.html">${p.title}</a></h4>
-                                    <p class="meta"><small>${p.date}</small></p>
-                                </div>
-                            `).join('')}
+                    <section class="article-foot" aria-labelledby="related-title">
+                        <h2 id="related-title">Related reading</h2>
+                        <div class="grid grid--related">
+                            ${related.map(p => renderPostCard(p, { showExcerpt: false, level: 'h3' })).join('')}
                         </div>
-                    </div>` : '';
+                    </section>` : '';
 
                 // Smart description: prefer frontmatter, then first clean text block (skip leading images/comments)
                 const autoDesc = post.content
@@ -894,15 +2191,16 @@ async function build() {
                     image: post.coverImage,
                     description: post.description || autoDesc,
                     date: post.date,
-                    updatedDate: post.updated || null
+                    updatedDate: post.updated || null,
+                    progress: true
                 };
 
                 // Giscus Script Logic
                 let commentsSection = '';
                 if (config.features.giscus && config.features.giscus.repo) {
-                   const g = config.features.giscus;
-                   commentsSection = `
-                   <div style="margin-top: 4rem;">
+                    const g = config.features.giscus;
+                    commentsSection = `
+                   <div class="comments">
                        <script src="https://giscus.app/client.js"
                             data-repo="${g.repo}"
                             data-repo-id="${g.repoId}"
@@ -922,25 +2220,39 @@ async function build() {
                    `;
                 }
 
-                const postHtml = renderLayout(`
+                const body = `
                     <article>
-                        <h1>${post.title}</h1>
-                        <p class="meta"><small>By <a href="https://alexmerced.com/about" style="color:inherit;">Alex Merced</a> | ${post.date} | ${post.readingTime} | ${post.tags ? post.tags.join(', ') : ''}</small></p>
-                        <img src="${post.coverImage}" alt="Cover Image" style="margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
-                        <div class="content">${post.html}</div>
-                        ${relatedHtml}
-                        ${commentsSection}
-                    </article>
-                `, post.title, config, css, seoData);
-                
+                        <header class="post-head">
+                            <div class="shell">
+                                <div class="post-head__inner">
+                                    <p class="eyebrow">Article</p>
+                                    <h1>${escapeHtml(post.title)}</h1>
+                                    <p class="byline">
+                                        <span class="byline__author">By <a href="https://alexmerced.com/about">Alex Merced</a></span>
+                                        <span class="dot"></span><time datetime="${isoDate(post.dateObj)}">${formatDate(post.dateObj)}</time>
+                                        <span class="dot"></span>${escapeHtml(post.readingTime || '')}
+                                    </p>
+                                    ${post.tags && post.tags.length ? `<div class="chips--head">${renderTagChips(post.tags)}</div>` : ''}
+                                </div>
+                            </div>
+                        </header>
+                        <div class="shell page">
+                            <div class="prose prose--article content">${post.html}</div>
+                            ${relatedHtml}
+                            ${commentsSection}
+                        </div>
+                    </article>`;
+
+                const postHtml = renderLayout(body, post.title, config, assets, seoData);
+
                 await fs.outputFile(path.join(blogDist, `${post.slug}.html`), postHtml);
                 searchIndex.push({ title: post.title, type: 'Blog', url: `/blog/${post.slug}.html`, description: seoData.description });
             }
-            
+
             // Pass 3: Build Indexes & Features
-            await generatePaginatedIndex(posts, blogDist, config, css);
+            await generatePaginatedIndex(posts, blogDist, config, assets);
             await generateBlogRSS(posts, config);
-            await generateTagPages(posts, config, css);
+            await generateTagPages(posts, config, assets);
         }
     }
 
@@ -949,23 +2261,21 @@ async function build() {
         const eventsSrc = path.join(CONTENT_DIR, 'events');
         const eventsDist = path.join(DIST_DIR, 'events');
         await fs.ensureDir(eventsDist);
-        
+
         if (await fs.pathExists(eventsSrc)) {
             const files = await fs.readdir(eventsSrc);
             const events = [];
-            
+
             for (const file of files) {
                 if (!file.endsWith('.md')) continue;
                 const raw = await fs.readFile(path.join(eventsSrc, file), 'utf-8');
                 const { content, data } = matter(raw);
                 const html = marked.parse(content);
                 const slug = file.replace('.md', '');
-                
-                // RSVP Button Logic
-                let rsvpBtn = '';
-                if (data.rsvp_link) {
-                    rsvpBtn = `<a href="${data.rsvp_link}" target="_blank" class="btn-support">RSVP / Register 🎟️</a>`;
-                }
+
+                const rsvpBtn = data.rsvp_link
+                    ? `<p class="hero__actions"><a class="btn btn--primary" href="${data.rsvp_link}" target="_blank" rel="noopener">RSVP / Register</a></p>`
+                    : '';
 
                 const seoData = {
                     type: 'event',
@@ -975,33 +2285,44 @@ async function build() {
                     description: `Event: ${data.title} at ${data.location}`
                 };
 
-                // Save Individual Event Page
-                const eventHtml = renderLayout(`
+                const body = `
                     <article>
-                        <h1>${data.title}</h1>
-                        <p class="meta"><strong>📅 Date:</strong> ${data.event_date} | <strong>📍 Location:</strong> ${data.location}</p>
-                        ${rsvpBtn}
-                        <hr>
-                        <div class="content">${html}</div>
-                    </article>
-                `, data.title, config, css, seoData);
-                
+                        <header class="post-head">
+                            <div class="shell">
+                                <div class="post-head__inner">
+                                    <p class="eyebrow">Event</p>
+                                    <h1>${escapeHtml(data.title)}</h1>
+                                    <p class="byline"><span class="byline__author">${escapeHtml(data.event_date)}</span><span class="dot"></span>${escapeHtml(data.location || '')}</p>
+                                    ${rsvpBtn}
+                                </div>
+                            </div>
+                        </header>
+                        <div class="shell page">
+                            <div class="prose content">${html}</div>
+                        </div>
+                    </article>`;
+
+                const eventHtml = renderLayout(body, data.title, config, assets, seoData);
+
                 await fs.outputFile(path.join(eventsDist, `${slug}.html`), eventHtml);
                 events.push({ ...data, slug, dateObj: new Date(data.event_date) });
                 searchIndex.push({ title: data.title, type: 'Event', url: `/events/${slug}.html`, description: seoData.description });
             }
-            
-            // Build Events Index
+
             events.sort((a, b) => a.dateObj - b.dateObj); // Ascending for upcoming
             const listHtml = events.map(e => `
-                <div class="card">
-                    <h2><a href="/events/${e.slug}.html">${e.title}</a></h2>
-                    <p>📅 ${e.event_date} @ ${e.location}</p>
-                    ${e.rsvp_link ? `<a href="${e.rsvp_link}" target="_blank">RSVP ↗</a>` : ''}
-                </div>
+                <li class="stack-item reveal">
+                    <p class="stack-item__meta"><time datetime="${isoDate(e.dateObj)}">${escapeHtml(e.event_date)}</time><span class="dot"></span>${escapeHtml(e.location || '')}</p>
+                    <h2 class="stack-item__title"><a href="/events/${e.slug}.html">${escapeHtml(e.title)}</a></h2>
+                    ${e.rsvp_link ? `<p class="stack-item__excerpt"><a href="${e.rsvp_link}" target="_blank" rel="noopener">RSVP ↗</a></p>` : ''}
+                </li>
             `).join('');
-            
-            const indexHtml = renderLayout(`<h1>Upcoming Events</h1>${listHtml}`, 'Events', config, css, { path: '/events/index.html' });
+
+            const body = `
+                ${renderPageHead({ eyebrow: 'Calendar', title: 'Upcoming events', lede: 'Talks, workshops and streams. Come say hello.' })}
+                <div class="shell page"><ol class="stack">${listHtml}</ol></div>`;
+
+            const indexHtml = renderLayout(body, 'Events', config, assets, { path: '/events/index.html' });
             await fs.outputFile(path.join(eventsDist, 'index.html'), indexHtml);
             console.log(`📅 Built Events (${events.length} events).`);
         }
@@ -1012,60 +2333,68 @@ async function build() {
         const podSrc = path.join(CONTENT_DIR, 'podcast');
         const podDist = path.join(DIST_DIR, 'podcast');
         await fs.ensureDir(podDist);
-        
+
         if (await fs.pathExists(podSrc)) {
             const files = await fs.readdir(podSrc);
             const episodes = [];
-            
+
             for (const file of files) {
                 if (!file.endsWith('.md')) continue;
                 const raw = await fs.readFile(path.join(podSrc, file), 'utf-8');
                 const { content, data } = matter(raw);
                 const html = marked.parse(content);
                 const slug = file.replace('.md', '');
-                
-                // Audio Player logic
+
                 let audioPlayer = '';
                 if (data.audio_url) {
-                    audioPlayer = `<audio controls src="${data.audio_url}" style="width:100%; margin: 1rem 0;"></audio>
+                    audioPlayer = `<audio controls src="${data.audio_url}" style="width:100%; margin: 1.5rem 0;"></audio>
                                    <p><a href="${data.audio_url}" download>Download MP3</a></p>`;
                 }
-                
+
                 const seoData = {
                     path: `/podcast/${slug}.html`,
                     date: data.date,
                     description: `Podcast Episode: ${data.title}`
                 };
 
-                // Save Episode Page
-                const epHtml = renderLayout(`
+                const body = `
                     <article>
-                        <h1>${data.title}</h1>
-                        <p class="meta">Posted: ${data.date} | Duration: ${data.duration}</p>
-                        ${audioPlayer}
-                        <div class="content">${html}</div>
-                    </article>
-                `, data.title, config, css, seoData);
-                
+                        <header class="post-head">
+                            <div class="shell">
+                                <div class="post-head__inner">
+                                    <p class="eyebrow">Podcast</p>
+                                    <h1>${escapeHtml(data.title)}</h1>
+                                    <p class="byline"><time>${escapeHtml(data.date)}</time><span class="dot"></span>${escapeHtml(data.duration || '')}</p>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="shell page">
+                            <div class="prose content">${audioPlayer}${html}</div>
+                        </div>
+                    </article>`;
+
+                const epHtml = renderLayout(body, data.title, config, assets, seoData);
+
                 await fs.outputFile(path.join(podDist, `${slug}.html`), epHtml);
                 episodes.push({ ...data, slug, html, dateObj: new Date(data.date) });
                 searchIndex.push({ title: data.title, type: 'Podcast', url: `/podcast/${slug}.html`, description: seoData.description });
             }
-            
-            // Build Podcast Index
+
             episodes.sort((a, b) => b.dateObj - a.dateObj);
             const listHtml = episodes.map(e => `
-                <div class="card">
-                    <h2><a href="/podcast/${e.slug}.html">${e.title}</a></h2>
-                    <p>🎧 ${e.duration}</p>
-                    <small>${e.date}</small>
-                </div>
+                <li class="stack-item reveal">
+                    <p class="stack-item__meta"><time>${escapeHtml(e.date)}</time><span class="dot"></span>${escapeHtml(e.duration || '')}</p>
+                    <h2 class="stack-item__title"><a href="/podcast/${e.slug}.html">${escapeHtml(e.title)}</a></h2>
+                </li>
             `).join('');
-            
-            const indexHtml = renderLayout(`<h1>Podcast Episodes</h1>${listHtml}`, 'Podcast', config, css, { path: '/podcast/index.html' });
+
+            const body = `
+                ${renderPageHead({ eyebrow: 'Audio', title: 'Podcast episodes', lede: 'Conversations on data, lakehouses and AI.' })}
+                <div class="shell page"><ol class="stack">${listHtml}</ol></div>`;
+
+            const indexHtml = renderLayout(body, 'Podcast', config, assets, { path: '/podcast/index.html' });
             await fs.outputFile(path.join(podDist, 'index.html'), indexHtml);
-            
-            
+
             // Generate RSS Feed (basic)
             const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
@@ -1092,26 +2421,15 @@ async function build() {
     // 8. Build Sitemap & Robots.txt
     const domain = config.domain || 'https://example.com';
     const today = new Date().toISOString();
-    
+
     // Collect specific URLs (only canonical root, not /index.html duplicate)
     const sitemapUrls = [
         { loc: `${domain}/`, priority: '1.0' }
     ];
 
-    // Helper to add Feature Indexes
     if (config.features.blog?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/blog/index.html`, priority: '0.9' });
     if (config.features.events?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/events/index.html`, priority: '0.9' });
     if (config.features.podcast?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/podcast/index.html`, priority: '0.9' });
-
-    // Read generated files to populate sitemap (simple discovery of what we just built)
-    // Actually, we can just walk the dist folder or use the lists we already have if we scoped them higher.
-    // For simplicity/robustness, let's walk the dist folder for .html files.
-    // Previously we had getFiles here, but it's now a helper function at top level
-    // We can just call it directory.
-    
-    // NOTE: getFiles is async and defined in helpers scope now.
-
-
 
     const allFiles = await getFiles(DIST_DIR);
     const allHtml = allFiles.filter(f => f.endsWith('.html'));
@@ -1124,7 +2442,7 @@ async function build() {
     <priority>${u.priority}</priority>
   </url>`).join('');
 
-    // Add all other HTML files not explicitly added (exclude tag pages — low-value, noindexed)
+    // Add all other HTML files not explicitly added (exclude tag pages: low-value, noindexed)
     const dynamicItems = allHtml.map(p => {
         const relPath = path.relative(DIST_DIR, p).replace(/\\/g, '/');
         // Skip tag pages (noindexed), skip root index.html (canonical is /)
@@ -1175,7 +2493,7 @@ Allow: /
 
 Sitemap: ${domain}/sitemap.xml`;
     await fs.outputFile(path.join(DIST_DIR, 'robots.txt'), robotsTxt);
-     console.log('🤖 Built robots.txt');
+    console.log('🤖 Built robots.txt');
 
     // Generate llms.txt
     await generateLLMsTxt(allPosts, config);
@@ -1193,11 +2511,13 @@ async function getAllPosts(config, theme) {
         const blogSrc = path.join(CONTENT_DIR, 'blog');
         if (await fs.pathExists(blogSrc)) {
             const files = await getFiles(blogSrc);
+            const parsed = [];
+
             for (const filePath of files) {
                 if (!filePath.endsWith('.md')) continue;
                 const relPath = path.relative(blogSrc, filePath);
                 const slug = relPath.replace(/\.md$/, '');
-                
+
                 const raw = await fs.readFile(filePath, 'utf-8');
                 const { content, data } = matter(raw);
 
@@ -1206,24 +2526,28 @@ async function getAllPosts(config, theme) {
                 const showDrafts = process.argv.includes('--drafts');
                 if (isDraft && !showDrafts) continue;
 
-                const html = marked.parse(content);
-                
-                // Dynamic Cover Image
-                let coverImage = data.cover_image;
-                if (!coverImage) {
-                    const safeName = path.basename(slug);
-                    coverImage = await generateCoverImage(data.title, safeName, theme);
-                }
-                
-                const readingTime = calculateReadingTime(content);
-                
-                posts.push({ ...data, slug, dateObj: new Date(data.date), coverImage, readingTime, html, content });
+                parsed.push({ ...data, slug, content, dateObj: new Date(data.date) });
             }
-            // Sort Posts
-            posts.sort((a, b) => b.dateObj - a.dateObj);
+
+            parsed.sort((a, b) => b.dateObj - a.dateObj);
+            const selected = POST_LIMIT ? parsed.slice(0, POST_LIMIT) : parsed;
+            if (POST_LIMIT) console.log(`⚡ --limit=${POST_LIMIT}: building ${selected.length} of ${parsed.length} posts.`);
+
+            for (const post of selected) {
+                const html = markLeadIn(marked.parse(stripDuplicateTitle(post.content, post.title)));
+
+                // Dynamic Cover Image
+                let coverImage = post.cover_image;
+                if (!coverImage) {
+                    const safeName = path.basename(post.slug);
+                    coverImage = await generateCoverImage(post.title, safeName, theme);
+                }
+
+                posts.push({ ...post, coverImage, readingTime: calculateReadingTime(post.content), html });
+            }
         }
     }
     return posts;
 }
 
-build().catch(err => console.error(err));
+build().catch(err => { console.error(err); process.exitCode = 1; });
