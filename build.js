@@ -1617,39 +1617,34 @@ main { display: block; flex: 1 0 auto; }
 .footer ul { list-style: none; padding: 0; display: grid; gap: 0.4rem; }
 .footer a { color: var(--ink-muted); text-decoration: none; }
 .footer a:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 0.2em; }
-.footer__network {
-  margin-top: var(--space-8, 2rem);
-  padding-top: var(--space-6, 1.5rem);
+.footer__run {
+  margin-top: var(--space-6, 1.5rem);
+  padding-top: var(--space-5, 1.25rem);
   border-top: 1px solid var(--rule);
 }
-.footer__network-title {
+.footer__run-title {
   font-family: var(--font-ui);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent-text);
-  margin-bottom: 1.5rem;
-}
-.footer__network-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-}
-.footer__network h3 {
-  font-size: 0.95rem;
   margin-bottom: 0.75rem;
 }
-.footer__network ul {
+.footer__run-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
-.footer__network a {
-  font-size: 0.9rem;
+.footer__run-list a { font-size: 0.875rem; }
+.footer__run-list li + li::before {
+  content: "·";
+  margin-right: 0.75rem;
+  opacity: 0.5;
 }
 
 .footer__legal { padding-top: var(--space-5); display: grid; gap: var(--space-3); }
@@ -2014,70 +2009,38 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                 </div>
             </div>
 
-            <nav class="footer__network" aria-label="The Alex Merced Network">
-                <h2 class="footer__network-title">The Alex Merced Network</h2>
-                <div class="footer__network-grid">
-                    <div>
-                        <h3>Alex Merced</h3>
-                        <ul>
-                            <li><a href="https://alexmerced.com" target="_blank" rel="noopener">AlexMerced.com</a></li>
-                            <li><a href="https://whoisalexmerced.com" target="_blank" rel="noopener">WhoIsAlexMerced.com</a></li>
-                            <li><a href="https://alexmercedmedia.com" target="_blank" rel="noopener">AlexMercedMedia.com</a></li>
-                            <li><a href="https://books.alexmerced.com" target="_blank" rel="noopener">Books</a></li>
-                            <li><a href="https://alexmercedcoder.dev" target="_blank" rel="noopener">AlexMercedCoder.dev</a></li>
-                            <li><a href="https://alexmerceddata.com" target="_blank" rel="noopener">AlexMercedData.com</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Lakehouse &amp; Data</h3>
-                        <ul>
-                            <li><a href="https://datalakehousehub.com" target="_blank" rel="noopener">DataLakehouseHub.com</a></li>
-                            <li><a href="https://iceberglakehouse.com" target="_blank" rel="noopener">IcebergLakehouse.com</a></li>
-                            <li><a href="https://agenticlakehouse.com" target="_blank" rel="noopener">AgenticLakehouse.com</a></li>
-                            <li><a href="https://semanticlakehouse.com" target="_blank" rel="noopener">SemanticLakehouse.com</a></li>
-                            <li><a href="https://dataengnr.com" target="_blank" rel="noopener">DataEngnr.com</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Blogs</h3>
-                        <ul>
-                            <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
-                            <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <nav class="footer__run" aria-label="The Alex Merced Network">
+              <div class="footer__run-title">The Alex Merced Network</div>
+              <ul class="footer__run-list">
+                <li><a href="https://alexmerced.com" target="_blank" rel="noopener">AlexMerced.com</a></li>
+                <li><a href="https://whoisalexmerced.com" target="_blank" rel="noopener">WhoIsAlexMerced.com</a></li>
+                <li><a href="https://alexmercedmedia.com" target="_blank" rel="noopener">AlexMercedMedia.com</a></li>
+                <li><a href="https://books.alexmerced.com" target="_blank" rel="noopener">Books</a></li>
+                <li><a href="https://alexmercedcoder.dev" target="_blank" rel="noopener">AlexMercedCoder.dev</a></li>
+                <li><a href="https://alexmerceddata.com" target="_blank" rel="noopener">AlexMercedData.com</a></li>
+                <li><a href="https://datalakehousehub.com" target="_blank" rel="noopener">DataLakehouseHub.com</a></li>
+                <li><a href="https://iceberglakehouse.com" target="_blank" rel="noopener">IcebergLakehouse.com</a></li>
+                <li><a href="https://agenticlakehouse.com" target="_blank" rel="noopener">AgenticLakehouse.com</a></li>
+                <li><a href="https://semanticlakehouse.com" target="_blank" rel="noopener">SemanticLakehouse.com</a></li>
+                <li><a href="https://dataengnr.com" target="_blank" rel="noopener">DataEngnr.com</a></li>
+                <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
+                <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>
+              </ul>
             </nav>
-
-            <nav class="footer__network" aria-label="Events and community">
-                <h2 class="footer__network-title">Events &amp; Community</h2>
-                <div class="footer__network-grid">
-                    <div>
-                        <h3>Event Calendars</h3>
-                        <ul>
-                            <li><a href="https://luma.com/agenticlakehouse" target="_blank" rel="noopener">Agentic Lakehouse Events</a></li>
-                            <li><a href="https://luma.com/DataLakehouseHub" target="_blank" rel="noopener">Data Lakehouse Hub Events</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Communities</h3>
-                        <ul>
-                            <li><a href="https://join.slack.com/t/thedatalakehousehub/shared_invite/zt-274yc8sza-mI2zhCW8LGkOh1uxuf8T5Q" target="_blank" rel="noopener">Data Lakehouse Hub Slack</a></li>
-                            <li><a href="https://join.slack.com/t/data-events/shared_invite/zt-38vgrooy9-U9ral_gr3NAz_Siih1QwmQ" target="_blank" rel="noopener">Data Events Slack</a></li>
-                            <li><a href="https://join.slack.com/t/datatechcommunity/shared_invite/zt-12xrk4qmd-y~6jUFFd7kdaLhgLURKwoA" target="_blank" rel="noopener">Data &amp; Tech Slack</a></li>
-                            <li><a href="https://www.reddit.com/r/datalakehouseandai/" target="_blank" rel="noopener">r/datalakehouseandai</a></li>
-                            <li><a href="https://www.linkedin.com/company/data-lakehouse-hub/" target="_blank" rel="noopener">Data Lakehouse Hub on LinkedIn</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>YouTube</h3>
-                        <ul>
-                            <li><a href="https://www.youtube.com/@AlexMercedCoder" target="_blank" rel="noopener">Alex Merced Tech</a></li>
-                            <li><a href="https://www.youtube.com/@alexmerceddata" target="_blank" rel="noopener">Alex Merced Data &amp; AI</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <nav class="footer__run" aria-label="Events and community">
+              <div class="footer__run-title">Events &amp; Community</div>
+              <ul class="footer__run-list">
+                <li><a href="https://luma.com/agenticlakehouse" target="_blank" rel="noopener">Agentic Lakehouse Events</a></li>
+                <li><a href="https://luma.com/DataLakehouseHub" target="_blank" rel="noopener">Data Lakehouse Hub Events</a></li>
+                <li><a href="https://join.slack.com/t/thedatalakehousehub/shared_invite/zt-274yc8sza-mI2zhCW8LGkOh1uxuf8T5Q" target="_blank" rel="noopener">Data Lakehouse Hub Slack</a></li>
+                <li><a href="https://join.slack.com/t/data-events/shared_invite/zt-38vgrooy9-U9ral_gr3NAz_Siih1QwmQ" target="_blank" rel="noopener">Data Events Slack</a></li>
+                <li><a href="https://join.slack.com/t/datatechcommunity/shared_invite/zt-12xrk4qmd-y~6jUFFd7kdaLhgLURKwoA" target="_blank" rel="noopener">Data &amp; Tech Slack</a></li>
+                <li><a href="https://www.reddit.com/r/datalakehouseandai/" target="_blank" rel="noopener">r/datalakehouseandai</a></li>
+                <li><a href="https://www.linkedin.com/company/data-lakehouse-hub/" target="_blank" rel="noopener">Data Lakehouse Hub on LinkedIn</a></li>
+                <li><a href="https://www.youtube.com/@AlexMercedCoder" target="_blank" rel="noopener">Alex Merced Tech on YouTube</a></li>
+                <li><a href="https://www.youtube.com/@alexmerceddata" target="_blank" rel="noopener">Alex Merced Data &amp; AI on YouTube</a></li>
+              </ul>
             </nav>
-
             <div class="footer__legal">
                 <p>&copy; ${new Date().getFullYear()} ${escapeHtml(config.author_name)}. Built with SoloPlatform.</p>
                 <p class="footer__disclaimer">The views, thoughts, and opinions expressed on this site belong solely to Alex Merced and do not represent the views of any organization or employer.</p>
