@@ -484,7 +484,22 @@ async function generateLLMsTxt(posts, config) {
     if (posts.length === 0) return;
     const header = `# ${config.site_title}\n> ${config.site_description}\n> Support: ${config.support_link || config.domain}\n\n## Content Directory\n`;
     const body = posts.map(p => `- [${p.title}](${config.domain}/blog/${p.slug}.html): ${p.description || "An article."}`).join('\n');
-    const content = header + body;
+    const extras = `
+
+## Events
+- [Agentic Lakehouse Events](https://luma.com/agenticlakehouse): global meetups and webinars on agentic analytics
+- [Data Lakehouse Hub Events](https://luma.com/DataLakehouseHub): global lakehouse meetups, linkups and webinars
+
+## Community
+- [Data Lakehouse Hub Slack](https://join.slack.com/t/thedatalakehousehub/shared_invite/zt-274yc8sza-mI2zhCW8LGkOh1uxuf8T5Q): practitioner community for lakehouse architecture
+- [Data Events Slack](https://join.slack.com/t/data-events/shared_invite/zt-38vgrooy9-U9ral_gr3NAz_Siih1QwmQ): announcements for data conferences and meetups
+- [Data & Tech Slack](https://join.slack.com/t/datatechcommunity/shared_invite/zt-12xrk4qmd-y~6jUFFd7kdaLhgLURKwoA): broader data and technology community
+- [r/datalakehouseandai](https://www.reddit.com/r/datalakehouseandai/): subreddit for data lakehouse and AI discussion
+- [Data Lakehouse Hub on LinkedIn](https://www.linkedin.com/company/data-lakehouse-hub/): company page for the Data Lakehouse Hub
+- [Alex Merced Tech on YouTube](https://www.youtube.com/@AlexMercedCoder): software development and engineering channel
+- [Alex Merced Data & AI on YouTube](https://www.youtube.com/@alexmerceddata): data lakehouse and AI channel
+`;
+    const content = header + body + extras;
     await fs.outputFile(path.join(DIST_DIR, 'llms.txt'), content);
     console.log('🤖 Built llms.txt');
 }
@@ -2028,6 +2043,36 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                         <ul>
                             <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
                             <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="footer__network" aria-label="Events and community">
+                <h2 class="footer__network-title">Events &amp; Community</h2>
+                <div class="footer__network-grid">
+                    <div>
+                        <h3>Event Calendars</h3>
+                        <ul>
+                            <li><a href="https://luma.com/agenticlakehouse" target="_blank" rel="noopener">Agentic Lakehouse Events</a></li>
+                            <li><a href="https://luma.com/DataLakehouseHub" target="_blank" rel="noopener">Data Lakehouse Hub Events</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Communities</h3>
+                        <ul>
+                            <li><a href="https://join.slack.com/t/thedatalakehousehub/shared_invite/zt-274yc8sza-mI2zhCW8LGkOh1uxuf8T5Q" target="_blank" rel="noopener">Data Lakehouse Hub Slack</a></li>
+                            <li><a href="https://join.slack.com/t/data-events/shared_invite/zt-38vgrooy9-U9ral_gr3NAz_Siih1QwmQ" target="_blank" rel="noopener">Data Events Slack</a></li>
+                            <li><a href="https://join.slack.com/t/datatechcommunity/shared_invite/zt-12xrk4qmd-y~6jUFFd7kdaLhgLURKwoA" target="_blank" rel="noopener">Data &amp; Tech Slack</a></li>
+                            <li><a href="https://www.reddit.com/r/datalakehouseandai/" target="_blank" rel="noopener">r/datalakehouseandai</a></li>
+                            <li><a href="https://www.linkedin.com/company/data-lakehouse-hub/" target="_blank" rel="noopener">Data Lakehouse Hub on LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>YouTube</h3>
+                        <ul>
+                            <li><a href="https://www.youtube.com/@AlexMercedCoder" target="_blank" rel="noopener">Alex Merced Tech</a></li>
+                            <li><a href="https://www.youtube.com/@alexmerceddata" target="_blank" rel="noopener">Alex Merced Data &amp; AI</a></li>
                         </ul>
                     </div>
                 </div>

@@ -10,14 +10,16 @@
   "author_sameAs": [
     "https://twitter.com/alexmercedcoder",
     "https://linkedin.com/in/alexmerced",
-    "https://github.com/alexmercedcoder"
+    "https://github.com/alexmercedcoder",
+    "https://www.youtube.com/@AlexMercedCoder",
+    "https://www.youtube.com/@alexmerceddata"
   ],
   "support_link": "https://buymeacoffee.com/alexmerced",
   "email_subscribe_form_url": "https://amdatalakehouse.substack.com/",
   "features": {
     "blog": {
       "mode": "internal",
-      "external_url": "", 
+      "external_url": "",
       "label": "Blog"
     },
     "events": {
@@ -45,8 +47,14 @@
     }
   },
   "nav_links": [
-    { "label": "Home", "url": "/" },
-    { "label": "About", "url": "/about.html" }
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "About",
+      "url": "/about.html"
+    }
   ],
   "social_links": {
     "twitter": "https://twitter.com/alexmercedcoder",
