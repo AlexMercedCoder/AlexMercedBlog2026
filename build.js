@@ -1647,6 +1647,24 @@ main { display: block; flex: 1 0 auto; }
   opacity: 0.5;
 }
 
+/* Mobile: one item per row left a separator stranded at line start and tiny tap
+   targets. Below 640px the run items become chips instead. */
+@media (max-width: 640px) {
+  .footer__run-list { gap: 8px; }
+  .footer__run-list li + li::before { content: none !important; margin-right: 0 !important; }
+  .footer__run-list a {
+    display: block;
+    padding: 9px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    line-height: 1.2;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 .footer__legal { padding-top: var(--space-5); display: grid; gap: var(--space-3); }
 .footer__disclaimer { max-width: 68ch; opacity: 0.85; }
 
