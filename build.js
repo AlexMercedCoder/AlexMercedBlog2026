@@ -859,6 +859,57 @@ main { display: block; flex: 1 0 auto; }
 .btn--ghost:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-soft); }
 .btn-support { /* legacy hook kept for safety */ }
 
+/* Ink strokes down the hero margins. Desktop only, where the shell leaves
+   clear gutters; hidden for prefers-reduced-motion users mid-stroke. */
+.hero-ink { display: none; }
+@media (min-width: 78rem) {
+  .hero-ink {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+.ink-stroke {
+  fill: none;
+  stroke: var(--brand);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.3;
+  stroke-dasharray: 100;
+  animation: inkDraw 18s ease-in-out infinite;
+}
+.ink-stroke--accent {
+  stroke: var(--accent);
+  opacity: 0.28;
+}
+.ink-dots circle {
+  fill: var(--accent);
+  opacity: 0.35;
+  animation: inkBleed 6s ease-in-out infinite;
+}
+.ink-rules line {
+  stroke: var(--rule-strong);
+  stroke-width: 1;
+  opacity: 0.5;
+}
+@keyframes inkDraw {
+  0%       { stroke-dashoffset: 100; }
+  30%, 72% { stroke-dashoffset: 0; }
+  100%     { stroke-dashoffset: -100; }
+}
+@keyframes inkBleed {
+  0%, 100% { opacity: 0.2; }
+  50%      { opacity: 0.7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ink-stroke, .ink-dots circle { animation: none; }
+  .ink-stroke { stroke-dashoffset: 0; }
+}
+
 /* --- Hero (home) --------------------------------------------------------- */
 .hero {
   position: relative;
@@ -1551,6 +1602,41 @@ main { display: block; flex: 1 0 auto; }
 .footer ul { list-style: none; padding: 0; display: grid; gap: 0.4rem; }
 .footer a { color: var(--ink-muted); text-decoration: none; }
 .footer a:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 0.2em; }
+.footer__network {
+  margin-top: var(--space-8, 2rem);
+  padding-top: var(--space-6, 1.5rem);
+  border-top: 1px solid var(--rule);
+}
+.footer__network-title {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin-bottom: 1.5rem;
+}
+.footer__network-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.footer__network h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+.footer__network ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer__network a {
+  font-size: 0.9rem;
+}
+
 .footer__legal { padding-top: var(--space-5); display: grid; gap: var(--space-3); }
 .footer__disclaimer { max-width: 68ch; opacity: 0.85; }
 
@@ -1912,6 +1998,41 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                     </ul>
                 </div>
             </div>
+
+            <nav class="footer__network" aria-label="The Alex Merced Network">
+                <h2 class="footer__network-title">The Alex Merced Network</h2>
+                <div class="footer__network-grid">
+                    <div>
+                        <h3>Alex Merced</h3>
+                        <ul>
+                            <li><a href="https://alexmerced.com" target="_blank" rel="noopener">AlexMerced.com</a></li>
+                            <li><a href="https://whoisalexmerced.com" target="_blank" rel="noopener">WhoIsAlexMerced.com</a></li>
+                            <li><a href="https://alexmercedmedia.com" target="_blank" rel="noopener">AlexMercedMedia.com</a></li>
+                            <li><a href="https://books.alexmerced.com" target="_blank" rel="noopener">Books</a></li>
+                            <li><a href="https://alexmercedcoder.dev" target="_blank" rel="noopener">AlexMercedCoder.dev</a></li>
+                            <li><a href="https://alexmerceddata.com" target="_blank" rel="noopener">AlexMercedData.com</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Lakehouse &amp; Data</h3>
+                        <ul>
+                            <li><a href="https://datalakehousehub.com" target="_blank" rel="noopener">DataLakehouseHub.com</a></li>
+                            <li><a href="https://iceberglakehouse.com" target="_blank" rel="noopener">IcebergLakehouse.com</a></li>
+                            <li><a href="https://agenticlakehouse.com" target="_blank" rel="noopener">AgenticLakehouse.com</a></li>
+                            <li><a href="https://semanticlakehouse.com" target="_blank" rel="noopener">SemanticLakehouse.com</a></li>
+                            <li><a href="https://dataengnr.com" target="_blank" rel="noopener">DataEngnr.com</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Blogs</h3>
+                        <ul>
+                            <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
+                            <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
             <div class="footer__legal">
                 <p>&copy; ${new Date().getFullYear()} ${escapeHtml(config.author_name)}. Built with SoloPlatform.</p>
                 <p class="footer__disclaimer">The views, thoughts, and opinions expressed on this site belong solely to Alex Merced and do not represent the views of any organization or employer.</p>
@@ -2245,6 +2366,42 @@ async function build() {
 
     let homeHtml = `
         <section class="hero">
+            <svg class="hero-ink" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <defs>
+                    <linearGradient id="amb-fade" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#fff"/>
+                        <stop offset="0.115" stop-color="#fff"/>
+                        <stop offset="0.145" stop-color="#000"/>
+                        <stop offset="0.855" stop-color="#000"/>
+                        <stop offset="0.885" stop-color="#fff"/>
+                        <stop offset="1" stop-color="#fff"/>
+                    </linearGradient>
+                    <mask id="amb-mask"><rect width="1440" height="760" fill="url(#amb-fade)"/></mask>
+                </defs>
+
+                <g mask="url(#amb-mask)">
+                    <!-- pen strokes down the margins, drawn and re-drawn -->
+                    <path class="ink-stroke" pathLength="100" d="M60 60 C-20 190, 150 260, 60 380 S-30 560, 80 700"/>
+                    <path class="ink-stroke ink-stroke--accent" pathLength="100" style="animation-delay:-5s" d="M141 90 C81 220, 207 300, 131 420 S55 590, 151 720"/>
+                    <path class="ink-stroke" pathLength="100" style="animation-delay:-8s" d="M1380 60 C1460 190, 1290 260, 1380 380 S1470 560, 1360 700"/>
+                    <path class="ink-stroke ink-stroke--accent" pathLength="100" style="animation-delay:-3s" d="M1324 90 C1384 220, 1258 300, 1334 420 S1410 590, 1314 720"/>
+
+                    <g class="ink-dots">
+                        <circle cx="60" cy="380" r="4"/>
+                        <circle cx="131" cy="420" r="3" style="animation-delay:-1.6s"/>
+                        <circle cx="1380" cy="380" r="4" style="animation-delay:-2.9s"/>
+                        <circle cx="1334" cy="420" r="3" style="animation-delay:-4.1s"/>
+                    </g>
+
+                    <!-- a paragraph rule, ruled and unruled -->
+                    <g class="ink-rules">
+                        <line x1="40" y1="176" x2="160" y2="176"/>
+                        <line x1="40" y1="600" x2="150" y2="600"/>
+                        <line x1="1280" y1="176" x2="1400" y2="176"/>
+                        <line x1="1290" y1="600" x2="1400" y2="600"/>
+                    </g>
+                </g>
+            </svg>
             <div class="shell hero__inner">
                 <div class="hero__copy">
                     <p class="eyebrow">Data engineering · Lakehouse · AI</p>
