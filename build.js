@@ -2039,10 +2039,20 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                 <li><a href="https://datalakehousehub.com" target="_blank" rel="noopener">DataLakehouseHub.com</a></li>
                 <li><a href="https://iceberglakehouse.com" target="_blank" rel="noopener">IcebergLakehouse.com</a></li>
                 <li><a href="https://agenticlakehouse.com" target="_blank" rel="noopener">AgenticLakehouse.com</a></li>
+                <li><a href="https://openagenticplatform.com" target="_blank" rel="noopener">OpenAgenticPlatform.com</a></li>
+                <li><a href="https://www.alexmercedai.com" target="_blank" rel="noopener">AlexMercedAI.com</a></li>
                 <li><a href="https://semanticlakehouse.com" target="_blank" rel="noopener">SemanticLakehouse.com</a></li>
                 <li><a href="https://dataengnr.com" target="_blank" rel="noopener">DataEngnr.com</a></li>
                 <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
                 <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>
+              </ul>
+            </nav>
+            <nav class="footer__run" aria-label="Free weekly newsletters">
+              <div class="footer__run-title">Free Weekly Newsletters</div>
+              <ul class="footer__run-list">
+                <li><a href="https://amdatalakehouse.substack.com" target="_blank" rel="noopener">AI newsletter, Thursdays</a></li>
+                <li><a href="https://amdatalakehouse.substack.com" target="_blank" rel="noopener">Apache lakehouse newsletter, Fridays</a></li>
+                <li><a href="https://amdatalakehouse.substack.com" target="_blank" rel="noopener">Subscribe on Substack</a></li>
               </ul>
             </nav>
             <nav class="footer__run" aria-label="Events and community">
