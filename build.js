@@ -1511,6 +1511,17 @@ main { display: block; flex: 1 0 auto; }
 .stack-item__title a { color: var(--ink); text-decoration: none; }
 .stack-item__title a:hover { color: var(--brand); text-decoration: underline; text-underline-offset: 0.2em; }
 .stack-item__excerpt { margin-top: var(--space-2); color: var(--ink-muted); font-size: 0.9375em; }
+
+/* Books */
+.book-list__meta { margin: 0 0 var(--space-6); color: var(--ink-muted); font-size: var(--step--1); }
+.book-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr)); gap: var(--space-8); }
+.book-item { display: grid; grid-template-columns: 6.5rem 1fr; gap: var(--space-5); align-items: start; padding-bottom: var(--space-6); border-bottom: 1px solid var(--rule); }
+.book-item__cover img { width: 100%; height: auto; border-radius: 2px; box-shadow: 0 2px 10px rgb(0 0 0 / 0.18); display: block; }
+.book-item__title { margin: 0 0 var(--space-1); font-size: 1.0625em; line-height: 1.35; }
+.book-item__publisher { margin: 0 0 var(--space-2); font-size: 0.75em; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.book-item__desc { margin: 0 0 var(--space-3); font-size: 0.9375em; line-height: 1.55; color: var(--ink-muted); }
+.book-item__links { display: flex; flex-wrap: wrap; gap: var(--space-4); margin: 0; font-size: 0.875em; font-weight: 600; }
+@media (max-width: 30rem) { .book-item { grid-template-columns: 5rem 1fr; gap: var(--space-4); } }
 .link-back {
   font-family: var(--font-ui);
   font-size: var(--step--1);
@@ -2649,6 +2660,63 @@ async function build() {
             await fs.outputFile(path.join(eventsDist, 'index.html'), indexHtml);
             console.log(`📅 Built Events (${events.length} events).`);
         }
+    }
+
+    // 6b. Build Books
+    {
+        const booksData = await fs.readJson(path.join(__dirname, 'data', 'books.json'));
+        const booksDist = path.join(DIST_DIR, 'books');
+        await fs.ensureDir(booksDist);
+
+        const cards = booksData.books.map(b => `
+            <li class="book-item">
+                <a class="book-item__cover" href="${b.canonicalPage}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                    <img src="${b.cover}" alt="" loading="lazy" decoding="async">
+                </a>
+                <div class="book-item__body">
+                    <h2 class="book-item__title"><a href="${b.canonicalPage}" target="_blank" rel="noopener">${escapeHtml(b.title)}</a></h2>
+                    ${b.publisher ? `<p class="book-item__publisher">${escapeHtml(b.publisher)}</p>` : ''}
+                    <p class="book-item__desc">${escapeHtml(b.description)}</p>
+                    <p class="book-item__links">
+                        <a href="${b.canonicalPage}" target="_blank" rel="noopener">Details</a>
+                        <a href="${b.amazon}" target="_blank" rel="noopener">Buy on Amazon</a>
+                    </p>
+                </div>
+            </li>`).join('');
+
+        const jsonLd = {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Books by Alex Merced',
+            numberOfItems: booksData.books.length,
+            itemListElement: booksData.books.map((b, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                item: {
+                    '@type': 'Book',
+                    name: b.title,
+                    description: b.description,
+                    url: b.canonicalPage,
+                    author: { '@type': 'Person', name: config.author_name, url: config.author_url },
+                },
+            })),
+        };
+
+        const body = `
+            ${renderPageHead({ eyebrow: 'Bookshelf', title: 'Books', lede: escapeHtml(booksData.intro) })}
+            <div class="shell page">
+                <p class="book-list__meta">${booksData.count} of ${booksData.totalInCatalog} titles.
+                    <a href="${booksData.catalog}" target="_blank" rel="noopener">See the complete catalog</a></p>
+                <ul class="book-list">${cards}</ul>
+            </div>
+            <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`;
+
+        const booksHtml = renderLayout(body, 'Books', config, assets, {
+            path: '/books/index.html',
+            description: booksData.intro,
+        });
+        await fs.outputFile(path.join(booksDist, 'index.html'), booksHtml);
+        console.log(`📚 Built Books (${booksData.books.length} titles).`);
     }
 
     // 7. Build Podcast (Internal Mode)

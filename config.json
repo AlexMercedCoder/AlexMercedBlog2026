@@ -52,6 +52,10 @@
       "url": "/"
     },
     {
+      "label": "Books",
+      "url": "/books/index.html"
+    },
+    {
       "label": "About",
       "url": "/about.html"
     }
