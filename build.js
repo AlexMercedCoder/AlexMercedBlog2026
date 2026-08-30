@@ -2053,6 +2053,7 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                 <li><a href="https://openagenticplatform.com" target="_blank" rel="noopener">OpenAgenticPlatform.com</a></li>
                 <li><a href="https://www.alexmercedai.com" target="_blank" rel="noopener">AlexMercedAI.com</a></li>
                 <li><a href="https://semanticlakehouse.com" target="_blank" rel="noopener">SemanticLakehouse.com</a></li>
+                <li><a href="https://openlakehouse.alexmerced.com" target="_blank" rel="noopener">OpenLakehouse.AlexMerced.com</a></li>
                 <li><a href="https://dataengnr.com" target="_blank" rel="noopener">DataEngnr.com</a></li>
                 <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
                 <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>

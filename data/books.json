@@ -11,6 +11,7 @@
       "slug": "ai-and-agents-for-normal-people",
       "description": "A practical guide to using AI tools for everyday tasks, covering Gemini, NotebookLM, ChatGPT, Claude, and local agent workflows without technical jargon.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "agentic",
         "ai-productivity"
@@ -26,6 +27,7 @@
       "slug": "ai-application-architecture-patterns-for-building-intelligent-systems",
       "description": "Covers architectural patterns for building intelligent applications, from inference pipelines to multi-agent orchestration.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering",
         "agentic"
@@ -41,6 +43,7 @@
       "slug": "apache-iceberg-for-agentic-ai-connecting-structured-enterprise",
       "description": "Explores how to connect structured enterprise data in Apache Iceberg lakehouses to agentic AI systems.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "agentic",
         "iceberg",
@@ -57,6 +60,7 @@
       "slug": "being-productive-with-open-models",
       "description": "A practical guide to using open models with Opencode, PI, and Hermes for AI-assisted development.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-productivity",
         "agentic"
@@ -72,6 +76,7 @@
       "slug": "building-knowledge-systems-for-ai-graphs-rag-memory-and-context",
       "description": "A deep dive into building robust knowledge systems for AI using knowledge graphs, RAG, memory architectures, and context management.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering",
         "semantic",
@@ -88,6 +93,7 @@
       "slug": "constructing-context-and-semantics-for-ai-agents",
       "description": "A practical guide to embeddings, knowledge graphs, memory systems, RAG, evaluation, and production agent architectures.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "semantic",
         "agentic",
@@ -104,6 +110,7 @@
       "slug": "enabling-agentic-analytics-with-apache-iceberg-and-dremio",
       "description": "A practical guide to building AI-ready lakehouse systems using Apache Iceberg and Dremio for agentic analytics workflows.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "agentic",
         "iceberg",
@@ -120,6 +127,7 @@
       "slug": "evaluating-ai-systems-testing-llms-rag-and-agents",
       "description": "A guide to properly testing and evaluating AI systems, including benchmarking strategies for LLMs, RAG pipelines, and agents.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering",
         "agentic"
@@ -135,6 +143,7 @@
       "slug": "governing-ai-systems",
       "description": "A guide to AI governance frameworks, covering risk management, compliance, ethics, and organizational oversight of AI systems.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering",
         "agentic"
@@ -150,6 +159,7 @@
       "slug": "hands-on-agentic-engineering-a-practical-guide-to-building-multi-agent-systems",
       "description": "A practical guide to building multi-agent systems with Apache Iceberg.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "agentic",
         "ai-engineering"
@@ -165,6 +175,7 @@
       "slug": "the-2026-guide-to-lakehouses-apache-iceberg-and-agentic-ai",
       "description": "A comprehensive guide covering the convergence of lakehouse architecture, Apache Iceberg, and the rise of agentic AI systems.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "lakehouse",
         "iceberg",
@@ -181,6 +192,7 @@
       "slug": "the-agentic-enterprise-deploying-ai-agents-across-the-modern-organization",
       "description": "A guide to deploying AI agents across enterprise functions, covering strategy, governance, and organizational adoption.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "agentic",
         "ai-engineering"
@@ -196,6 +208,7 @@
       "slug": "the-ai-lakehouse-architecting-data-platforms-for-ai",
       "description": "Explores how to architect data lakehouse platforms specifically designed to serve AI and machine learning workloads.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "lakehouse",
         "ai-engineering",
@@ -212,6 +225,7 @@
       "slug": "the-book-on-agentic-analytics",
       "description": "Explores the foundations of agentic data architecture, where AI agents autonomously discover, query, and analyze data.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "agentic",
         "data-engineering",
@@ -228,6 +242,7 @@
       "slug": "the-book-on-data-data-engineering-data-analytics-and-agentic-ai-volume-1",
       "description": "A complete guide to modern data systems, data engineering, analytics, and AI.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "data-engineering",
         "agentic",
@@ -244,6 +259,7 @@
       "slug": "the-book-on-data-data-engineering-data-analytics-and-agentic-ai-volume-2",
       "description": "A complete guide to SQL analytics, BI, and agentic AI for modern data platforms.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "data-engineering",
         "agentic",
@@ -260,6 +276,7 @@
       "slug": "the-no-lock-in-apache-iceberg-lakehouse-with-agentic-analytics",
       "description": "A practical guide to building a portable Apache Iceberg lakehouse with open catalogs, agentic analytics, and AI-ready data platforms while avoiding vendor lock-in.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "lakehouse",
         "iceberg",
@@ -276,6 +293,7 @@
       "slug": "using-ai-agents-for-data-engineering-and-data-analysis",
       "description": "A practical guide to leveraging AI agents for automating data engineering pipelines and performing intelligent data analysis.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "agentic",
         "data-engineering"
@@ -291,6 +309,7 @@
       "slug": "ai-ready-data",
       "description": "Designing data platforms optimized for LLMs, AI agents, and retrieval-augmented generation (RAG) workflows.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering",
         "data-engineering",
@@ -307,6 +326,7 @@
       "slug": "shipping-ai-from-prototype-to-production-systems",
       "description": "Covers the full lifecycle of taking AI systems from prototype to production, including deployment, scaling, and monitoring.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering"
       ],
@@ -321,6 +341,7 @@
       "slug": "the-2026-guide-to-ai-assisted-development",
       "description": "Covers prompt engineering, AI coding assistants, and agent-driven development workflows for modern software engineers.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-productivity",
         "ai-engineering"
@@ -336,6 +357,7 @@
       "slug": "the-ai-engineering-handbook",
       "description": "A full-stack reference for building AI systems, covering LLMs, embeddings, agents, RAG, and production deployment patterns.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering"
       ],
@@ -350,6 +372,7 @@
       "slug": "the-economics-of-ai-cost-latency-and-infrastructure-tradeoffs",
       "description": "Analyzes the cost structures of AI systems and how to optimize spending across compute, latency, and infrastructure.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-engineering"
       ],
@@ -364,6 +387,7 @@
       "slug": "the-economics-of-labor-in-the-ai-era",
       "description": "Examines how the AI era is disrupting the labor market and explores paths for adaptation and the future of work.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "economics",
         "ai-engineering"
@@ -379,6 +403,7 @@
       "slug": "apache-iceberg-the-definitive-guide",
       "description": "A comprehensive guide to Apache Iceberg and modern lakehouse architecture, covering table format internals, schema evolution, partitioning, and integration with major query engines.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "iceberg",
         "lakehouse"
@@ -394,6 +419,7 @@
       "slug": "apache-polaris-the-definitive-guide",
       "description": "A guide to open catalogs for Apache Iceberg lakehouses, covering Polaris catalog architecture, configuration, and governance.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "catalogs",
         "iceberg",
@@ -410,6 +436,7 @@
       "slug": "architecting-an-apache-iceberg-lakehouse",
       "description": "Architecture patterns and best practices for building production-grade, Iceberg-based data platforms from the ground up.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "iceberg",
         "lakehouse"
@@ -425,6 +452,7 @@
       "slug": "dremio-and-the-semantic-layer",
       "description": "The journey to providing meaning and context for AI with Dremio's semantic layer.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "semantic",
         "lakehouse"
@@ -440,6 +468,7 @@
       "slug": "the-book-on-apache-polaris",
       "description": "Building the open data lakehouse with the industry standard Iceberg REST catalog.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "catalogs",
         "iceberg",
@@ -456,6 +485,7 @@
       "slug": "the-lakehouse-built-for-everyone",
       "description": "From laptop prototypes to enterprise-scale agentic AI with Apache Iceberg and Dremio.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "lakehouse"
       ],
@@ -470,6 +500,7 @@
       "slug": "the-open-source-lakehouse-architecting-the-decoupled-analytical-foundation",
       "description": "Covers building a fully decoupled lakehouse using open source technologies, emphasizing modularity and vendor independence.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "lakehouse",
         "iceberg"
@@ -485,6 +516,7 @@
       "slug": "the-book-on-using-apache-iceberg-with-python",
       "description": "A hands-on guide to working with Apache Iceberg using Python tools like PyIceberg, PySpark, and other Python-based engines.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "iceberg",
         "data-engineering"
@@ -500,6 +532,7 @@
       "slug": "being-productive-with-claude",
       "description": "A practical guide to Claude.ai, Claude Code, and Claude Dispatch for AI-powered development.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-productivity"
       ],
@@ -514,6 +547,7 @@
       "slug": "being-productive-with-google-ai",
       "description": "A practical guide to using Google's AI ecosystem including Gemini, NotebookLM, Veo, Gemini Spark, and Jules.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-productivity"
       ],
@@ -528,6 +562,7 @@
       "slug": "being-productive-with-grok-and-cursor",
       "description": "A practical guide to the xAI and Cursor coding ecosystem covering Grok Chat, Grok Build, DeepSearch, Cursor Composer, Agent Mode, MCP servers, and local model runtimes for agentic development workflows.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-productivity"
       ],
@@ -542,6 +577,7 @@
       "slug": "being-productive-with-microsoft-copilot",
       "description": "A practical guide to the Microsoft Copilot ecosystem covering Copilot Chat, M365 Copilot, GitHub Copilot Agent Mode, Copilot Studio, Copilot Cowork, and Copilot Plus PC features.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-productivity"
       ],
@@ -556,6 +592,7 @@
       "slug": "being-productive-with-openai-codex",
       "description": "A practical guide to building documents, images, video, websites, and apps with an AI agent using OpenAI Codex.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "ai-productivity"
       ],
@@ -570,6 +607,7 @@
       "slug": "alex-merced-s-field-guide-to-developer-relations",
       "description": "A practical guide to developer relations, community building, and technical evangelism for practitioners entering or growing in the DevRel field.",
       "category": "Tech",
+      "categorySlug": "tech",
       "topics": [
         "devrel"
       ],
@@ -584,6 +622,7 @@
       "slug": "economic-ideas-from-beginning-to-early-2026",
       "description": "A survey of the history of economic thought, tracing ideas from ancient civilizations through the modern AI era.",
       "category": "Economics & Philosophy",
+      "categorySlug": "economics",
       "topics": [
         "economics"
       ],
@@ -598,6 +637,7 @@
       "slug": "profits-are-generosity-entrepreneurship-is-philanthropy",
       "description": "An economic philosophy book arguing that voluntary exchange and entrepreneurship are the most generous forms of social contribution.",
       "category": "Economics & Philosophy",
+      "categorySlug": "economics",
       "topics": [
         "economics"
       ],
@@ -612,6 +652,7 @@
       "slug": "the-field-guide-to-libertarianism",
       "description": "An accessible introduction to libertarian ideas, key debates, and the spectrum of thought within the libertarian tradition.",
       "category": "Economics & Philosophy",
+      "categorySlug": "economics",
       "topics": [
         "economics"
       ],
@@ -626,6 +667,7 @@
       "slug": "the-field-guide-to-political-thought-and-debates-in-the-united-states",
       "description": "Maps the terrain of American political thought — conservative, progressive, and libertarian — so you can understand why people across the table believe what they believe and how to talk about it.",
       "category": "Economics & Philosophy",
+      "categorySlug": "economics",
       "topics": [
         "economics"
       ],
@@ -640,6 +682,7 @@
       "slug": "the-libertarian-heart",
       "description": "A philosophical exploration of consent, individual peace, and the moral foundations of a free society.",
       "category": "Economics & Philosophy",
+      "categorySlug": "economics",
       "topics": [
         "economics"
       ],
@@ -654,6 +697,7 @@
       "slug": "adventures-in-love-and-flooding",
       "description": "A romantic action thriller about disaster capitalism, artificial intelligence, and ordinary competence. He crossed an ocean for a woman he had only ever met on a screen, and landed four days before the water came.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -668,6 +712,7 @@
       "slug": "celestial-fragments-the-duel-of-souls",
       "description": "A contemporary fantasy in which two political rivals discover they carry the fragments of ancient beings of love and hate, continuing a conflict twelve thousand years old.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -682,6 +727,7 @@
       "slug": "crowns-and-wings",
       "description": "The second book in the epic fantasy trilogy, deepening the political intrigue and expanding the world's mythology.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -696,6 +742,7 @@
       "slug": "embers-of-claim",
       "description": "The first book in an epic fantasy trilogy, introducing a world of competing kingdoms, ancient magic, and rising conflict.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -710,6 +757,7 @@
       "slug": "plastic-punk",
       "description": "A genre-bending novel exploring economic systems, societal structures, and individual agency in a stylized world.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -724,6 +772,7 @@
       "slug": "signal-and-noise",
       "description": "A literary novel tracing a twelve-year long-distance connection between a documentary producer in Manila and a logistics manager in Indiana, and the single hour that finally tests it.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -738,6 +787,7 @@
       "slug": "tales-of-fur-and-sky-echoes-of-the-ages",
       "description": "A companion volume to the fantasy trilogy, expanding the lore with standalone tales set in the same world.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -752,6 +802,7 @@
       "slug": "the-emperors-of-a-i-valley",
       "description": "A near-future thriller exploring power struggles, corporate intrigue, and moral dilemmas in an AI-dominated Silicon Valley.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -766,6 +817,7 @@
       "slug": "the-federation-of-tides",
       "description": "An epic fantasy adventure following a narwhal on a journey seeking knowledge across oceanic civilizations.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -780,6 +832,7 @@
       "slug": "the-last-continue",
       "description": "A novel about finishing things, and about what a finished life turns out to be for. A clockmaker in Manchester, Connecticut spends fifty-six years noticing that the world does not always keep time.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -794,6 +847,7 @@
       "slug": "the-semantic-rebellion",
       "description": "A sci-fi novel following a data engineer's journey through a rapidly changing world shaped by AI and shifting power dynamics.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -808,6 +862,7 @@
       "slug": "thrones-of-ash-and-sky",
       "description": "The concluding volume of the trilogy, bringing the saga of kingdoms, magic, and destiny to its climax.",
       "category": "Fiction",
+      "categorySlug": "fiction",
       "topics": [
         "fiction"
       ],
@@ -822,6 +877,7 @@
       "slug": "d6-storyteller-cybernetics-speculative-alternate-tech-companion",
       "description": "Ten settings exploring the relationship between technology and humanity, from dieselpunk war machines and genome splicing to clockwork worlds and nanotech frontiers.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -836,6 +892,7 @@
       "slug": "d6-storyteller-high-mythic-fantasy-companion",
       "description": "Ten complete high-fantasy settings for the D6 engine, each with a unique genre mechanic, ready-to-play archetypes, condition palettes, and a starter scenario.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -850,6 +907,7 @@
       "slug": "d6-storyteller-historical-alternate-history-companion",
       "description": "Ten settings grounded in real history with speculative twists, from Roman legions and Sengoku Japan to WWII occult warfare and wuxia dynasties.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -864,6 +922,7 @@
       "slug": "d6-storyteller-horror-occult-supernatural-companion",
       "description": "Ten horror settings ranging from 1930s cosmic cults and slasher camps to vampire dynasties and nightmare realms.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -878,6 +937,7 @@
       "slug": "d6-storyteller-post-apocalyptic-speculative-worlds-companion",
       "description": "Ten end-of-the-world settings, from ice-age survival and sound-hunting alien horrors to the final fortress city at the end of time.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -892,6 +952,7 @@
       "slug": "d6-storyteller-quirky-experimental-micro-scale-companion",
       "description": "Ten playful experimental settings, from tiny borrowers and living toys to arcade cabinet adventures and time-travel patrols.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -906,6 +967,7 @@
       "slug": "d6-storyteller-sci-fi-cosmic-frontiers-companion",
       "description": "Ten sci-fi settings spanning generation ships, Dyson spheres, cyberpunk megacities, and transhuman frontiers, each with its own genre mechanic and archetypes.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -920,6 +982,7 @@
       "slug": "d6-storyteller-superheroes-kaiju-anime-tropes-companion",
       "description": "Ten settings for caped vigilantes, mech academies, kaiju defense forces, magical guardians, and anime-inspired heroics.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -934,6 +997,7 @@
       "slug": "d6-storyteller-the-core-rulebook",
       "description": "The complete fiction-first tabletop roleplaying engine, with character creation, dice mechanics, a Storyteller's guide, and ten ready-to-play starter worlds spanning fantasy, sci-fi, horror, noir, superheroes, and post-apocalyptic genres.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
@@ -948,6 +1012,7 @@
       "slug": "d6-storyteller-weird-west-piracy-swashbuckling-companion",
       "description": "Ten gunpowder-and-salt-air settings covering demon-haunted frontier towns, cursed pirate seas, and swashbuckling royal courts.",
       "category": "Tabletop RPG",
+      "categorySlug": "tabletop",
       "topics": [
         "ttrpg"
       ],
