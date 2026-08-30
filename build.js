@@ -2050,6 +2050,7 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                 <li><a href="https://datalakehousehub.com" target="_blank" rel="noopener">DataLakehouseHub.com</a></li>
                 <li><a href="https://iceberglakehouse.com" target="_blank" rel="noopener">IcebergLakehouse.com</a></li>
                 <li><a href="https://agenticlakehouse.com" target="_blank" rel="noopener">AgenticLakehouse.com</a></li>
+                <li><a href="https://agenticanalyticsnow.com" target="_blank" rel="noopener">AgenticAnalyticsNow.com</a></li>
                 <li><a href="https://openagenticplatform.com" target="_blank" rel="noopener">OpenAgenticPlatform.com</a></li>
                 <li><a href="https://www.alexmercedai.com" target="_blank" rel="noopener">AlexMercedAI.com</a></li>
                 <li><a href="https://semanticlakehouse.com" target="_blank" rel="noopener">SemanticLakehouse.com</a></li>
