@@ -2058,6 +2058,7 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                 <li><a href="https://dataengnr.com" target="_blank" rel="noopener">DataEngnr.com</a></li>
                 <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
                 <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>
+                <li><a href="https://alexmercedmusic.com" target="_blank" rel="noopener">AlexMercedMusic.com</a></li>
               </ul>
             </nav>
             <nav class="footer__run" aria-label="Free weekly newsletters">
