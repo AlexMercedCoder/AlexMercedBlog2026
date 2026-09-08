@@ -1861,6 +1861,7 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
 
     const authorObj = {
         "@type": "Person",
+        "@id": "https://alexmerced.com/#alexmerced",
         "name": config.author_name,
         ...(config.author_url ? { "url": config.author_url } : {}),
         ...(config.author_sameAs && config.author_sameAs.length ? { "sameAs": config.author_sameAs } : {})
@@ -2042,11 +2043,13 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
               <div class="footer__run-title">The Alex Merced Network</div>
               <ul class="footer__run-list">
                 <li><a href="https://alexmerced.com" target="_blank" rel="noopener">AlexMerced.com</a></li>
+                <li><a href="https://branding.alexmerced.com" target="_blank" rel="noopener">Branding.AlexMerced.com</a></li>
                 <li><a href="https://whoisalexmerced.com" target="_blank" rel="noopener">WhoIsAlexMerced.com</a></li>
                 <li><a href="https://alexmercedmedia.com" target="_blank" rel="noopener">AlexMercedMedia.com</a></li>
-                <li><a href="https://books.alexmerced.com" target="_blank" rel="noopener">Books</a></li>
+                <li><a href="https://books.alexmerced.com" target="_blank" rel="noopener">Books.AlexMerced.com</a></li>
                 <li><a href="https://alexmercedcoder.dev" target="_blank" rel="noopener">AlexMercedCoder.dev</a></li>
                 <li><a href="https://alexmerceddata.com" target="_blank" rel="noopener">AlexMercedData.com</a></li>
+                <li><a href="https://opendatalakehouse.com" target="_blank" rel="noopener">OpenDataLakehouse.com</a></li>
                 <li><a href="https://datalakehousehub.com" target="_blank" rel="noopener">DataLakehouseHub.com</a></li>
                 <li><a href="https://iceberglakehouse.com" target="_blank" rel="noopener">IcebergLakehouse.com</a></li>
                 <li><a href="https://agenticlakehouse.com" target="_blank" rel="noopener">AgenticLakehouse.com</a></li>
@@ -2873,13 +2876,28 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Google-Extended
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
 Allow: /
 
 User-agent: CCBot

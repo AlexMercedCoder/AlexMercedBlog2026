@@ -123,7 +123,7 @@ There are several other fields such as desktop software development, Quality Ass
 
 - Learning how git and github work in-depth also a must
 
-- [Read this article on building your brand](https://tuts.alexmercedcoder.dev/2020/branding/)
+- Build your public proof of work and professional presence: explore [Branding by Alex Merced](https://branding.alexmerced.com) and the companion book [Reputation as Code](https://books.alexmerced.com/books/reputation-as-code/) for strategies on turning projects, tutorials, and talks into inbound career opportunities.
 
 - subscribe to a lot of development podcasts, listening to people talk about code will help immerse you and get more comfortable hearing it
 

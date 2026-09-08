@@ -70,7 +70,7 @@ One trick that regular users discover is that you can train Gemini to match your
 
 **Translation.** "Translate this email from Spanish to English." "What does this French menu item mean?" Gemini handles over 100 languages. The translation quality is competitive with dedicated translation tools for common language pairs like Spanish English, French English, and Chinese English.
 
-**Content repurposing.** Paste a long memo into Gemini and ask for three versions: a one paragraph summary, a bullet point list of key takeaways, and a social media post announcing the main finding. This turns one piece of content into three formats in under a minute.
+**Content repurposing.** Paste a long memo into Gemini and ask for three versions: a one paragraph summary, a bullet point list of key takeaways, and a social media post announcing the main finding. This turns one piece of content into three formats in under a minute. If you want a structured blueprint for turning technical projects into reusable writing and talk proposals, check out [Branding by Alex Merced](https://branding.alexmerced.com) and the book [Reputation as Code](https://books.alexmerced.com/books/reputation-as-code/).
 
 ### Where Free Gemini Falls Short
 
