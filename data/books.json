@@ -3,8 +3,8 @@
   "source": "https://alexmerced.com/entity/books.json",
   "catalog": "https://books.alexmerced.com/",
   "intro": "Every book Alex Merced has written, from lakehouse architecture and agentic AI through to economics, fiction, and tabletop roleplaying.",
-  "totalInCatalog": 66,
-  "count": 66,
+  "totalInCatalog": 77,
+  "count": 77,
   "books": [
     {
       "title": "AI and Agents for Normal People",
@@ -303,6 +303,22 @@
       "cover": "https://images.amazon.com/images/P/B0GR6PYJT9.01._SCLZZZZZZZ_.jpg",
       "canonicalPage": "https://books.alexmerced.com/books/using-ai-agents-for-data-engineering-and-data-analysis/",
       "amazon": "https://www.amazon.com/dp/B0GR6PYJT9"
+    },
+    {
+      "title": "Building the Software Factory",
+      "slug": "building-the-software-factory",
+      "description": "Co-authored with Benedikt Stemmildt. How to turn AI coding agents into a dependable, team-wide software factory using context engineering, AI-TDD, harness design, and the AEMM and Elastic Loop frameworks, moving teams from vibe coding to disciplined agentic engineering.",
+      "category": "Tech",
+      "categorySlug": "tech",
+      "topics": [
+        "ai-productivity",
+        "ai-engineering"
+      ],
+      "publisher": "Packt Publishing",
+      "flagship": true,
+      "cover": "https://m.media-amazon.com/images/I/81-gPruyXyL._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/building-the-software-factory/",
+      "amazon": "https://www.amazon.com/dp/1807782778"
     },
     {
       "title": "AI-Ready Data",
@@ -709,6 +725,21 @@
       "amazon": "https://www.amazon.com/dp/035975211X"
     },
     {
+      "title": "A Crown of Cliffs",
+      "slug": "a-crown-of-cliffs",
+      "description": "The Worlds Between Home, Book 2 of 10. The Oleds land on Cyradon, a canyon kingdom where every load-bearing part carries a household's name, and survive on a queen's revocable guest-oath while their asylum claim waits in court.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/81m0syAst1L._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/a-crown-of-cliffs/",
+      "amazon": "https://www.amazon.com/dp/B0HJ3VMVXD"
+    },
+    {
       "title": "Adventures in Love and Flooding",
       "slug": "adventures-in-love-and-flooding",
       "description": "A romantic action thriller about disaster capitalism, artificial intelligence, and ordinary competence. He crossed an ocean for a woman he had only ever met on a screen, and landed four days before the water came.",
@@ -769,6 +800,21 @@
       "amazon": "https://www.amazon.com/dp/B0GQGW7VCY"
     },
     {
+      "title": "No One Commands the Tunnels",
+      "slug": "no-one-commands-the-tunnels",
+      "description": "The Worlds Between Home, Book 7 of 10. Caldris runs on syndicates, chambers, and signed findings instead of offices, and a family nobody refuses finds that nobody is able to accept them either.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/91ZToGC0L1L._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/no-one-commands-the-tunnels/",
+      "amazon": "https://www.amazon.com/dp/B0HJK1FL81"
+    },
+    {
       "title": "Plastic Punk",
       "slug": "plastic-punk",
       "description": "A genre-bending novel exploring economic systems, societal structures, and individual agency in a stylized world.",
@@ -812,6 +858,51 @@
       "cover": "https://images.amazon.com/images/P/B0GQGRGH93.01._SCLZZZZZZZ_.jpg",
       "canonicalPage": "https://books.alexmerced.com/books/tales-of-fur-and-sky-echoes-of-the-ages/",
       "amazon": "https://www.amazon.com/dp/B0GQGRGH93"
+    },
+    {
+      "title": "Terms of Protection",
+      "slug": "terms-of-protection",
+      "description": "The Worlds Between Home, Book 8 of 10. On the Orison Exchange, air is the currency and protection is bought from competing houses, so the Oleds end up covered on three separate books by people who all deal with them honestly.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/91XYqcyp6kL._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/terms-of-protection/",
+      "amazon": "https://www.amazon.com/dp/B0HJGP4K8H"
+    },
+    {
+      "title": "The Children of Damaris",
+      "slug": "the-children-of-damaris",
+      "description": "The Worlds Between Home, Book 1 of 10. A ship mechanic, a surgical assistant, and their two children steal a damaged survey courier to escape a fascist world that has begun taking every child into state custody, with a whispering stuffed animal hidden aboard.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/814bKVKGW+L._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/the-children-of-damaris/",
+      "amazon": "https://www.amazon.com/dp/B0HHZFSG82"
+    },
+    {
+      "title": "The Common Sun",
+      "slug": "the-common-sun",
+      "description": "The Worlds Between Home, Book 4 of 10. Solvara's generous public system heals the family and repairs their ship for free, yet every entitlement costs them something they did not know they were holding.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/910nHjOgvkL._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/the-common-sun/",
+      "amazon": "https://www.amazon.com/dp/B0HJFNCSCN"
     },
     {
       "title": "The Emperors of A.I. Valley",
@@ -859,6 +950,51 @@
       "amazon": "https://www.amazon.com/dp/B0HG5TGQBV"
     },
     {
+      "title": "The Light at the Lava Sea",
+      "slug": "the-light-at-the-lava-sea",
+      "description": "The Worlds Between Home, Book 9 of 10. Three of the Oleds are taken aboard an occupation carrier that writes everything down, while Xia climbs alone through a dark recovery trunk with a pencil and her mother's rules.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/81ukVpUTn5L._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/the-light-at-the-lava-sea/",
+      "amazon": "https://www.amazon.com/dp/B0HJJWZTKT"
+    },
+    {
+      "title": "The Memory Garden",
+      "slug": "the-memory-garden",
+      "description": "The Worlds Between Home, Book 6 of 10. On Varduun nothing is withheld and nothing is billed, the memory gardens keep what people say for nine hundred years, and Xia carries something that took an entire hillside without asking.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/91U627Pk2TL._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/the-memory-garden/",
+      "amazon": "https://www.amazon.com/dp/B0HJJSSWJ7"
+    },
+    {
+      "title": "The Price of High Ground",
+      "slug": "the-price-of-high-ground",
+      "description": "The Worlds Between Home, Book 3 of 10. On Vanthel, where arrival is an invoice and every charge is published, the family learns that each honest offer made to them comes with a claim on their ship.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/91jvMuSAA-L._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/the-price-of-high-ground/",
+      "amazon": "https://www.amazon.com/dp/B0HJ6B5JWJ"
+    },
+    {
       "title": "The Semantic Rebellion",
       "slug": "the-semantic-rebellion",
       "description": "A sci-fi novel following a data engineer's journey through a rapidly changing world shaped by AI and shifting power dynamics.",
@@ -874,6 +1010,21 @@
       "amazon": "https://www.amazon.com/dp/B0GPMNX78W"
     },
     {
+      "title": "The Voice at the End of Everything",
+      "slug": "the-voice-at-the-end-of-everything",
+      "description": "The Worlds Between Home, Book 10 of 10. The concluding volume: the Directorate has broken, Aldex rebuilds authority with paper and signatures, and Xia keeps a case open against the voice that has watched eight worlds decide what to do with her family.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/91ew4c30crL._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/the-voice-at-the-end-of-everything/",
+      "amazon": "https://www.amazon.com/dp/B0HL22DC7F"
+    },
+    {
       "title": "Thrones of Ash and Sky",
       "slug": "thrones-of-ash-and-sky",
       "description": "The concluding volume of the trilogy, bringing the saga of kingdoms, magic, and destiny to its climax.",
@@ -887,6 +1038,21 @@
       "cover": "https://images.amazon.com/images/P/B0GQCHRYHV.01._SCLZZZZZZZ_.jpg",
       "canonicalPage": "https://books.alexmerced.com/books/thrones-of-ash-and-sky/",
       "amazon": "https://www.amazon.com/dp/B0GQCHRYHV"
+    },
+    {
+      "title": "What the Models Cannot See",
+      "slug": "what-the-models-cannot-see",
+      "description": "The Worlds Between Home, Book 5 of 10. The best-run world the Oleds have seen places them under a formal hold, and ten-year-old Xia's refusals become the only thing standing between careful assessors and the voice she talks to.",
+      "category": "Fiction",
+      "categorySlug": "fiction",
+      "topics": [
+        "fiction"
+      ],
+      "publisher": null,
+      "flagship": false,
+      "cover": "https://m.media-amazon.com/images/I/81aHYjEWVRL._SL1500_.jpg",
+      "canonicalPage": "https://books.alexmerced.com/books/what-the-models-cannot-see/",
+      "amazon": "https://www.amazon.com/dp/B0HJJDS9NH"
     },
     {
       "title": "D6 Storyteller: Cybernetics, Speculative & Alternate Tech Companion",

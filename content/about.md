@@ -27,10 +27,11 @@ Alex Merced is the Head of Developer Relations at Dremio, where he educates, ent
 
 Alex is a regular speaker at global conferences such as Data Council, Data Day Texas, OSA Con, Nerdearla, Øredev, Confluent’s Currents, StreamNative’s Data Streaming Summit, and Dremio’s Subsurface. His talks often center on open table formats, metadata management, and the future of cloud-native data platforms.
 
-He is the author of three books:
+He is the author of 77 books, including:
 *   **Apache Iceberg: The Definitive Guide** (O’Reilly)
 *   **Apache Polaris: The Definitive Guide** (O’Reilly)
 *   **Architecting an Apache Iceberg Lakehouse** (Manning)
+*   **Building the Software Factory** (Packt, with Benedikt Stemmildt)
 
 Beyond writing and speaking, Alex contributes to the open-source community through several projects, including:
 *   **SencilloDB** – a lightweight, in-process document database in JavaScript

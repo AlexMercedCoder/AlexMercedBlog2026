@@ -4,7 +4,7 @@ hero_image: /assets/AlexBlogBannerNight.webp
 hero_image_alt: "Illustration of Alex Merced working at a laptop at night, with glowing teal data charts drawn across the window and a valley of city lights below the mountains beyond it."
 show_recent_blog_posts: true
 # Shown in the home hero. Source of truth: https://books.alexmerced.com
-books_count: "61+"
+books_count: "77"
 ---
 
 # Data Engineering, Lakehouses, and the Future of AI
