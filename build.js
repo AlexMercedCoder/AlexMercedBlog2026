@@ -2047,21 +2047,28 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
                 <li><a href="https://whoisalexmerced.com" target="_blank" rel="noopener">WhoIsAlexMerced.com</a></li>
                 <li><a href="https://alexmercedmedia.com" target="_blank" rel="noopener">AlexMercedMedia.com</a></li>
                 <li><a href="https://books.alexmerced.com" target="_blank" rel="noopener">Books.AlexMerced.com</a></li>
+                <li><a href="https://resources.alexmerced.com" target="_blank" rel="noopener">Resources.AlexMerced.com</a></li>
                 <li><a href="https://alexmercedcoder.dev" target="_blank" rel="noopener">AlexMercedCoder.dev</a></li>
                 <li><a href="https://alexmerceddata.com" target="_blank" rel="noopener">AlexMercedData.com</a></li>
                 <li><a href="https://opendatalakehouse.com" target="_blank" rel="noopener">OpenDataLakehouse.com</a></li>
                 <li><a href="https://datalakehousehub.com" target="_blank" rel="noopener">DataLakehouseHub.com</a></li>
+                <li><a href="https://datalakehouse.help" target="_blank" rel="noopener">DataLakehouse.help</a></li>
                 <li><a href="https://iceberglakehouse.com" target="_blank" rel="noopener">IcebergLakehouse.com</a></li>
                 <li><a href="https://agenticlakehouse.com" target="_blank" rel="noopener">AgenticLakehouse.com</a></li>
                 <li><a href="https://agenticanalyticsnow.com" target="_blank" rel="noopener">AgenticAnalyticsNow.com</a></li>
                 <li><a href="https://openagenticplatform.com" target="_blank" rel="noopener">OpenAgenticPlatform.com</a></li>
                 <li><a href="https://www.alexmercedai.com" target="_blank" rel="noopener">AlexMercedAI.com</a></li>
+                <li><a href="https://dataaiwiki.com" target="_blank" rel="noopener">DataAIWiki.com</a></li>
                 <li><a href="https://semanticlakehouse.com" target="_blank" rel="noopener">SemanticLakehouse.com</a></li>
                 <li><a href="https://openlakehouse.alexmerced.com" target="_blank" rel="noopener">OpenLakehouse.AlexMerced.com</a></li>
                 <li><a href="https://dataengnr.com" target="_blank" rel="noopener">DataEngnr.com</a></li>
+                <li><a href="https://weekofdata.com" target="_blank" rel="noopener">WeekOfData.com</a></li>
                 <li><a href="https://grokoverflow.com" target="_blank" rel="noopener">GrokOverflow.com</a></li>
                 <li><a href="https://ingestthis.com" target="_blank" rel="noopener">IngestThis.com</a></li>
                 <li><a href="https://alexmercedmusic.com" target="_blank" rel="noopener">AlexMercedMusic.com</a></li>
+                <li><a href="https://alexmercedlibertarian.com" target="_blank" rel="noopener">AlexMercedLibertarian.com</a></li>
+                <li><a href="https://d6storyteller.alexmerced.com" target="_blank" rel="noopener">D6Storyteller.AlexMerced.com</a></li>
+                <li><a href="https://tuts.alexmercedcoder.dev" target="_blank" rel="noopener">Tuts.AlexMercedCoder.dev</a></li>
               </ul>
             </nav>
             <nav class="footer__run" aria-label="Free weekly newsletters">
