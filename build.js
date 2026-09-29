@@ -372,6 +372,12 @@ async function generateBlogRSS(posts, config) {
 }
 
 async function generateTagPages(posts, config, assets) {
+    const topicIntros = {
+        'apache-iceberg': 'Start with the table format: snapshots, metadata, catalogs, and the choices that affect production operations. For a complete reference architecture, visit OpenDataLakehouse.com.',
+        'data-lakehouse': 'Explore the architecture from storage and tables through catalogs, engines, and governance. Begin with the overview, then use the articles below for implementation details.',
+        'agentic-ai': 'Follow the path from a governed data source to a trustworthy agent answer: interfaces, semantic context, evaluation, and operational controls.',
+        'python': 'Python tutorials and patterns for data engineering, APIs, and AI workflows. Check the library versions in each tutorial before running older code.'
+    };
     const tagsMap = {};
     posts.forEach(p => {
         if (p.tags && Array.isArray(p.tags)) {
@@ -400,14 +406,14 @@ async function generateTagPages(posts, config, assets) {
             ${renderPageHead({
                 eyebrow: 'Topic',
                 title: escapeHtml(entry.label),
-                lede: `${tagPosts.length} ${tagPosts.length === 1 ? 'post' : 'posts'} tagged “${escapeHtml(entry.label)}”.`
+                lede: topicIntros[slug] || `${tagPosts.length} ${tagPosts.length === 1 ? 'post' : 'posts'} tagged “${escapeHtml(entry.label)}”.`
             })}
             <div class="shell page">
                 <ol class="stack">${listHtml}</ol>
                 <p class="page__back"><a class="link-back" href="/blog/index.html">Browse all posts</a></p>
             </div>`;
 
-        const pageHtml = renderLayout(body, entry.label, config, assets, { path: `/tags/${slug}.html`, noindex: true, description: `Posts tagged ${entry.label}.` });
+        const pageHtml = renderLayout(body, entry.label, config, assets, { path: `/tags/${slug}.html`, noindex: !topicIntros[slug], description: topicIntros[slug] || `Posts tagged ${entry.label}.` });
         await fs.outputFile(path.join(tagsDir, `${slug}.html`), pageHtml);
     }
     console.log(`🏷️ Built ${Object.keys(tagsMap).length} Tag Pages.`);
@@ -469,6 +475,7 @@ async function generatePaginatedIndex(posts, distDir, config, assets) {
                 lede: `${posts.length} posts on Apache Iceberg, lakehouse architecture, data engineering and applied AI.`
             })}
             <div class="shell page">
+                ${i === 1 ? '<nav aria-label="Browse by topic"><strong>Explore a topic:</strong> <a href="/tags/apache-iceberg.html">Apache Iceberg</a> · <a href="/tags/data-lakehouse.html">Data lakehouses</a> · <a href="/tags/agentic-ai.html">Agentic AI</a> · <a href="/tags/python.html">Python</a></nav>' : ''}
                 ${featuredHtml}
                 ${gridHtml}
                 ${paginationHtml}
@@ -1852,6 +1859,7 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
     const fullTitle = `${pageTitle} | ${config.site_title}`;
     const description = seo.description || config.site_description;
     const url = seo.path ? `${config.domain}${seo.path}` : config.domain;
+    const canonicalUrl = /^https:\/\/[^\s]+$/.test(seo.canonical || '') ? seo.canonical : url;
     const image = seo.image
         ? (seo.image.startsWith('http') ? seo.image : `${config.domain}${seo.image}`)
         : `${config.domain}/og-image.png`;
@@ -1880,7 +1888,7 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
         jsonLd = {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
             "headline": pageTitle,
             "description": description,
             "image": image,
@@ -1926,7 +1934,7 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
     <meta name="author" content="${escapeHtml(config.author_name)}">
     <meta name="theme-color" content="${(assets.themeColorLight)}" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="${(assets.themeColorDark)}" media="(prefers-color-scheme: dark)">
-    <link rel="canonical" href="${url}" />
+    <link rel="canonical" href="${canonicalUrl}" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="alternate" type="application/rss+xml" title="${escapeHtml(config.site_title)} RSS" href="/feed.xml">
     ${seo.prevUrl ? `<link rel="prev" href="${seo.prevUrl}" />` : ''}
@@ -2539,6 +2547,7 @@ async function build() {
                     description: post.description || autoDesc,
                     date: post.date,
                     updatedDate: post.updated || null,
+                    canonical: post.canonical || null,
                     progress: true
                 };
 
@@ -2836,6 +2845,7 @@ async function build() {
     if (config.features.podcast?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/podcast/index.html`, priority: '0.9' });
 
     const allFiles = await getFiles(DIST_DIR);
+    const crossPostedPaths = new Set(allPosts.filter(post => post.canonical && !post.canonical.startsWith(`${domain}/`)).map(post => `blog/${post.slug}.html`));
     const allHtml = allFiles.filter(f => f.endsWith('.html'));
     const uniqueUrls = new Set(sitemapUrls.map(u => u.loc));
 
@@ -2850,7 +2860,7 @@ async function build() {
     const dynamicItems = allHtml.map(p => {
         const relPath = path.relative(DIST_DIR, p).replace(/\\/g, '/');
         // Skip tag pages (noindexed), skip root index.html (canonical is /)
-        if (relPath.startsWith('tags/') || relPath === 'index.html') return '';
+        if ((relPath.startsWith('tags/') && !['apache-iceberg','data-lakehouse','agentic-ai','python'].some(tag => relPath === `tags/${tag}.html`)) || relPath === 'index.html' || crossPostedPaths.has(relPath)) return '';
         const url = `${domain}/${relPath}`;
         if (!uniqueUrls.has(url)) {
             return `
