@@ -3,6 +3,7 @@ const path = require('path');
 const crypto = require('crypto');
 const matter = require('gray-matter');
 const hljs = require('highlight.js');
+const { gitModified, dateSource } = require('./lib/git-dates');
 
 // Topic hubs: the only tag pages that are indexed; every other tag is noindex.
 const TOPIC_INTROS = {
@@ -2827,16 +2828,42 @@ async function build() {
 
     // 8. Build Sitemap & Robots.txt
     const domain = config.domain || 'https://example.com';
-    const today = new Date().toISOString();
+
+    // Real <lastmod> values (P5.1). A post's date is its frontmatter `updated`
+    // or `date`, falling back to git. Listing pages (home, blog index,
+    // pagination) change whenever a post is published, so they carry the
+    // newest post date. Topic pages carry their newest post. Other pages use
+    // the git date of their source file. With no known date, lastmod is omitted.
+    const toDay = d => { const x = d instanceof Date ? d : (d ? new Date(d) : null); return x && !isNaN(x) ? x.toISOString().slice(0, 10) : null; };
+    const maxDay = (...ds) => ds.filter(Boolean).sort().pop() || null;
+    const postDay = post => toDay(post.updated) || toDay(post.dateObj) || toDay(gitModified(`content/blog/${post.slug}.md`));
+    const newestPostDay = maxDay(...allPosts.map(postDay));
+    const lastmodFor = new Map();
+    lastmodFor.set('index.html', maxDay(newestPostDay, toDay(gitModified('content/home.md'))));
+    lastmodFor.set('about.html', toDay(gitModified('content/about.md')));
+    lastmodFor.set('books/index.html', toDay(gitModified('data/books.json')));
+    for (const post of allPosts) lastmodFor.set(`blog/${post.slug}.html`, postDay(post));
+    for (const post of allPosts) {
+        for (const t of (Array.isArray(post.tags) ? post.tags : [])) {
+            const rel = `tags/${tagSlug(t)}.html`;
+            lastmodFor.set(rel, maxDay(lastmodFor.get(rel), postDay(post)));
+        }
+    }
+    const lastmodOf = relPath => {
+        if (relPath === 'blog/index.html' || relPath.startsWith('blog/page/')) return newestPostDay;
+        return lastmodFor.get(relPath) || null;
+    };
+    const lastmodTag = relPath => { const d = lastmodOf(relPath); return d ? `\n    <lastmod>${d}</lastmod>` : ''; };
+    console.log(`🗓️ Sitemap dates from frontmatter and ${dateSource()} history.`);
 
     // Collect specific URLs (only canonical root, not /index.html duplicate)
     const sitemapUrls = [
-        { loc: `${domain}/`, priority: '1.0' }
+        { loc: `${domain}/`, rel: 'index.html', priority: '1.0' }
     ];
 
-    if (config.features.blog?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/blog/index.html`, priority: '0.9' });
-    if (config.features.events?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/events/index.html`, priority: '0.9' });
-    if (config.features.podcast?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/podcast/index.html`, priority: '0.9' });
+    if (config.features.blog?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/blog/index.html`, rel: 'blog/index.html', priority: '0.9' });
+    if (config.features.events?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/events/index.html`, rel: 'events/index.html', priority: '0.9' });
+    if (config.features.podcast?.mode === 'internal') sitemapUrls.push({ loc: `${domain}/podcast/index.html`, rel: 'podcast/index.html', priority: '0.9' });
 
     const allFiles = await getFiles(DIST_DIR);
     const crossPostedPaths = new Set(allPosts.filter(post => post.canonical && !post.canonical.startsWith(`${domain}/`)).map(post => `blog/${post.slug}.html`));
@@ -2845,8 +2872,7 @@ async function build() {
 
     const xmlItems = sitemapUrls.map(u => `
   <url>
-    <loc>${u.loc}</loc>
-    <lastmod>${today}</lastmod>
+    <loc>${u.loc}</loc>${lastmodTag(u.rel)}
     <priority>${u.priority}</priority>
   </url>`).join('');
 
@@ -2859,8 +2885,7 @@ async function build() {
         if (!uniqueUrls.has(url)) {
             return `
   <url>
-    <loc>${url}</loc>
-    <lastmod>${today}</lastmod>
+    <loc>${url}</loc>${lastmodTag(relPath)}
     <priority>0.6</priority>
   </url>`;
         }

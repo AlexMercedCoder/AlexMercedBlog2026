@@ -1,0 +1,3145 @@
+{
+  "generatedBy": "scripts/build-git-dates.js",
+  "files": {
+    "content/about.md": {
+      "modified": "2026-09-26T11:27:08-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/10JSObjects/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/AgilityCMSBlog/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/AngularBlog/file.png": {
+      "modified": "2026-01-14T15:14:12-05:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/AngularBlog/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/ArrayMethods/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/AuthConcept/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/ExpressMongo/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/IntroToExpress/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/Mongoose/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/MoreSpinupTemplates/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/NetlifyJSONApi/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/OnlineCodePlaygrounds/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/ReactImages/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/Ruby on Rails/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/StencilJS/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/Svelte101/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/WebComponentLibs/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/amponenttut/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/angulartut/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/axiosfetch/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/basicref/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/branding/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/clientsidejsfun/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/cors/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/createreactloaded/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/cssguide/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/deploy/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/djangoreference/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/frontendcrudpvjs/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/gatsbynext/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/gatsbyportfolio/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/graphql/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/jQuery/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/jsevents/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/konjection/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/make-fullstack-app/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/mblocks/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/merced-react-hooks/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/mercedspinuptut/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/mercedui/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/merver/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/mongorester/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/mutils/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/postsapper/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/promises/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/railsdeployment/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/railsmanytomany/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/react-tut/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/reactcheatsheet/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/reactconcepts/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/reacthooks/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/renderblocks/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/ruby-tut/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/rubyvjs/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/svelte/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/taskrunner/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/todoreactangularvue/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/typescript101/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/usedatastore/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/vue-tut/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/vueprops/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/webcomp1/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/webcomp2/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/webcomp3/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2020/writingpromises/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/10ReactTips/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/Ballerina101/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/DeveloperGuide/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/Golang101/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/MVC/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/Rust101/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/bosqueenvironment/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/cloudfunctions/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/deepdivetooling/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/depinject/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/deployreact/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/ezcomponent/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/fastapi/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/freeheadless/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/garbagecollector/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/guidetogit/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/introtophp/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/koaserver/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/mastertomain/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/netlifyfunctions/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/pythonrubyphpjavascript/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/pythonvirtualenv/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/reactdataflowguide/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/reactjsonblog/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/recursivemap/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/tipsfordevs/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/understandingdeployment/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/understandingreactrouter/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/usingenvvariableswithreact/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/vercelfunctions/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/1/wheredoesmycoderun/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/10/express_templating_cheatsheet/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/10/my_first_react_app_2021_to_react_app/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/10/router_5_6/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/10/simple_application_wide_state_in_react/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/10/starting_http_server/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/11/Auth_with_express_JWT/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/11/creating_a_habit_tracker_graphql_hasura/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/11/developer_team_work_best_practices/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/11/how_to_implement_authorization_master_guide/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/11/mongo_mongoose_data_relationships/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/12/masonite_python_authentication_one_to_many/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/2021BackendFrameworks/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/CLIReference2021/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/GoRustCpp/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/JSReference/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/JavascriptTricks/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/linuxpostgres/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/makesfiles/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/2/streams/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/CSSFrameworks2021/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/dartzerotodeploy/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/dotnet5/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/expressmongoosereference/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/expresstemplatingintro/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/introtogobuffalo/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/javaspring/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/laravelhelloworld/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/mercedexpress/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/puredjangoapi/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/rivisitingpyenv/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/3/rustrocket0todeploy/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/Javascript_Functions/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/SolidJS/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/deploying_node_heroku/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/fastify_web_server/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/javascript_bundlers/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/pipenv/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/react_conditional_rendering/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/react_functional_reference/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/4/react_jest_testing_basics/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/5/FoalTS-Typescript-Web-Framework/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/5/Masonite-Python-Web-Framework-101/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/5/deno_scripts/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/5/deno_ts_api/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/5/docker_express_neo4j/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/5/python_flask/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/6/10-Programming-Languages/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/6/Basic_Intro_to_NextJS/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/6/Intro_to_SvelteKit/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/6/Intro_to_ruby_sinatra/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/6/Using_Ruby_Sinatra_with_Postgres/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/7/full_crud_flask_fastapi/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/7/full_crud_with_nodejs/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/7/full_crud_with_sinatra/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/7/full_crud_with_typescript/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/7/full_crud_with_vanilla_node/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/7/jamstack/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/8/api_calls_react/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/8/basic_auth_express_mongo/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/8/deploy_anything_with_nginx/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/8/frontend_ajax_call_how_to/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/8/js_jquery_cheatsheet/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/8/serverside_templating_comback/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/8/understanding_data_and_databases/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/9/JS_pattern_matching/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/9/next_typescript_mongo/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2021/9/using_graphdb_neo4j_in_node/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/1/becoming_a_developer_in_2022/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/12/12-Using-Solid-Start-With-A-GraphQL-API.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/12/12-Using-Solid-Start-With-A-tRPC-API.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/2/create-a-dev-environment-with-docker/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/2/grpc-world-protocols/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/2/understanding-ssh/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/2/why-all-developers-should-master-markdown/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/3/03-batch-vs-streaming.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/3/03-localstorage.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/3/2022-dom-js-cheatsheet/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/3/creating-a-markdown-blog-with-next-js/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/3/getting-started-with-scala3/index.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/4/04-2022-Expressjs-cheatsheet.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/4/04-2022-mongoosejs-cheatsheet.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/4/04-Express-Mongo-Build.md.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/4/04-Express-Todo-List copy.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/5/05-Introduction-to-SQL.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/5/05-making-multiple-api-calls-in-javascript.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/6/06-Intro-to-json-yaml-toml.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/6/06-The-World-Of-Data.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/7/07-Hands-on-intro-to-apache-iceberg-in-five-minutes.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/7/07-Web-Terminology-To-Know.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2022/8/08-five-reasons-you-should-embrace-dremio-cloud.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/1/01-using-simple-rpc-with-sveltekit.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/10/10-How-to-effectively-learn-development.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/10/10-an-in-depth-overview-of-iceberg-nessie.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/10/10-java-spring-scratch.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/10/10-play-json-api-using-scala-from-a-blank-sbt-project.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/10/10-why-dremio-iceberg-data-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/11/11-Building-a-todo-list-with-solid-start.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/11/11-OOP-Design-Patterns-Javascript.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/11/11-Why-Dremio-is-a-must-for-apache-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/11/11-apache-iceberg-spark-configurations.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/12/12-Converting-xls-csv-into-parquet-no-code-with-dremio.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/12/12-What-is-HTMX-Why-it-matters-and-how-to-use-it.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/4/04-Overview-of-the-data-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/5/05-Dremio-Arctic-Project-Nessie-Resources.md.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/5/05-Why-Project-Nessie-Matters-For-Data-Engineers.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/6/06-Dremio-Modern-Data-Architecture.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/6/06-file-encryption-overview.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/6/06-parquet-file-compression.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/7/07-project-nessie-in-depth.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/8/08-Handling-Cross-Origin-Cookies-In-ExpressJS.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/8/08-creating-a-iceberg-nessie-data-lakehouse-on-your-laptop.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/9/09-Flask-FastAPI-PsychoPG2.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2023/9/09-architecting-low-cost-fast-self-service-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/01-Apache_Iceberg_Catalog_Versioning_Data_Lakehouse_Management.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/01-Nessie-Alternative-to-Hive-JDBC-for-Apache-Iceberg.md.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/01-Open_Lakehouse_Engineering.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/01-Why-Choose-Data-Lakehouse-Apache-Iceberg-Dremio.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-Data-Lakehouse-Apache-Iceberg-Nessie-Dremio.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-Data-Vault-Modeling.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-Learning-Python-for-Beginners.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-Partitioning-Apache-Hive-Apache-Iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-Row-based-OLTP-Column-based-OLAP.md.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-Table_Format_FUD_Apache_Iceberg_Delta_Lake_Apache_Hudi.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-Understanding_Javascript_Promises_in-depth.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-What-are-ontologies.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-git-push-git-pull.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/02-introduction-to-ansi-sql.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/03-10-reasons-apache-iceberg-dremio-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/03-5-open-source-data-project-to-follow.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/03-Apache-Iceberg-Dremio-5-Reasons.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/03-Apache-Iceberg-The-Great-Equalizer.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/03-deep-dive-into-apache-iceberg-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/04-End-to-End-Data-Engineering-Tutorial-Ingest-Dashboards.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/04-Functional-Programming-in-Javascript.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/04-deep-dive-into-apache-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/04-the-future-of-apache-iceberg-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/05-3-reasons-data-engineers-should-embrace-apache-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/05-Apache-Iceberg-Partitioning-Deep-Dive.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/05-SQL-on-Excel-Files.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/06-apache-iceberg-intro-to-lakehouse-engineering-course.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/06-javascript-sorting-algorithms.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/07-Apache-Iceberg-Reliability.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/07-Upcoming-Events.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/07-databases-deconstructed-data-lakehouses-and-table-formats.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-07-Understanding-Polaris-Apache-Iceberg-Catalog.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-Understanding-Apache-Iceberg-Delete-Files.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-Understanding-Apache-Iceberg-Manifest-List.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-Understanding-Apache-Iceberg-Manifest.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-acid-guarantees-and-apache-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-apache-iceberg-metadata-json.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-data-lakehouses-101.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-using-the-alexmerced-datanotebook-image.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-08-what-apache-iceberg-rest-catalog-is-and-isnt.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-Deep-Dive-into-data-apps-with-streamlit.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-Getting-Started-with-rust.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-Why-Dremio-Iceberg-Matters.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-a-deep-dive-into-docker-compose.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-decentralization-centralization-data-at-scale.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-five-trends-in-data-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-hands-on-iceberg-dremio-minio-nessie.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-09-using-strings-in-rust.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-CDC-when-there-is-no-CDC.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-Data-Lakhouse-Roundup-1.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-01.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-02.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-03.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-04.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-05.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-06.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-07.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-08.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-09.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-all-about-parquet-part-10.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-bronze-silver-gold-data.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-data-modeling-entities-and-events.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-dbt-macros.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-github-actions-dbt-airflow-data.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-governing-apache-iceberg-tables.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-hands-on-with-iceberg-dremio-laptop.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-intro-to-github-actions.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-learning-data-with-python.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-pyarrow-and-python.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-rust-collections.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-10-ultimate-directory-of-Apache-Iceberg-Resources.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-11-10-Iceberg-developments.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-11-Dremio-and-AI-Ready-Data.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-11-Python-Analytics-Pattern-Matching.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-11-deep-dive-auto-ingest-dremio-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-11-intro-to-sql-with-dremio.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-11-rust-cargo-toml.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2024/2024-12-2025-guide-architecting-an-iceberg-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-01-XTable-or-Uniform.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-01-comprehensive-apache-iceberg-guide.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-01-the-lakehouse-benefits-and-enhancing.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-02-crash-course-on-langchain.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-02-understanding-helm-charts.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-01.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-02.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-03.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-04.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-05.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-06.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-07.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-08.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-09.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-AI-Agents-MCP-10.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-04-basics-of-making-mcp-server.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-01.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-02.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-03.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-04.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-05.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-06.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-07.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-08.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-09.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-10.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-11.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-12.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-13.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-14.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-15.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-16.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-17.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-05-intro-to-data-engineering-concepts-18.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-01-iceberg-optimization-degradation.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-02-iceberg-optimization-compaction-basics.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-03-iceberg-streaming-compaction.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-04-iceberg-clustering-sorting-zorder.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-05-iceberg-metadata-bloat-cleanup.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-06-iceberg-optimization-cadence.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-07-iceberg-metadata-triggered-compaction.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-08-iceberg-partition-evolution-compaction.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-09-iceberg-large-scale-optimization.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-10-iceberg-autonomous-optimization-pipeline.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-07-discovering-or-organizing-lakehouse-iceberg-meetups.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-09-2026-guide-to-data-lakehouses.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-09-agentic-ai-dremio-apache-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-09-ultimate-guide-to-open-table-formats.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-10-2026-guide-to-learning-lakehouse-iceberg-agentic-ai.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-10-Building-Universal-Lakehouse-Catalog.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-10-Intro-to-Apache-Iceberg-with-Apache-Polaris-and-Apache-Spark.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-10-apache-iceberg-v4.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-10-exploring-commerical-iceberg-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-11-Dremio-next-gen-tutorial.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-11-introducing-dremioframe-dataframe-python-library.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-12-2025-year-in-review-iceberg-arrow-polaris-parquet.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2025/2025-12-dremioframe-and-iceframe.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-01-table-formats.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-02-metadata-structures.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-03-iceberg-metadata-performance.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-04-partition-evolution.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-05-hidden-partitioning.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-06-writing-to-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-07-lakehouse-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-08-embedded-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-09-storage-degradation.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-10-maintaining-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-11-metadata-tables.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-12-python-and-mpp.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-13-streaming-to-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-14-hands-on-dremio-cloud.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-iceberg-masterclass-15-migrating-to-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-01-overview.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-02-row-vs-column-storage.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-03-data-organization-on-disk.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-04-indexing-strategies.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-05-query-optimizer.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-06-execution-models.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-07-memory-and-caching.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-08-partitioning.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-09-distributed-joins.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-04-29-query-engine-10-concurrency-control.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-04-29T08:48:50-04:00"
+    },
+    "content/blog/2026-05-25-hermes-agent-free-deepseek-setup.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-25T14:15:07-04:00"
+    },
+    "content/blog/2026-05-28-active-monitoring-agentic-ai-pipelines.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-anatomy-agentic-analytics-system.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-apache-iceberg-v3-upgrade.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-building-custom-agentic-analytics-python.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-data-governance-lakehouse-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-iceberg-hybrid-cloud-regulated-markets.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-iceberg-row-column-access-control.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-iceberg-snapshot-expiration.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-iceberg-storage-compute-decoupling.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-legacy-warehouse-to-lakehouse-migration.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-open-catalog-architecture-agentic-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-open-lakehouse-vs-proprietary-warehouse-tco.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-real-time-bi-iceberg-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-rise-of-agentic-analytics.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-semantic-layer-translation-engine.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-top-agentic-analytics-tools-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-trustworthy-ai-concurrency-isolation.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-unified-data-architecture-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-why-lakehouses-fail-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-28-zero-etl-federation-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-28T15:22:01-04:00"
+    },
+    "content/blog/2026-05-31-agentic-coding-tools-may-2026.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-05-31-agentic-coding-tools.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-31T12:28:18-04:00"
+    },
+    "content/blog/2026-05-31-data-platform-ai-agent-tooling.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-05-31T14:54:21-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-1-what-ai-is-and-isnt.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-01T11:21:05-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-2-getting-started-for-free.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-01T11:21:05-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-3-chatgpt-and-claude-deep-dive.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-01T11:21:05-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-4-specialized-ai-tools.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-01T11:21:05-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-5-going-advanced.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-01T11:21:05-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-ai-for-all-levels-1-what-ai-is-and-isnt.md": {
+      "modified": "2026-06-01T12:23:46-04:00",
+      "created": "2026-06-01T11:23:13-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-ai-for-all-levels-2-getting-started-for-free.md": {
+      "modified": "2026-06-01T12:23:46-04:00",
+      "created": "2026-06-01T11:23:13-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-ai-for-all-levels-3-chatgpt-and-claude-deep-dive.md": {
+      "modified": "2026-06-01T12:23:46-04:00",
+      "created": "2026-06-01T11:23:13-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-ai-for-all-levels-4-specialized-ai-tools.md": {
+      "modified": "2026-06-01T12:23:46-04:00",
+      "created": "2026-06-01T11:23:13-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-ai-for-all-levels-5-going-advanced.md": {
+      "modified": "2026-06-01T12:23:46-04:00",
+      "created": "2026-06-01T11:23:13-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-june-1-1-what-ai-is-and-isnt.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-june-1-2-getting-started-for-free.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-june-1-3-chatgpt-and-claude-deep-dive.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-june-1-4-specialized-ai-tools.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-01-ai-for-all-levels-june-1-5-going-advanced.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-agentic-coding-tools.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-agentic-lakehouse-concurrency-isolation-contracts.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-ai-for-all-levels-1-what-ai-is-and-isnt.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-ai-for-all-levels-2-getting-started-for-free.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-ai-for-all-levels-3-chatgpt-and-claude-deep-dive.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-ai-for-all-levels-4-specialized-ai-tools.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-ai-for-all-levels-5-going-advanced.md": {
+      "modified": "2026-06-08T11:05:31-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-anatomy-agentic-lakehouse-four-layers.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-apache-iceberg-v4-roadmap-adaptive-metadata-delta-convergence.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-atlan-snowflake-iceberg-v3-context-layer.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-clickhouse-real-time-agentic-analytics-event-loops.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-composable-analytics-semantic-layers-expressiveness.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-goal-directed-analytics-agents-apache-iceberg-action-loops.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-iceberg-remote-signing-regulated-datasets.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-iceberg-v3-deletion-vectors-snowflake-dml.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-iceberg-v3-row-lineage-cdc.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-iceberg-view-federation-portable-sql-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-mcp-lakehouse-semantic-data-layer-python.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-microsoft-fabric-build-2026-agentic-analytics-stack.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-python-tooling-apache-iceberg-pyiceberg-iceframe-iceberg-cli.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-rest-catalog-credential-vending-secure-lakehouse-storage.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-saas-procurement-semantic-layer-over-dashboards.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-securing-agent-identities-lakehouse-token-exchange.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-snowflake-horizon-catalog-bidirectional-iceberg-writes.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-snowflake-semantic-view-autopilot-business-logic.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-08-zero-copy-mirroring-modern-lakehouse-migration.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-08T10:17:42-04:00"
+    },
+    "content/blog/2026-06-22-ai-ready-metadata-lineage-quality-llm-query-failures.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-autonomous-materialization-ai-agents-table-performance.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-beyond-metrics-lists-composable-semantic-layers-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-built-for-agents-managed-by-agents-dremio-agentic-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-clickhouse-loop-real-time-event-streams-active-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-context-layer-semantic-lineage-quality-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-databricks-summit-2026-lakehouse-agentic-ai-operating-layer.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-event-driven-table-compaction-agentic-coordination.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-fabric-build-2026-lakehouse-schema-agentic-analytics.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-fine-grained-security-machine-speed-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-iceberg-v4-performance-root-manifests-combined-calls.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-ltap-lakehouse-transactional-analytical-processing-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-model-not-moat-semantic-lakehouse-layer-enterprise-ai.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-pyiceberg-scale-high-concurrency-no-spark.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-real-time-lakehouse-streaming-sql-cold-iceberg-storage.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-rest-catalog-v2-loadtable-protocol-design.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-rust-vs-cpp-table-layer-native-scan-operators.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-server-side-commit-deconflicting-rest-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-snowflake-interoperable-lakehouse-production-lessons.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-06-22-unity-ai-gateway-vs-apache-polaris-governance-control-plane.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-06-25T09:18:53-04:00"
+    },
+    "content/blog/2026-07-06-arrow-flight-iceberg-rest-catalog-columnar-transfers.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-block-vs-object-storage-deep-dive.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-11T20:03:53-04:00"
+    },
+    "content/blog/2026-07-06-buyers-scorecard-agentic-analytics-enterprise-ai-era.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-closed-loop-decision-agents-passive-bi-active-workflows.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-conversational-ai-managed-iceberg-s3-tables-mcp-server.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-decoupled-catalogs-vs-managed-tables-table-format-convergence.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-designing-your-own-ai-harness.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T03:06:47-04:00"
+    },
+    "content/blog/2026-07-06-deterministic-data-engineering-with-ai-harnesses.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T03:06:47-04:00"
+    },
+    "content/blog/2026-07-06-eu-ai-act-data-lakehouse-lineage-provenance-compliance.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-federation-and-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-11T20:03:53-04:00"
+    },
+    "content/blog/2026-07-06-file-compression-deep-dive.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-13T21:11:34-04:00"
+    },
+    "content/blog/2026-07-06-file-formats-renaissance.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-13T21:11:34-04:00"
+    },
+    "content/blog/2026-07-06-fine-grained-security-machine-speed-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-iceberg-v3-positional-deletes-deletion-vectors-event-lakes.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-iceberg-v3-variant-type-ai-json-payloads.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-iceberg-v4-state-july-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-07T10:32:34-04:00"
+    },
+    "content/blog/2026-07-06-idempotent-pipelines-agentic-lakehouse-double-write-anomalies.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-lakehouse-encryption-deep-dive.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-13T21:11:34-04:00"
+    },
+    "content/blog/2026-07-06-mcp-2026-07-28-stateless-spec-data-platforms.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-metric-contract-mandate-semantic-layers-ai-agent-access.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-multi-engine-catalog-federation-apache-polaris-multicloud.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-open-source-foundations-explained.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-14T06:32:58-04:00"
+    },
+    "content/blog/2026-07-06-operational-vs-analytical-systems.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-14T06:32:58-04:00"
+    },
+    "content/blog/2026-07-06-personal-vs-shared-context.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-11T20:03:53-04:00"
+    },
+    "content/blog/2026-07-06-private-air-gapped-data-lakehouses-iceberg-secure-clouds.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-proprietary-warehouse-open-lakehouse-zero-copy-metadata-translation.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-state-of-agentic-ai-standards-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-07T13:21:40-04:00"
+    },
+    "content/blog/2026-07-06-state-of-apache-arrow-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-07T13:21:40-04:00"
+    },
+    "content/blog/2026-07-06-state-of-apache-parquet-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-07T13:21:40-04:00"
+    },
+    "content/blog/2026-07-06-state-of-apache-polaris-july-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-07T13:21:40-04:00"
+    },
+    "content/blog/2026-07-06-streaming-to-iceberg-july-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-07T10:32:34-04:00"
+    },
+    "content/blog/2026-07-06-table-formats-2026-breakdown.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-13T21:11:34-04:00"
+    },
+    "content/blog/2026-07-06-trustworthy-concurrency-agentic-lakehouse-production-writes.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-06T16:54:57-04:00"
+    },
+    "content/blog/2026-07-06-when-gatekeepers-panic.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T03:06:47-04:00"
+    },
+    "content/blog/2026-07-06-who-what-why-semantic-layers.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-11T20:03:53-04:00"
+    },
+    "content/blog/2026-07-13-active-analytics-loop-goal-directed-action-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-apache-polaris-asf-top-level-multi-engine-catalog-interoperability.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-automated-materialized-views-autonomous-table-optimization-dremio-agentic-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-chase-catch-gap-agentic-ai-enterprise-scale-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-cube-semantic-standard-governed-agentic-analytics.md": {
+      "modified": "2026-07-18T23:59:54-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-data-lakehouse-open-standards-agentic-era.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-dremio-state-data-lakehouse-ai-report-agentic-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-five-layer-agentic-lakehouse-architecture-enterprise-pattern.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-gsa-model-context-protocol-server-hackathon-open-data-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-hybrid-lakehouse-regulated-markets-on-prem-public-metadata.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-iceberg-v3-deletion-vectors-merge-on-read-dml-performance.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-iceberg-variant-type-semi-structured-ai-datasets.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-llm-agency-concurrency-isolation-high-frequency-agent-writes-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-mcp-stateless-specifications-scalable-data-gateways-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-policy-layer-security-policy-enforcement-autonomous-multi-agent-systems.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-rest-catalog-credential-vending-zero-copy-security.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-rest-catalog-v2-standard-iceberg-scaling-protocol-debt.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-semantic-view-autopilot-dynamic-metric-definition-governance.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-13-zero-copy-mirroring-migration-proprietary-warehouses-open-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-18T22:52:31-04:00"
+    },
+    "content/blog/2026-07-24-cognitive-filters-media-evolution.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-24T10:56:29-04:00"
+    },
+    "content/blog/2026-07-24-open-lakehouse-breakdown-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-24T10:56:29-04:00"
+    },
+    "content/blog/2026-07-24-rampocalypse-economics.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-24T10:56:29-04:00"
+    },
+    "content/blog/2026-07-24-value-of-open-models-security.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-24T10:56:29-04:00"
+    },
+    "content/blog/2026-07-25-agent-cost-governance.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-25-ai-model-families-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T19:08:16-04:00"
+    },
+    "content/blog/2026-07-25-freshness-as-a-contract.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-25-iceberg-market-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T19:08:16-04:00"
+    },
+    "content/blog/2026-07-25-laptop-scale-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-25-parquet-constrains-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-25-sovereign-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-25-table-maintenance-economics.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-25-tabular-foundation-models.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-25-transaction-to-agent-race.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T19:08:16-04:00"
+    },
+    "content/blog/2026-07-25-zero-copy-actually-costs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-25T20:38:53-04:00"
+    },
+    "content/blog/2026-07-28-agent-guardrails-human-in-the-loop.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:59:55-04:00"
+    },
+    "content/blog/2026-07-28-agent-telemetry-iceberg-audit.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:12:37-04:00"
+    },
+    "content/blog/2026-07-28-agentic-analytics-tco.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:59:55-04:00"
+    },
+    "content/blog/2026-07-28-air-gapped-iceberg-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:59:55-04:00"
+    },
+    "content/blog/2026-07-28-autonomous-reflections-agentic-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:12:37-04:00"
+    },
+    "content/blog/2026-07-28-data-products-for-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:12:37-04:00"
+    },
+    "content/blog/2026-07-28-equality-deletes-iceberg-v4.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:12:37-04:00"
+    },
+    "content/blog/2026-07-28-five-layer-agentic-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T10:38:25-04:00"
+    },
+    "content/blog/2026-07-28-fluss-kafka-iceberg-streaming.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:59:55-04:00"
+    },
+    "content/blog/2026-07-28-hot-tier-iceberg-serving.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T10:38:25-04:00"
+    },
+    "content/blog/2026-07-28-iceberg-concurrent-commits-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:12:37-04:00"
+    },
+    "content/blog/2026-07-28-iceberg-jackson-3-migration.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:59:55-04:00"
+    },
+    "content/blog/2026-07-28-mcp-apache-polaris.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:12:37-04:00"
+    },
+    "content/blog/2026-07-28-multi-region-catalog-federation.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:59:55-04:00"
+    },
+    "content/blog/2026-07-28-oracle-lakehouse-federation.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T10:38:25-04:00"
+    },
+    "content/blog/2026-07-28-parquet-versioning-iceberg-v4.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T09:12:37-04:00"
+    },
+    "content/blog/2026-07-28-python-native-iceberg-pipelines.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-07-28T10:38:25-04:00"
+    },
+    "content/blog/2026-08-02-apache-polaris-1-7-0.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-02T16:57:23-04:00"
+    },
+    "content/blog/2026-08-02-batch-pipelines-into-apache-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-02T16:57:23-04:00"
+    },
+    "content/blog/2026-08-02-iceberg-across-the-hyperscalers.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-02T16:57:23-04:00"
+    },
+    "content/blog/2026-08-04-agentic-analytics-tco-token-budgets.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:49:08-04:00"
+    },
+    "content/blog/2026-08-04-agentic-lakehouse-mcp-architecture.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:49:08-04:00"
+    },
+    "content/blog/2026-08-04-autonomous-table-optimization.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T21:08:11-04:00"
+    },
+    "content/blog/2026-08-04-building-air-gapped-iceberg-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-closed-loop-decision-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:49:08-04:00"
+    },
+    "content/blog/2026-08-04-high-concurrency-agent-writes-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T21:08:11-04:00"
+    },
+    "content/blog/2026-08-04-iceberg-v3-deletion-vectors-merge-on-read.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-iceberg-v3-variant-shredding-s3-tables.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-iceberg-v4-roadmap.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-lakehouse-vs-warehouse-tco.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-mcp-governed-semantic-layer.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:49:08-04:00"
+    },
+    "content/blog/2026-08-04-mcp-supply-chain-decision-loops.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:49:08-04:00"
+    },
+    "content/blog/2026-08-04-metric-contracts-for-ai-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:49:08-04:00"
+    },
+    "content/blog/2026-08-04-polaris-cross-cloud-credential-vending.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-policy-aware-ai-telemetry-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T21:08:11-04:00"
+    },
+    "content/blog/2026-08-04-preventing-prompt-injection-lakehouse-gateway.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T21:08:11-04:00"
+    },
+    "content/blog/2026-08-04-rest-catalog-v2-multi-table-commits.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-warehouse-to-iceberg-migration-playbook.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-04-zero-copy-data-sharing-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-04T20:29:23-04:00"
+    },
+    "content/blog/2026-08-06-arrow-flight-adbc-explained.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-06T10:20:11-04:00"
+    },
+    "content/blog/2026-08-10-agentic-graph-open-agent-profile-two-open-specs-agent-harnesses.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-14T16:45:42-04:00"
+    },
+    "content/blog/2026-08-19-apache-iceberg-v3-deletion-vectors-streaming-ingest.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-decoupled-data-lakehouse-multi-engine-rest-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-five-layers-agentic-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-goal-directed-data-quality-agents-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-managing-tco-agentic-analytics.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-metric-contracts-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-policy-aware-lakehouse-telemetry-eu-ai-act.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-query-routing-machine-scale.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-securing-agentic-lakehouse-gateway.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-semantic-layer-federation-multi-cloud.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-serverless-iceberg-ingestion-pyiceberg-duckdb.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-stateless-mcp-tool-gateways-fastmcp.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-write-audit-publish-iceberg-branches.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-19-zero-copy-warehouse-modernization-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-19T15:37:38-04:00"
+    },
+    "content/blog/2026-08-24-agents-with-personalities.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-ai-gateways-field-guide.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-graphs-in-ai-engineering.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-hidden-cost-of-tiny-iceberg-commits.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-delete-story-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-is-becoming-a-library.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-is-escaping-the-jvm.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-rest-catalog-compatibility-test.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-rest-remote-scan-planning.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-row-lineage.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-v4-adaptive-metadata-tree.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-iceberg-v4-cost-of-change-principle.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-inside-iceberg-rest-scan-planning.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-seven-rest-catalogs-one-duckdb-script.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-stop-flattening-your-json-iceberg-variant.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-two-engines-one-iceberg-table.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-variant-shredding-explained.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-24-who-owns-an-iceberg-table.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-24T15:16:14-04:00"
+    },
+    "content/blog/2026-08-25-agent-driven-iceberg-storage-tiering.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-agentic-lakehouse-gateway-prompt-injection.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-apache-ossie-polaris-semantic-models.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-arrow-flight-sql-adbc-connectivity.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-datafusion-comet-1-spark-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-fsst-alp-parquet-encodings.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-governance-as-code-lakehouse-rest-catalog.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-metric-contracts-code-multi-agent.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-multi-branch-iceberg-merge-automation.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-multi-cloud-polaris-rest-catalog-topologies.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-parquet-manifests-iceberg-v4.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-query-routing-lakehouse-engines.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-semantic-layer-federation-three-clouds.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-serverless-iceberg-microbatch-pyiceberg-duckdb.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-08-25-zero-copy-legacy-db-to-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-08-25T11:38:35-04:00"
+    },
+    "content/blog/2026-09-02-data-quality-tooling-compared.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-data-team-of-the-agentic-era.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-dbt-on-iceberg-incremental-models.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-disaster-recovery-for-iceberg-tables.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-gdpr-hard-deletes-on-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-geospatial-data-in-apache-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-iceberg-default-values-and-field-ids.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-iceberg-table-properties-that-matter.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-inside-the-puffin-file-format.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-lakehouse-ingestion-tools.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-local-iceberg-development-environments.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-metadata-platforms-in-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-moving-iceberg-tables-between-catalogs.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-opentelemetry-data-lake-on-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-orchestration-in-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-postgres-meets-the-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-schema-registries-and-event-schemas.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-storage-partitioned-joins-and-the-bucket-transform.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-synthetic-data-in-the-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-02-will-ai-replace-data-engineers.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-02T15:03:10-04:00"
+    },
+    "content/blog/2026-09-10-agentic-data-architecture.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-apache-polaris-in-production.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-consolidation-2026-open-formats.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-context-engineering-for-data-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-guardrails-ai-company-data.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-in-place-migration.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-maintenance-budget.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-on-kubernetes.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-partition-statistics-files.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-pipeline-assertions.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-rest-catalog-compatibility-report-2026.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-two-region-serving.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-iceberg-vended-credentials.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-kafka-connect-iceberg-commits.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-lakehouse-unit-economics.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-open-lakehouse-on-your-laptop.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-10-where-lock-in-went.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-10T16:45:20-04:00"
+    },
+    "content/blog/2026-09-21-datafusion-iceberg-moves-to-apache-datafusion.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-21-iceberg-v4-file-type-multimodal-tables.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-21-jev-classification-models-iceberg-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T12:39:47-04:00"
+    },
+    "content/blog/2026-09-21-ossie-semantic-query-interface-agents.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-21-parquet-kms-url-cve-2026-73334-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-21-parquet-page-index-pruning-iceberg.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-21-polaris-open-sharing-iceberg-tables.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-21-polaris-private-networking-lakehouse.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-21-vector-search-over-iceberg-tables.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-21T20:51:00-04:00"
+    },
+    "content/blog/2026-09-28-ags-multi-agent-analytics-workflow.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-28T14:21:11-04:00"
+    },
+    "content/blog/2026-09-28-iceberg-tags-regulatory-snapshot-retention.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-28T14:21:11-04:00"
+    },
+    "content/blog/2026-09-28-semantic-failure-catalog-ai-agent-queries.md": {
+      "modified": "2026-09-29T20:50:25-04:00",
+      "created": "2026-09-28T14:21:11-04:00"
+    },
+    "content/blog/2026/2026-01-A-Practical-Guide-to-AI-Assisted-Coding.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-01-15T11:57:45-05:00"
+    },
+    "content/blog/2026/2026-01-rag-isnt-the-problem.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2026/2026-01-recursive-langauge-models.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2026/2026-01-the-story-of-pangolin-catalog.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-01-14T15:14:12-05:00"
+    },
+    "content/blog/2026/2026-02-18-batch-vs-streaming-choose-the-right-processing-model.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-conceptual-logical-and-physical-data-models-explained.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-data-engineering-best-practices-the-complete-checklist.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-data-modeling-best-practices-7-mistakes-to-avoid.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-data-modeling-for-analytics-optimize-for-queries-not-transactions.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-data-modeling-for-the-lakehouse-what-changes.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-data-quality-is-a-pipeline-problem-not-a-dashboard-problem.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-data-vault-modeling-hubs-links-and-satellites.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-data-virtualization-and-the-semantic-layer-query-without-copying.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-denormalization-when-and-why-to-flatten-your-data.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-dimensional-modeling-facts-dimensions-and-grains.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-headless-bi-how-a-universal-semantic-layer-replaces-tool-specific-models.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-how-a-self-documenting-semantic-layer-reduces-data-team-toil.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-how-to-build-a-semantic-layer-a-step-by-step-guide.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-how-to-design-reliable-data-pipelines.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-how-to-think-like-a-data-engineer.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-idempotent-pipelines-build-once-run-safely-forever.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-partition-and-organize-data-for-performance.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-pipeline-observability-know-when-things-break.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-schema-evolution-without-breaking-consumers.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-semantic-layer-best-practices-7-mistakes-to-avoid.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-semantic-layer-vs-data-catalog-complementary-not-competing.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-semantic-layer-vs-metrics-layer-whats-the-difference.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-slowly-changing-dimensions-types-1-3-with-examples.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-star-schema-vs-snowflake-schema-when-to-use-each.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-testing-data-pipelines-what-to-validate-and-when.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-the-role-of-the-semantic-layer-in-data-governance.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-what-is-a-semantic-layer-a-complete-guide.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-what-is-data-modeling-a-complete-guide.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-18-why-your-ai-initiatives-fail-without-a-semantic-layer.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-18T17:16:59-05:00"
+    },
+    "content/blog/2026/2026-02-2026-Intro-to-Apache-Iceberg.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-02-15T09:44:03-05:00"
+    },
+    "content/blog/2026/2026-03-01-classify-your-data-with-sql-a-hands-on-guide-to-dremios-aiclassify-function.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-amazon-redshift-to-dremio-cloud-extend-your-warehouse-with-federation-and-ai-analytics.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-amazon-s3-to-dremio-cloud-query-your-data-lake-with-sql-federation-and-ai.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-any-iceberg-rest-catalog-to-dremio-cloud-universal-lakehouse-access.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-apache-druid-to-dremio-cloud-add-sql-joins-ai-and-governance-to-your-real-time-analytics.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-aws-glue-data-catalog-to-dremio-cloud-query-and-manage-your-aws-iceberg-tables.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-azure-storage-to-dremio-cloud-query-your-microsoft-data-lake-with-sql-and-ai.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-azure-synapse-analytics-to-dremio-cloud-multi-cloud-data-warehouse-federation.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-databricks-unity-catalog-to-dremio-cloud-query-delta-lake-tables-with-federation-and-ai.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-dremio-software-to-dremio-cloud-hybrid-federation-across-deployments.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-google-bigquery-to-dremio-cloud-cross-cloud-analytics-without-data-movement.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-ibm-db2-to-dremio-cloud-modernize-mainframe-analytics-with-federation-and-ai.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-microsoft-sql-server-to-dremio-cloud-federate-enterprise-data-without-etl.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-mongodb-to-dremio-cloud-sql-analytics-on-document-data.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-mysql-to-dremio-cloud-federated-analytics-without-etl.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-oracle-database-to-dremio-cloud-enterprise-analytics-without-data-movement.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-postgresql-to-dremio-cloud-query-federate-and-accelerate-your-data.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-sap-hana-to-dremio-cloud-unlock-analytics-beyond-the-sap-ecosystem.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-snowflake-open-catalog-to-dremio-cloud-multi-engine-iceberg-analytics.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-snowflake-to-dremio-cloud-federate-govern-and-accelerate-beyond-snowflake.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-connect-vertica-to-dremio-cloud-federation-for-analytics-optimized-data.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-dremios-built-in-open-catalog-your-zero-configuration-apache-iceberg-lakehouse.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-extract-structured-data-from-text-with-dremios-aigenerate-function.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-01-generate-summaries-and-insights-with-dremios-aicomplete-function.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-01T14:24:21-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-amazon-kiro-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-claude-code-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-claude-cowork-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-cursor-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-gemini-cli-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-github-copilot-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-google-antigravity-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-jetbrains-ai-assistant-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-openai-codex-cli-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-opencode-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-openwork-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-windsurf-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-05-how-to-use-dremio-with-zed-connect-query-and-build-data-apps.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-05T17:11:14-05:00"
+    },
+    "content/blog/2026/2026-03-07-agentic-analytics-on-the-apache-lakehouse.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-04-13T12:59:23-04:00"
+    },
+    "content/blog/2026/2026-03-07-apache-software-foundation-history-purpose-and-process.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-04-13T12:59:23-04:00"
+    },
+    "content/blog/2026/2026-03-07-assembling-the-apache-lakehouse-the-modular-architecture.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-04-13T12:59:23-04:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-chatgpt-a-complete-guide-to-getting-better-results.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-claude-code-a-complete-guide-for-developers.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-claude-cowork-a-complete-guide-for-knowledge-workers.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-claude-desktop-a-complete-guide-to-mcp-computer-use-and-local-file-access.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-claude-web-a-complete-guide-to-projects-artifacts-and-intelligent-context.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-cursor-a-complete-guide-to-the-ai-native-code-editor.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-gemini-cli-a-complete-guide-to-terminal-native-ai-development.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-gemini-web-and-notebooklm-a-complete-guide-to-googles-ai-knowledge-ecosystem.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-google-antigravity-a-complete-guide-to-the-agent-first-ide.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-openai-codex-a-complete-guide-across-browser-cli-and-app.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-opencode-a-complete-guide-to-the-open-source-terminal-ai-agent.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-openwork-a-complete-guide-to-the-desktop-ai-agent-framework.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-perplexity-ai-a-complete-guide-to-research-first-ai-conversations.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-t3-chat-a-complete-guide-to-the-unified-multi-model-ai-interface.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-vs-code-with-llm-plugins-a-complete-guide-to-building-your-own-ai-powered-ide.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-windsurf-a-complete-guide-to-the-ai-flow-ide.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-context-management-strategies-for-zed-a-complete-guide-to-the-high-performance-ai-code-editor.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T17:47:10-05:00"
+    },
+    "content/blog/2026/2026-03-07-the-model-context-protocol-mcp-explained-a-complete-guide-to-how-every-major-ai-tool-connects-to-external-data.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-03-07T20:45:42-05:00"
+    },
+    "content/blog/2026/2026-03-07-what-is-apache-arrow-erasing-the-serialization-tax.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-04-13T12:59:23-04:00"
+    },
+    "content/blog/2026/2026-03-07-what-is-apache-iceberg-the-table-format-revolution.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-04-13T12:59:23-04:00"
+    },
+    "content/blog/2026/2026-03-07-what-is-apache-parquet-columns-encoding-and-performance.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-04-13T12:59:23-04:00"
+    },
+    "content/blog/2026/2026-03-07-what-is-apache-polaris-unifying-the-iceberg-ecosystem.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-04-13T12:59:23-04:00"
+    },
+    "content/blog/2026/2026-05-23-apache-iceberg-1-11-0-deep-dive.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-23T09:43:05-04:00"
+    },
+    "content/blog/2026/2026-05-24-automating-table-maintenance.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-choosing-iceberg-control-plane.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-clean-rooms-privacy.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-composable-query-engines.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-data-mesh-after-hype.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-dbt-fusion-analytics-engineering.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-duckdb-polars-iceberg.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-finops-warehouse-cost.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-governed-rag-data-products.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-iceberg-cdc-pipelines.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-kafka-streaming-operations.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-lance-iceberg-multimodal.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-mlflow-data-pipelines.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-modern-feature-stores.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-openlineage-observability.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-paimon-vs-iceberg-mutable-streams.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-policy-as-code-governance.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-real-time-lakehouse-flink.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-semantic-layers-text-to-sql.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/2026/2026-05-24-single-node-data-engineering.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-23T23:22:42-04:00"
+    },
+    "content/blog/2026/2026-05-24-vector-stores-retrieval.md": {
+      "modified": "2026-07-06T16:54:57-04:00",
+      "created": "2026-05-24T13:02:27-04:00"
+    },
+    "content/blog/first-post.md": {
+      "modified": "2026-01-14T15:14:12-05:00",
+      "created": "2026-01-14T13:12:04-05:00"
+    },
+    "content/events/launch-party.md": {
+      "modified": "2026-01-14T13:12:04-05:00",
+      "created": "2026-01-14T13:12:04-05:00"
+    },
+    "content/home.md": {
+      "modified": "2026-09-26T11:27:08-04:00",
+      "created": "2026-01-14T13:12:04-05:00"
+    },
+    "content/podcast/ep1.md": {
+      "modified": "2026-01-14T13:12:04-05:00",
+      "created": "2026-01-14T13:12:04-05:00"
+    },
+    "data/books.json": {
+      "modified": "2026-09-29T20:50:24-04:00",
+      "created": "2026-08-29T13:59:01-04:00"
+    }
+  }
+}

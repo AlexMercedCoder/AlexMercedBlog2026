@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"node --watch build.js\" \"serve dist\"",
     "build": "node build.js",
+    "dates": "node scripts/build-git-dates.js",
     "serve": "serve dist"
   },
   "keywords": [],
