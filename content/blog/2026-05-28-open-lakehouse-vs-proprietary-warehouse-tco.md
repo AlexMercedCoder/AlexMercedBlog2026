@@ -2,7 +2,12 @@
 title: "Evaluating the TCO of an Open Lakehouse vs. Proprietary Data Warehouses"
 date: 2026-05-28T12:00:00Z
 tags: ["Open Lakehouse Vs Proprietary Warehouse Tco"]
+canonical: https://iceberglakehouse.com/posts/open-lakehouse-vs-proprietary-warehouse-tco/
+description: "Open lakehouse vs proprietary warehouse: a comprehensive TCO breakdown covering storage, compute, engineering, and hidden costs to help you make the right."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/open-lakehouse-vs-proprietary-warehouse-tco/).
+
 # Evaluating the TCO of an Open Lakehouse vs. Proprietary Data Warehouses
 
 Before you sign a multiyear warehouse contract or commit to building an open lakehouse, you need the actual numbers. Not marketing claims : a breakdown of what each architecture costs at different scales, where the hidden charges accumulate, and at what point the economics of one approach overtake the other.

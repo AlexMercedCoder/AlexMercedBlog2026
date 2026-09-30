@@ -3,7 +3,10 @@ date: '2021-04-07T12:12:03.284Z'
 description: Venv... the best way?
 tags: []
 title: Pipenv - Yep, another post about Python Virtual Environments
+canonical: https://tuts.alexmercedcoder.dev/2021/4/pipenv/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/4/pipenv/).
 
 Virtual environments have always been one of those areas of constant discovery as I've learned python. I've been writing on articles what, how, and why of Virtual Environments and you can find those articles here:
 

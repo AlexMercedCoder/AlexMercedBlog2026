@@ -2,7 +2,12 @@
 title: "Zero-Copy Mirroring for Modern Lakehouse Migration"
 date: 2026-06-08T09:00:00Z
 tags: ["lakehouse", "zero-copy", "migration"]
+canonical: https://datalakehousehub.com/blog/zero-copy-mirroring-modern-lakehouse-migration/
+description: "Zero-copy mirroring gives teams a safer migration path because they can expose a lakehouse surface before they duplicate every byte or rewrite every workload."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/zero-copy-mirroring-modern-lakehouse-migration/).
+
 Zero-copy mirroring gives teams a safer migration path because they can expose a lakehouse surface before they duplicate every byte or rewrite every workload. That is the useful lens for zero-copy lakehouse mirroring in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![zero-copy lakehouse mirroring architecture diagram](/assets/blog/june8batch/zero-copy-mirroring-modern-lakehouse-migration-diagram-1.png)

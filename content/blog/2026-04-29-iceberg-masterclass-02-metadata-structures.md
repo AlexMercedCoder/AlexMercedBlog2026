@@ -2,7 +2,12 @@
 title: "The Metadata Structure of Modern Table Formats"
 date: 2026-04-29T12:01:00Z
 tags: ["iceberg", "data-lake"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-02/
+description: "Iceberg uses a metadata tree, Delta Lake uses a transaction log, Hudi uses a timeline. Here is exactly how each format organizes metadata and why it matters."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-02/).
+
 <!-- Meta Description: Iceberg uses a metadata tree, Delta Lake uses a transaction log, Hudi uses a timeline. Here is exactly how each format organizes metadata and why it matters. -->
 <!-- Primary Keyword: table format metadata -->
 <!-- Secondary Keywords: Apache Iceberg metadata, Delta Lake transaction log, manifest files -->

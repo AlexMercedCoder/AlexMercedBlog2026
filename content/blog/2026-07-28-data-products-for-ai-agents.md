@@ -2,10 +2,11 @@
 title: "Why AI Agents Fail on Raw Data, and What to Give Them Instead"
 date: 2026-07-28T09:00:00Z
 tags: ["AI Agents", "Apache Iceberg", "Semantic Layer", "Data Products"]
-canonical: "https://iceberglakehouse.com/posts/data-products-for-ai-agents/"
+canonical: https://iceberglakehouse.com/posts/data-products-for-ai-agents/
+description: "Agents fail on raw lake data because business rules live in people's heads. Data products with semantic contracts fix this at the source."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/data-products-for-ai-agents/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/data-products-for-ai-agents/).
 
 # Why AI Agents Fail on Raw Data, and What to Give Them Instead
 

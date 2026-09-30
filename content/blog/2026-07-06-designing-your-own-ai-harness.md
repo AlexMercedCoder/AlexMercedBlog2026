@@ -3,9 +3,10 @@ title: "Designing Your Own AI Harness: A Deep Dive Into the Architecture of Agen
 date: 2026-07-06T09:00:00Z
 tags: ["AI agents", "agent architecture", "MCP", "tool calling", "language models"]
 canonical: https://iceberglakehouse.com/posts/designing-your-own-ai-harness/
+description: "A deep dive into custom AI harness architecture: model layers, tool design, context management, permissions, control budgets, persistence, orchestration."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/designing-your-own-ai-harness/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/designing-your-own-ai-harness/).
 
 *By Alex Merced, Head of Developer Relations at Dremio*
 

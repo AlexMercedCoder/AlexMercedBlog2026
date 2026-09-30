@@ -2,7 +2,11 @@
 title: "Snowflake Interoperable Lakehouse Lessons"
 date: 2026-06-22T09:00:00Z
 tags: ["snowflake", "interoperable-lakehouse", "iceberg-interoperability"]
+canonical: https://iceberglakehouse.com/posts/snowflake-interoperable-lakehouse-production-lessons/
+description: "Interoperable lakehouse announcements matter when they change production contracts, not just import and export narratives."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/snowflake-interoperable-lakehouse-production-lessons/).
 
 # Snowflake Interoperable Lakehouse Lessons
 

@@ -3,7 +3,10 @@ date: '2021-01-01T12:12:03.284Z'
 description: Servers, Ports and Environmental Variables oh my
 tags: []
 title: In-Depth Guide on Understanding Deploying Web Apps
+canonical: https://tuts.alexmercedcoder.dev/2021/1/understandingdeployment/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/understandingdeployment/).
 
 ## What we will be discussing
 

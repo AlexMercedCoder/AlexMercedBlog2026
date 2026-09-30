@@ -3,8 +3,9 @@ title: "Designing Private, Air-Gapped Data Lakehouses: Scaling Iceberg in Highly
 date: 2026-07-06T09:00:00Z
 tags: ["air-gapped", "data lakehouse", "iceberg", "security"]
 canonical: https://iceberglakehouse.com/posts/private-air-gapped-data-lakehouses-iceberg-secure-clouds/
+description: "Some of the most important lakehouse work happens in environments that will never look like a simple public-cloud reference architecture. Defense..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/private-air-gapped-data-lakehouses-iceberg-secure-clouds/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/private-air-gapped-data-lakehouses-iceberg-secure-clouds/).
 
 # Designing Private, Air-Gapped Data Lakehouses: Scaling Iceberg in Highly Secure, On-Premises Clouds
 

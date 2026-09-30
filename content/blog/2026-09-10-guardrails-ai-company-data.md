@@ -3,9 +3,10 @@ title: "Guardrails for AI on Company Data"
 date: 2026-09-10T09:00:00Z
 tags: ["AI governance", "prompt injection", "access control", "audit trails", "agentic AI"]
 canonical: https://iceberglakehouse.com/posts/guardrails-ai-company-data/
+description: "The control surfaces that actually contain damage once an agent is fooled: identity, permissions, audit trails, and prompt injection at the query layer."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/guardrails-ai-company-data/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/guardrails-ai-company-data/).
 
 The security review question that ends agent projects is short: what is this thing allowed to do?
 

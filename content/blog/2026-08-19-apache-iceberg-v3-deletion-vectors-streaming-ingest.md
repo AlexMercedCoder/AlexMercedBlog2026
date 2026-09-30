@@ -2,9 +2,10 @@
 title: "Mastering Apache Iceberg v3 Deletion Vectors for High-Throughput Streaming Ingest"
 date: 2026-08-19T09:00:00Z
 tags: ["Apache Iceberg", "v3", "deletion vectors", "streaming", "CDC"]
-canonical: "https://iceberglakehouse.com/posts/apache-iceberg-v3-deletion-vectors-streaming-ingest/"
+canonical: https://iceberglakehouse.com/posts/apache-iceberg-v3-deletion-vectors-streaming-ingest/
+description: "Apache Iceberg v3 deletion vectors for high-throughput streaming ingest: how bitmaps and Puffin files fix CDC write amplification and read decay."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/apache-iceberg-v3-deletion-vectors-streaming-ingest/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/apache-iceberg-v3-deletion-vectors-streaming-ingest/).
 
 Here is a bill that surprises teams every quarter. A Flink pipeline streams change data capture events into an Apache Iceberg table, a few thousand updates per minute against a ten-terabyte fact table. The data itself is tiny. The cloud bill is not. Storage grows far faster than the data, object store API charges climb, and the nightly compaction job takes longer every week. Query latency creeps up too, because every read now wades through thousands of small files that exist only to say "these rows are gone."
 

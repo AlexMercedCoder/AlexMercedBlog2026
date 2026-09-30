@@ -3,7 +3,10 @@ date: '2021-01-05T12:12:03.284Z'
 description: Web Application Architecture
 tags: []
 title: Understanding MVC (Models - Views - Controllers)
+canonical: https://tuts.alexmercedcoder.dev/2021/1/mvc/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/mvc/).
 
 ## Why Does MVC Matter?
 

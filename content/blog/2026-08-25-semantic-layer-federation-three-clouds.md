@@ -2,9 +2,10 @@
 title: "Semantic Layer Federation: One Logical Model Over Data on Three Clouds"
 date: 2026-08-25T09:00:00Z
 tags: ["semantic layer", "federation", "multi-cloud", "Apache Iceberg"]
-canonical: "https://iceberglakehouse.com/posts/semantic-layer-federation-three-clouds/"
+canonical: https://iceberglakehouse.com/posts/semantic-layer-federation-three-clouds/
+description: "One logical model over Iceberg and databases on three clouds. Pushdown, egress, Reflections, and where semantic federation still breaks."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/semantic-layer-federation-three-clouds/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/semantic-layer-federation-three-clouds/).
 
 A global retailer's revenue dashboard needs four sources. Orders are in an Apache Iceberg table on S3 in Virginia. Customers are in an Iceberg table on Google Cloud Storage in Belgium, inherited from an acquisition. Inventory is in a PostgreSQL database on Azure in a sovereign region that regulators say cannot leave. Currency rates come from a SaaS API cached in a small table nobody remembers creating. The dashboard wants revenue by customer segment by product category in local currency, refreshed hourly, under two seconds.
 

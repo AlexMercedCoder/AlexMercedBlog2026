@@ -2,7 +2,11 @@
 title: "The Breakdown of the Open Lakehouse in 2026: Iceberg, Arrow, Polaris, Parquet, and Ossie, and How to Actually Build One"
 date: 2026-07-24T00:00:00Z
 tags: ["Apache Iceberg", "Apache Parquet", "Apache Arrow", "Apache Polaris", "Apache Ossie", "Open Lakehouse", "Dremio", "Data Architecture"]
+canonical: https://iceberglakehouse.com/posts/open-lakehouse-breakdown-2026/
+description: "A detailed breakdown of the five Apache projects powering the open lakehouse in 2026, Parquet, Iceberg, Polaris, Arrow, and Ossie, and how to build one."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/open-lakehouse-breakdown-2026/).
 
 *By Alex Merced, Head of Developer Relations at Dremio*
 

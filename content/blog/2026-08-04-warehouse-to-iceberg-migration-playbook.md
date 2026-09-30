@@ -2,10 +2,11 @@
 title: "A Migration Playbook for Moving Legacy Warehouses onto Apache Iceberg"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Iceberg", "Migration", "Data Warehouse", "Playbook", "Parquet", "Data Lakehouse"]
-canonical: "https://iceberglakehouse.com/posts/warehouse-to-iceberg-migration-playbook/"
+canonical: https://iceberglakehouse.com/posts/warehouse-to-iceberg-migration-playbook/
+description: "A dependency-first playbook for migrating legacy warehouses onto Apache Iceberg: snapshot vs migrate vs add_files, four-level parity validation."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/warehouse-to-iceberg-migration-playbook/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/warehouse-to-iceberg-migration-playbook/).
 
 # A Migration Playbook for Moving Legacy Warehouses onto Apache Iceberg
 

@@ -3,8 +3,9 @@ title: "The Who, What, and Why of Semantic Layers: The Layer That Decides Whethe
 date: 2026-07-06T09:00:00Z
 tags: ["semantic layers", "analytics", "data governance"]
 canonical: https://iceberglakehouse.com/posts/who-what-why-semantic-layers/
+description: "There is a survey statistic making the rounds this year that I cannot stop quoting: 84 percent of data teams report regularly encountering conflict..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/who-what-why-semantic-layers/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/who-what-why-semantic-layers/).
 
 # The Who, What, and Why of Semantic Layers: The Layer That Decides Whether Your Numbers Can Be Trusted
 

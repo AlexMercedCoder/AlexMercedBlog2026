@@ -3,8 +3,9 @@ title: "Trustworthy Concurrency in the Agentic Lakehouse: Reconciling Academic P
 date: 2026-07-06T09:00:00Z
 tags: ["concurrency", "agentic lakehouse", "production writes"]
 canonical: https://iceberglakehouse.com/posts/trustworthy-concurrency-agentic-lakehouse-production-writes/
+description: "Agentic lakehouses change the concurrency conversation. Traditional data pipelines already deal with overlapping jobs, retries, compaction, merges..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/trustworthy-concurrency-agentic-lakehouse-production-writes/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/trustworthy-concurrency-agentic-lakehouse-production-writes/).
 
 # Trustworthy Concurrency in the Agentic Lakehouse: Reconciling Academic Proofs with High-Frequency Production Writes
 

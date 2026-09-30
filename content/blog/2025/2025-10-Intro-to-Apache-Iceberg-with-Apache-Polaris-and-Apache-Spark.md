@@ -9,7 +9,10 @@ tags:
 - Apache Iceberg
 - Apache Polaris
 title: Intro to Apache Iceberg with Apache Polaris and Apache Spark
+canonical: https://iceberglakehouse.com/posts/2025-10-intro-to-apache-iceberg-with-apache-polaris-and-apache-spark/
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2025-10-intro-to-apache-iceberg-with-apache-polaris-and-apache-spark/).
 
 **Get Data Lakehouse Books:**
 - [Apache Iceberg: The Definitive Guide](https://drmevn.fyi/tableformatblog)

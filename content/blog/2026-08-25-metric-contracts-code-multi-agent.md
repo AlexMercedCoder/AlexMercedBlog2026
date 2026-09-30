@@ -2,9 +2,10 @@
 title: "Metric Contracts in Code: Testing, Versioning, and Serving Business Logic to Multi-Agent Systems"
 date: 2026-08-25T09:00:00Z
 tags: ["metrics", "AI agents", "semantic layer", "data contracts"]
-canonical: "https://iceberglakehouse.com/posts/metric-contracts-code-multi-agent/"
+canonical: https://iceberglakehouse.com/posts/metric-contracts-code-multi-agent/
+description: "Metric contracts in code let teams test, version, and serve business logic to multi-agent systems without each agent inventing its own SQL."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/metric-contracts-code-multi-agent/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/metric-contracts-code-multi-agent/).
 
 Three agents answer the same question on the same afternoon. A finance agent, asked for last quarter's net revenue, sums completed orders, subtracts refunds, and reports $41.2 million. A sales agent, asked the same thing by a regional director, sums completed orders and reports $43.8 million, because nobody told it about refunds. A board-deck agent pulls "revenue" from a dashboard's cached tile and reports $42.6 million, which was right two weeks ago. All three are confident. All three cite their sources. The CFO gets three numbers and has to decide which agent to believe.
 

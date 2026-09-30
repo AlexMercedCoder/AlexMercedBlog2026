@@ -3,7 +3,10 @@ date: '2021-01-05T12:12:03.284Z'
 description: Web Application Architecture
 tags: []
 title: Getting Started Programming Ballerina 101
+canonical: https://tuts.alexmercedcoder.dev/2021/1/ballerina101/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/ballerina101/).
 
 ## What is Ballerina?
 

@@ -2,7 +2,12 @@
 title: "Apache Iceberg v3 Deletion Vectors on Snowflake"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse", "Snowflake"]
+canonical: https://datalakehousehub.com/blog/iceberg-v3-deletion-vectors-snowflake-dml/
+description: "Apache Iceberg v3 deletion vectors replace positional delete files with binary bitmaps in Puffin files, delivering up to 10x faster DML on Snowflake."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/iceberg-v3-deletion-vectors-snowflake-dml/).
+
 Deletion vectors matter because row-level changes should not require a full rewrite of every affected data file. That is the useful lens for Apache Iceberg v3 deletion vectors in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![Apache Iceberg v3 deletion vectors architecture diagram](/assets/blog/june8batch/iceberg-v3-deletion-vectors-snowflake-dml-diagram-1.png)

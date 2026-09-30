@@ -3,7 +3,10 @@ date: '2021-08-20T14:12:03.284Z'
 description: A Beginning oriented dive into databases
 tags: []
 title: Basic Authentication with Node/Express and Mongo
+canonical: https://tuts.alexmercedcoder.dev/2021/8/basic_auth_express_mongo/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/8/basic_auth_express_mongo/).
 
 [REPO OF CODE FROM THIS LESSON HERE AS A TEMPLATE](https://github.com/AlexMercedCoder/Express-Mongo-Auth-Template)
 

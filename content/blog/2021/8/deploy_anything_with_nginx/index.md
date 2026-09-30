@@ -3,7 +3,10 @@ date: '2021-08-30T12:12:03.284Z'
 description: Getting Data from an external API
 tags: []
 title: Walkthrough - Deploy Anything with Nginx
+canonical: https://tuts.alexmercedcoder.dev/2021/8/deploy_anything_with_nginx/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/8/deploy_anything_with_nginx/).
 
 ## Purpose of this article
 

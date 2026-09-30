@@ -2,10 +2,11 @@
 title: "Wiring Analytical Queries to Transactional APIs in Closed-Loop Decision Agents"
 date: 2026-08-04T09:00:00Z
 tags: ["AI Agents", "Decision Loops", "Saga Pattern", "Idempotency", "Apache Iceberg"]
-canonical: "https://iceberglakehouse.com/posts/closed-loop-decision-agents/"
+canonical: https://iceberglakehouse.com/posts/closed-loop-decision-agents/
+description: "Wiring analytical queries to transactional APIs in closed-loop decision agents: conditional writes, sagas with compensations, decision records, and blast."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/closed-loop-decision-agents/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/closed-loop-decision-agents/).
 
 # Wiring Analytical Queries to Transactional APIs in Closed-Loop Decision Agents
 

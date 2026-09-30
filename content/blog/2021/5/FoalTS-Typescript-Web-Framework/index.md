@@ -3,7 +3,10 @@ date: '2021-05-27T12:12:03.284Z'
 description: Making an API with this Typescript Based Framework
 tags: []
 title: FoalTS - Building a Typescript Based API
+canonical: https://tuts.alexmercedcoder.dev/2021/5/foalts-typescript-web-framework/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/5/foalts-typescript-web-framework/).
 
 Bottom Line, like bow-ties... Typescript is cool!
 

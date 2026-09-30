@@ -2,10 +2,11 @@
 title: "Reading the Apache Iceberg V4 Proposals Before They Land"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Iceberg", "Iceberg V4", "Metadata", "Streaming", "Data Lakehouse"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-v4-roadmap/"
+canonical: https://iceberglakehouse.com/posts/iceberg-v4-roadmap/
+description: "A field guide to the Apache Iceberg V4 proposals: adaptive metadata trees, single-file commits, typed statistics, column families, and what is safe."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-v4-roadmap/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-v4-roadmap/).
 
 # Reading the Apache Iceberg V4 Proposals Before They Land
 

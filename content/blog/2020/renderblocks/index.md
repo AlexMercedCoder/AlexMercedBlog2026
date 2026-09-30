@@ -3,7 +3,10 @@ date: '2020-08-23T22:12:03.284Z'
 description: Beginners Tutorial
 tags: []
 title: RenderBlocks
+canonical: https://tuts.alexmercedcoder.dev/2020/renderblocks/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/renderblocks/).
 
 ## What is RenderBlocks
 

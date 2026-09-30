@@ -3,7 +3,10 @@ date: '2020-09-24T22:12:03.284Z'
 description: Props, State, Forms, Classes, Functions
 tags: []
 title: React Cheat Sheet
+canonical: https://tuts.alexmercedcoder.dev/2020/reactcheatsheet/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/reactcheatsheet/).
 
 **MY SET OF REACT TUTORIAL VIDEOS** => https://www.youtube.com/playlist?list=PLY6oTPmKnKbba6LlpF7kcnsyWdlwePt_V
 

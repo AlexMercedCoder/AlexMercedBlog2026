@@ -2,10 +2,11 @@
 title: "Moving From Supply Chain Dashboards to Decision Loops With the Model Context Protocol"
 date: 2026-08-04T09:00:00Z
 tags: ["AI Agents", "MCP", "Supply Chain", "Decision Loops", "Apache Iceberg"]
-canonical: "https://iceberglakehouse.com/posts/mcp-supply-chain-decision-loops/"
+canonical: https://iceberglakehouse.com/posts/mcp-supply-chain-decision-loops/
+description: "Moving from supply chain dashboards to decision loops with MCP: sense, decide, act, and verify, with typed action tools, idempotency keys, and graduated."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/mcp-supply-chain-decision-loops/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/mcp-supply-chain-decision-loops/).
 
 # Moving From Supply Chain Dashboards to Decision Loops With the Model Context Protocol
 

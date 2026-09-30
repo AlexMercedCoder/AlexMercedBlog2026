@@ -2,7 +2,11 @@
 title: "Rust vs C++ in Native Iceberg Scan Operators"
 date: 2026-06-22T09:00:00Z
 tags: ["rust", "cpp", "native-iceberg-scan-operators"]
+canonical: https://iceberglakehouse.com/posts/rust-vs-cpp-table-layer-native-scan-operators/
+description: "The Rust versus C++ discussion is really about table-layer execution safety, interoperability, and performance envelopes."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/rust-vs-cpp-table-layer-native-scan-operators/).
 
 # Rust vs C++ in Native Iceberg Scan Operators
 

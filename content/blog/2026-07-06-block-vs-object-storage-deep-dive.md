@@ -3,8 +3,9 @@ title: "Block vs. Object Storage: A Deep Dive Into the Foundation of Modern Data
 date: 2026-07-06T09:00:00Z
 tags: ["data lakehouse", "storage", "architecture"]
 canonical: https://iceberglakehouse.com/posts/block-vs-object-storage-deep-dive/
+description: "Here is one of the strangest and most consequential plot twists in the history of data infrastructure: over the past decade, the analytics industry..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/block-vs-object-storage-deep-dive/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/block-vs-object-storage-deep-dive/).
 
 # Block vs. Object Storage: A Deep Dive Into the Foundation of Modern Data, and How the Lakehouse Made the Slow Option Fast
 

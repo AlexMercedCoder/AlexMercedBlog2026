@@ -3,8 +3,9 @@ title: "Mapping the Variant Type in Iceberg v3: Standardizing Semi-Structured AI
 date: 2026-07-06T09:00:00Z
 tags: ["iceberg v3", "variant type", "json", "ai"]
 canonical: https://iceberglakehouse.com/posts/iceberg-v3-variant-type-ai-json-payloads/
+description: "AI applications are messy data producers. They create prompts, completions, tool calls, retrieval traces, ranking signals, evaluation scores, safet..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-v3-variant-type-ai-json-payloads/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-v3-variant-type-ai-json-payloads/).
 
 # Mapping the Variant Type in Iceberg v3: Standardizing Semi-Structured AI JSON Payloads
 

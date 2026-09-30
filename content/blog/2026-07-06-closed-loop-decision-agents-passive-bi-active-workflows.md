@@ -3,8 +3,9 @@ title: "Building Closed-Loop Decision Agents: Moving from Passive BI Dashboards 
 date: 2026-07-06T09:00:00Z
 tags: ["ai agents", "decision agents", "workflows"]
 canonical: https://iceberglakehouse.com/posts/closed-loop-decision-agents-passive-bi-active-workflows/
+description: "Dashboards are excellent at showing people what happened. They are less good at deciding what should happen next.  That gap is where closed-loop de..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/closed-loop-decision-agents-passive-bi-active-workflows/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/closed-loop-decision-agents-passive-bi-active-workflows/).
 
 # Building Closed-Loop Decision Agents: Moving from Passive BI Dashboards to Active Goal-Directed Workflows
 

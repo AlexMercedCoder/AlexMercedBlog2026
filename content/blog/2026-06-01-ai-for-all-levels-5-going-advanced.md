@@ -2,7 +2,11 @@
 title: "Going Advanced: Open Source Models, Hermes Agent, and Local AI"
 date: 2026-06-01T12:00:00Z
 tags: ["ai", "artificial intelligence", "machine learning", "llm", "productivity"]
+canonical: https://datalakehousehub.com/blog/ai-for-all-levels-5-going-advanced/
+description: "Tired of subscriptions and privacy concerns? Open source models and agent frameworks let you run AI on your own hardware."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/ai-for-all-levels-5-going-advanced/).
 
 This is the final installment of "Catching Up with Using AI for All Levels." Parts 1 through 4 covered the fundamentals, free tools, paid services, and specialized creative tools. This post goes deeper. We will explore the open source ecosystem: models you can download and run on your own computer, agent frameworks that automate complex tasks, and coding tools that work entirely offline.
 

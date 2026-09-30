@@ -3,9 +3,10 @@ title: "Keeping Lakehouse Traffic Off the Public Internet With Apache Polaris"
 date: 2026-09-21T09:00:00Z
 tags: ["Apache Polaris", "Networking", "Security", "Private Link"]
 canonical: https://iceberglakehouse.com/posts/polaris-private-networking-lakehouse/
+description: "A private Polaris lakehouse still leaks data if the storage hop goes public. How to bind vended credentials to private networks on AWS, Azure, and GCP."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/polaris-private-networking-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/polaris-private-networking-lakehouse/).
 
 A bank's security team reviews its new lakehouse design. Apache Polaris serves as the Iceberg REST catalog. Query engines run in private subnets. The catalog sits behind an internal load balancer. Everything looks private.
 

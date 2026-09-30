@@ -2,10 +2,11 @@
 title: "Surviving Commit Conflicts When Dozens of Writers Hit the Same Iceberg Table"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Concurrency", "Data Engineering", "AI Agents"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-concurrent-commits-agents/"
+canonical: https://iceberglakehouse.com/posts/iceberg-concurrent-commits-agents/
+description: "Commit conflicts multiply with writer count, and AI agents introduce unpredictable write patterns."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-concurrent-commits-agents/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-concurrent-commits-agents/).
 
 # Surviving Commit Conflicts When Dozens of Writers Hit the Same Iceberg Table
 

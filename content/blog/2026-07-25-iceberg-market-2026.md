@@ -3,9 +3,10 @@ title: "The Apache Iceberg Market in the Middle of 2026"
 date: 2026-07-25T09:00:00Z
 tags: ["apache iceberg", "lakehouse", "data engineering", "polaris", "catalog"]
 canonical: https://datalakehousehub.com/blog/iceberg-market-2026/
+description: "A survey of the Apache Iceberg market in July 2026: the state of the specification, platform support, the acquisition wave, the catalog contest, and how."
 ---
 
-> **Cross-posted.** This article's canonical home is [datalakehousehub.com](https://datalakehousehub.com/blog/iceberg-market-2026/).
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/iceberg-market-2026/).
 
 Two years ago the interesting question was whether your data platform supported Apache Iceberg. Today every platform claims it does, and the claim tells you almost nothing. One vendor means an engine that reads Iceberg tables somebody else wrote. Another means it writes tables but only through its own catalog. A third means outside engines can create, write, and commit to its managed tables through the standard REST API with credentials the catalog hands out per query. Those are three completely different products wearing one word.
 

@@ -2,9 +2,10 @@
 title: "What Actually Happens When Two Engines Write the Same Iceberg Table at Once?"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "concurrency", "commits", "multi-engine"]
-canonical: "https://iceberglakehouse.com/posts/two-engines-one-iceberg-table/"
+canonical: https://iceberglakehouse.com/posts/two-engines-one-iceberg-table/
+description: "What happens when two engines write the same Iceberg table at once: snapshot isolation, optimistic commits, conflict detection, and when retries fail."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/two-engines-one-iceberg-table/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/two-engines-one-iceberg-table/).
 
 Somewhere in your platform, right now, a Spark job and a streaming writer are heading toward the same Apache Iceberg table, and they will arrive within milliseconds of each other. Maybe it is Spark and Flink, maybe a nightly batch and a DuckDB session someone opened from a laptop, maybe two instances of the same service after a deployment overlap. Nothing coordinates them. They share no locks, no leader, no queue, and in most cases no knowledge of each other's existence. And the table comes out correct anyway, both writes present, history linear, no reader ever seeing a half-applied state.
 

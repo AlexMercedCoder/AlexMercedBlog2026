@@ -3,7 +3,10 @@ date: '2020-10-15T22:12:03.284Z'
 description: Queries and Endpoints oh my!
 tags: []
 title: Mongo, Mongoose and Express Reference
+canonical: https://tuts.alexmercedcoder.dev/2020/expressmongo/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/expressmongo/).
 
 **CHECK OUT MY PLAYLIST ON CREATING A REACT/EXPRESS APPLICATION WITH MONGO AND JWT AUTH HERE:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbZsBHeBGNL9suAPIJdLaVk9
 

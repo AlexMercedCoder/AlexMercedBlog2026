@@ -3,7 +3,10 @@ date: '2022-03-06T12:12:03.284Z'
 description: Powerful Functional & OOP JVM Language
 tags: []
 title: Getting Started with Scala 3
+canonical: https://tuts.alexmercedcoder.dev/2022/3/creating-a-markdown-blog-with-next-js/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/3/creating-a-markdown-blog-with-next-js/).
 
 ## Why Scala 3
 

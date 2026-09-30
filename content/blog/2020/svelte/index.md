@@ -3,7 +3,10 @@ date: '2020-09-05T22:12:03.284Z'
 description: Compiling based frontend framework
 tags: []
 title: Svelte - The New Kids on the Frontend Framework Block
+canonical: https://tuts.alexmercedcoder.dev/2020/svelte/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/svelte/).
 
 ## What is Svelte
 

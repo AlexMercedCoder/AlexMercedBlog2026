@@ -2,7 +2,12 @@
 title: "Partition Evolution: Change Your Partitioning Without Rewriting Data"
 date: 2026-04-29T12:03:00Z
 tags: ["iceberg", "data-lake"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-04/
+description: "Iceberg lets you change partition schemes without rewriting data. Here is how partition evolution works internally and why Hive-style partitioning could."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-04/).
+
 <!-- Meta Description: Iceberg lets you change partition schemes without rewriting data. Here is how partition evolution works internally and why Hive-style partitioning could not do this. -->
 <!-- Primary Keyword: Iceberg partition evolution -->
 <!-- Secondary Keywords: partition spec, hidden partitioning, Hive partitioning limitations -->

@@ -3,7 +3,10 @@ date: '2021-03-18T12:12:03.284Z'
 description: Building Backends with NodeJS
 tags: []
 title: Ultimate Express & Mongo Reference
+canonical: https://tuts.alexmercedcoder.dev/2021/3/expressmongoosereference/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/3/expressmongoosereference/).
 
 This is not a guide on how to use express and mongo, but a useful reference especially for those starting to learn these technologies. This guide will serve as documentation of the basics of all the main functions and patterns in these libraries.
 

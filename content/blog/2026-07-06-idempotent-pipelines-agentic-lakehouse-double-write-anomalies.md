@@ -3,8 +3,9 @@ title: "Designing Idempotent Pipelines in the Agentic Lakehouse: Eliminating Dou
 date: 2026-07-06T09:00:00Z
 tags: ["idempotent pipelines", "agentic lakehouse", "double-write"]
 canonical: https://iceberglakehouse.com/posts/idempotent-pipelines-agentic-lakehouse-double-write-anomalies/
+description: "Agents retry. Networks fail. Jobs time out after doing some work. APIs return ambiguous responses. Schedulers run the same workflow twice. A human..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/idempotent-pipelines-agentic-lakehouse-double-write-anomalies/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/idempotent-pipelines-agentic-lakehouse-double-write-anomalies/).
 
 # Designing Idempotent Pipelines in the Agentic Lakehouse: Eliminating Double-Write Anomalies
 

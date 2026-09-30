@@ -8,7 +8,10 @@ tags:
 - Data Engineering
 - Apache Iceberg
 title: The State of Apache Iceberg v4 - October 2025 Edition
+canonical: https://datalakehousehub.com/blog/2025-10-apache-iceberg-v4-october-2025/
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/2025-10-apache-iceberg-v4-october-2025/).
 
 **Get Data Lakehouse Books:**
 - [Apache Iceberg: The Definitive Guide](https://drmevn.fyi/tableformatblog)

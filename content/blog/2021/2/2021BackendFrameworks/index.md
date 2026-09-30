@@ -3,7 +3,10 @@ date: '2021-02-26T12:12:03.284Z'
 description: Build your application or microservice
 tags: []
 title: Chart of Backend Web Frameworks 2021
+canonical: https://tuts.alexmercedcoder.dev/2021/2/2021backendframeworks/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/2021backendframeworks/).
 
 **Find tutorials for many of these frameworks at my website, devNursery.com**
 

@@ -2,7 +2,12 @@
 title: "Hands-On with Apache Iceberg Using Dremio Cloud"
 date: 2026-04-29T12:13:00Z
 tags: ["iceberg", "data-lake"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-14/
+description: "A practical walkthrough of creating, querying, and optimizing Iceberg tables on Dremio Cloud, from account setup to AI-powered analytics."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-14/).
+
 <!-- Meta Description: A practical walkthrough of creating, querying, and optimizing Iceberg tables on Dremio Cloud, from account setup to AI-powered analytics. -->
 <!-- Primary Keyword: Dremio Cloud Apache Iceberg -->
 <!-- Secondary Keywords: Dremio Cloud tutorial, Iceberg hands-on, COPY INTO, semantic layer -->

@@ -3,7 +3,10 @@ date: '2021-11-24T12:12:03.284Z'
 description: For simple web development
 tags: []
 title: Auth with Express with JWT, MongoDB, and Postgres
+canonical: https://tuts.alexmercedcoder.dev/2021/11/auth_with_express_jwt/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/11/auth_with_express_jwt/).
 
 ![Header Image](https://imgur.com/W1WsHqL.jpg)
 

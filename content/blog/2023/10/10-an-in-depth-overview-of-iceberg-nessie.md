@@ -6,7 +6,10 @@ tags:
 - data lakehouse
 - data engineering
 title: 'An In-Depth Overview of Open Lakehouse Tech: Apache Iceberg & Nessie'
+canonical: https://tuts.alexmercedcoder.dev/2023/10/10-an-in-depth-overview-of-iceberg-nessie/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/10/10-an-in-depth-overview-of-iceberg-nessie/).
 
 # Unleashing the Power of Open Lakehouse Technologies: Apache Iceberg and Project Nessie
 

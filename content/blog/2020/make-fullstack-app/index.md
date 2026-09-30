@@ -3,7 +3,10 @@ date: '2020-10-22T22:12:03.284Z'
 description: One Project, Two Apps, One Command
 tags: []
 title: npx make-fullstack-app - Scaffolding your back and frontend
+canonical: https://tuts.alexmercedcoder.dev/2020/make-fullstack-app/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/make-fullstack-app/).
 
 ## Why?
 

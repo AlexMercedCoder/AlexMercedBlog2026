@@ -3,7 +3,10 @@ date: '2021-04-09T12:12:03.284Z'
 description: The new shiny frontend toy!
 tags: []
 title: SolidJS - React meets Svelte?
+canonical: https://tuts.alexmercedcoder.dev/2021/4/solidjs/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/4/solidjs/).
 
 React is by far the biggest frontend Javascript framework in modern web development. Although, Svelte has been growing steadily in popularity over the last few years. What makes Svelte so special.
 

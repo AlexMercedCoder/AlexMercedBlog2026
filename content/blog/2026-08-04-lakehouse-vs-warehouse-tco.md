@@ -2,10 +2,11 @@
 title: "Building an Honest TCO Model for Open Lakehouses and Proprietary Warehouses"
 date: 2026-08-04T09:00:00Z
 tags: ["TCO", "Data Lakehouse", "Data Warehouse", "Cost Analysis", "Apache Iceberg"]
-canonical: "https://iceberglakehouse.com/posts/lakehouse-vs-warehouse-tco/"
+canonical: https://iceberglakehouse.com/posts/lakehouse-vs-warehouse-tco/
+description: "An honest TCO framework for open lakehouses versus proprietary warehouses: five cost categories, measured numbers, sensitivity analysis, and where each."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/lakehouse-vs-warehouse-tco/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/lakehouse-vs-warehouse-tco/).
 
 # Building an Honest TCO Model for Open Lakehouses and Proprietary Warehouses
 

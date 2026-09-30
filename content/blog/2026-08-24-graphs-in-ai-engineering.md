@@ -2,9 +2,10 @@
 title: "Graphs in AI Engineering Have Solved Three Problems. The Fourth Is the Plan."
 date: 2026-08-24T09:00:00Z
 tags: ["AI agents", "graphs", "Agentic Graph Specification", "knowledge graphs"]
-canonical: "https://iceberglakehouse.com/posts/graphs-in-ai-engineering/"
+canonical: https://iceberglakehouse.com/posts/graphs-in-ai-engineering/
+description: "Knowledge graphs, GraphRAG, and LangGraph solved three problems. The fourth is the work itself: a reviewable graph of bounded agentic loops."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/graphs-in-ai-engineering/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/graphs-in-ai-engineering/).
 
 Ask an agent to ship a feature and watch what it does. It reads some files, decides on an order of operations, writes code, runs tests, fixes what broke, and declares itself done. Somewhere inside that run there was a plan. It had steps, the steps had dependencies, and some steps mattered more than others. You never saw it. It lived in the model's context window for the length of the session and evaporated when the session ended.
 

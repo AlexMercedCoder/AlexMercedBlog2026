@@ -2,10 +2,11 @@
 title: "What Zero-Copy Data Sharing Actually Does Between Salesforce, Snowflake, and Databricks"
 date: 2026-08-04T09:00:00Z
 tags: ["Zero-Copy", "Data Sharing", "Apache Iceberg", "Catalog Federation", "Salesforce", "Snowflake", "Databricks"]
-canonical: "https://iceberglakehouse.com/posts/zero-copy-data-sharing-iceberg/"
+canonical: https://iceberglakehouse.com/posts/zero-copy-data-sharing-iceberg/
+description: "What zero-copy data sharing actually does across Salesforce, Snowflake, and Databricks: query federation, file federation, catalog federation, and when."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/zero-copy-data-sharing-iceberg/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/zero-copy-data-sharing-iceberg/).
 
 # What Zero-Copy Data Sharing Actually Does Between Salesforce, Snowflake, and Databricks
 

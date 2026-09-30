@@ -3,7 +3,10 @@ date: '2021-01-08T12:12:03.284Z'
 description: A Simple Build to Learn React
 tags: []
 title: React 101 - Basic JSON Blog from 0 to deployment
+canonical: https://tuts.alexmercedcoder.dev/2021/1/reactjsonblog/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/reactjsonblog/).
 
 ## Our Goal
 

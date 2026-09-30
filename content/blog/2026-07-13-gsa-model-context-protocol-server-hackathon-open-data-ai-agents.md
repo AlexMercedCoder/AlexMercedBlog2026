@@ -3,9 +3,10 @@ title: "GSA MCP Servers for Open Data AI Agents"
 date: 2026-07-13T09:00:00Z
 category: "MCP"
 tags: ["MCP", "Government", "AI Agents", "Open Data"]
-canonical: "https://iceberglakehouse.com/posts/gsa-model-context-protocol-server-hackathon-open-data-ai-agents/"
+canonical: https://iceberglakehouse.com/posts/gsa-model-context-protocol-server-hackathon-open-data-ai-agents/
+description: "An in-depth exploration of gsa mcp servers for open data ai agents"
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/gsa-model-context-protocol-server-hackathon-open-data-ai-agents/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/gsa-model-context-protocol-server-hackathon-open-data-ai-agents/).
 
 The U.S. government publishes hundreds of thousands of datasets through [Data.gov](https://data.gov/) and agency portals, and almost none of them are shaped for an AI agent to use directly. An agent can download a CSV, but it cannot ask that CSV what columns it has, what the units are, which rows it is allowed to see, or how to filter for the answer a person actually wants. That gap between "public data exists" and "an agent can use public data responsibly" is the interesting problem, and it is the reason the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) has become a useful way to think about open data.
 

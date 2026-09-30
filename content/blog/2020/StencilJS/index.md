@@ -3,7 +3,10 @@ date: '2020-10-26T22:12:03.284Z'
 description: Ionics Component Creation Tool
 tags: []
 title: Making Framework Agnostic Web Components with StencilJS
+canonical: https://tuts.alexmercedcoder.dev/2020/stenciljs/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/stenciljs/).
 
 **STENCIL VIDEO PLAYLIST:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbazpUTMcGmvMtgU5sr0Ip-V
 

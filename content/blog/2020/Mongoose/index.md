@@ -3,7 +3,10 @@ date: '2020-09-17T22:12:03.284Z'
 description: Documents, Collections and Databases oh my!
 tags: []
 title: Mongoose, Connecting to Mongo via Javascript
+canonical: https://tuts.alexmercedcoder.dev/2020/mongoose/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/mongoose/).
 
 ## What is Mongo and Mongoose?
 

@@ -3,7 +3,10 @@ date: '2021-10-21T12:12:03.284Z'
 description: For simple web development
 tags: []
 title: Comparing React Router 5, 6, and React Location
+canonical: https://tuts.alexmercedcoder.dev/2021/10/router_5_6/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/10/router_5_6/).
 
 ![Comparing React Router 5, 6, and React Location](https://i.imgur.com/YxqmEmR.jpg)
 

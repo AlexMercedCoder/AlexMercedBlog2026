@@ -3,8 +3,9 @@ title: "Multi-Engine Catalog Federation with Apache Polaris: Syncing Google Clou
 date: 2026-07-06T09:00:00Z
 tags: ["apache polaris", "catalog federation", "multicloud"]
 canonical: https://iceberglakehouse.com/posts/multi-engine-catalog-federation-apache-polaris-multicloud/
+description: "Open table formats changed the data lakehouse conversation, but they did not finish it. A table can be stored in an open format and still be hard t..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/multi-engine-catalog-federation-apache-polaris-multicloud/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/multi-engine-catalog-federation-apache-polaris-multicloud/).
 
 # Multi-Engine Catalog Federation with Apache Polaris: Syncing Google Cloud, AWS, and Azure Metadata
 

@@ -3,7 +3,10 @@ date: '2022-02-05T12:12:03.284Z'
 description: How to write Markdown and where you can use it
 tags: []
 title: Why All Developers Should Master Markdown
+canonical: https://tuts.alexmercedcoder.dev/2022/2/why-all-developers-should-master-markdown/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/2/why-all-developers-should-master-markdown/).
 
 ## What is Markdown
 

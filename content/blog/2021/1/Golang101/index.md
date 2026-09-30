@@ -3,7 +3,10 @@ date: '2021-01-04T12:12:03.284Z'
 description: A Fun Language for Fast Compiled Apps
 tags: []
 title: Go/Golang 101 - The Syntax and Basics
+canonical: https://tuts.alexmercedcoder.dev/2021/1/golang101/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/golang101/).
 
 ## Why do we need another lower-level compiled language?
 

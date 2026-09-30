@@ -3,8 +3,9 @@ title: "The Lakehouse Ingestion Tool Landscape: Fivetran, Airbyte, dlt, and CDC 
 date: 2026-09-02T09:00:00Z
 tags: ["Ingestion", "CDC", "Fivetran", "Airbyte", "dlt", "Apache Iceberg"]
 canonical: https://iceberglakehouse.com/posts/lakehouse-ingestion-tools/
+description: "How Fivetran, Airbyte, dlt, and CDC and streaming tools land well-behaved Apache Iceberg tables, and how to choose and maintain them."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/lakehouse-ingestion-tools/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/lakehouse-ingestion-tools/).
 
 Ingestion used to end at a warehouse. A connector pulled from Salesforce or Postgres, wrote to a staging schema in Snowflake or BigQuery, and the warehouse handled the rest. The lakehouse changes the destination. The connector now writes Apache Iceberg tables to object storage, registers them through a REST catalog, and hands them to whichever engines are reading. What the connector does with schema evolution, how often it commits, how it represents a deleted row, and who compacts the files afterward all become the ingestion tool's responsibility, because there is no warehouse to absorb the mistakes.
 

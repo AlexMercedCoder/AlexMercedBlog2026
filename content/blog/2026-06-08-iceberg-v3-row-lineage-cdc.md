@@ -2,7 +2,12 @@
 title: "CDC Without Complexity Using Iceberg v3 Row Lineage"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse", "CDC", "change data capture"]
+canonical: https://datalakehousehub.com/blog/iceberg-v3-row-lineage-cdc/
+description: "Iceberg v3 row lineage adds _row_id and _last_updated_sequence_number to every table, enabling native change data capture without Debezium or Kafka."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/iceberg-v3-row-lineage-cdc/).
+
 Row lineage gives Iceberg a native way to tell incremental consumers which rows changed and when they changed. That is the useful lens for Iceberg v3 row lineage in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![Iceberg v3 row lineage architecture diagram](/assets/blog/june8batch/iceberg-v3-row-lineage-cdc-diagram-1.png)

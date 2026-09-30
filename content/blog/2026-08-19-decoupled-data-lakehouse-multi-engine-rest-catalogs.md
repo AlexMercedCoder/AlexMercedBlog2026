@@ -2,9 +2,10 @@
 title: "The Decoupled Data Lakehouse: Multi-Engine Freedom with Open REST Catalogs"
 date: 2026-08-19T09:00:00Z
 tags: ["REST catalog", "decoupled lakehouse", "multi-engine", "Apache Polaris"]
-canonical: "https://iceberglakehouse.com/posts/decoupled-data-lakehouse-multi-engine-rest-catalogs/"
+canonical: https://iceberglakehouse.com/posts/decoupled-data-lakehouse-multi-engine-rest-catalogs/
+description: "The decoupled data lakehouse: multi-engine freedom with open REST catalogs, credential vending, and an estate that outlives its tools."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/decoupled-data-lakehouse-multi-engine-rest-catalogs/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/decoupled-data-lakehouse-multi-engine-rest-catalogs/).
 
 Every few years a data team discovers, mid-contract-renewal, exactly how much of their platform they do not control. The data sits in the vendor's format. The metadata lives in the vendor's catalog. The security policies exist only in the vendor's console. Moving any workload means moving all of it, and the vendor's pricing team knows that better than anyone. The technical name for this position is coupling, and the commercial name for it is the renewal quote.
 

@@ -3,7 +3,10 @@ date: '2021-01-15T12:12:03.284Z'
 description: Learn the Pre-Hypertext Processor Language
 tags: []
 title: Intro to PHP
+canonical: https://tuts.alexmercedcoder.dev/2021/1/introtophp/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/introtophp/).
 
 ## What is PHP?
 

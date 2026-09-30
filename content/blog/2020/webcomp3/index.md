@@ -3,7 +3,10 @@ date: '2020-09-05T22:12:03.284Z'
 description: Built in functions that run at certain points
 tags: []
 title: Web Components Part 3 - Lifecycle Functions
+canonical: https://tuts.alexmercedcoder.dev/2020/webcomp3/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/webcomp3/).
 
 ## What is a Web Component
 

@@ -2,10 +2,11 @@
 title: "Why Iceberg V4 Wants to Retire Equality Deletes, and What Streaming Teams Should Do About It"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Streaming", "Data Engineering", "Deletion Vectors"]
-canonical: "https://iceberglakehouse.com/posts/equality-deletes-iceberg-v4/"
+canonical: https://iceberglakehouse.com/posts/equality-deletes-iceberg-v4/
+description: "Equality deletes made streaming upserts into Iceberg practical at the cost of read performance."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/equality-deletes-iceberg-v4/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/equality-deletes-iceberg-v4/).
 
 # Why Iceberg V4 Wants to Retire Equality Deletes, and What Streaming Teams Should Do About It
 

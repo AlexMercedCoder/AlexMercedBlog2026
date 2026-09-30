@@ -3,7 +3,10 @@ date: '2021-03-18T12:12:03.284Z'
 description: Building APIs with Rust
 tags: []
 title: Rust & Rocket - Zero to Deploy
+canonical: https://tuts.alexmercedcoder.dev/2021/3/rustrocket0todeploy/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/3/rustrocket0todeploy/).
 
 Rust along with Go has been growing as popular alternatives to many of the use cases of languages like C & C++. With more straightforward and centralized package management systems along with Syntax and Standard libraries that minimize many of the pain points of working with C/C++. Go/Rust offers the ability to have a lower-level language that creates faster applications but still maintains a pleasant and productive developer experience.
 

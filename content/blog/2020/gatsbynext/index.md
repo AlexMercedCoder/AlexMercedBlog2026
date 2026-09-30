@@ -3,7 +3,10 @@ date: '2020-12-05T22:12:03.284Z'
 description: Using merced-spinup templates
 tags: []
 title: Creating a Gatsby or NextJS Markdown Blog
+canonical: https://tuts.alexmercedcoder.dev/2020/gatsbynext/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/gatsbynext/).
 
 ## Why a Markdown Blog
 

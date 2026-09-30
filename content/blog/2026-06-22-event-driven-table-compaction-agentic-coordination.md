@@ -2,7 +2,11 @@
 title: "Event-Driven Table Compaction with Agents"
 date: 2026-06-22T09:00:00Z
 tags: ["event-driven-table-compaction", "iceberg-maintenance", "agentic-coordination"]
+canonical: https://iceberglakehouse.com/posts/event-driven-table-compaction-agentic-coordination/
+description: "Event-driven compaction is valuable when agents coordinate maintenance with workload signals, table health, and commit safety."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/event-driven-table-compaction-agentic-coordination/).
 
 # Event-Driven Table Compaction with Agents
 

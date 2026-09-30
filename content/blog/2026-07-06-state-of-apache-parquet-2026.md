@@ -3,8 +3,9 @@ title: "The State of Apache Parquet in 2026: The Quiet Format Enters Its Loudest
 date: 2026-07-06T12:00:00Z
 canonical: https://iceberglakehouse.com/posts/state-of-apache-parquet-2026/
 tags: ["Apache Parquet", "data engineering", "lakehouse architecture", "columnar storage", "open table formats"]
+description: "Apache Parquet in 2026, variant types, geospatial, ALP encoding, footer redesign, the versioning debate, and how the decade-old format is renovating."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/state-of-apache-parquet-2026/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/state-of-apache-parquet-2026/).
 
 # The State of Apache Parquet in 2026: The Quiet Format Enters Its Loudest Decade
 

@@ -2,7 +2,12 @@
 title: "Iceberg Remote Signing for Regulated Datasets"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse", "remote signing"]
+canonical: https://datalakehousehub.com/blog/iceberg-remote-signing-regulated-datasets/
+description: "Iceberg REST catalog remote signing provides per-file pre-signed URL access for regulated datasets."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/iceberg-remote-signing-regulated-datasets/).
+
 Remote signing is the stricter pattern for lakehouse storage security because clients request signed file operations instead of receiving storage credentials. That is the useful lens for Iceberg remote signing in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![Iceberg remote signing architecture diagram](/assets/blog/june8batch/iceberg-remote-signing-regulated-datasets-diagram-1.png)

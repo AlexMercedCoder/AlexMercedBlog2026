@@ -2,10 +2,11 @@
 title: "The Five Layers Between Your Lakehouse and a Trustworthy Agent"
 date: 2026-07-28T09:00:00Z
 tags: ["AI Agents", "Apache Iceberg", "Data Architecture", "Semantic Layer"]
-canonical: "https://iceberglakehouse.com/posts/five-layer-agentic-lakehouse/"
+canonical: https://iceberglakehouse.com/posts/five-layer-agentic-lakehouse/
+description: "Agent reliability is a property of the stack the model sits on. Five layers with distinct owners and failure modes turn the agent is unreliable."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/five-layer-agentic-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/five-layer-agentic-lakehouse/).
 
 # The Five Layers Between Your Lakehouse and a Trustworthy Agent
 

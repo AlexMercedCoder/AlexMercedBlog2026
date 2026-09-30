@@ -3,7 +3,10 @@ date: '2021-01-06T12:12:03.284Z'
 description: Component Based Frontend Framework
 tags: []
 title: EZComponent -Open Source Frontend Framework using Web Components
+canonical: https://tuts.alexmercedcoder.dev/2021/1/ezcomponent/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/ezcomponent/).
 
 ## The Origin Story
 

@@ -3,9 +3,10 @@ title: "REST Catalog V2: Fixing Iceberg Protocol Debt"
 date: 2026-07-13T09:00:00Z
 category: "Apache Iceberg"
 tags: ["REST Catalog v2", "Iceberg", "Protocol", "Data Engineering"]
-canonical: "https://iceberglakehouse.com/posts/rest-catalog-v2-standard-iceberg-scaling-protocol-debt/"
+canonical: https://iceberglakehouse.com/posts/rest-catalog-v2-standard-iceberg-scaling-protocol-debt/
+description: "An in-depth exploration of rest catalog v2: fixing iceberg protocol debt"
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/rest-catalog-v2-standard-iceberg-scaling-protocol-debt/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/rest-catalog-v2-standard-iceberg-scaling-protocol-debt/).
 
 A single BI dashboard refresh can trigger dozens of catalog calls before a single byte of table data is scanned. An AI agent investigating a revenue anomaly can trigger hundreds. Each of those calls loads a namespace, resolves a table identifier, fetches a metadata pointer, reads the current metadata file, and vends temporary credentials. When one analyst ran one query, that overhead was invisible. Now that engines, semantic layers, and autonomous agents all hammer the same [Apache Iceberg REST catalog](https://iceberg.apache.org/rest-catalog-spec/) at once, the overhead is the bottleneck. The scan is fast. Getting ready to scan is slow.
 

@@ -2,7 +2,11 @@
 title: "How Query Engines Think: The Tradeoffs Behind Every Data System"
 date: 2026-04-29T13:00:00Z
 tags: ["query-engine", "database"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-query-engine-01/
+description: "Every database is a collection of engineering tradeoffs. Learn the 9 design decisions that shape how query engines store, index, and process your data."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-query-engine-01/).
 
 <!-- Meta Description: Every database is a collection of engineering tradeoffs. Learn the 9 design decisions that shape how query engines store, index, and process your data. -->
 <!-- Primary Keyword: query engine design -->

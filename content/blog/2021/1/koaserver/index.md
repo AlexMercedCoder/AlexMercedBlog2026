@@ -3,7 +3,10 @@ date: '2021-01-14T12:12:03.284Z'
 description: Building a Web Server with Node and KOA
 tags: []
 title: Intro to Building Backend Servers with KOAjs
+canonical: https://tuts.alexmercedcoder.dev/2021/1/koaserver/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/koaserver/).
 
 ## What is the Backend
 

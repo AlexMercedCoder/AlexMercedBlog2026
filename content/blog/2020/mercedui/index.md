@@ -3,7 +3,10 @@ date: '2020-08-22T22:12:03.284Z'
 description: Beginners Tutorial
 tags: []
 title: MercedUI - Web Components with Super Powers
+canonical: https://tuts.alexmercedcoder.dev/2020/mercedui/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/mercedui/).
 
 ## What is MercedUI
 

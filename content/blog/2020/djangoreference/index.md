@@ -3,7 +3,10 @@ date: '2020-08-27T22:12:03.284Z'
 description: A one stop shop for many of the things you'll have to look up a lot
 tags: []
 title: Ultimate Django Reference (Deployment, Rest API, Commands, .env)
+canonical: https://tuts.alexmercedcoder.dev/2020/djangoreference/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/djangoreference/).
 
 #### Other Useful Python Articles:
 

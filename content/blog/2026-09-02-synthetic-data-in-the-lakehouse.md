@@ -3,8 +3,9 @@ title: "Synthetic Data in the Lakehouse: Generation, Governance, and Testing"
 date: 2026-09-02T09:00:00Z
 tags: ["Synthetic Data", "Testing", "Lakehouse", "Generation", "Governance"]
 canonical: https://iceberglakehouse.com/posts/synthetic-data-in-the-lakehouse/
+description: "What synthetic data in a lakehouse is for, the generation methods, how to preserve fidelity, and where synthetic tables belong."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/synthetic-data-in-the-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/synthetic-data-in-the-lakehouse/).
 
 A team needs to test a new pipeline against a year of production orders. Production has the data. Production also has names, addresses, payment tokens, and enough behavioral history that a single row identifies a customer. So the team does what teams do: they take a sample, run a script that replaces names with "Test User" and emails with `user{n}@example.com`, and load it into staging. The pipeline passes. In production it fails, because the masked data lost the correlation between region and payment method that a join depended on, and because nobody masked the free-text notes field, which still contains three customers' phone numbers.
 

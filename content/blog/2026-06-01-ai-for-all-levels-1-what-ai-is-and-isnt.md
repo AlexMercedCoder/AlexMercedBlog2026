@@ -2,7 +2,11 @@
 title: "What AI Is and Isnt: A Laypersons Guide to How LLMs Actually Work"
 date: 2026-06-01T12:00:00Z
 tags: ["ai", "artificial intelligence", "machine learning", "llm", "productivity"]
+canonical: https://datalakehousehub.com/blog/ai-for-all-levels-1-what-ai-is-and-isnt/
+description: "AI is not magic or sentient. Learn what large language models actually do, how vectors and embeddings work, and why todays AI is pattern matching not thinking."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/ai-for-all-levels-1-what-ai-is-and-isnt/).
 
 Welcome to "Catching Up with Using AI for All Levels," a five-part series designed to take you from confused observer to confident AI user. This first post tackles the biggest problem with AI today: almost nobody understands what it actually is.
 

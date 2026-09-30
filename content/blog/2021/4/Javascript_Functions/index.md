@@ -3,7 +3,10 @@ date: '2021-04-11T12:12:03.284Z'
 description: What's your function?
 tags: []
 title: Ultimate Guide to Javascript Functions
+canonical: https://tuts.alexmercedcoder.dev/2021/4/javascript_functions/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/4/javascript_functions/).
 
 Functions are one of the most important concepts in programming, and Javascript gives functions first-class support meaning there is a lot to learn but a lot of great ways to use functions in javascript. This article is a reference on functions in javascript. Enjoy.
 

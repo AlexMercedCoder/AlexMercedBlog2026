@@ -2,9 +2,10 @@
 title: "Serverless Iceberg Ingestion with PyIceberg and DuckDB: Micro-Batches Without a Spark Cluster"
 date: 2026-08-25T09:00:00Z
 tags: ["Apache Iceberg", "PyIceberg", "DuckDB", "serverless"]
-canonical: "https://iceberglakehouse.com/posts/serverless-iceberg-microbatch-pyiceberg-duckdb/"
+canonical: https://iceberglakehouse.com/posts/serverless-iceberg-microbatch-pyiceberg-duckdb/
+description: "Land small Iceberg micro-batches with PyIceberg and DuckDB in a serverless function. Commits, concurrency, and why Spark is the wrong default."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/serverless-iceberg-microbatch-pyiceberg-duckdb/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/serverless-iceberg-microbatch-pyiceberg-duckdb/).
 
 A team has 40 event feeds landing in an object store. Most of them produce a few hundred megabytes an hour. A handful spike to a few gigabytes during business hours. The data needs to end up in Apache Iceberg tables within a few minutes of arrival so analysts and agents can query it. The obvious answer is a Spark Structured Streaming job, so the team stands one up. Six months later they are paying for a three-node cluster that sits at 8 percent CPU, they have a checkpoint directory nobody fully understands, and every version upgrade of Spark, Iceberg, and the cloud connector jar is a week of work.
 

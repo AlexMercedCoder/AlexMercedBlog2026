@@ -3,7 +3,10 @@ date: '2020-11-11T22:12:03.284Z'
 description: How to create a many to many relationship
 tags: []
 title: Ruby on Rails Tutorial - Many to Many Relationships
+canonical: https://tuts.alexmercedcoder.dev/2020/railsmanytomany/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/railsmanytomany/).
 
 **My Learning Ruby on Rails Video Playlist:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbYlAqVHgzZl5lou54bizdbV
 

@@ -2,7 +2,12 @@
 title: "Bidirectional Iceberg Writes with Horizon Catalog"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse", "Snowflake"]
+canonical: https://datalakehousehub.com/blog/snowflake-horizon-catalog-bidirectional-iceberg-writes/
+description: "Snowflake Horizon Catalog enables bidirectional Iceberg writes from external engines like Spark and Trino, powered by Apache Polaris."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/snowflake-horizon-catalog-bidirectional-iceberg-writes/).
+
 Bidirectional Iceberg interoperability changes managed Iceberg from a read surface into a shared write contract. That is the useful lens for bidirectional Iceberg interoperability in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![bidirectional Iceberg interoperability architecture diagram](/assets/blog/june8batch/snowflake-horizon-catalog-bidirectional-iceberg-writes-diagram-1.png)

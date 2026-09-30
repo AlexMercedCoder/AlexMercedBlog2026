@@ -8,7 +8,10 @@ tags:
 - Apache Iceberg
 - Data Lakehouse
 title: A deep dive into the concept and world of Apache Iceberg Catalogs
+canonical: https://iceberglakehouse.com/posts/2024-3-deep-dive-into-apache-iceberg-catalogs/
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2024-3-deep-dive-into-apache-iceberg-catalogs/).
 
 > [Get a Free Copy of "Apache Iceberg: The Definitive Guide"](https://hello.dremio.com/wp-apache-iceberg-the-definitive-guide-reg.html)
 

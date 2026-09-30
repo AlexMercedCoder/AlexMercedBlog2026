@@ -3,7 +3,10 @@ date: '2021-12-07T12:12:03.284Z'
 description: Using A Developer Friendly Web Framework in Python
 tags: []
 title: How to create an One to Many Relationship with Auth in Python with Masonite
+canonical: https://tuts.alexmercedcoder.dev/2021/12/masonite_python_authentication_one_to_many/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/12/masonite_python_authentication_one_to_many/).
 
 ## To Get Started with Masonite, Start Here
 

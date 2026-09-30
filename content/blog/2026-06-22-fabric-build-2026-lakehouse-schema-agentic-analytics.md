@@ -2,7 +2,11 @@
 title: "Fabric Agentic Analytics and Lakehouse Schema Design"
 date: 2026-06-22T09:00:00Z
 tags: ["fabric", "lakehouse-schema", "agentic-analytics"]
+canonical: https://iceberglakehouse.com/posts/fabric-build-2026-lakehouse-schema-agentic-analytics/
+description: "Microsoft Fabric agentic analytics is a reminder that schemas, semantic models, and governed lakehouse design now shape AI behavior."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/fabric-build-2026-lakehouse-schema-agentic-analytics/).
 
 # Fabric Agentic Analytics and Lakehouse Schema Design
 

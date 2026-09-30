@@ -3,9 +3,10 @@ title: "Apache Polaris and Multi-Engine Iceberg Catalogs"
 date: 2026-07-13T09:00:00Z
 category: "Apache Polaris"
 tags: ["Apache Polaris", "Iceberg Catalog", "Interoperability"]
-canonical: "https://iceberglakehouse.com/posts/apache-polaris-asf-top-level-multi-engine-catalog-interoperability/"
+canonical: https://iceberglakehouse.com/posts/apache-polaris-asf-top-level-multi-engine-catalog-interoperability/
+description: "An in-depth exploration of apache polaris and multi-engine iceberg catalogs"
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/apache-polaris-asf-top-level-multi-engine-catalog-interoperability/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/apache-polaris-asf-top-level-multi-engine-catalog-interoperability/).
 
 Apache Iceberg solved a hard problem: it gave analytics teams a table format that multiple engines can read and write without corrupting each other's view of the data. Snapshot isolation, schema evolution, hidden partitioning, and time travel all live in the table format itself. What Iceberg did not fully solve on its own is the question one layer up. How does an engine find a table in the first place? How does it know which snapshot is current, commit a new one safely, or organize tables into namespaces? That job belongs to a catalog, and for years the catalog is where the openness of a lakehouse quietly leaked away. You could have perfectly open Iceberg files sitting in object storage and still be locked into whichever engine controlled the catalog that pointed at them.
 

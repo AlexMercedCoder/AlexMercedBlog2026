@@ -2,9 +2,10 @@
 title: "Your Agent Should Answer the Phone: A Field Guide to AI Gateways on Slack, Discord, Telegram, Signal, and Teams"
 date: 2026-08-24T09:00:00Z
 tags: ["AI agents", "gateways", "Slack", "developer tools"]
-canonical: "https://iceberglakehouse.com/posts/ai-gateways-field-guide/"
+canonical: https://iceberglakehouse.com/posts/ai-gateways-field-guide/
+description: "A field guide to AI gateways on Slack, Discord, Telegram, Signal, and Teams: architecture, auth, cost, and the failure modes that matter."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/ai-gateways-field-guide/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/ai-gateways-field-guide/).
 
 The most useful thing my terminal agent ever did happened while I was nowhere near a terminal. I was in line at an airport, a build had failed, and I sent a message from my phone: "check why the release job failed and tell me if it is the flaky test again." Four minutes later I had the answer and a proposed fix waiting for my approval. The agent had not changed. What changed was that it heard me from somewhere other than a shell prompt.
 

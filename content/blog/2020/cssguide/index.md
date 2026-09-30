@@ -3,7 +3,10 @@ date: '2020-12-27T12:12:03.284Z'
 description: CSS All the Things!
 tags: []
 title: Ultimate CSS Reference
+canonical: https://tuts.alexmercedcoder.dev/2020/cssguide/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/cssguide/).
 
 ## What is this guide?
 

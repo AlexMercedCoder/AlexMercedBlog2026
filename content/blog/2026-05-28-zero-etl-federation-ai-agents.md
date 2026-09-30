@@ -2,7 +2,12 @@
 title: "The Era of Zero-ETL Federation: Fueling AI Agents with Real-Time Cross-Enterprise Data"
 date: 2026-05-28T12:00:00Z
 tags: ["Zero Etl Federation AI Agents"]
+canonical: https://datalakehousehub.com/blog/zero-etl-federation-ai-agents/
+description: "Zero-ETL federation lets AI agents join real-time CRM data with historical lakehouse tables instantly."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/zero-etl-federation-ai-agents/).
+
 # The Era of Zero-ETL Federation: Fueling AI Agents with Real-Time Cross-Enterprise Data
 
 ETL pipelines were the right answer in 2010. You pulled data from operational systems nightly, transformed it, and loaded it into the warehouse. Analysts got yesterday's data by 8 AM. The tradeoff was acceptable.

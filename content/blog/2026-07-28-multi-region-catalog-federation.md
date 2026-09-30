@@ -2,10 +2,11 @@
 title: "Governing Iceberg Tables Across Regions Without Three Sets of Permissions"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Apache Polaris", "Data Governance", "Multi-Region"]
-canonical: "https://iceberglakehouse.com/posts/multi-region-catalog-federation/"
+canonical: https://iceberglakehouse.com/posts/multi-region-catalog-federation/
+description: "Catalog federation gives you one authorization model and one audit point across regions. Here's what it solves, what it doesn't, and how to build."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/multi-region-catalog-federation/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/multi-region-catalog-federation/).
 
 # Governing Iceberg Tables Across Regions Without Three Sets of Permissions
 

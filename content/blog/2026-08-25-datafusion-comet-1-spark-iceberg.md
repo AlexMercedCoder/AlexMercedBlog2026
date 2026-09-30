@@ -2,9 +2,10 @@
 title: "DataFusion Comet 1.0 and What Native Rust Scans Change for Spark on Iceberg"
 date: 2026-08-25T09:00:00Z
 tags: ["Apache Iceberg", "Apache Spark", "DataFusion Comet", "Rust"]
-canonical: "https://iceberglakehouse.com/posts/datafusion-comet-1-spark-iceberg/"
+canonical: https://iceberglakehouse.com/posts/datafusion-comet-1-spark-iceberg/
+description: "DataFusion Comet 1.0 replaces Spark Iceberg scans with native Rust. What speeds up, what still falls back to the JVM, and how to deploy it."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/datafusion-comet-1-spark-iceberg/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/datafusion-comet-1-spark-iceberg/).
 
 A Spark job reads a 4 terabyte Apache Iceberg table, filters it down to a week of data, joins it against a dimension table, and aggregates. On paper the plan is simple. In the Spark UI, the scan stage takes 70 percent of the wall clock time, executors show long garbage collection pauses in the middle of the scan, and the CPU is busy but not busy doing anything you asked for. The work is decoding Parquet pages into Java objects, copying them into Spark's internal row format, and cleaning up the garbage afterward.
 

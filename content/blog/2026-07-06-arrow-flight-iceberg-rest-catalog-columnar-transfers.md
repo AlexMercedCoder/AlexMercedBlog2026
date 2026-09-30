@@ -3,8 +3,9 @@ title: "High-Performance Columnar Transfers: Combining Apache Arrow Flight and I
 date: 2026-07-06T09:00:00Z
 tags: ["arrow flight", "iceberg rest catalog", "columnar transfers"]
 canonical: https://iceberglakehouse.com/posts/arrow-flight-iceberg-rest-catalog-columnar-transfers/
+description: "Modern lakehouse architecture is easier to reason about when you separate two questions. The first question is how a system discovers and governs a..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/arrow-flight-iceberg-rest-catalog-columnar-transfers/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/arrow-flight-iceberg-rest-catalog-columnar-transfers/).
 
 # High-Performance Columnar Transfers: Combining Apache Arrow Flight and Iceberg REST Catalogs
 

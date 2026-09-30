@@ -2,7 +2,11 @@
 title: "AI-Ready Metadata Prevents Query Failures"
 date: 2026-06-22T09:00:00Z
 tags: ["ai-ready-metadata", "lineage-quality", "llm-query-failures"]
+canonical: https://iceberglakehouse.com/posts/ai-ready-metadata-lineage-quality-llm-query-failures/
+description: "AI-ready metadata reduces query failures by making ownership, freshness, lineage, quality, and policy visible at execution time."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/ai-ready-metadata-lineage-quality-llm-query-failures/).
 
 # AI-Ready Metadata Prevents Query Failures
 

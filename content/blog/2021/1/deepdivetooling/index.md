@@ -3,7 +3,10 @@ date: '2021-01-08T12:12:03.284Z'
 description: Node, ESLint, Babel, Bundlers
 tags: []
 title: Deep Dive on Javascript Tooling (Bundlers, Linters, Oh MY!)
+canonical: https://tuts.alexmercedcoder.dev/2021/1/deepdivetooling/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/deepdivetooling/).
 
 ## Node
 

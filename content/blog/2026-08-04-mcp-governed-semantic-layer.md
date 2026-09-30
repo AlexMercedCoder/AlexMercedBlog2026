@@ -2,10 +2,11 @@
 title: "Why Agentic AI Needs a Governed Semantic Layer Behind the Model Context Protocol"
 date: 2026-08-04T09:00:00Z
 tags: ["AI Agents", "MCP", "Semantic Layer", "Apache Ossie", "Apache Polaris"]
-canonical: "https://iceberglakehouse.com/posts/mcp-governed-semantic-layer/"
+canonical: https://iceberglakehouse.com/posts/mcp-governed-semantic-layer/
+description: "Why agentic AI needs a governed semantic layer behind the Model Context Protocol: metric consistency, access control, Apache Ossie for portable."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/mcp-governed-semantic-layer/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/mcp-governed-semantic-layer/).
 
 # Why Agentic AI Needs a Governed Semantic Layer Behind the Model Context Protocol
 

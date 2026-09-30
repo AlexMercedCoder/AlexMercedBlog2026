@@ -2,7 +2,12 @@
 title: "Lakehouse Context Layers with Atlan and Iceberg v3"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse", "Snowflake", "Atlan"]
+canonical: https://datalakehousehub.com/blog/atlan-snowflake-iceberg-v3-context-layer/
+description: "Lakehouse context layers bridge the gap between raw Iceberg tables and AI agents that need business meaning."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/atlan-snowflake-iceberg-v3-context-layer/).
+
 The context layer explains what lakehouse data means, which is the part table formats do not solve alone. That is the useful lens for lakehouse context layer in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![lakehouse context layer architecture diagram](/assets/blog/june8batch/atlan-snowflake-iceberg-v3-context-layer-diagram-1.png)

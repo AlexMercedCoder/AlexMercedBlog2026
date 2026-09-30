@@ -3,7 +3,10 @@ date: '2021-10-03T12:12:03.284Z'
 description: For simple web development
 tags: []
 title: Methods of Starting a Quick HTTP Server from the Command Line (alternatives to liveserver)
+canonical: https://tuts.alexmercedcoder.dev/2021/10/starting_http_server/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/10/starting_http_server/).
 
 If you are developing in VSCode it's quite typical that you'd be using the live-server extension to spin-up a quick development server. A few reasons sometimes you may not want to use liveserver.
 

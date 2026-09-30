@@ -3,7 +3,10 @@ date: '2021-02-21T12:12:03.284Z'
 description: Upping Your Javascript Gains
 tags: []
 title: Many Useful Javascript Tricks
+canonical: https://tuts.alexmercedcoder.dev/2021/2/javascripttricks/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/javascripttricks/).
 
 **Learn more Javascript with my Javascript Video Playlist => [Javascript Playlist](https://www.youtube.com/playlist?list=PLY6oTPmKnKbZDZ9cRrRby4Wnr4GIJj5O3)**
 

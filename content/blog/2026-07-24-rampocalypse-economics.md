@@ -2,7 +2,11 @@
 title: "Understanding the RAMpocalypse: An Economic Autopsy of the Great Memory Shortage and What Comes Next"
 date: 2026-07-24T00:00:00Z
 tags: ["DRAM", "Memory Shortage", "Economics", "Hardware", "AI Infrastructure", "Semiconductors"]
+canonical: https://iceberglakehouse.com/posts/rampocalypse-economics/
+description: "An economic autopsy of the 2026 memory shortage, why DRAM prices surged 90% in a quarter, and what supply, demand, and market structure mean."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/rampocalypse-economics/).
 
 *By Alex Merced*
 

@@ -2,10 +2,11 @@
 title: "Guardrails for Analytics Agents That Do More Than Answer Questions"
 date: 2026-07-28T09:00:00Z
 tags: ["AI Agents", "Guardrails", "Data Governance", "Human-in-the-Loop"]
-canonical: "https://iceberglakehouse.com/posts/agent-guardrails-human-in-the-loop/"
+canonical: https://iceberglakehouse.com/posts/agent-guardrails-human-in-the-loop/
+description: "The risk isn't agents going rogue, it's agents acting correctly on bad input at machine speed."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/agent-guardrails-human-in-the-loop/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/agent-guardrails-human-in-the-loop/).
 
 # Guardrails for Analytics Agents That Do More Than Answer Questions
 

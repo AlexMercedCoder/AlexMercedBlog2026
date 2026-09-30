@@ -2,7 +2,11 @@
 title: "Built for Agents and Managed by Agents"
 date: 2026-06-22T09:00:00Z
 tags: ["built-for-agents", "managed-by-agents", "dremio-agentic-lakehouse"]
+canonical: https://iceberglakehouse.com/posts/built-for-agents-managed-by-agents-dremio-agentic-lakehouse/
+description: "Dremio Agentic Lakehouse is easiest to understand as two ideas: data built for agent access and platform work managed by agents."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/built-for-agents-managed-by-agents-dremio-agentic-lakehouse/).
 
 # Built for Agents and Managed by Agents
 

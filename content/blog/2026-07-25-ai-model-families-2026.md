@@ -3,9 +3,10 @@ title: "Every AI Model Family That Matters in Mid-2026"
 date: 2026-07-25T09:00:00Z
 tags: ["AI models", "LLM", "open weights", "local inference", "model routing"]
 canonical: https://datalakehousehub.com/blog/ai-model-families-2026/
+description: "A full survey of the AI model landscape in mid-2026: frontier families, open-weight labs, local inference, specialists, and how to build a routing layer."
 ---
 
-> **Cross-posted.** This article's canonical home is [datalakehousehub.com](https://datalakehousehub.com/blog/ai-model-families-2026/).
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/ai-model-families-2026/).
 
 A team I talked with recently had hardcoded one model name into forty places in their codebase. The model was deprecated with sixty days notice. They spent three weeks on a migration that produced no new features, and then the replacement model's pricing changed the economics of their cheapest feature. Nobody made a bad decision. They just treated a model as a permanent dependency in a market where the average flagship stays flagship for about ten weeks.
 

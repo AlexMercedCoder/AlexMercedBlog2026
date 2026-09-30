@@ -3,7 +3,10 @@ date: '2020-10-22T22:12:03.284Z'
 description: Scaffolding Mongo/Express APIs with ease
 tags: []
 title: Full Crud Mongo/Express API in One Line with MongoRester
+canonical: https://tuts.alexmercedcoder.dev/2020/mongorester/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/mongorester/).
 
 ## Explanation of Mongorester
 

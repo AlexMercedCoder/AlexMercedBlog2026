@@ -2,10 +2,11 @@
 title: "Defending the Lakehouse Gateway Against Prompt Injection and Data Exfiltration"
 date: 2026-08-04T09:00:00Z
 tags: ["AI Agents", "Prompt Injection", "Security", "Lakehouse", "MCP"]
-canonical: "https://iceberglakehouse.com/posts/preventing-prompt-injection-lakehouse-gateway/"
+canonical: https://iceberglakehouse.com/posts/preventing-prompt-injection-lakehouse-gateway/
+description: "Defending the lakehouse gateway against prompt injection and data exfiltration: per-user identity, no-SQL tool surfaces, volume bounds, and detection."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/preventing-prompt-injection-lakehouse-gateway/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/preventing-prompt-injection-lakehouse-gateway/).
 
 # Defending the Lakehouse Gateway Against Prompt Injection and Data Exfiltration
 

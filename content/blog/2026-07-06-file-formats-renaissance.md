@@ -3,8 +3,9 @@ title: "The File Format Renaissance: Parquet, Lance, Vortex, Nimble, BtrBlocks, 
 date: 2026-07-06T09:00:00Z
 tags: ["parquet", "lance", "vortex", "columnar storage"]
 canonical: https://iceberglakehouse.com/posts/file-formats-renaissance/
+description: "For a decade, the file format layer was the most settled real estate in data. Apache Parquet held the analytical world, ORC held the Hive legacy es..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/file-formats-renaissance/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/file-formats-renaissance/).
 
 # The File Format Renaissance: Parquet, Lance, Vortex, Nimble, BtrBlocks, and the New Physics of Columnar Storage
 

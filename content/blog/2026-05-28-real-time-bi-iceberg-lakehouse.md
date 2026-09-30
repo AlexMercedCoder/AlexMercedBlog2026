@@ -2,7 +2,12 @@
 title: "Real-Time BI: Enabling Sub-Second Queries on Apache Iceberg Data Lakehouses"
 date: 2026-05-28T12:00:00Z
 tags: ["Real Time Bi Iceberg Lakehouse"]
+canonical: https://datalakehousehub.com/blog/real-time-bi-iceberg-lakehouse/
+description: "Sub-second queries on Apache Iceberg are achievable with the right architecture. Learn how Reflections, C3 cache, and query acceleration close the BI."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/real-time-bi-iceberg-lakehouse/).
+
 # Real-Time BI: Enabling Sub-Second Queries on Apache Iceberg Data Lakehouses
 
 The standard knock on cloud object storage for analytics is latency. S3 GET requests average 20–50 milliseconds each. A dashboard query that scans 10,000 files issues 10,000 of those requests, which means 3–8 minutes of wall time before the analyst sees a result. That's not a BI experience : it's a batch report.

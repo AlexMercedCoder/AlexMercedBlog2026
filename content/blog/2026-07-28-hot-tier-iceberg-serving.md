@@ -2,10 +2,11 @@
 title: "Serving Sub-Second Queries Over an Iceberg Lakehouse With a Hot Tier"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Streaming", "Data Serving", "Hot Tier"]
-canonical: "https://iceberglakehouse.com/posts/hot-tier-iceberg-serving/"
+canonical: https://iceberglakehouse.com/posts/hot-tier-iceberg-serving/
+description: "A lakehouse cannot serve sub-second queries over seconds-old data. A hot tier in front solves it, with consequences for consistency, governance."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/hot-tier-iceberg-serving/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/hot-tier-iceberg-serving/).
 
 # Serving Sub-Second Queries Over an Iceberg Lakehouse With a Hot Tier
 

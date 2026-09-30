@@ -3,7 +3,10 @@ date: '2021-07-24T12:12:03.284Z'
 description: Learning REST conventions with Ruby Sinatra
 tags: []
 title: Basics of Building a CRUD API with Ruby Sinatra
+canonical: https://tuts.alexmercedcoder.dev/2021/7/full_crud_with_sinatra/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/7/full_crud_with_sinatra/).
 
 Ruby Sinatra is probably the second most popular web framework in the Ruby ecosystem, second to the behemoth of Ruby on Rails. Ruby is a more minimalist framework like Javascripts, Express or Pythons, Flask.
 

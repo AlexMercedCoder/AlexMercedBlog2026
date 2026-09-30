@@ -3,7 +3,10 @@ date: '2020-12-30T12:12:03.284Z'
 description: Template designed for Dev Portfolios
 tags: []
 title: Create Your Dev Portfolio with this Gatsby Template
+canonical: https://tuts.alexmercedcoder.dev/2020/gatsbyportfolio/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/gatsbyportfolio/).
 
 ## create-markdown-blog
 

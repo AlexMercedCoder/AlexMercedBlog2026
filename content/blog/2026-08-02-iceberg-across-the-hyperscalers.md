@@ -2,10 +2,11 @@
 title: "Apache Iceberg Support Across the Major Hyperscalers"
 date: 2026-08-02T09:00:00Z
 tags: ["Apache Iceberg", "AWS", "Google Cloud", "Microsoft Azure", "S3 Tables", "Data Lakehouse"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-across-the-hyperscalers/"
+canonical: https://iceberglakehouse.com/posts/iceberg-across-the-hyperscalers/
+description: "How AWS, Google Cloud, and Microsoft Azure actually support Apache Iceberg: storage, catalogs, maintenance, governance, and interoperability, layer by layer."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-across-the-hyperscalers/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-across-the-hyperscalers/).
 
 # Apache Iceberg Support Across the Major Hyperscalers
 

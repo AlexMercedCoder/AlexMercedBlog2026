@@ -2,9 +2,10 @@
 title: "The Hidden Cost of Tiny Iceberg Commits"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "streaming", "metadata", "compaction"]
-canonical: "https://iceberglakehouse.com/posts/hidden-cost-of-tiny-iceberg-commits/"
+canonical: https://iceberglakehouse.com/posts/hidden-cost-of-tiny-iceberg-commits/
+description: "Trace what one tiny Iceberg commit writes, then model hourly, per-minute, and per-second cadences so streaming costs become arithmetic, not adjectives."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/hidden-cost-of-tiny-iceberg-commits/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/hidden-cost-of-tiny-iceberg-commits/).
 
 There is a number in your streaming configuration that is quietly deciding your lakehouse's operational future, and it looks completely innocent: the commit interval. Ten seconds sounds responsive. One second sounds impressive. Per-record sounds like real-time. And each of those choices multiplies through Apache Iceberg's metadata machinery into consequences, file populations, storage requests, planning latency, maintenance backlogs, that arrive weeks later, wearing disguises, billed to teams who never saw the original number.
 

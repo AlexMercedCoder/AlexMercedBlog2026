@@ -3,7 +3,10 @@ date: '2021-04-24T12:12:03.284Z'
 description: Making Sure React Works
 tags: []
 title: Intro to Fastify & The Liquid Templating Language
+canonical: https://tuts.alexmercedcoder.dev/2021/4/fastify_web_server/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/4/fastify_web_server/).
 
 ## What is Fastify
 

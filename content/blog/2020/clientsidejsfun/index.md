@@ -3,7 +3,10 @@ date: '2020-12-28T12:12:03.284Z'
 description: The Building Blocks of Client-Side Javascript Master
 tags: []
 title: Fundamentals of Client Side Javascript
+canonical: https://tuts.alexmercedcoder.dev/2020/clientsidejsfun/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/clientsidejsfun/).
 
 ## Why read this?
 

@@ -3,7 +3,10 @@ date: '2020-12-20T22:12:03.284Z'
 description: Using Netlify to Deliver Static JSON
 tags: []
 title: Delivering JSON Data with Netlify
+canonical: https://tuts.alexmercedcoder.dev/2020/netlifyjsonapi/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/netlifyjsonapi/).
 
 ## Why use JSON to Deliver Data and What is JAMStack
 

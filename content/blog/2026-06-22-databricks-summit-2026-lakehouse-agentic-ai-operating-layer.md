@@ -2,7 +2,11 @@
 title: "Lakehouse as the Operating Layer for Agentic AI"
 date: 2026-06-22T09:00:00Z
 tags: ["databricks-summit", "lakehouse", "agentic-ai"]
+canonical: https://iceberglakehouse.com/posts/databricks-summit-2026-lakehouse-agentic-ai-operating-layer/
+description: "Agentic AI announcements are useful when they validate the need for governed data, semantic context, and cost-aware execution."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/databricks-summit-2026-lakehouse-agentic-ai-operating-layer/).
 
 # Lakehouse as the Operating Layer for Agentic AI
 

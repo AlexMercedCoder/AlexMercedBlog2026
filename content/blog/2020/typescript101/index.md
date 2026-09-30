@@ -3,7 +3,10 @@ date: '2020-10-02T22:12:03.284Z'
 description: Super charging Javascript Scalability
 tags: []
 title: Typescript 101 - Typing, Interfaces and Enums oh MY!
+canonical: https://tuts.alexmercedcoder.dev/2020/typescript101/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/typescript101/).
 
 **Watch My Typescript Video Playlist Here: https://www.youtube.com/playlist?list=PLY6oTPmKnKbboGAL_-MineM-zcOblOm6V**
 

@@ -2,7 +2,12 @@
 title: "Building the Brain of the Agentic Lakehouse: Designing an Open Catalog Architecture"
 date: 2026-05-28T12:00:00Z
 tags: ["Open Catalog Architecture Agentic Lakehouse"]
+canonical: https://datalakehousehub.com/blog/open-catalog-architecture-agentic-lakehouse/
+description: "The open catalog is the brain of the agentic lakehouse. Learn how Apache Polaris, Dremio's Open Catalog, and catalog-native governance enable reliable AI."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/open-catalog-architecture-agentic-lakehouse/).
+
 # Building the Brain of the Agentic Lakehouse: Designing an Open Catalog Architecture
 
 An AI agent connected to a data platform needs to know three things before it can answer questions reliably: what data exists, what it means, and who is allowed to see it. In an agentic lakehouse, the catalog provides all three. Without a well-designed catalog, the agent is navigating blind.

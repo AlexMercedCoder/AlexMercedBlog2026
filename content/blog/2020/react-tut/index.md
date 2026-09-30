@@ -3,7 +3,10 @@ date: '2020-08-18T22:12:03.284Z'
 description: Basics of How React Works
 tags: []
 title: React 101 Tutorial
+canonical: https://tuts.alexmercedcoder.dev/2020/react-tut/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/react-tut/).
 
 ## What is React?
 

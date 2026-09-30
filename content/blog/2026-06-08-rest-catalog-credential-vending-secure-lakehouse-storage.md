@@ -2,7 +2,12 @@
 title: "REST Catalog Credential Vending for Lakehouse Security"
 date: 2026-06-08T09:00:00Z
 tags: ["lakehouse", "REST catalog"]
+canonical: https://datalakehousehub.com/blog/rest-catalog-credential-vending-secure-lakehouse-storage/
+description: "Iceberg REST catalog credential vending issues short-lived, table-scoped storage tokens for S3, ADLS, and GCS."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/rest-catalog-credential-vending-secure-lakehouse-storage/).
+
 Credential vending lets the catalog issue short-lived storage access instead of spreading permanent cloud keys across every engine. That is the useful lens for REST catalog credential vending in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![REST catalog credential vending architecture diagram](/assets/blog/june8batch/rest-catalog-credential-vending-secure-lakehouse-storage-diagram-1.png)

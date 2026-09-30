@@ -2,10 +2,11 @@
 title: "Designing Policy-Aware Telemetry Tables for AI Systems in Apache Iceberg"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Iceberg", "AI Telemetry", "EU AI Act", "Governance", "Compliance"]
-canonical: "https://iceberglakehouse.com/posts/policy-aware-ai-telemetry-iceberg/"
+canonical: https://iceberglakehouse.com/posts/policy-aware-ai-telemetry-iceberg/
+description: "Designing policy-aware AI telemetry tables in Apache Iceberg: what to log, tamper evidence, retention against conflicting deletion requirements."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/policy-aware-ai-telemetry-iceberg/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/policy-aware-ai-telemetry-iceberg/).
 
 # Designing Policy-Aware Telemetry Tables for AI Systems in Apache Iceberg
 

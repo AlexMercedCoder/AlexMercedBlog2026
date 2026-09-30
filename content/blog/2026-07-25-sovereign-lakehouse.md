@@ -3,9 +3,10 @@ title: "Building a Lakehouse That Stays Inside the Border"
 date: 2026-07-25T09:00:00Z
 tags: ["data sovereignty", "apache iceberg", "GDPR", "open formats", "lakehouse"]
 canonical: https://iceberglakehouse.com/posts/sovereign-lakehouse/
+description: "Residency is a storage location. Sovereignty is who can compel access, who operates the systems, and whether you can leave."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/sovereign-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/sovereign-lakehouse/).
 
 A manufacturer in southern Germany asked me a question during an architecture review that I have thought about since. Their data sat in a Frankfurt region. Their contract specified EU processing. Their auditor had signed off. Then somebody asked where the catalog ran, and the answer was a software-as-a-service control plane in Virginia.
 

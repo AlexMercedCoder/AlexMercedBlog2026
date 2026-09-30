@@ -3,9 +3,10 @@ title: "The Plan and the Worker: Two Open Specifications for Agent Harnesses"
 date: 2026-08-10T09:00:00Z
 tags: ["Agentic AI", "Open Specifications", "Agent Harnesses", "AGS", "OAP", "AI Agents"]
 canonical: https://iceberglakehouse.com/posts/agentic-graph-open-agent-profile-two-open-specs-agent-harnesses/
+description: "Two open specifications, the Agentic Graph Specification and the Open Agent Profile, turn agent plans and agent identity into portable, reviewable files."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/agentic-graph-open-agent-profile-two-open-specs-agent-harnesses/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/agentic-graph-open-agent-profile-two-open-specs-agent-harnesses/).
 
 Every agent harness solves the same two problems, and almost every one of them solves both privately.
 

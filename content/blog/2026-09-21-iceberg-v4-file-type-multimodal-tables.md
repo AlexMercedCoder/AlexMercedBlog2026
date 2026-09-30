@@ -3,9 +3,10 @@ title: "What Iceberg v4's Proposed FILE Type Means for Multimodal Tables"
 date: 2026-09-21T09:00:00Z
 tags: ["Apache Iceberg", "Iceberg v4", "Multimodal", "FILE type"]
 canonical: https://iceberglakehouse.com/posts/iceberg-v4-file-type-multimodal-tables/
+description: "Iceberg v4's proposed FILE type brings first-class media references to tables, via Parquet's FILE logical type, ranges, checksums, and pre-signed URLs."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-v4-file-type-multimodal-tables/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-v4-file-type-multimodal-tables/).
 
 A product catalog table has two million rows. Each row has a SKU, a price, a category, and three product photos. The photos live in an object storage bucket, and the table stores their paths as plain strings. An AI team wants to run a vision model over every photo in one category to generate alt text.
 

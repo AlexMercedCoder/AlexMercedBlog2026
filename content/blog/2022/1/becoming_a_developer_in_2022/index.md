@@ -3,7 +3,10 @@ date: '2022-01-22T12:12:03.284Z'
 description: How to switch careers within 12-18 months
 tags: []
 title: Becoming a Developer in 2022
+canonical: https://tuts.alexmercedcoder.dev/2022/1/becoming_a_developer_in_2022/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/1/becoming_a_developer_in_2022/).
 
 ## Your Mission if you choose to accept it
 

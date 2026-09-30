@@ -3,7 +3,10 @@ date: '2020-09-19T22:12:03.284Z'
 description: Templates for days
 tags: []
 title: Spin-up your next project with merced-spinup
+canonical: https://tuts.alexmercedcoder.dev/2020/mercedspinuptut/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/mercedspinuptut/).
 
 ## What is merced-spinup
 

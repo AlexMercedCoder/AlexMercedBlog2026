@@ -2,7 +2,12 @@
 title: "Legacy Warehouses to Open Lakehouses: A Step-by-Step Migration Playbook"
 date: 2026-05-28T12:00:00Z
 tags: ["Legacy Warehouse To Lakehouse Migration"]
+canonical: https://datalakehousehub.com/blog/legacy-warehouse-to-lakehouse-migration/
+description: "Migrating from a legacy data warehouse to an open lakehouse? This step-by-step playbook covers assessment, phased migration, validation, and avoiding."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/legacy-warehouse-to-lakehouse-migration/).
+
 # Legacy Warehouses to Open Lakehouses: A Step-by-Step Migration Playbook
 
 Most teams that start a warehouse-to-lakehouse migration underestimate one thing: the actual problem is trust, not technology. Your stakeholders have dashboards that have been running the same numbers for years. The moment those numbers change : even correctly,  you've got a political problem.

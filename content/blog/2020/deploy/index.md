@@ -3,7 +3,10 @@ date: '2020-08-30T22:12:03.284Z'
 description: Quality, Fast, Deployment for your static or full stack site.
 tags: []
 title: Guide to Free/Cheap Deployment Options 2020
+canonical: https://tuts.alexmercedcoder.dev/2020/deploy/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/deploy/).
 
 ## And the categories are...
 

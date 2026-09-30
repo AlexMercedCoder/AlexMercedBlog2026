@@ -3,7 +3,10 @@ date: '2020-08-22T22:12:03.284Z'
 description: Beginners Tutorial
 tags: []
 title: mBlocks - Frontend UI Library
+canonical: https://tuts.alexmercedcoder.dev/2020/mblocks/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/mblocks/).
 
 ## What is mBlocks
 

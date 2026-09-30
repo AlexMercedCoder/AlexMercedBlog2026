@@ -2,7 +2,12 @@
 title: "Securing Agent Identities in the Lakehouse"
 date: 2026-06-08T09:00:00Z
 tags: ["lakehouse", "AI agents", "token exchange", "security"]
+canonical: https://datalakehousehub.com/blog/securing-agent-identities-lakehouse-token-exchange/
+description: "How OAuth 2. 0 token exchange, OAuth 2. 1 device authorization grant, credential vending, and fine-grained access control secure AI agent identities."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/securing-agent-identities-lakehouse-token-exchange/).
+
 Every lakehouse agent needs its own identity, scope, and audit trail. That is the useful lens for agent identities lakehouse in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![agent identities lakehouse architecture diagram](/assets/blog/june8batch/securing-agent-identities-lakehouse-token-exchange-diagram-1.png)

@@ -3,7 +3,10 @@ date: '2022-03-13T12:12:03.284Z'
 description: Creating a Blog and Deploying with NextJS
 tags: []
 title: Creating a Markdown Blog in 2022 with Next JS
+canonical: https://tuts.alexmercedcoder.dev/2022/3/getting-started-with-scala3/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/3/getting-started-with-scala3/).
 
 ## Why Do you want a markdown blog
 

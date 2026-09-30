@@ -3,9 +3,10 @@ title: "Twelve Queries That Pass Every Schema Check and Still Return the Wrong N
 date: 2026-09-28T09:00:00Z
 tags: ["AI Agents", "Semantic Layer", "Data Quality", "Text-to-SQL", "Data Governance"]
 canonical: https://iceberglakehouse.com/posts/semantic-failure-catalog-ai-agent-queries/
+description: "Twelve query patterns that pass schema validation and still return wrong numbers, with detectors, required metadata, and tested code for each."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/semantic-failure-catalog-ai-agent-queries/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/semantic-failure-catalog-ai-agent-queries/).
 
 A query can be syntactically valid, reference only real tables and columns, run without error, and still return a wrong business number. The Semantic Failure Catalog lists twelve of these patterns, each with a reproducible example, the metadata needed to detect it, and a working detection test.
 

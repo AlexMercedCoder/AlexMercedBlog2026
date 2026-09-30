@@ -3,7 +3,10 @@ date: '2021-02-05T12:12:03.284Z'
 description: All the commands you'll need all the time
 tags: []
 title: Ultimate Command Line Reference 2021 - Bash, Git, Node, Python, Ruby, PHP
+canonical: https://tuts.alexmercedcoder.dev/2021/2/clireference2021/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/clireference2021/).
 
 ---
 # Bash Terminal

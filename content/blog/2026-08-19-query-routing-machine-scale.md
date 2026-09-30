@@ -2,9 +2,10 @@
 title: "Query Routing at Machine Scale: Multi-Engine Workload Distribution for the Agentic Lakehouse"
 date: 2026-08-19T09:00:00Z
 tags: ["query routing", "workload management", "multi-engine", "agentic lakehouse"]
-canonical: "https://iceberglakehouse.com/posts/query-routing-machine-scale/"
+canonical: https://iceberglakehouse.com/posts/query-routing-machine-scale/
+description: "Query routing at machine scale for the agentic lakehouse: engine selection, acceleration substitution, admission control, and placement."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/query-routing-machine-scale/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/query-routing-machine-scale/).
 
 For most of the analytics era, query routing was a human problem with human solutions. Analysts learned which tool to open for which job, platform teams published guidance about where the big joins belonged, and the estate's workload distribution was the sum of a few hundred people's habits, corrected quarterly by a wiki page nobody read. The arrangement survived because the query population grew with headcount, which is to say slowly, and because humans absorb routing rules the way they absorb office norms, imperfectly and well enough.
 

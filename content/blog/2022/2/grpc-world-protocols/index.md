@@ -3,7 +3,10 @@ date: '2022-02-19T12:12:03.284Z'
 description: How to write Markdown and where you can use it
 tags: []
 title: Understanding RPC (tour of API protocols, gRPC nodejs walkthrough, and Apache Arrow Flight)
+canonical: https://tuts.alexmercedcoder.dev/2022/2/grpc-world-protocols/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/2/grpc-world-protocols/).
 
 ## The World of Protocols
 

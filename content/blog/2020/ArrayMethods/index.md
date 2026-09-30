@@ -3,7 +3,10 @@ date: '2020-10-13T22:12:03.284Z'
 description: Map, Reduce, Some, Every, Filter, Find, FindIndex
 tags: []
 title: Javascript Callback Array Methods
+canonical: https://tuts.alexmercedcoder.dev/2020/arraymethods/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/arraymethods/).
 
 ## Array Callback Methods
 

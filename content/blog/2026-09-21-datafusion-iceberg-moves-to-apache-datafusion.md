@@ -3,9 +3,10 @@ title: "Why the Iceberg DataFusion Integration Is Moving to Apache DataFusion"
 date: 2026-09-21T09:00:00Z
 tags: ["Apache DataFusion", "Apache Iceberg", "Rust", "Open Source"]
 canonical: https://iceberglakehouse.com/posts/datafusion-iceberg-moves-to-apache-datafusion/
+description: "Why the Iceberg DataFusion integration moved to the DataFusion project, and what the split means for users, Comet, and iceberg-rust contributors."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/datafusion-iceberg-moves-to-apache-datafusion/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/datafusion-iceberg-moves-to-apache-datafusion/).
 
 A team building a Rust analytics service wants to read Apache Iceberg tables. They reach for Apache DataFusion, the Rust query engine, and the `iceberg-datafusion` crate that connects it to Iceberg. It works for simple scans. Then they need a feature the integration lacks, such as better scan partitioning or scan metrics. They open a pull request against `apache/iceberg-rust`. It sits for weeks. Meanwhile a new DataFusion release ships, and their service cannot upgrade until iceberg-rust upgrades first.
 

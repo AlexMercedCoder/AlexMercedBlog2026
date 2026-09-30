@@ -3,7 +3,10 @@ date: '2020-09-17T22:12:03.284Z'
 description: Asynchronous Javascript in Nutshell
 tags: []
 title: Promises 101  and Fetch, Axios and $.ajax
+canonical: https://tuts.alexmercedcoder.dev/2020/promises/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/promises/).
 
 ## What is the problem?
 

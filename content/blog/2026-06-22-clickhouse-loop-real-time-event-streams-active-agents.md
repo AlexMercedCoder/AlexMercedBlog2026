@@ -2,7 +2,11 @@
 title: "ClickHouse in the Loop for Active Agents"
 date: 2026-06-22T09:00:00Z
 tags: ["clickhouse", "real-time-event-streams", "active-agents"]
+canonical: https://iceberglakehouse.com/posts/clickhouse-loop-real-time-event-streams-active-agents/
+description: "Low-latency analytical systems can help active agents, but only when event loops include validation, context, and safety boundaries."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/clickhouse-loop-real-time-event-streams-active-agents/).
 
 # ClickHouse in the Loop for Active Agents
 

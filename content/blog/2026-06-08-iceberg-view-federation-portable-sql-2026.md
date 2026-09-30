@@ -2,7 +2,12 @@
 title: "The 2026 Guide to Iceberg View Federation"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse", "Iceberg views"]
+canonical: https://datalakehousehub.com/blog/iceberg-view-federation-portable-sql-2026/
+description: "Iceberg views standardize SQL view definitions across engines, enabling view federation across Polaris, Nessie, and Gravitino catalogs."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/iceberg-view-federation-portable-sql-2026/).
+
 Portable views are the missing logic layer between open tables and multi-engine analytics. That is the useful lens for Iceberg view federation in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![Iceberg view federation architecture diagram](/assets/blog/june8batch/iceberg-view-federation-portable-sql-2026-diagram-1.png)

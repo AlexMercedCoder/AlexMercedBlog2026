@@ -3,7 +3,10 @@ date: '2020-08-21T22:12:03.284Z'
 description: Enterprise level frontend framework
 tags: []
 title: Intro to Angular 9 Tutorial
+canonical: https://tuts.alexmercedcoder.dev/2020/angulartut/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/angulartut/).
 
 **ANGULAR VIDEO PLAYLIST:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbahNK_YUsjTzP5U-FkGA544
 

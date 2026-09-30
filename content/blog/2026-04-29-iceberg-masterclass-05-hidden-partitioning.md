@@ -2,7 +2,12 @@
 title: "Hidden Partitioning: How Iceberg Eliminates Accidental Full Table Scans"
 date: 2026-04-29T12:04:00Z
 tags: ["iceberg", "data-lake"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-05/
+description: "Iceberg's hidden partitioning separates physical layout from user queries using transform functions."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-05/).
+
 <!-- Meta Description: Iceberg's hidden partitioning separates physical layout from user queries using transform functions. Here is how it works and why it eliminates accidental full scans. -->
 <!-- Primary Keyword: Iceberg hidden partitioning -->
 <!-- Secondary Keywords: partition transforms, accidental full table scan, bucket partitioning -->

@@ -3,7 +3,10 @@ date: '2020-08-18T22:12:03.284Z'
 description: Creating a Ruby on Rails API with Auth
 tags: []
 title: Ruby on Rails API with JWT Auth Tutorial
+canonical: https://tuts.alexmercedcoder.dev/2020/ruby-tut/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/ruby-tut/).
 
 _Certain parts of this tutorial were adapted from this tutorial, https://medium.com/better-programming/build-a-rails-api-with-jwt-61fb8a52d833_
 

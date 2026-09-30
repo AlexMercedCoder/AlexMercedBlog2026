@@ -3,7 +3,10 @@ date: '2020-12-07T22:12:03.284Z'
 description: Understand JWT, Sessions and Bcrypt
 tags: []
 title: Authorization and Authentication in Concept
+canonical: https://tuts.alexmercedcoder.dev/2020/authconcept/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/authconcept/).
 
 ## What is Authentication and Authorization?
 

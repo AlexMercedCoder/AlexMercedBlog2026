@@ -3,7 +3,10 @@ date: '2020-08-19T22:12:03.284Z'
 description: Building Reactive and Styling UI Components
 tags: []
 title: AMPonent, Webcomponent Building Library
+canonical: https://tuts.alexmercedcoder.dev/2020/amponenttut/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/amponenttut/).
 
 ## What is AMPonent?
 

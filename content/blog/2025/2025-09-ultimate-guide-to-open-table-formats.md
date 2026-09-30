@@ -10,7 +10,10 @@ tags:
 - Apache Iceberg
 - Delta Lake
 title: The Ultimate Guide to Open Table Formats - Iceberg, Delta Lake, Hudi, Paimon, and DuckLake
+canonical: https://datalakehousehub.com/blog/2025-09-ultimate-guide-to-open-table-formats/
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/2025-09-ultimate-guide-to-open-table-formats/).
 
 **Get Data Lakehouse Books:**
 - [Apache Iceberg: The Definitive Guide](https://drmevn.fyi/tableformatblog)

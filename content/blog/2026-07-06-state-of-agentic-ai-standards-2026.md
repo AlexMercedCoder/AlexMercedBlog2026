@@ -3,8 +3,9 @@ title: "The State of Agentic AI Standards in 2026: MCP, A2A, WebMCP, OSI, and th
 date: 2026-07-06T12:00:00Z
 canonical: https://iceberglakehouse.com/posts/state-of-agentic-ai-standards-2026/
 tags: ["Apache Iceberg", "data engineering", "lakehouse architecture", "agentic AI", "MCP", "A2A", "semantic layer"]
+description: "The agentic AI protocol stack is solidifying in 2026, MCP for tools, A2A for agents, WebMCP for the web, OSI for semantics, payments, identity."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/state-of-agentic-ai-standards-2026/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/state-of-agentic-ai-standards-2026/).
 
 # The State of Agentic AI Standards in 2026: MCP, A2A, WebMCP, OSI, and the Protocol Stack Taking Shape
 

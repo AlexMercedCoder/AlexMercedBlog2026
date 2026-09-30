@@ -3,9 +3,10 @@ title: "How Apache Polaris Plans to Share Iceberg Tables Across Organizations"
 date: 2026-09-21T09:00:00Z
 tags: ["Apache Polaris", "Data Sharing", "Iceberg REST", "Lakehouse"]
 canonical: https://iceberglakehouse.com/posts/polaris-open-sharing-iceberg-tables/
+description: "Apache Polaris's Open Sharing proposal adds first-class shares, external consumers, and listings so any Iceberg REST engine can read shared tables."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/polaris-open-sharing-iceberg-tables/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/polaris-open-sharing-iceberg-tables/).
 
 A retailer wants to give a supplier live access to three sales tables. Nothing else. The supplier runs its own query engine in its own cloud account. The retailer does not want to copy the data into the supplier's account every night, and it does not want the supplier logging into its data platform like an employee.
 

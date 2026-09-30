@@ -3,7 +3,10 @@ date: '2022-03-12T12:12:03.284Z'
 description: All the main bits summed up in one place
 tags: []
 title: Javascript DOM & jQuery Cheatsheet 2022
+canonical: https://tuts.alexmercedcoder.dev/2022/3/2022-dom-js-cheatsheet/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/3/2022-dom-js-cheatsheet/).
 
 #### Join the slack and discord community at devNursery.com
 

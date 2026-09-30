@@ -2,10 +2,11 @@
 title: "Running an Apache Iceberg Lakehouse With No Internet Connection"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Air-Gapped", "Data Engineering", "On-Premises"]
-canonical: "https://iceberglakehouse.com/posts/air-gapped-iceberg-lakehouse/"
+canonical: https://iceberglakehouse.com/posts/air-gapped-iceberg-lakehouse/
+description: "A practical guide to deploying an Iceberg lakehouse in air-gapped environments: component choices, artifact pipelines, identity without a cloud."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/air-gapped-iceberg-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/air-gapped-iceberg-lakehouse/).
 
 # Running an Apache Iceberg Lakehouse With No Internet Connection
 

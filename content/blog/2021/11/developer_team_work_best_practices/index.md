@@ -3,7 +3,10 @@ date: '2021-11-16T12:12:03.284Z'
 description: How to be part of a developer team
 tags: []
 title: Developer Team Work Best Practices (Git, Agile/Scrum/Kanban, CI/CD)
+canonical: https://tuts.alexmercedcoder.dev/2021/11/developer_team_work_best_practices/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/11/developer_team_work_best_practices/).
 
 ## The Why?
 

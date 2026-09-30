@@ -2,7 +2,11 @@
 title: "The Model Is Not the Moat"
 date: 2026-06-22T09:00:00Z
 tags: ["semantic-lakehouse-layer", "enterprise-ai", "model-moat"]
+canonical: https://iceberglakehouse.com/posts/model-not-moat-semantic-lakehouse-layer-enterprise-ai/
+description: "Enterprise AI advantage increasingly comes from governed context, semantic models, and operational data contracts, not only from model choice."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/model-not-moat-semantic-lakehouse-layer-enterprise-ai/).
 
 # The Model Is Not the Moat
 

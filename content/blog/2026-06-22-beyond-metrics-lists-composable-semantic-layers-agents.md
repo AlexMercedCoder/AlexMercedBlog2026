@@ -2,7 +2,11 @@
 title: "Composable Semantic Layers for Analytical Agents"
 date: 2026-06-22T09:00:00Z
 tags: ["composable-semantic-layers", "ai-agents", "agentic-analytics"]
+canonical: https://iceberglakehouse.com/posts/beyond-metrics-lists-composable-semantic-layers-agents/
+description: "AI agents need more than metric names. They need composable business logic that survives multi-step analysis."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/beyond-metrics-lists-composable-semantic-layers-agents/).
 
 # Composable Semantic Layers for Analytical Agents
 

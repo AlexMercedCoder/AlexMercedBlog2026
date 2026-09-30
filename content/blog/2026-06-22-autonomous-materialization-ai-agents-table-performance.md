@@ -2,7 +2,11 @@
 title: "Autonomous Materialization for Agentic Analytics"
 date: 2026-06-22T09:00:00Z
 tags: ["autonomous-materialization", "ai-agents", "table-performance"]
+canonical: https://iceberglakehouse.com/posts/autonomous-materialization-ai-agents-table-performance/
+description: "Autonomous materialization is useful when it is tied to workload evidence, governance checks, and lifecycle management."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/autonomous-materialization-ai-agents-table-performance/).
 
 # Autonomous Materialization for Agentic Analytics
 

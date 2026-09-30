@@ -2,7 +2,12 @@
 title: "Agentic Lakehouse Concurrency and Isolation"
 date: 2026-06-08T09:00:00Z
 tags: ["lakehouse", "AI agents"]
+canonical: https://datalakehousehub.com/blog/agentic-lakehouse-concurrency-isolation-contracts/
+description: "How Iceberg optimistic concurrency control, partition-level isolation, and idempotency keys enable safe concurrent writes from multiple AI agents."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/agentic-lakehouse-concurrency-isolation-contracts/).
+
 Agentic writes need isolation contracts, not just write permissions. That is the useful lens for agentic lakehouse concurrency in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![agentic lakehouse concurrency architecture diagram](/assets/blog/june8batch/agentic-lakehouse-concurrency-isolation-contracts-diagram-1.png)

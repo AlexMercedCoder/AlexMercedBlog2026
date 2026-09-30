@@ -2,9 +2,10 @@
 title: "Iceberg Is Becoming a Library, Not Just a Table Format"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "libraries", "ecosystem", "data engineering"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-is-becoming-a-library/"
+canonical: https://iceberglakehouse.com/posts/iceberg-is-becoming-a-library/
+description: "Iceberg is turning from a JVM table format into a library other systems embed. What that shift changes for engines, catalogs, and the spec itself."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-is-becoming-a-library/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-is-becoming-a-library/).
 
 Categories in data infrastructure are quieter than features, and more consequential. For eight years, Apache Iceberg belonged to the category "table format": a specification that query engines implement, a treaty among big compute systems about how to share tables safely. You experienced Iceberg through an engine, or you did not experience it at all. That category is dissolving in front of us. In 2026, Iceberg is something applications link: a component inside services, notebooks, agent runtimes, browser tabs, and other people's databases, doing its work wherever the code already runs, with no engine in sight.
 

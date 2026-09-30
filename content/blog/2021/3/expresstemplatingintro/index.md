@@ -3,7 +3,10 @@ date: '2021-03-04T12:12:03.284Z'
 description: Tales of PHP's Demise are Exaggerated
 tags: []
 title: Intro to Express, Templating and API's (EJS, Handlebars, Mustache, Pug)
+canonical: https://tuts.alexmercedcoder.dev/2021/3/expresstemplatingintro/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/3/expresstemplatingintro/).
 
 Express is by far the most popular backend web framework in the NodeJS world. It is a right of passage for every javascript developer to learn how to create full-stack applications and APIs. 
 

@@ -3,7 +3,10 @@ date: '2020-09-23T22:12:03.284Z'
 description: useEffect, useState, UseReducer and more!
 tags: []
 title: React Hooks Basics Reference
+canonical: https://tuts.alexmercedcoder.dev/2020/reacthooks/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/reacthooks/).
 
 ## What are React Hooks?
 

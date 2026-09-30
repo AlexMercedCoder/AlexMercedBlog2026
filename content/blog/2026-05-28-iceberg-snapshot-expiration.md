@@ -2,7 +2,12 @@
 title: "Designing an Immutable Data Lakehouse: Best Practices for Iceberg Snapshot Expiration"
 date: 2026-05-28T12:00:00Z
 tags: ["Iceberg Snapshot Expiration"]
+canonical: https://iceberglakehouse.com/posts/iceberg-snapshot-expiration/
+description: "Iceberg snapshot bloat silently kills query performance. Learn the best practices for snapshot expiration, manifest cleanup, and automated table maintenance."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-snapshot-expiration/).
+
 # Designing an Immutable Data Lakehouse: Best Practices for Iceberg Snapshot Expiration
 
 Iceberg tables accumulate snapshots by design. Every write : every INSERT, UPDATE, DELETE, or compaction,  creates a new snapshot. That's how Iceberg provides time travel, rollback, and concurrent reads without locks. It's a good feature, until you never clean it up.

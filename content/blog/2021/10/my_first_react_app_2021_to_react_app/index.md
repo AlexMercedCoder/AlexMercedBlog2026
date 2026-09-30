@@ -3,7 +3,10 @@ date: '2021-10-29T12:12:03.284Z'
 description: The Basics of React
 tags: []
 title: My First React App - 2021 Intro to React
+canonical: https://tuts.alexmercedcoder.dev/2021/10/my_first_react_app_2021_to_react_app/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/10/my_first_react_app_2021_to_react_app/).
 
 ## Before Starting this tutorial
 

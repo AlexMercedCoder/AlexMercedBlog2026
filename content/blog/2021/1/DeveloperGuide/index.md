@@ -3,7 +3,10 @@ date: '2021-01-07T12:12:03.284Z'
 description: Step by Step Guide and Advice
 tags: []
 title: Guide to Becoming a Developer in 2021
+canonical: https://tuts.alexmercedcoder.dev/2021/1/developerguide/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/developerguide/).
 
 ## Reasons to Become a Developer
 

@@ -3,9 +3,10 @@ title: "Active Analytics Loops for AI Action Agents"
 date: 2026-07-13T09:00:00Z
 category: "AI & Agents"
 tags: ["AI Agents", "Analytics", "Data Engineering"]
-canonical: "https://iceberglakehouse.com/posts/active-analytics-loop-goal-directed-action-agents/"
+canonical: https://iceberglakehouse.com/posts/active-analytics-loop-goal-directed-action-agents/
+description: "An in-depth exploration of active analytics loops for ai action agents"
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/active-analytics-loop-goal-directed-action-agents/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/active-analytics-loop-goal-directed-action-agents/).
 
 Most analytics agents in production today answer questions. You type a request, the agent generates SQL, runs it, and hands back a chart or a paragraph. That pattern is useful, and it removes real friction from self-service analytics. It also stops well short of where the value actually lives. An agent that waits for you to ask a question can only help when you already know something is wrong and already know what to ask. The interesting work happens before that: noticing that inventory is drifting toward a stockout, that a data pipeline silently dropped 12 percent of yesterday's rows, or that cloud spend on a specific service jumped overnight. That work is not question-and-answer. It is a loop.
 

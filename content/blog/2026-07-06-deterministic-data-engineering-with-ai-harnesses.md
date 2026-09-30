@@ -3,9 +3,10 @@ title: "Deterministic Data Engineering With AI Harnesses: Using Claude Code, Cod
 date: 2026-07-06T09:00:00Z
 tags: ["data engineering", "AI agents", "Claude Code", "OpenAI Codex", "deterministic pipelines"]
 canonical: https://iceberglakehouse.com/posts/deterministic-data-engineering-with-ai-harnesses/
+description: "How to use AI agent harnesses for data engineering without losing determinism, reproducibility, and trust in your data pipelines and analytics."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/deterministic-data-engineering-with-ai-harnesses/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/deterministic-data-engineering-with-ai-harnesses/).
 
 *By Alex Merced, Head of Developer Relations at Dremio*
 

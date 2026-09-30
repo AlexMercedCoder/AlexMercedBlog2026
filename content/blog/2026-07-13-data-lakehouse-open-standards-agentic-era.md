@@ -3,9 +3,10 @@ title: "Data Lakehouse Open Standards for AI Agents"
 date: 2026-07-13T09:00:00Z
 category: "Data Lakehouse"
 tags: ["Lakehouse", "Open Standards", "AI Agents"]
-canonical: "https://iceberglakehouse.com/posts/data-lakehouse-open-standards-agentic-era/"
+canonical: https://iceberglakehouse.com/posts/data-lakehouse-open-standards-agentic-era/
+description: "An in-depth exploration of data lakehouse open standards for ai agents"
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/data-lakehouse-open-standards-agentic-era/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/data-lakehouse-open-standards-agentic-era/).
 
 A single analyst running a report might touch three tables and issue a dozen queries in an afternoon. An AI agent working the same problem can issue a dozen queries in a minute, inspect twenty datasets to figure out which one it actually needs, and repeat that pattern across dozens of parallel tasks. The math changes the moment agents enter the picture. Every friction point in your data architecture, every copy you have to reconcile, every place where a metric is defined differently in two tools, gets multiplied by the volume and speed at which agents work.
 

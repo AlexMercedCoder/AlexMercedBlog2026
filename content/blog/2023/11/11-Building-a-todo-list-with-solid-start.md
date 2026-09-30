@@ -8,7 +8,10 @@ tags:
 - backend
 - solidjs
 title: Building a Todo List with Solid Start
+canonical: https://tuts.alexmercedcoder.dev/2023/11/11-building-a-todo-list-with-solid-start/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/11/11-building-a-todo-list-with-solid-start/).
 
 I've written about SolidJS in the past, so if you aren't familiar with it here are some of my past articles:
 

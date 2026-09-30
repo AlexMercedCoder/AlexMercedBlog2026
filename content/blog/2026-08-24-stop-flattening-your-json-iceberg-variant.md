@@ -2,9 +2,10 @@
 title: "Stop Flattening Your JSON: How Iceberg Variant Changes Semi-Structured Analytics"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "Variant", "JSON", "semi-structured"]
-canonical: "https://iceberglakehouse.com/posts/stop-flattening-your-json-iceberg-variant/"
+canonical: https://iceberglakehouse.com/posts/stop-flattening-your-json-iceberg-variant/
+description: "Iceberg Variant stores JSON as navigable binary with shredding for columnar filters. Why flattening wide tables is no longer the only performance path."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/stop-flattening-your-json-iceberg-variant/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/stop-flattening-your-json-iceberg-variant/).
 
 Somewhere in your company there is a table with a column named `payload`, `properties`, `raw_event`, or `extra`, and inside it lives JSON stored as a string. Every query that touches it parses text, row by row, to pull out two or three fields. Someone once proposed flattening it into real columns, and the project died when the count came back at 400 columns, half of them null, with new fields arriving weekly. So the string column stayed, the parsing tax stayed, and everyone learned not to filter on anything inside it.
 

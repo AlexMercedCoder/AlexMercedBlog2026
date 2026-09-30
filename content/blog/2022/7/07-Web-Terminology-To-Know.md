@@ -6,7 +6,10 @@ description: The words you need to know as a web professional
 tags:
 - web development
 title: Web Development Glossary 2022
+canonical: https://tuts.alexmercedcoder.dev/2022/7/07-web-terminology-to-know/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/7/07-web-terminology-to-know/).
 
 - **Abstraction**: Something that simplifies the complexities of something else to make it easier to use without the need to understand how it works.
 

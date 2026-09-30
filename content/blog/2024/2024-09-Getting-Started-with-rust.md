@@ -7,7 +7,10 @@ tags:
 - programming
 - rust
 title: Getting Started with Rust - A Modern Systems Programming Language
+canonical: https://tuts.alexmercedcoder.dev/2024/2024-09-getting-started-with-rust/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2024/2024-09-getting-started-with-rust/).
 
 [Follow me on Twitter](https://www.twitter.com/alexmercedcoder)
 [Subscribe on Youtube](https://www.youtube.com/@alexmercedcoder)

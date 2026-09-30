@@ -3,8 +3,9 @@ title: "Metadata Platforms in 2026: DataHub, OpenMetadata, Atlan, and Catalog Co
 date: 2026-09-02T09:00:00Z
 tags: ["DataHub", "OpenMetadata", "Atlan", "Metadata", "Catalogs", "Polaris"]
 canonical: https://iceberglakehouse.com/posts/metadata-platforms-in-2026/
+description: "How the technical catalog and the metadata platform are converging in 2026, and how to arrange the two layers for a lakehouse."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/metadata-platforms-in-2026/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/metadata-platforms-in-2026/).
 
 The word "catalog" has meant two different things in data infrastructure for about a decade, and in 2026 the two are colliding.
 

@@ -2,7 +2,11 @@
 title: "The Filters We Build: Scams, Slop, and the Search for Signal, From Radio Ads to AI"
 date: 2026-07-24T00:00:00Z
 tags: ["Media", "AI", "Cognitive Filters", "Scams", "Information Overload", "Curation", "Digital Literacy"]
+canonical: https://iceberglakehouse.com/posts/cognitive-filters-media-evolution/
+description: "How every media era from radio to AI forces humanity to build new cognitive filters, the shield against scams and the sieve for finding signal in an ocean."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/cognitive-filters-media-evolution/).
 
 *By Alex Merced*
 

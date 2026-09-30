@@ -3,7 +3,10 @@ date: '2021-08-12T12:12:03.284Z'
 description: Getting Data from an external API
 tags: []
 title: 3 Ways to make API Requests in React (fetch/axios, merced-react-hooks, react-request)
+canonical: https://tuts.alexmercedcoder.dev/2021/8/api_calls_react/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/8/api_calls_react/).
 
 When working with React there are several things that can be particularly annoying to deal with...
 

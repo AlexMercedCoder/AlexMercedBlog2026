@@ -3,7 +3,10 @@ date: '2021-10-19T12:12:03.284Z'
 description: Sever Side Rendering for All the People!
 tags: []
 title: Express Templating Cheatsheet
+canonical: https://tuts.alexmercedcoder.dev/2021/10/express_templating_cheatsheet/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/10/express_templating_cheatsheet/).
 
 # Intro
 

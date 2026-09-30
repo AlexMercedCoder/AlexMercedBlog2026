@@ -3,8 +3,9 @@ title: "Federation and the Lakehouse: Two Roads to Unified Data Access, and How 
 date: 2026-07-06T09:00:00Z
 tags: ["data federation", "data lakehouse", "unified access"]
 canonical: https://iceberglakehouse.com/posts/federation-and-lakehouse/
+description: "Every data strategy document written this decade contains some version of the same sentence: we need a single place to access all our data. The sen..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/federation-and-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/federation-and-lakehouse/).
 
 # Federation and the Lakehouse: Two Roads to Unified Data Access, and How to Know Which One to Take
 

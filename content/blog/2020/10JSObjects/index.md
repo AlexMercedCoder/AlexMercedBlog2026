@@ -3,7 +3,10 @@ date: '2020-11-30T22:12:03.284Z'
 description: Getting Advanced with Javascript
 tags: []
 title: 6 JS Object Types You May Not Have Used
+canonical: https://tuts.alexmercedcoder.dev/2020/10jsobjects/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/10jsobjects/).
 
 **My Javascript Playlist:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbZDZ9cRrRby4Wnr4GIJj5O3
 

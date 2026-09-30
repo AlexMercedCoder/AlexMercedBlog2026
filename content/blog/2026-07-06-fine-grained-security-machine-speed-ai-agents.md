@@ -3,8 +3,9 @@ title: "Enforcing Fine-Grained Security at Machine Speed: Dynamic Access Control
 date: 2026-07-06T09:00:00Z
 tags: ["fine-grained security", "ai agents", "access control"]
 canonical: https://iceberglakehouse.com/posts/fine-grained-security-machine-speed-ai-agents/
+description: "AI agents change the security model for analytics. A human user may run a handful of queries, pause, interpret the answer, and ask a follow-up. An..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/fine-grained-security-machine-speed-ai-agents/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/fine-grained-security-machine-speed-ai-agents/).
 
 # Enforcing Fine-Grained Security at Machine Speed: Dynamic Access Control for High-Frequency AI Agents
 

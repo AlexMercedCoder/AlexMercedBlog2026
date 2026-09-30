@@ -2,7 +2,12 @@
 title: "The 2026 Unified Data Architecture: Reconciling Multi-Cloud Data Lakehouses"
 date: 2026-05-28T12:00:00Z
 tags: ["Unified Data Architecture 2026"]
+canonical: https://datalakehousehub.com/blog/unified-data-architecture-2026/
+description: "Multi-cloud data lakehouses in 2026 run on Apache Iceberg, open catalogs, and zero-ETL federation. Here's what a composable, unified architecture looks like."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/unified-data-architecture-2026/).
+
 # The 2026 Unified Data Architecture: Reconciling Multi-Cloud Data Lakehouses
 
 Three years ago, "multi-cloud strategy" for data meant maintaining separate warehouses on AWS, Azure, and GCP, then running ETL to sync them. Teams spent more time on pipeline maintenance than on actual analysis. That approach is giving way to something simpler: a shared table format, a unified catalog, and a query engine that reaches across cloud boundaries without moving data.

@@ -3,7 +3,10 @@ date: '2021-04-21T12:12:03.284Z'
 description: React for Everyone
 tags: []
 title: React Conditional Rendering
+canonical: https://tuts.alexmercedcoder.dev/2021/4/react_conditional_rendering/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/4/react_conditional_rendering/).
 
 [My React Breakdown 2021 Github Gist](https://gist.github.com/AlexMercedCoder/b4d86790176f2f5c7b374235cf3dc23c)
 

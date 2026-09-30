@@ -2,7 +2,11 @@
 title: "Iceberg v4 Performance: Root Manifests and Calls"
 date: 2026-06-22T09:00:00Z
 tags: ["iceberg-v4", "performance", "root-manifests"]
+canonical: https://iceberglakehouse.com/posts/iceberg-v4-performance-root-manifests-combined-calls/
+description: "Apache Iceberg v4 discussion should focus on planning cost, metadata layout, and object storage round trips, not vague claims about faster tables."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-v4-performance-root-manifests-combined-calls/).
 
 # Iceberg v4 Performance: Root Manifests and Calls
 

@@ -3,7 +3,10 @@ date: '2021-05-03T12:12:03.284Z'
 description: The Joys of Docker
 tags: []
 title: Using Docker & Docker Compose to Create an Express/Neo4J Dev Environment(Intro to Graph Databases)
+canonical: https://tuts.alexmercedcoder.dev/2021/5/docker_express_neo4j/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/5/docker_express_neo4j/).
 
 ## Previous Content on Docker
 

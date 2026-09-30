@@ -2,7 +2,12 @@
 title: "Real-Time Agentic Analytics with ClickHouse"
 date: 2026-06-08T09:00:00Z
 tags: ["AI agents", "ClickHouse"]
+canonical: https://datalakehousehub.com/blog/clickhouse-real-time-agentic-analytics-event-loops/
+description: "ClickHouse has become the leading real-time analytics engine for AI agent workloads, with event-loop architectures that let agents query and act."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/clickhouse-real-time-agentic-analytics-event-loops/).
+
 Real-time agents need analytical systems that can answer while an event still matters. That is the useful lens for real-time agentic analytics in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![real-time agentic analytics architecture diagram](/assets/blog/june8batch/clickhouse-real-time-agentic-analytics-event-loops-diagram-1.png)

@@ -2,10 +2,11 @@
 title: "Building Apache Iceberg Lakehouses That Run Without an Internet Connection"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Iceberg", "Air-Gapped", "On-Premises", "MinIO", "Lakekeeper", "Security"]
-canonical: "https://iceberglakehouse.com/posts/building-air-gapped-iceberg-lakehouse/"
+canonical: https://iceberglakehouse.com/posts/building-air-gapped-iceberg-lakehouse/
+description: "How to build an Apache Iceberg lakehouse that runs fully offline: storage, catalog, compute, cross-zone transfer, compliance, and the failure modes that bite."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/building-air-gapped-iceberg-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/building-air-gapped-iceberg-lakehouse/).
 
 # Building Apache Iceberg Lakehouses That Run Without an Internet Connection
 

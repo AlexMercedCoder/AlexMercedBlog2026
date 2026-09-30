@@ -2,7 +2,12 @@
 title: "Migrating to Apache Iceberg: Strategies for Every Source System"
 date: 2026-04-29T12:14:00Z
 tags: ["iceberg", "data-lake"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-15/
+description: "Migrate to Iceberg from Hive, data warehouses, or raw files using in-place migration, full rewrite, or the zero-downtime view swap pattern."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-15/).
+
 <!-- Meta Description: Migrate to Iceberg from Hive, data warehouses, or raw files using in-place migration, full rewrite, or the zero-downtime view swap pattern. -->
 <!-- Primary Keyword: migrating to Apache Iceberg -->
 <!-- Secondary Keywords: Hive to Iceberg migration, Iceberg migration strategy, view swap migration -->

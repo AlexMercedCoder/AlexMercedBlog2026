@@ -7,7 +7,10 @@ tags:
 - web storage
 - oltp
 title: Web Storage API Part 1 - LocalStorage and SessionStorage
+canonical: https://tuts.alexmercedcoder.dev/2022/3/03-localstorage/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/3/03-localstorage/).
 
 ## Web Storage APIs
 

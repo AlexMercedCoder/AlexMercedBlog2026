@@ -2,7 +2,11 @@
 title: "Unity AI Gateway vs Apache Polaris Control Planes"
 date: 2026-06-22T09:00:00Z
 tags: ["unity-ai-gateway", "apache-polaris", "governance-control-plane"]
+canonical: https://iceberglakehouse.com/posts/unity-ai-gateway-vs-apache-polaris-governance-control-plane/
+description: "The right comparison is not vendor scoreboard. It is closed AI governance gateway versus open catalog control plane."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/unity-ai-gateway-vs-apache-polaris-governance-control-plane/).
 
 # Unity AI Gateway vs Apache Polaris Control Planes
 

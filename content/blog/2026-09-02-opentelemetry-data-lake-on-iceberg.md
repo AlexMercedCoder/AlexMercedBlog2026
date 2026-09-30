@@ -3,8 +3,9 @@ title: "Logs, Traces, and Metrics as Tables: Building an OpenTelemetry Data Lake
 date: 2026-09-02T09:00:00Z
 tags: ["OpenTelemetry", "Apache Iceberg", "Logs", "Traces", "Metrics", "Observability"]
 canonical: https://iceberglakehouse.com/posts/opentelemetry-data-lake-on-iceberg/
+description: "Building an OpenTelemetry data lake on Iceberg: schemas for spans, logs, and metrics, ingestion, query patterns, and retention."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/opentelemetry-data-lake-on-iceberg/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/opentelemetry-data-lake-on-iceberg/).
 
 An engineering organization pays its observability vendor by the gigabyte ingested and keeps thirty days of logs because ninety triples the bill. When an incident's root cause turns out to be a change deployed six weeks ago, the logs from that deploy are gone. The traces that show the latency regression starting were sampled at one percent to control cost. The metrics are there, downsampled to one point per hour after two weeks, which is too coarse to see the five-minute spike that started it.
 

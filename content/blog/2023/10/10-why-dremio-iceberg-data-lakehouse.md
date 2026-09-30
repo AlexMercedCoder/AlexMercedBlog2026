@@ -6,7 +6,10 @@ tags:
 - data lakehouse
 - data engineering
 title: 'Overview of the Open Lakehouse: Why Dremio?'
+canonical: https://tuts.alexmercedcoder.dev/2023/10/10-why-dremio-iceberg-data-lakehouse/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/10/10-why-dremio-iceberg-data-lakehouse/).
 
 ## Pain Points
 

@@ -3,7 +3,10 @@ date: '2021-01-18T12:12:03.284Z'
 description: Microsoft Exeperimental Language
 tags: []
 title: Creating a Bosque Programming Language Dev Environment in 2021
+canonical: https://tuts.alexmercedcoder.dev/2021/1/bosqueenvironment/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/bosqueenvironment/).
 
 ## What is Bosque?
 

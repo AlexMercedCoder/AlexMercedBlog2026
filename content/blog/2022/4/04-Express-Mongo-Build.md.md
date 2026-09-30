@@ -8,7 +8,10 @@ tags:
 - javascript
 - node
 title: Express/EJS/Mongooose Build from Zero to Deploy
+canonical: https://tuts.alexmercedcoder.dev/2022/4/04-express-mongo-build.md/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/4/04-express-mongo-build.md/).
 
 [Repo With Code From this tutorial for reference](https://github.com/AlexMercedCoder/epress-ejs-tutorial-code)
 

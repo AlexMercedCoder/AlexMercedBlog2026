@@ -2,7 +2,11 @@
 title: "What Is LTAP in the Lakehouse?"
 date: 2026-06-22T09:00:00Z
 tags: ["ltap", "lakehouse", "transactional-analytical-processing"]
+canonical: https://iceberglakehouse.com/posts/ltap-lakehouse-transactional-analytical-processing-2026/
+description: "Lakehouse transactional analytical processing is useful only when teams define freshness, isolation, and workload boundaries clearly."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/ltap-lakehouse-transactional-analytical-processing-2026/).
 
 # What Is LTAP in the Lakehouse?
 

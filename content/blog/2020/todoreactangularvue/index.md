@@ -3,7 +3,10 @@ date: '2020-11-17T22:12:03.284Z'
 description: Same app... different frontend frameworks
 tags: []
 title: 1 Backend, 5 Frontends - Todo List with Rails, React, Angular, Vue, Svelte, and jQuery
+canonical: https://tuts.alexmercedcoder.dev/2020/todoreactangularvue/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/todoreactangularvue/).
 
 ## Why are we doing this?
 

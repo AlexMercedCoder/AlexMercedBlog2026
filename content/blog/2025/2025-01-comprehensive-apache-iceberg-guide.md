@@ -7,7 +7,10 @@ tags:
 - data lakehouse
 - apache iceberg
 title: 2025 Comprehensive Guide to Apache Iceberg
+canonical: https://datalakehousehub.com/blog/2025-01-2025-comprehensive-apache-iceberg-guide/
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/2025-01-2025-comprehensive-apache-iceberg-guide/).
 
 - [Free Apache Iceberg Crash Course](https://university.dremio.com/?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=2025-iceberg-comp-guide&utm_content=alexmerced&utm_term=external_blog)
 - [Free Copy of “Apache Iceberg: The Definitive Guide”](https://hello.dremio.com/wp-apache-iceberg-the-definitive-guide-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=2025-iceberg-comp-guide&utm_content=alexmerced&utm_term=external_blog)

@@ -2,7 +2,11 @@
 title: "REST Catalog V2 LoadTable and Client Capability"
 date: 2026-06-22T09:00:00Z
 tags: ["rest-catalog-v2", "loadtable", "iceberg-rest-catalog"]
+canonical: https://iceberglakehouse.com/posts/rest-catalog-v2-loadtable-protocol-design/
+description: "REST Catalog V2 LoadTable work matters because clients and catalogs need explicit contracts, not optimistic assumptions."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/rest-catalog-v2-loadtable-protocol-design/).
 
 # REST Catalog V2 LoadTable and Client Capability
 

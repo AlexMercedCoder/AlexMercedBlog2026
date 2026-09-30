@@ -7,7 +7,10 @@ tags:
 - javascript
 - algorithms
 title: Introduction to Sorting Algorithms in JavaScript
+canonical: https://tuts.alexmercedcoder.dev/2024/06-javascript-sorting-algorithms/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2024/06-javascript-sorting-algorithms/).
 
 - [My Video and Written Content](https://main.devnursery.com)
 - [New Developer Docs](https://docs.devnursery.com)

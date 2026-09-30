@@ -3,7 +3,10 @@ date: '2021-03-02T12:12:03.284Z'
 description: Using Pythons Built in venv module
 tags: []
 title: More on Python Virtual Environments
+canonical: https://tuts.alexmercedcoder.dev/2021/3/rivisitingpyenv/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/3/rivisitingpyenv/).
 
 **My Original Article on [Virtual Environments](https://tuts.alexmercedcoder.dev/2021/1/pythonvirtualenv/)**
 

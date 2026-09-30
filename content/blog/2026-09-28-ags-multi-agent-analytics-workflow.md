@@ -3,9 +3,10 @@ title: "Turning an Analytics Question Into a Verified Agentic Graph"
 date: 2026-09-28T09:00:00Z
 tags: ["AI Agents", "Agentic Graph Specification", "Multi-Agent", "Semantic Layer", "Verification"]
 canonical: https://iceberglakehouse.com/posts/ags-multi-agent-analytics-workflow/
+description: "A complete AGS 1.0 graph for governed metric questions, with verification gates, deterministic check scripts, and reconciliation against a semantic layer."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/ags-multi-agent-analytics-workflow/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/ags-multi-agent-analytics-workflow/).
 
 A multi-agent analytics workflow built with the Agentic Graph Specification (AGS) is a YAML file that splits one business question into bounded steps. Each step declares its inputs, outputs, model tier, budget, and machine-checkable success criteria. Verification gates sit between steps, so a wrong number fails a check before any person reads it.
 

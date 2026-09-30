@@ -2,9 +2,10 @@
 title: "Agent-Driven Storage Tiering for Apache Iceberg: Moving Cold Data Without Breaking Queries"
 date: 2026-08-25T09:00:00Z
 tags: ["Apache Iceberg", "storage tiering", "cost optimization", "query engines"]
-canonical: "https://iceberglakehouse.com/posts/agent-driven-iceberg-storage-tiering/"
+canonical: https://iceberglakehouse.com/posts/agent-driven-iceberg-storage-tiering/
+description: "A background agent can move cold Iceberg partitions to cheaper tiers without breaking live queries. Heatmaps, path-safe moves, and restore paths."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/agent-driven-iceberg-storage-tiering/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/agent-driven-iceberg-storage-tiering/).
 
 A five-year-old event table holds 900 terabytes across 3,000 daily partitions. Query logs for the last quarter show that 94 percent of scans touch the most recent 90 days. Another 5 percent touch the prior year, mostly month-end reports. The remaining 1 percent reach into the four years before that, a few hundred queries a quarter, most of them audits and one-off investigations. Every byte of those 900 terabytes sits in standard object storage at the same price per gigabyte, and the storage line item for that one table is larger than the compute bill for querying it.
 

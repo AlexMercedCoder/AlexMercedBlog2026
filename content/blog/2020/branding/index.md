@@ -3,7 +3,10 @@ date: '2020-09-16T22:12:03.284Z'
 description: Creating the Demand For You
 tags: []
 title: Building Your Coder/Developer Brand
+canonical: https://tuts.alexmercedcoder.dev/2020/branding/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/branding/).
 
 ## Why do you need a brand?
 

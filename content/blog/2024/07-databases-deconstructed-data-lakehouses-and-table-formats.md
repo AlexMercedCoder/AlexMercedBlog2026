@@ -7,7 +7,10 @@ tags:
 - data lakehouse
 - data engineering
 title: Databases Deconstructed - The Value of Data Lakehouses and Table Formats
+canonical: https://iceberglakehouse.com/posts/2024-7-databases-decontstructed-value-of-data-lakehouses-and-table-formats/
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2024-7-databases-decontstructed-value-of-data-lakehouses-and-table-formats/).
 
 - [Checkout out my Apache Iceberg Crash Course](https://bit.ly/am-2024-iceberg-live-crash-course-1)
 - [Get a free copy of Apache Iceberg the Definitive Guide](https://bit.ly/am-iceberg-book)

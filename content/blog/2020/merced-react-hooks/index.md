@@ -3,7 +3,10 @@ date: '2020-10-29T22:12:03.284Z'
 description: Utility Hooks Library for React
 tags: []
 title: merced-react-hooks => Application State, LocalStorage, Lifecycle
+canonical: https://tuts.alexmercedcoder.dev/2020/merced-react-hooks/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/merced-react-hooks/).
 
 **merced-react-hooks VIDEO PLAYLIST:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbYurl9-_fSMY4X6DZ1sx39s
 

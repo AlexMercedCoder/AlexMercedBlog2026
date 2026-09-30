@@ -3,7 +3,10 @@ date: '2020-09-12T22:12:03.284Z'
 description: A Comprehensive Guide to Javascript Events
 tags: []
 title: Javascript Events - In the Browser and Node
+canonical: https://tuts.alexmercedcoder.dev/2020/jsevents/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/jsevents/).
 
 ## What are Events
 

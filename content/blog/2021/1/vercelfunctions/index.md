@@ -3,7 +3,10 @@ date: '2021-01-23T12:12:03.284Z'
 description: Your First Cloud Function
 tags: []
 title: How to use Vercel Cloud Functions
+canonical: https://tuts.alexmercedcoder.dev/2021/1/vercelfunctions/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/vercelfunctions/).
 
 ## Context
 

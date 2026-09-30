@@ -3,7 +3,10 @@ date: '2021-03-22T12:12:03.284Z'
 description: Express... on Rails...
 tags: []
 title: merced-express - Express with a Ruby on Rails Feel
+canonical: https://tuts.alexmercedcoder.dev/2021/3/mercedexpress/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/3/mercedexpress/).
 
 If you've ever used Ruby on Rails it provides many awesome benefits with its command-line interface:
 

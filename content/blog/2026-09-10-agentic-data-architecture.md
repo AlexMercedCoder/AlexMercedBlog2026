@@ -3,9 +3,10 @@ title: "Agentic Data Architecture"
 date: 2026-09-10T09:00:00Z
 tags: ["Agentic AI", "data architecture", "semantic layer", "Model Context Protocol", "data governance"]
 canonical: https://iceberglakehouse.com/posts/agentic-data-architecture/
+description: "A six-layer reference architecture for agents on company data: planners, tool boundaries, identity, the semantic layer, and what breaks when a layer is missing."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/agentic-data-architecture/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/agentic-data-architecture/).
 
 Most agent projects on company data are built the same way. Someone connects a model to a warehouse, gives it a SQL tool, wraps it in a chat interface, and ships it. It works in the demo. Then a user asks something that takes four steps, the agent runs a query that scans eight terabytes, another user asks a question about data they are not allowed to see and gets an answer, and the whole thing gets quietly retired.
 

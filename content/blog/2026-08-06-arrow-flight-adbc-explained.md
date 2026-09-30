@@ -3,9 +3,10 @@ title: "Apache Arrow Flight and ADBC, and Why Database Connectivity Finally Went
 date: 2026-08-06T09:00:00Z
 tags: ["Apache Arrow", "ADBC", "Arrow Flight", "Dremio", "columnar", "database connectivity"]
 canonical: https://iceberglakehouse.com/posts/arrow-flight-adbc-explained/
+description: "Arrow Flight and ADBC move database results as columnar data, ending the row-oriented bottleneck between engines and applications. Here's how."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/arrow-flight-adbc-explained/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/arrow-flight-adbc-explained/).
 
 A data scientist runs a query against a warehouse. The engine finishes the scan in three seconds. Then the notebook sits there for four minutes while the result set trickles into a DataFrame. The query was fast. The download was not.
 

@@ -3,8 +3,9 @@ title: "The Buyer's Scorecard for Agentic Analytics: Evaluating Tooling in the E
 date: 2026-07-06T09:00:00Z
 tags: ["agentic analytics", "enterprise ai", "evaluation"]
 canonical: https://iceberglakehouse.com/posts/buyers-scorecard-agentic-analytics-enterprise-ai-era/
+description: "Agentic analytics demos are easy to enjoy and hard to evaluate. A user asks a question, an assistant answers, a chart appears, and the room leans f..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/buyers-scorecard-agentic-analytics-enterprise-ai-era/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/buyers-scorecard-agentic-analytics-enterprise-ai-era/).
 
 # The Buyer's Scorecard for Agentic Analytics: Evaluating Tooling in the Enterprise AI Era
 

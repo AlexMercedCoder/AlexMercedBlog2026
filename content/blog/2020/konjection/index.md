@@ -3,7 +3,10 @@ date: '2020-11-16T22:12:03.284Z'
 description: Connect and Setup Your Models with Ease
 tags: []
 title: Konjection - ORM Helper using Knex and Objection
+canonical: https://tuts.alexmercedcoder.dev/2020/konjection/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/konjection/).
 
 **Konjection Tutorial Video:** https://youtu.be/zfp7D_MB9c0
 

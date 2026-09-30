@@ -2,9 +2,10 @@
 title: "Securing the Agentic Lakehouse Gateway: A Threat Model for Prompt Injection, Exfiltration, and the Firewall That Reads Sentences"
 date: 2026-08-19T09:00:00Z
 tags: ["security", "prompt injection", "MCP", "threat modeling"]
-canonical: "https://iceberglakehouse.com/posts/securing-agentic-lakehouse-gateway/"
+canonical: https://iceberglakehouse.com/posts/securing-agentic-lakehouse-gateway/
+description: "A threat model for the agentic lakehouse gateway covering prompt injection, exfiltration, and the firewall that reads sentences."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/securing-agentic-lakehouse-gateway/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/securing-agentic-lakehouse-gateway/).
 
 My article on building stateless tool gateways ended with a promise deferred: the gateway is where agent traffic converges, which makes it where governance, metering, and security all attach, and the security story is large enough to deserve its own treatment. This is that treatment, and it is deliberately the adversary's article rather than the builder's. Where the build piece asked how do I stand up a gateway that scales, this one asks how does an attacker turn my agent estate against me, and what stops them, because the two questions have different shapes: the first is answered by architecture, the second by threat modeling, and an estate that got the first right can still lose badly to the second.
 

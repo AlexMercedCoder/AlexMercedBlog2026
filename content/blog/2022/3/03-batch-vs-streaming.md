@@ -3,7 +3,10 @@ date: '2021-03-18'
 description: The fundamentals of data engineering
 tags: []
 title: What is Batch and Streaming Data? (Data 101)
+canonical: https://tuts.alexmercedcoder.dev/2022/3/03-batch-vs-streaming/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/3/03-batch-vs-streaming/).
 
 ## Where data comes from
 

@@ -3,7 +3,10 @@ date: '2020-10-19T22:12:03.284Z'
 description: Javascript in Review
 tags: []
 title: Axios, Fetch and other useful images!
+canonical: https://tuts.alexmercedcoder.dev/2020/axiosfetch/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/axiosfetch/).
 
 ## Fetch
 

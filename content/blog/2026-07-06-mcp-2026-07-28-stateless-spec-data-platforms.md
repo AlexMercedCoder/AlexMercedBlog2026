@@ -3,8 +3,9 @@ title: "The 2026-07-28 Model Context Protocol Release Candidate: What the Statel
 date: 2026-07-06T09:00:00Z
 tags: ["model context protocol", "mcp", "data platforms"]
 canonical: https://iceberglakehouse.com/posts/mcp-2026-07-28-stateless-spec-data-platforms/
+description: "The date in this topic matters. Today is July 6, 2026. A release candidate dated July 28, 2026 is still in the future. That means this article shou..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/mcp-2026-07-28-stateless-spec-data-platforms/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/mcp-2026-07-28-stateless-spec-data-platforms/).
 
 # The 2026-07-28 Model Context Protocol Release Candidate: What the Stateless Spec Means for Data Platforms
 

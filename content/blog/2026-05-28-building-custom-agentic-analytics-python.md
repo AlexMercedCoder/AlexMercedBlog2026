@@ -2,7 +2,12 @@
 title: "Building a Custom Agentic Analytics System: Python, LangChain, and SQL Data Lakes"
 date: 2026-05-28T12:00:00Z
 tags: ["Building Custom Agentic Analytics Python"]
+canonical: https://datalakehousehub.com/blog/building-custom-agentic-analytics-python/
+description: "Build a custom agentic analytics system using Python, LangChain, and Dremio. A developer tutorial covering SQL tool binding, prompt design, and secure."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/building-custom-agentic-analytics-python/).
+
 # Building a Custom Agentic Analytics System: Python, LangChain, and SQL Data Lakes
 
 Building your own agentic analytics system is a reasonable choice if you need custom investigation logic, specific tool integrations, or control over how the agent reasons about your schema. The open-source tooling is mature enough in 2026 that you can have a working prototype in an afternoon, and a production-grade system in a few weeks.

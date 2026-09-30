@@ -3,7 +3,10 @@ date: '2020-08-17T22:12:03.284Z'
 description: Firs Blog Post and Vue Tutorial
 tags: []
 title: Hello World in Vue
+canonical: https://tuts.alexmercedcoder.dev/2020/vue-tut/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/vue-tut/).
 
 **VUE VIDEO PLAYLIST:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbbsEAIDfFAlhAVbSCIt2Bxx
 

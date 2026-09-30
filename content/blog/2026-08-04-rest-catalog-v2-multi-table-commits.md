@@ -2,10 +2,11 @@
 title: "How the Iceberg REST Catalog Turned Into the Lakehouse Control Plane"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Iceberg", "REST Catalog", "Apache Polaris", "Catalog", "Data Lakehouse"]
-canonical: "https://iceberglakehouse.com/posts/rest-catalog-v2-multi-table-commits/"
+canonical: https://iceberglakehouse.com/posts/rest-catalog-v2-multi-table-commits/
+description: "How the Iceberg REST catalog became the lakehouse control plane: multi-table atomic commits, credential vending, capability negotiation, and what still breaks."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/rest-catalog-v2-multi-table-commits/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/rest-catalog-v2-multi-table-commits/).
 
 # How the Iceberg REST Catalog Turned Into the Lakehouse Control Plane
 

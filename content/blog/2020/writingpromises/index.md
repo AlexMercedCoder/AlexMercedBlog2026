@@ -3,7 +3,10 @@ date: '2020-09-25T22:12:03.284Z'
 description: Under the Hood of Asynchronous Javascript
 tags: []
 title: Writing Javascript Promises
+canonical: https://tuts.alexmercedcoder.dev/2020/writingpromises/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/writingpromises/).
 
 To read my previous article explaining promises, go here:
 https://tuts.alexmercedcoder.dev/2020/promises/

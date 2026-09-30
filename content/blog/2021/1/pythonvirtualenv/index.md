@@ -3,7 +3,10 @@ date: '2021-01-27T12:12:03.284Z'
 description: Understanding that Pesky Virtual Environment Thing
 tags: []
 title: Python Virtual Environment 101
+canonical: https://tuts.alexmercedcoder.dev/2021/1/pythonvirtualenv/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/pythonvirtualenv/).
 
 ## Why do we care?
 

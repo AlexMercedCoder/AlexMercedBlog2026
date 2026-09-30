@@ -3,7 +3,10 @@ date: '2020-09-05T22:12:03.284Z'
 description: The Basics We Should all know
 tags: []
 title: Ultimate Basic Coder Reference (Bash, Git, VSCode, Nodejs, more)
+canonical: https://tuts.alexmercedcoder.dev/2020/basicref/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/basicref/).
 
 ## About
 

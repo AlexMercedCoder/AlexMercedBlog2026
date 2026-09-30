@@ -3,7 +3,10 @@ date: '2020-12-23T22:12:03.284Z'
 description: Enterprise level frontend framework
 tags: []
 title: Svelte after Sapper - The Svelte Ecosystem
+canonical: https://tuts.alexmercedcoder.dev/2020/postsapper/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/postsapper/).
 
 ## What is the story?
 

@@ -3,8 +3,9 @@ title: "The State of Streaming to Apache Iceberg in July 2026: Every Path, Its L
 date: 2026-07-06T12:00:00Z
 canonical: https://iceberglakehouse.com/posts/streaming-to-iceberg-july-2026/
 tags: ["Apache Iceberg", "streaming", "data engineering", "lakehouse architecture", "Kafka", "CDC"]
+description: "Every path for streaming data into Iceberg in 2026, Flink, Spark, Kafka Connect, broker-native, managed pipelines, with honest latency numbers."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/streaming-to-iceberg-july-2026/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/streaming-to-iceberg-july-2026/).
 
 # The State of Streaming to Apache Iceberg in July 2026: Every Path, Its Latency, and What to Do When Seconds Are Not Fast Enough
 

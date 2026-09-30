@@ -3,8 +3,9 @@ title: "Conversational AI on Managed Iceberg: Exposing Amazon S3 Tables through 
 date: 2026-07-06T09:00:00Z
 tags: ["conversational ai", "amazon s3 tables", "mcp"]
 canonical: https://iceberglakehouse.com/posts/conversational-ai-managed-iceberg-s3-tables-mcp-server/
+description: "The most interesting part of conversational analytics is not the chat box. The chat box is just the surface area. The harder question is what happe..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/conversational-ai-managed-iceberg-s3-tables-mcp-server/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/conversational-ai-managed-iceberg-s3-tables-mcp-server/).
 
 # Conversational AI on Managed Iceberg: Exposing Amazon S3 Tables through MCP
 

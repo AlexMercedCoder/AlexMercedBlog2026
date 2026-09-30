@@ -2,7 +2,12 @@
 title: "Modern Python Tooling for Apache Iceberg"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse"]
+canonical: https://datalakehousehub.com/blog/python-tooling-apache-iceberg-pyiceberg-iceframe-iceberg-cli/
+description: "PyIceberg, IceFrame, and the Iceberg CLI form a complete Python toolchain for Iceberg table management."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/python-tooling-apache-iceberg-pyiceberg-iceframe-iceberg-cli/).
+
 Python has become a practical Iceberg control plane for metadata work, catalog automation, and smaller operational workflows. That is the useful lens for Python Apache Iceberg tooling in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![Python Apache Iceberg tooling architecture diagram](/assets/blog/june8batch/python-tooling-apache-iceberg-pyiceberg-iceframe-iceberg-cli-diagram-1.png)

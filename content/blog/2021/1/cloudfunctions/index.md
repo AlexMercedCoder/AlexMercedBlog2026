@@ -3,7 +3,10 @@ date: '2021-01-22T12:12:03.284Z'
 description: Why you should embrace serverless tech
 tags: []
 title: Cloud Functions - Server-Side Code On Demand
+canonical: https://tuts.alexmercedcoder.dev/2021/1/cloudfunctions/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/cloudfunctions/).
 
 ## How things have been done
 

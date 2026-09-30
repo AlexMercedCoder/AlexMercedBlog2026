@@ -3,7 +3,10 @@ date: '2021-01-24T12:12:03.284Z'
 description: What a Fancy Word
 tags: []
 title: Understanding Dependency Injection
+canonical: https://tuts.alexmercedcoder.dev/2021/1/depinject/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/depinject/).
 
 - [Watch My Video Explanation](https://youtu.be/qGVJVqHNTNo)
 

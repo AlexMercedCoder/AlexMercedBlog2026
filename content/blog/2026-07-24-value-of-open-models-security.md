@@ -2,7 +2,11 @@
 title: "The Own Goal: What the Hugging Face Breach Reveals About Why Open Models Are a Security Necessity"
 date: 2026-07-24T00:00:00Z
 tags: ["AI Security", "Open Source", "Open Models", "Hugging Face", "Cybersecurity", "OpenAI"]
+canonical: https://iceberglakehouse.com/posts/value-of-open-models-security/
+description: "How the 2026 Hugging Face breach proved that open models are a security necessity, closed models failed to defend, an open Chinese model succeeded."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/value-of-open-models-security/).
 
 *By Alex Merced*
 

@@ -2,7 +2,12 @@
 title: "Mastering Apache Iceberg v3: What's New and How to Plan Your Upgrade"
 date: 2026-05-28T12:00:00Z
 tags: ["Apache Iceberg V3 Upgrade"]
+canonical: https://iceberglakehouse.com/posts/apache-iceberg-v3-upgrade/
+description: "Apache Iceberg v3 adds deletion vectors, VARIANT type, row lineage, and table encryption. Here's what changed and how to plan your upgrade."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/apache-iceberg-v3-upgrade/).
+
 # Apache Iceberg v3: What Changed and How to Upgrade Safely
 
 Apache Iceberg v3 became production-ready with the release of Apache Iceberg 1.11.0 on May 19, 2026. The specification had been in development for over a year, and 1.11.0 is the version that locks it in as stable for production workloads. If you run Iceberg tables, you need to understand what changed, what it costs to upgrade, and when to wait.

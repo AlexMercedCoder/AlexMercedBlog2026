@@ -2,7 +2,11 @@
 title: "Buffer Pools, Caches, and the Memory Hierarchy"
 date: 2026-04-29T13:06:00Z
 tags: ["query-engine", "database"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-query-engine-07/
+description: "Databases use buffer pools, column caches, and result caches to keep hot data in RAM. Here is how each caching strategy works and what happens when data."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-query-engine-07/).
 
 <!-- Meta Description: Databases use buffer pools, column caches, and result caches to keep hot data in RAM. Here is how each caching strategy works and what happens when data does not fit. -->
 <!-- Primary Keyword: database caching -->

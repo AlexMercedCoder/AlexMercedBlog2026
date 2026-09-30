@@ -3,7 +3,10 @@ date: '2020-10-14T22:12:03.284Z'
 description: Router, GlobalState, Sass and more!
 tags: []
 title: npx create-react-loaded supercharged react
+canonical: https://tuts.alexmercedcoder.dev/2020/createreactloaded/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/createreactloaded/).
 
 ## React Templates
 

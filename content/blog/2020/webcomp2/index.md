@@ -3,7 +3,10 @@ date: '2020-08-27T22:12:03.284Z'
 description: Making Pretty and Flexible Components
 tags: []
 title: Web Components Part 2 - Styling and Slots
+canonical: https://tuts.alexmercedcoder.dev/2020/webcomp2/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/webcomp2/).
 
 ## What is a Web Component
 

@@ -2,7 +2,11 @@
 title: "Server-Side Commit Deconflicting in REST Catalogs"
 date: 2026-06-22T09:00:00Z
 tags: ["server-side-commit", "deconflicting", "rest-catalogs"]
+canonical: https://iceberglakehouse.com/posts/server-side-commit-deconflicting-rest-catalogs/
+description: "Server-side commit deconflicting is about moving concurrency control closer to the catalog contract."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/server-side-commit-deconflicting-rest-catalogs/).
 
 # Server-Side Commit Deconflicting in REST Catalogs
 

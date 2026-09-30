@@ -2,10 +2,11 @@
 title: "The Five Layers of an Agentic Lakehouse and Where the MCP Server Sits"
 date: 2026-08-04T09:00:00Z
 tags: ["AI Agents", "MCP", "Agentic Lakehouse", "Apache Polaris", "Apache Iceberg"]
-canonical: "https://iceberglakehouse.com/posts/agentic-lakehouse-mcp-architecture/"
+canonical: https://iceberglakehouse.com/posts/agentic-lakehouse-mcp-architecture/
+description: "The five layers of an agentic lakehouse and where the MCP server sits: storage, catalog, semantic layer, MCP gateway, and agent surface, plus identity."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/agentic-lakehouse-mcp-architecture/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/agentic-lakehouse-mcp-architecture/).
 
 # The Five Layers of an Agentic Lakehouse and Where the MCP Server Sits
 

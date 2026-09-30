@@ -2,9 +2,10 @@
 title: "Multi-Cloud REST Catalog Topologies: Running Apache Polaris Across AWS, Azure, and GCP"
 date: 2026-08-25T09:00:00Z
 tags: ["Apache Polaris", "REST catalog", "multi-cloud", "Apache Iceberg"]
-canonical: "https://iceberglakehouse.com/posts/multi-cloud-polaris-rest-catalog-topologies/"
+canonical: https://iceberglakehouse.com/posts/multi-cloud-polaris-rest-catalog-topologies/
+description: "Polaris can catalog Iceberg tables across AWS, Azure, and GCP. Four topologies, credential vending, and the tradeoffs of each design."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/multi-cloud-polaris-rest-catalog-topologies/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/multi-cloud-polaris-rest-catalog-topologies/).
 
 A global company has analytics data in three places. Its retail arm runs on AWS in Virginia and Frankfurt. An acquisition brought a Google Cloud estate in Belgium. A regulatory requirement put a set of tables on Azure in a sovereign region. Every one of those is an Apache Iceberg lakehouse on the local object store, and every one has its own catalog, its own permissions model, and its own engine fleet. An analyst in the retail team who wants to join her sales table against the acquired company's customer table has to file a ticket, wait for a copy job, and then query a stale replica that nobody is responsible for keeping fresh.
 

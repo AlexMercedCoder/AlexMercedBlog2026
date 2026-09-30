@@ -2,7 +2,11 @@
 title: "Fine-Grained Security for AI Agents"
 date: 2026-06-22T09:00:00Z
 tags: ["fine-grained-security", "ai-agents", "lakehouse-security"]
+canonical: https://datalakehousehub.com/blog/fine-grained-security-ai-agents/
+description: "Machine-speed analytics requires machine-enforced policy, identity, masking, filtering, and audit controls."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/fine-grained-security-ai-agents/).
 
 # Fine-Grained Security for AI Agents
 

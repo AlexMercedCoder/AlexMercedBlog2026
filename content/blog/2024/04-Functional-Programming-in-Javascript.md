@@ -8,7 +8,10 @@ tags:
 - Functional Programming
 - Computer Science
 title: Deep Dive into Functional Programming in Javascript
+canonical: https://tuts.alexmercedcoder.dev/2024/04-functional-programming-in-javascript/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2024/04-functional-programming-in-javascript/).
 
 [Subscribe to My Coding Youtube Channel](https://www.youtube.com/@alexmercedcoder)
 

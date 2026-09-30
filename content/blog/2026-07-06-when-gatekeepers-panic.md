@@ -3,9 +3,10 @@ title: "When Gatekeepers Panic: The Encyclopédie, Open AI Models, and the Polit
 date: 2026-07-06T09:00:00Z
 tags: ["open source AI", "AI regulation", "open weights", "knowledge accessibility", "AI policy"]
 canonical: https://iceberglakehouse.com/posts/when-gatekeepers-panic/
+description: "The fight over open AI models mirrors the 18th-century suppression of Diderot's Encyclopédie, revealing the same pattern of institutional fear."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/when-gatekeepers-panic/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/when-gatekeepers-panic/).
 
 *By Alex Merced*
 

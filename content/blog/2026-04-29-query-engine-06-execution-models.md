@@ -2,7 +2,11 @@
 title: "Volcano, Vectorized, Compiled: How Engines Execute Your Query"
 date: 2026-04-29T13:05:00Z
 tags: ["query-engine", "database"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-query-engine-06/
+description: "The Volcano model processes one row at a time. Vectorized execution processes batches with SIMD. Code generation fuses operators into compiled code."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-query-engine-06/).
 
 <!-- Meta Description: The Volcano model processes one row at a time. Vectorized execution processes batches with SIMD. Code generation fuses operators into compiled code. Here is how each works. -->
 <!-- Primary Keyword: query execution models -->

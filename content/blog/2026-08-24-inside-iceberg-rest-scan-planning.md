@@ -2,9 +2,10 @@
 title: "The Catalog Can Now Plan Your Iceberg Query: Inside REST Scan Planning"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "REST catalog", "scan planning", "query engines"]
-canonical: "https://iceberglakehouse.com/posts/inside-iceberg-rest-scan-planning/"
+canonical: https://iceberglakehouse.com/posts/inside-iceberg-rest-scan-planning/
+description: "A mechanics walkthrough of Iceberg REST scan planning: client-side planning, remote endpoints, pagination, and where engine support stands in 2026."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/inside-iceberg-rest-scan-planning/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/inside-iceberg-rest-scan-planning/).
 
 For as long as Apache Iceberg has existed, one division of labor held constant: catalogs answered "where is the table," and engines figured out everything else. Every query engine that read Iceberg carried its own complete planning machinery, downloading metadata from object storage, pruning it, and deciding which data files to read, while the catalog watched from the sidelines holding a pointer. The Iceberg 1.11 release, the culmination of endpoints added to the REST catalog specification back in 2024 and two years of implementation work, retires that constant. A REST catalog can now plan the scan itself: the engine sends a filter, the catalog walks the metadata, and file scan tasks come back over HTTP.
 

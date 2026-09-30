@@ -2,10 +2,11 @@
 title: "Metric Contracts as the Interface AI Agents Actually Need"
 date: 2026-08-04T09:00:00Z
 tags: ["AI Agents", "Metric Contracts", "Semantic Layer", "Apache Ossie", "Data Governance"]
-canonical: "https://iceberglakehouse.com/posts/metric-contracts-for-ai-agents/"
+canonical: https://iceberglakehouse.com/posts/metric-contracts-for-ai-agents/
+description: "Metric contracts as the interface AI agents need: calculation, inclusion rules, grain, temporal semantics, ownership, semantic versioning, and testing."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/metric-contracts-for-ai-agents/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/metric-contracts-for-ai-agents/).
 
 # Metric Contracts as the Interface AI Agents Actually Need
 

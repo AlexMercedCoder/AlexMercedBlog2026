@@ -8,7 +8,10 @@ tags:
 - collections
 - programming
 title: Working with Collections in Rust | A Comprehensive Guide
+canonical: https://tuts.alexmercedcoder.dev/2024/2024-10-rust-collections/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2024/2024-10-rust-collections/).
 
 - [Subscribe to my Dev Youtube](https://www.youtube.com/@alexmercedcoder)
 - [Subscribe to my Data Youtube](https://www.youtube.com/@alexmerceddata)

@@ -3,9 +3,10 @@ title: "Dremio Lakehouse AI Report: Agentic Lessons"
 date: 2026-07-13T09:00:00Z
 category: "Data Lakehouse"
 tags: ["Dremio", "Lakehouse", "AI Report"]
-canonical: "https://iceberglakehouse.com/posts/dremio-state-data-lakehouse-ai-report-agentic-lakehouse/"
+canonical: https://iceberglakehouse.com/posts/dremio-state-data-lakehouse-ai-report-agentic-lakehouse/
+description: "An in-depth exploration of dremio lakehouse ai report: agentic lessons"
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/dremio-state-data-lakehouse-ai-report-agentic-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/dremio-state-data-lakehouse-ai-report-agentic-lakehouse/).
 
 Most lakehouse roadmaps written in the last few years had the same top items: migrate off the expensive warehouse, cut storage costs, consolidate on open table formats. Those are still reasonable goals. They are also no longer the whole story, because the thing pulling on data platforms hardest right now is not cost. It is agents. The direction that data leaders are signaling, and that Dremio's [state of the data lakehouse and AI findings](https://www.dremio.com/resources/) point at, is a shift from the lakehouse as a place to store and query data toward the lakehouse as an operating foundation for AI.
 

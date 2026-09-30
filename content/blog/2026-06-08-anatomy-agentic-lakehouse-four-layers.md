@@ -2,7 +2,12 @@
 title: "Anatomy of an Agentic Lakehouse"
 date: 2026-06-08T09:00:00Z
 tags: ["lakehouse", "AI agents"]
+canonical: https://datalakehousehub.com/blog/anatomy-agentic-lakehouse-four-layers/
+description: "The four-layer architecture of the agentic lakehouse: object storage, Apache Iceberg table format, Apache Polaris catalog, and the semantic/agent layer."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/anatomy-agentic-lakehouse-four-layers/).
+
 An Agentic Lakehouse is storage, catalog governance, semantic context, and agents working as one operating model. That is the useful lens for agentic lakehouse in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![agentic lakehouse architecture diagram](/assets/blog/june8batch/anatomy-agentic-lakehouse-four-layers-diagram-1.png)

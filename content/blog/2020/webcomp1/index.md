@@ -3,7 +3,10 @@ date: '2020-08-26T22:12:03.284Z'
 description: Creating, ShadowDOM
 tags: []
 title: Web Components Part 1 - The Basics
+canonical: https://tuts.alexmercedcoder.dev/2020/webcomp1/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/webcomp1/).
 
 ## What is a Web Component
 

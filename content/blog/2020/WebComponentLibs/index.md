@@ -3,7 +3,10 @@ date: '2020-12-18T22:12:03.284Z'
 description: Libraries of Pre-Built Web Components
 tags: []
 title: Web Component Libraries
+canonical: https://tuts.alexmercedcoder.dev/2020/webcomponentlibs/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/webcomponentlibs/).
 
 ## What are Web Components
 

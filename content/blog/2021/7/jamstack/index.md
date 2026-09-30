@@ -3,7 +3,10 @@ date: '2021-07-11T12:12:03.284Z'
 description: Speed, SEO and Security with JAMStack
 tags: []
 title: The Concepts of JAMStack 101
+canonical: https://tuts.alexmercedcoder.dev/2021/7/jamstack/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/7/jamstack/).
 
 JAMStack is a set of technologies to create fast, SEO friendly, and secure websites. To really appreciate what these set of technologies provide us (Static Site Generators and Headless CMS's) let's discuss the evolution of web development.
 

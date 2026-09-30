@@ -3,7 +3,10 @@ date: '2020-12-21T22:12:03.284Z'
 description: An Introductory Angular Tutorial
 tags: []
 title: Creating a Portfolio/Blog with Angular/Agility CMS
+canonical: https://tuts.alexmercedcoder.dev/2020/angularblog/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/angularblog/).
 
 ## Pre-Requisites
 

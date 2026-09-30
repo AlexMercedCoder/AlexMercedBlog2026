@@ -3,7 +3,10 @@ date: '2021-02-10T12:12:03.284Z'
 description: Learn All The Things
 tags: []
 title: Go, Rust and C++ Side by Side
+canonical: https://tuts.alexmercedcoder.dev/2021/2/gorustcpp/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/gorustcpp/).
 
 ## Why?
 

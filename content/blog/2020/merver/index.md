@@ -3,7 +3,10 @@ date: '2020-10-17T22:12:03.284Z'
 description: NodeJS Micro-Web Framework
 tags: []
 title: Create Your Next Microservice with Merver!
+canonical: https://tuts.alexmercedcoder.dev/2020/merver/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/merver/).
 
 ## What is Merver?
 

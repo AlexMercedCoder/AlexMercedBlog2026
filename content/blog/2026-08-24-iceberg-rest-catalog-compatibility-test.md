@@ -2,9 +2,10 @@
 title: "The Iceberg REST Catalog Compatibility Test: One Suite of Operations Every Platform Should Pass"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "REST catalog", "compatibility", "testing"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-rest-catalog-compatibility-test/"
+canonical: https://iceberglakehouse.com/posts/iceberg-rest-catalog-compatibility-test/
+description: "One suite of REST catalog operations every Iceberg platform should pass. What sameness means, where implementations diverge, and how to test it."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-rest-catalog-compatibility-test/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-rest-catalog-compatibility-test/).
 
 "Supports the Iceberg REST catalog" is the most load-bearing claim in the modern data platform market, and it has no test. Every catalog service, warehouse, and managed platform makes it, buyers weigh entire architectures on it, and the claim's actual content, which operations, from which clients, under which policies, varies so widely that two platforms making the identical sentence true can differ on whether your engine can create a table, evolve a schema, or write a row. This site has documented that variance empirically, more than once, and documentation of variance is not the fix. The fix is a test: a defined suite of operations, run the same way against every platform, scored in a shared four-value vocabulary, published with dates attached, and re-run on a standing calendar.
 

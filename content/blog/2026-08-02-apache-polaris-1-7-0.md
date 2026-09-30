@@ -2,10 +2,11 @@
 title: "Apache Polaris 1.7.0 and the Quiet Work of Making a Catalog Trustworthy"
 date: 2026-08-02T09:00:00Z
 tags: ["Apache Polaris", "Apache Iceberg", "Catalog", "Data Engineering", "Open Source"]
-canonical: "https://iceberglakehouse.com/posts/apache-polaris-1-7-0/"
+canonical: https://iceberglakehouse.com/posts/apache-polaris-1-7-0/
+description: "Apache Polaris 1.7.0 deep dive: idempotent writes, semantic models, stricter credential vending, orphan cleanup, and what the upgrade asks of you."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/apache-polaris-1-7-0/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/apache-polaris-1-7-0/).
 
 # Apache Polaris 1.7.0 and the Quiet Work of Making a Catalog Trustworthy
 

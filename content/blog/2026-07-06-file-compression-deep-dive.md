@@ -3,8 +3,9 @@ title: "A Deep Dive Into File Compression: How Data Gets Smaller, Why Codecs Dif
 date: 2026-07-06T09:00:00Z
 tags: ["file compression", "codecs", "parquet"]
 canonical: https://iceberglakehouse.com/posts/file-compression-deep-dive/
+description: "Somewhere in your data platform right now, a single configuration property is quietly deciding a meaningful percentage of your storage bill, your q..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/file-compression-deep-dive/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/file-compression-deep-dive/).
 
 # A Deep Dive Into File Compression: How Data Gets Smaller, Why Codecs Differ, and What to Actually Use in the Lakehouse
 

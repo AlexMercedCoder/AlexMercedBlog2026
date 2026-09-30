@@ -3,7 +3,10 @@ date: '2021-01-09T12:12:03.284Z'
 description: Getting with the times
 tags: []
 title: Git/Github - Making the Switch from Master to Main
+canonical: https://tuts.alexmercedcoder.dev/2021/1/mastertomain/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/mastertomain/).
 
 ## Why Should I do this?
 

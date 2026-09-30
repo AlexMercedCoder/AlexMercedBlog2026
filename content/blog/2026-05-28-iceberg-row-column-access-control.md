@@ -2,7 +2,12 @@
 title: "Securing Apache Iceberg Tables with Fine-Grained Row and Column Level Access Control"
 date: 2026-05-28T12:00:00Z
 tags: ["Iceberg Row Column Access Control"]
+canonical: https://iceberglakehouse.com/posts/iceberg-row-column-access-control/
+description: "Apache Iceberg doesn't enforce row and column security on its own. Learn how catalog-level governance with Apache Polaris and Dremio delivers enterprise FGAC."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-row-column-access-control/).
+
 # Securing Apache Iceberg Tables with Fine-Grained Row and Column Level Access Control
 
 Apache Iceberg handles table format, schema evolution, and metadata management. What it doesn't handle is access control. The spec defines how data is structured and stored, not who can see which rows or whether a phone number column gets masked for certain users.

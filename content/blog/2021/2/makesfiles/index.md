@@ -3,7 +3,10 @@ date: '2021-02-14T12:12:03.284Z'
 description: Automating all the things
 tags: []
 title: What is a Makefile and how do I use them?
+canonical: https://tuts.alexmercedcoder.dev/2021/2/makesfiles/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/makesfiles/).
 
 ## The beauty of scripting and automation
 

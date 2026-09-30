@@ -3,7 +3,10 @@ date: '2021-02-14T12:12:03.284Z'
 description: The Little Things that May not be obvious
 tags: []
 title: Understanding Postgres on Linux
+canonical: https://tuts.alexmercedcoder.dev/2021/2/linuxpostgres/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/linuxpostgres/).
 
 ## Installing Postgres
 

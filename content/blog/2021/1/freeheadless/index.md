@@ -3,7 +3,10 @@ date: '2021-01-12T12:12:03.284Z'
 description: Get Your JAM Stack ON
 tags: []
 title: Big List of Hosted Headless CMS Providers with Free or Developer Tier in 2021
+canonical: https://tuts.alexmercedcoder.dev/2021/1/freeheadless/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/freeheadless/).
 
 ## What is a Headless CMS
 

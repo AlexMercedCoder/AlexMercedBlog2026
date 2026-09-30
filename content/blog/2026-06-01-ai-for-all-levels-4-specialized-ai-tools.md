@@ -2,7 +2,11 @@
 title: "A Tour of Specialized AI Tools: Music, Video, Images, and More"
 date: 2026-06-01T12:00:00Z
 tags: ["ai", "artificial intelligence", "machine learning", "llm", "productivity"]
+canonical: https://datalakehousehub.com/blog/ai-for-all-levels-4-specialized-ai-tools/
+description: "Beyond chatbots lie specialized AI tools for creating music, generating videos, and editing images."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/ai-for-all-levels-4-specialized-ai-tools/).
 
 The first three parts of this series covered general purpose AI assistants: the chatbots and writing tools that handle text based tasks. But AI in 2026 extends far beyond chat windows. A whole ecosystem of specialized tools creates original music, generates cinematic video, produces professional images, and designs presentations.
 

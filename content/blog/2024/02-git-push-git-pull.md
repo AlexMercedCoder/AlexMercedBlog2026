@@ -6,7 +6,10 @@ description: Having a better understanding of git pull and git push
 tags:
 - git
 title: Mastering Git | A Comprehensive Guide to git pull and git push
+canonical: https://tuts.alexmercedcoder.dev/2024/02-git-push-git-pull/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2024/02-git-push-git-pull/).
 
 [Subscribe to my youtube channel](https://www.youtube.com/@alexmercedcoder)
 

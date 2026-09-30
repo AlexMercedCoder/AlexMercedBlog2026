@@ -2,9 +2,10 @@
 title: "The Five Layers of an Agentic Lakehouse"
 date: 2026-08-19T09:00:00Z
 tags: ["agentic lakehouse", "architecture", "MCP", "semantic layer"]
-canonical: "https://iceberglakehouse.com/posts/five-layers-agentic-lakehouse/"
+canonical: https://iceberglakehouse.com/posts/five-layers-agentic-lakehouse/
+description: "The five layers of an agentic lakehouse: Storage, Catalog, Semantic, Gateway, and Agent Surface, and how one question travels through all of them."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/five-layers-agentic-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/five-layers-agentic-lakehouse/).
 
 Every architecture era gets its reference diagram. The warehouse era had its star schemas and its staging-to-mart flow. The big data era had its lambda architectures. The lakehouse era drew storage, format, catalog, and engines, and settled the argument about where data should live. The agentic era needs its own diagram, because the question changed: not where data lives, but how autonomous systems get to use it, correctly, governedly, and affordably, at machine scale. After two years of building, stalling, and rebuilding, the estates that work have converged on the same shape, and it has five layers: Storage, Catalog, Semantic, Gateway, and Agent Surface.
 

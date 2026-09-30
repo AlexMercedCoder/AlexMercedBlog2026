@@ -3,7 +3,10 @@ date: '2020-10-22T22:12:03.284Z'
 description: All You need to know to be productive in Rails
 tags: []
 title: Ruby on Rails Reference - CLI Commands, Bundler, Macros
+canonical: https://tuts.alexmercedcoder.dev/2020/ruby%20on%20rails/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/ruby%20on%20rails/).
 
 **My Learning Ruby on Rails Video Playlist:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbYlAqVHgzZl5lou54bizdbV
 

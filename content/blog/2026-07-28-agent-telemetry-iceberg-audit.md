@@ -2,10 +2,11 @@
 title: "Building Agent Telemetry Tables in Iceberg That Survive an Audit"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "AI Agents", "Data Governance", "Telemetry"]
-canonical: "https://iceberglakehouse.com/posts/agent-telemetry-iceberg-audit/"
+canonical: https://iceberglakehouse.com/posts/agent-telemetry-iceberg-audit/
+description: "A practical guide to building agent decision traces in Apache Iceberg that support audit reconstruction, governance review, and cost attribution."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/agent-telemetry-iceberg-audit/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/agent-telemetry-iceberg-audit/).
 
 # Building Agent Telemetry Tables in Iceberg That Survive an Audit
 

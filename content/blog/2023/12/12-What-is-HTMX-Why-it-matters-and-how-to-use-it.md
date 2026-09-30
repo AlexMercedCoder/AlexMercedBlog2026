@@ -7,7 +7,10 @@ tags:
 - HTML
 - Javascript
 title: What is HTMX? Why it Matters? and How to use it.
+canonical: https://tuts.alexmercedcoder.dev/2023/12/12-what-is-htmx-why-it-matters-and-how-to-use-it/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/12/12-what-is-htmx-why-it-matters-and-how-to-use-it/).
 
 In the early days of web development, server-side templating was the cornerstone of website creation, offering a straightforward approach to generating dynamic web pages. Technologies like PHP, Ruby on Rails, and ASP.NET enabled developers to create rich, interactive user experiences. However, the web development landscape evolved, and a significant shift occurred towards client-side rendering. Frameworks such as React, Angular, Svelte, Vue, Qwik, and SolidJS gained popularity for their ability to create highly interactive and responsive user interfaces directly in the browser.
 

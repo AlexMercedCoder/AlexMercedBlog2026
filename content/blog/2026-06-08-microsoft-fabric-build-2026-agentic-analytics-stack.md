@@ -2,7 +2,12 @@
 title: "Microsoft Fabric Build 2026 Agentic Analytics Stack"
 date: 2026-06-08T09:00:00Z
 tags: ["AI agents", "Microsoft Fabric"]
+canonical: https://datalakehousehub.com/blog/microsoft-fabric-build-2026-agentic-analytics-stack/
+description: "Microsoft Build 2026 revealed an agentic analytics stack built on Fabric IQ, OneLake Iceberg support, and semantic models."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/microsoft-fabric-build-2026-agentic-analytics-stack/).
+
 Microsoft's Fabric direction shows that agentic analytics is becoming a platform architecture, not a chat feature. That is the useful lens for Microsoft Fabric agentic analytics in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![Microsoft Fabric agentic analytics architecture diagram](/assets/blog/june8batch/microsoft-fabric-build-2026-agentic-analytics-stack-diagram-1.png)

@@ -7,7 +7,10 @@ tags:
 - data lakehouse
 - dremio
 title: Handling Cross-Origin Cookies with ExpressJS
+canonical: https://tuts.alexmercedcoder.dev/2023/8/08-handling-cross-origin-cookies-in-expressjs/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/8/08-handling-cross-origin-cookies-in-expressjs/).
 
 Data is becoming the cornerstone of modern businesses. As businesses scale, so does their data, and this leads to the need for efficient data storage, retrieval, and processing systems. This is where Data Lakehouses come into the picture.
 

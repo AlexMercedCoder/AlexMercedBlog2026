@@ -10,7 +10,10 @@ tags:
 - Delta Lake
 - Apache Hudi
 title: Table Format FUD - Thinking Through the Table Format Conversion (Apache Iceberg, Apache Hudi, Delta Lake)
+canonical: https://datalakehousehub.com/blog/2024/2024-02-table_format_fud_apache_iceberg_delta_lake_apache_hudi/
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/2024/2024-02-table_format_fud_apache_iceberg_delta_lake_apache_hudi/).
 
 ## Context
 

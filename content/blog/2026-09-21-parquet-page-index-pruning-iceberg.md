@@ -3,9 +3,10 @@ title: "Parquet Page Indexes and the Last Mile of Pruning in Apache Iceberg"
 date: 2026-09-21T09:00:00Z
 tags: ["Apache Parquet", "Apache Iceberg", "Pruning", "Performance"]
 canonical: https://iceberglakehouse.com/posts/parquet-page-index-pruning-iceberg/
+description: "Parquet page indexes can cut selective Iceberg scans by an order of magnitude on sorted data. How they work, what they cost, and how to lay out tables."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/parquet-page-index-pruning-iceberg/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/parquet-page-index-pruning-iceberg/).
 
 A query asks for one customer's orders from a 2 TB Apache Iceberg table. Planning goes well. Partition pruning and manifest statistics cut the scan from 16,000 data files to 12. The engine opens those 12 files, checks row group statistics, and keeps one row group in each. Then it reads that entire row group, 128 MB of compressed column data per file, to find perhaps 40 matching rows.
 

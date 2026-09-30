@@ -9,7 +9,10 @@ tags:
 - Agentic AI
 - Apache Iceberg
 title: Unlocking the Power of Agentic AI with Apache Iceberg and Dremio
+canonical: https://iceberglakehouse.com/posts/2025-09-agentic-ai-dremio-apache-iceberg/
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2025-09-agentic-ai-dremio-apache-iceberg/).
 
 ## Free Resources  
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=lakehouse-meetups&utm_content=alexmerced&utm_term=external_blog)**  

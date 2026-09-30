@@ -2,7 +2,12 @@
 title: "How Data Lake Table Storage Degrades Over Time"
 date: 2026-04-29T12:08:00Z
 tags: ["iceberg", "data-lake"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-09/
+description: "Iceberg tables degrade through small files, orphan files, metadata bloat, sort order decay, and partition skew. Here is how to diagnose each problem."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-09/).
+
 <!-- Meta Description: Iceberg tables degrade through small files, orphan files, metadata bloat, sort order decay, and partition skew. Here is how to diagnose each problem. -->
 <!-- Primary Keyword: Iceberg storage degradation -->
 <!-- Secondary Keywords: small file problem, orphan files, Iceberg table maintenance -->

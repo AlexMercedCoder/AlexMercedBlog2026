@@ -3,8 +3,9 @@ title: "Data Quality Tooling Compared: Great Expectations, Soda, dbt Tests, and 
 date: 2026-09-02T09:00:00Z
 tags: ["Great Expectations", "Soda", "dbt", "Data Quality", "Anomaly Detection"]
 canonical: https://iceberglakehouse.com/posts/data-quality-tooling-compared/
+description: "A comparison of Great Expectations, Soda, dbt tests, and anomaly detection, and a layered design that uses each where it fits."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/data-quality-tooling-compared/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/data-quality-tooling-compared/).
 
 A revenue dashboard shows a 40 percent drop for yesterday. Every pipeline reported success. Every dbt test passed. The orders table has a fresh snapshot with a plausible row count. Three hours of investigation later, the cause is a source system that started sending amounts in cents instead of dollars after an upgrade nobody announced. No test checked that. No test was going to, because nobody knew to write it.
 

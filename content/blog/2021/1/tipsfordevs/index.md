@@ -3,7 +3,10 @@ date: '2021-01-20T12:12:03.284Z'
 description: Good Advice
 tags: []
 title: Tips for Aspiring Developers
+canonical: https://tuts.alexmercedcoder.dev/2021/1/tipsfordevs/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/tipsfordevs/).
 
 ### Solid houses are built on strong foundations
 

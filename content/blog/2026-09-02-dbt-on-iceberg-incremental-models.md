@@ -3,8 +3,9 @@ title: "dbt on Iceberg: Incremental Models on Open Tables"
 date: 2026-09-02T09:00:00Z
 tags: ["dbt", "Apache Iceberg", "Incremental Models", "dbt-spark", "dbt-trino"]
 canonical: https://iceberglakehouse.com/posts/dbt-on-iceberg-incremental-models/
+description: "How dbt incremental materializations map to Iceberg operations, and the configuration, predicates, and maintenance that keep them healthy."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/dbt-on-iceberg-incremental-models/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/dbt-on-iceberg-incremental-models/).
 
 A dbt project has a model called `fct_orders` configured as `materialized='incremental'` with `incremental_strategy='merge'` and `unique_key='order_id'`. It runs hourly. On a warehouse it does what the name says: merges the last hour of orders into a managed table. Pointed at an Apache Iceberg table through Spark, Trino, Dremio, or Athena, it still runs and still produces the right rows. What changes is everything underneath. Each run is a snapshot. The merge is a copy-on-write or merge-on-read operation depending on a table property dbt never mentions. The target's history accumulates. Small files pile up. And the `MERGE` scans the whole target table every hour unless someone told it not to.
 

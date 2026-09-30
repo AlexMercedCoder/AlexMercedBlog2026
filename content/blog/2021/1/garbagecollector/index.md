@@ -3,7 +3,10 @@ date: '2021-01-29T12:12:03.284Z'
 description: The Stack, The Heap, and Memory Management
 tags: []
 title: A Tale of Memory and the Garbage Collector
+canonical: https://tuts.alexmercedcoder.dev/2021/1/garbagecollector/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/garbagecollector/).
 
 ## It all starts with memory
 

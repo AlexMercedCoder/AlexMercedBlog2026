@@ -3,7 +3,10 @@ date: '2021-02-07T12:12:03.284Z'
 description: Quickly find what you need
 tags: []
 title: Javascript Basic Reference
+canonical: https://tuts.alexmercedcoder.dev/2021/2/jsreference/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/jsreference/).
 
 ## Declaring Variables
 

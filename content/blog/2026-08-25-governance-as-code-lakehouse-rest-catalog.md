@@ -2,9 +2,10 @@
 title: "Governance-as-Code for the Lakehouse: Managing REST Catalog RBAC and Masking in Git"
 date: 2026-08-25T09:00:00Z
 tags: ["governance", "REST catalog", "RBAC", "Apache Polaris"]
-canonical: "https://iceberglakehouse.com/posts/governance-as-code-lakehouse-rest-catalog/"
+canonical: https://iceberglakehouse.com/posts/governance-as-code-lakehouse-rest-catalog/
+description: "Put REST catalog RBAC and masking in Git. How to review grants, apply them safely, and keep lakehouse access from drifting."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/governance-as-code-lakehouse-rest-catalog/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/governance-as-code-lakehouse-rest-catalog/).
 
 A security audit asks a simple question: who can read the `customers.pii` table, and when was that last changed? The data platform team opens four consoles. The Spark cluster has its own ACLs. The Trino deployment has a Ranger policy set. The BI tool has its own row-level security config. The catalog has grants that were entered by hand over two years. The answers differ. Nobody can say which one is authoritative, and nobody can say who changed what, when, or why, because none of it is in version control.
 

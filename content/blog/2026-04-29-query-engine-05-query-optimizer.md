@@ -2,7 +2,11 @@
 title: "Inside the Query Optimizer: How Engines Pick a Plan"
 date: 2026-04-29T13:04:00Z
 tags: ["query-engine", "database"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-query-engine-05/
+description: "Query optimizers transform SQL into execution plans using rule-based rewrites, cost-based search, and adaptive runtime adjustments."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-query-engine-05/).
 
 <!-- Meta Description: Query optimizers transform SQL into execution plans using rule-based rewrites, cost-based search, and adaptive runtime adjustments. Here is how each approach works. -->
 <!-- Primary Keyword: query optimizer -->

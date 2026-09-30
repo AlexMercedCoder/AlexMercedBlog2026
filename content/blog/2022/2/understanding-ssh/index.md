@@ -3,7 +3,10 @@ date: '2022-02-27T12:12:03.284Z'
 description: Logging Securely and Conveniently with SSH
 tags: []
 title: Understanding SSH and What it is for
+canonical: https://tuts.alexmercedcoder.dev/2022/2/understanding-ssh/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/2/understanding-ssh/).
 
 ## What is SSH
 

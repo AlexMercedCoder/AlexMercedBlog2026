@@ -3,7 +3,10 @@ date: '2021-07-30T12:12:03.284Z'
 description: Learning the Node HTTP/HTTPS library
 tags: []
 title: Basics of Building a CRUD API with Node (no framework)
+canonical: https://tuts.alexmercedcoder.dev/2021/7/full_crud_with_vanilla_node/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/7/full_crud_with_vanilla_node/).
 
 In this tutorial we once again create a full CRUD api without a database. In this article we won't use a pre-existing framework but the standard node libraries that underpin all our favorite frameworks.
 

@@ -2,10 +2,11 @@
 title: "Wiring an AI Agent to Apache Polaris with the Model Context Protocol"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "MCP", "AI Agents", "Apache Polaris"]
-canonical: "https://iceberglakehouse.com/posts/mcp-apache-polaris/"
+canonical: https://iceberglakehouse.com/posts/mcp-apache-polaris/
+description: "The catalog is the right attachment point for AI agents working against a lakehouse. Here's how to wire the official Polaris MCP Server and add the read."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/mcp-apache-polaris/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/mcp-apache-polaris/).
 
 # Wiring an AI Agent to Apache Polaris with the Model Context Protocol
 

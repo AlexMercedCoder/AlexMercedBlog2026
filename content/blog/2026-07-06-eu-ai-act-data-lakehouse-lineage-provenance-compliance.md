@@ -3,8 +3,9 @@ title: "Preparing Your Data Lakehouse for the EU AI Act: Auditable Lineage and D
 date: 2026-07-06T09:00:00Z
 tags: ["eu ai act", "compliance", "data lakehouse"]
 canonical: https://iceberglakehouse.com/posts/eu-ai-act-data-lakehouse-lineage-provenance-compliance/
+description: "The EU AI Act changes the conversation around AI architecture because it makes trust operational. It is not enough to say that an AI system is usef..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/eu-ai-act-data-lakehouse-lineage-provenance-compliance/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/eu-ai-act-data-lakehouse-lineage-provenance-compliance/).
 
 # Preparing Your Data Lakehouse for the EU AI Act: Auditable Lineage and Data Provenance
 

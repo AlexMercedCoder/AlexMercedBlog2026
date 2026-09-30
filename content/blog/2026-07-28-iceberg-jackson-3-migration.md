@@ -2,10 +2,11 @@
 title: "The Jackson 3 Problem in Apache Iceberg, and What It Means for Your Code"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Jackson", "Java", "Library Migration"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-jackson-3-migration/"
+canonical: https://iceberglakehouse.com/posts/iceberg-jackson-3-migration/
+description: "Jackson 3 changes everything: package names, unchecked exceptions, flipped defaults. Here's what breaks, why the engines are fine and your service isn't."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-jackson-3-migration/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-jackson-3-migration/).
 
 # The Jackson 3 Problem in Apache Iceberg, and What It Means for Your Code
 

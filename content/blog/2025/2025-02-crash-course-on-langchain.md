@@ -7,7 +7,10 @@ tags:
 - AI
 - langchain
 title: Crash Course on Developing AI Applications with LangChain
+canonical: https://iceberglakehouse.com/posts/2025-02-crash-course-on-langchain/
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2025-02-crash-course-on-langchain/).
 
 ## Free Resources
 

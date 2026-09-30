@@ -3,7 +3,10 @@ date: '2021-09-06T12:12:03.284Z'
 description: Like a Switch Statement on Steroids
 tags: []
 title: Pattern Matching in Javascript with alexmerced-patternmatcher
+canonical: https://tuts.alexmercedcoder.dev/2021/9/js_pattern_matching/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/9/js_pattern_matching/).
 
 ## Conditionals in Javscript
 

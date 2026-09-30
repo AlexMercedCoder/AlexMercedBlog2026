@@ -2,7 +2,11 @@
 title: "Data Platform Native AI Agent Tooling in 2026"
 date: 2026-05-31T10:00:00Z
 tags: ["AI Agents", "Data Platforms", "MCP", "Agentic Analytics", "Data Engineering"]
+canonical: https://iceberglakehouse.com/posts/data-platform-ai-agent-tooling/
+description: "A comprehensive comparison of AI agent tooling across Dremio, Snowflake, Databricks, Microsoft Fabric, AWS, Google Cloud, ClickHouse, VeloDB, SpiceAI."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/data-platform-ai-agent-tooling/).
 
 # Data Platform Native AI Agent Tooling in 2026
 

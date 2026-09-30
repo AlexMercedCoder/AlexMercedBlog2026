@@ -3,7 +3,10 @@ date: '2021-01-12T12:12:03.284Z'
 description: Getting Your Project Online
 tags: []
 title: Deploying React, Angular, Svelte and Vue to Netlify & Vercel
+canonical: https://tuts.alexmercedcoder.dev/2021/1/deployreact/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/deployreact/).
 
 ## Creating Your Project
 

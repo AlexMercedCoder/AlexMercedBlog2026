@@ -3,7 +3,10 @@ date: '2021-03-01T12:12:03.284Z'
 description: In case you were wondering
 tags: []
 title: Django Rest API without DjangoRestFramework
+canonical: https://tuts.alexmercedcoder.dev/2021/3/puredjangoapi/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/3/puredjangoapi/).
 
 **Find tutorials for django at my website, devNursery.com**
 

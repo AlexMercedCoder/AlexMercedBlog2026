@@ -2,9 +2,10 @@
 title: "Semantic Layer Federation: One Meaning for Data That Lives Everywhere"
 date: 2026-08-19T09:00:00Z
 tags: ["semantic layer", "federation", "multi-cloud", "metrics"]
-canonical: "https://iceberglakehouse.com/posts/semantic-layer-federation-multi-cloud/"
+canonical: https://iceberglakehouse.com/posts/semantic-layer-federation-multi-cloud/
+description: "Build a federated semantic layer across multi-cloud data so one set of governed metric definitions serves BI tools, dashboards, and AI agents identically."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/semantic-layer-federation-multi-cloud/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/semantic-layer-federation-multi-cloud/).
 
 Ask three systems in the same company what monthly recurring revenue was in July and you can get three answers, each computed correctly by its own definition, each defended by its own team, each feeding decisions. One came from a dashboard whose SQL a departed analyst tuned, one from a warehouse view written before the pricing model changed, one from a spreadsheet that finance trusts precisely because they can see the formula. The data was fine. The meaning was fragmented, and meaning fragments faster than data does, because every tool that touches data invites someone to redefine it there.
 

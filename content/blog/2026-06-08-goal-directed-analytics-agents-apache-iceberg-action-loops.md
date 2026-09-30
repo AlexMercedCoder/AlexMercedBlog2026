@@ -2,7 +2,12 @@
 title: "Goal-Directed Analytics Agents on Apache Iceberg"
 date: 2026-06-08T09:00:00Z
 tags: ["Apache Iceberg", "open table format", "lakehouse", "AI agents"]
+canonical: https://datalakehousehub.com/blog/goal-directed-analytics-agents-apache-iceberg-action-loops/
+description: "How goal-directed analytics agents decompose business questions into sub-tasks, execute action loops over Apache Iceberg tables, and use the lakehouse."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/goal-directed-analytics-agents-apache-iceberg-action-loops/).
+
 The next step after text-to-SQL is a governed action loop with checks before every external effect. That is the useful lens for goal-directed analytics agents in June 2026. The market is not short on announcements. What matters is whether the new pattern changes ownership, performance, governance, and agent readiness in a way your team can operate.
 
 ![goal-directed analytics agents architecture diagram](/assets/blog/june8batch/goal-directed-analytics-agents-apache-iceberg-action-loops-diagram-1.png)

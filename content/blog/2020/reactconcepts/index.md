@@ -3,7 +3,10 @@ date: '2020-09-24T22:12:03.284Z'
 description: Props, State, Forms, Classes, Functions
 tags: []
 title: React in Concept - The Terms and Idea
+canonical: https://tuts.alexmercedcoder.dev/2020/reactconcepts/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/reactconcepts/).
 
 **MY SET OF REACT TUTORIAL VIDEOS** => https://www.youtube.com/playlist?list=PLY6oTPmKnKbba6LlpF7kcnsyWdlwePt_V
 

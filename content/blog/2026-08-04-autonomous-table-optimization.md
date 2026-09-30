@@ -2,10 +2,11 @@
 title: "Autonomous Table Optimization When Your Query Workload Stops Being Predictable"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Iceberg", "Table Optimization", "Compaction", "Autonomous", "Data Lakehouse"]
-canonical: "https://iceberglakehouse.com/posts/autonomous-table-optimization/"
+canonical: https://iceberglakehouse.com/posts/autonomous-table-optimization/
+description: "Autonomous table optimization when query workloads stop being predictable: observing file layout and query patterns, scoring compaction work, adaptive."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/autonomous-table-optimization/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/autonomous-table-optimization/).
 
 # Autonomous Table Optimization When Your Query Workload Stops Being Predictable
 

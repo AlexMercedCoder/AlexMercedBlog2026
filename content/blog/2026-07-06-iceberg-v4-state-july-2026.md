@@ -3,8 +3,9 @@ title: "The State of Apache Iceberg v4 in July 2026: What the Dev List Tells Us 
 date: 2026-07-06T12:00:00Z
 canonical: https://iceberglakehouse.com/posts/iceberg-v4-state-july-2026/
 tags: ["Apache Iceberg", "data engineering", "lakehouse architecture", "Iceberg v4", "open table formats"]
+description: "What the Iceberg v4 dev list tells us about adaptive metadata trees, single-file commits, column updates, and the format's next chapter in mid-2026."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-v4-state-july-2026/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-v4-state-july-2026/).
 
 # The State of Apache Iceberg v4 in July 2026: What the Dev List Tells Us About the Format's Next Chapter
 

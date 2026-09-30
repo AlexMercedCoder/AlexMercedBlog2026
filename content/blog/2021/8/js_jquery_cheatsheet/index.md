@@ -3,7 +3,10 @@ date: '2021-08-04T14:12:03.284Z'
 description: A Beginning oriented dive into databases
 tags: []
 title: Ultimate Plain Vanilla DOM JS & JQuery Cheatsheet
+canonical: https://tuts.alexmercedcoder.dev/2021/8/js_jquery_cheatsheet/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/8/js_jquery_cheatsheet/).
 
 While for larger projects using one of the main frontend frameworks is usually the way to go:
 

@@ -2,9 +2,10 @@
 title: "Apache Ossie and Apache Polaris: Putting Semantic Models in the Open Catalog"
 date: 2026-08-25T09:00:00Z
 tags: ["Apache Ossie", "Apache Polaris", "semantic layer", "metrics"]
-canonical: "https://iceberglakehouse.com/posts/apache-ossie-polaris-semantic-models/"
+canonical: https://iceberglakehouse.com/posts/apache-ossie-polaris-semantic-models/
+description: "Apache Ossie and Polaris put metric definitions in the open catalog. What the spec covers, what Polaris stores, and what is still unfinished."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/apache-ossie-polaris-semantic-models/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/apache-ossie-polaris-semantic-models/).
 
 Ask four systems in the same company what "monthly active users" means and you get four answers. The BI tool counts distinct user IDs with at least one session in the calendar month. The product analytics platform counts users with at least one qualifying event in a trailing 30-day window. The finance model counts billable seats that logged in. The AI agent someone stood up last quarter asked the warehouse for "active users" and got whatever the first table with that column name returned. Every one of those definitions is defensible. Every one of them lives in a different tool, in a different format, and none of them can be read by the others.
 

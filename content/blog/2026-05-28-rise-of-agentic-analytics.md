@@ -2,7 +2,12 @@
 title: "The Rise of Agentic Analytics: Shifting BI from Passive Dashboards to Goal-Directed Action"
 date: 2026-05-28T12:00:00Z
 tags: ["Rise Of Agentic Analytics"]
+canonical: https://datalakehousehub.com/blog/rise-of-agentic-analytics/
+description: "Agentic analytics replaces static dashboards with AI agents that pursue business goals autonomously."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/rise-of-agentic-analytics/).
+
 # The Rise of Agentic Analytics: Shifting BI from Passive Dashboards to Goal-Directed Action
 
 Dashboards have a fundamental design problem: they answer the question the designer anticipated, not the question the business needs answered today. A revenue dashboard shows you revenue is down 12% this month. It doesn't tell you which product line, which region, which customer segment, which sales motion : unless someone thought to build that drill-down when they designed the dashboard six months ago.

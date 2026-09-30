@@ -3,8 +3,9 @@ title: "The Metric Contract Mandate: Standardizing Semantic Layers Before AI Age
 date: 2026-07-06T09:00:00Z
 tags: ["semantic layers", "metric contracts", "ai agents"]
 canonical: https://iceberglakehouse.com/posts/metric-contract-mandate-semantic-layers-ai-agent-access/
+description: "AI agents are very good at moving quickly. That is the opportunity and the risk. If an agent can inspect metadata, generate queries, compare result..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/metric-contract-mandate-semantic-layers-ai-agent-access/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/metric-contract-mandate-semantic-layers-ai-agent-access/).
 
 # The Metric Contract Mandate: Standardizing Semantic Layers Before AI Agent Access
 

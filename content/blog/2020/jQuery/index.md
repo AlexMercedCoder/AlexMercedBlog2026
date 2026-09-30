@@ -3,7 +3,10 @@ date: '2020-09-13T22:12:03.284Z'
 description: The Basics of one of the most popular libraries ever
 tags: []
 title: Ultimate jQuery/Plain Vanilla JS DOM Reference
+canonical: https://tuts.alexmercedcoder.dev/2020/jquery/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/jquery/).
 
 ## What is jQuery
 

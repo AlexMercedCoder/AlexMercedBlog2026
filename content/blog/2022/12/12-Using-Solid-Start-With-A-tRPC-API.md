@@ -8,7 +8,10 @@ tags:
 - backend
 - solidjs
 title: Implementing a tRPC API with a Solid-Start Application
+canonical: https://tuts.alexmercedcoder.dev/2022/12/12-using-solid-start-with-a-trpc-api/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/12/12-using-solid-start-with-a-trpc-api/).
 
 # Implementing a tRPC API with a Solid-Start Application
 ### by Alex Merced

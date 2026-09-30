@@ -6,7 +6,10 @@ description: Understanding Javascript Promises and Asynchronous Code
 tags:
 - Javascript
 title: Understanding JavaScript Promises In-Depth
+canonical: https://tuts.alexmercedcoder.dev/2024/02-understanding_javascript_promises_in-depth/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2024/02-understanding_javascript_promises_in-depth/).
 
 [Subscribe to My Youtube Channel](https://www.youtube.com/@alexmercedcoder)
 

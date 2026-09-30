@@ -2,9 +2,10 @@
 title: "Why Iceberg v4 Is Really About Making the Cost of Change Proportional to the Change"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "Iceberg v4", "metadata", "architecture"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-v4-cost-of-change-principle/"
+canonical: https://iceberglakehouse.com/posts/iceberg-v4-cost-of-change-principle/
+description: "Iceberg v4 is really about making the cost of a change proportional to the change. The principle, the current tax, and what the redesign pays down."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-v4-cost-of-change-principle/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-v4-cost-of-change-principle/).
 
 Read enough of the Apache Iceberg v4 proposals, the design documents, the dev-list threads, the community sync notes, and a pattern emerges that no single proposal states as its title: every one of them exists to stop the format from charging for things that did not change. Single-file commits stop a small append from rewriting table-scale metadata. Column families stop a one-column update from rewriting whole rows. Relative paths stop a table relocation from rewriting every file reference. Delta-encoded schemas stop an unchanged schema from being re-serialized per commit. Snapshot offloading stops accumulated history from riding in every write. Different layers, different mechanisms, different authors and threads, one sentence underneath them all: updating 1 percent of a table should not require work proportional to 100 percent of it.
 

@@ -3,9 +3,10 @@ title: "Iceberg's Next Version Depends on Decisions Being Made in Parquet"
 date: 2026-07-25T09:00:00Z
 tags: ["apache iceberg", "apache parquet", "variant type", "open formats", "lakehouse"]
 canonical: https://iceberglakehouse.com/posts/parquet-constrains-iceberg/
+description: "The Iceberg and Parquet specifications are co-evolving. Several of the most consequential Iceberg v4 proposals are waiting on Parquet work."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/parquet-constrains-iceberg/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/parquet-constrains-iceberg/).
 
 Follow an Apache Iceberg design discussion about column-level updates long enough and it stops being an Iceberg discussion. The question of whether a writer can replace one column in an existing file, without rewriting the other thirty-nine, turns on whether the file format underneath supports the idea of a logical file assembled from pieces. Iceberg cannot decide that alone. The answer lives in Apache Parquet.
 

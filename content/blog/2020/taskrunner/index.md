@@ -3,7 +3,10 @@ date: '2020-12-24T12:12:03.284Z'
 description: A State Management Alternative
 tags: []
 title: React - Why use TaskRunner over Redux, useReducer
+canonical: https://tuts.alexmercedcoder.dev/2020/taskrunner/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/taskrunner/).
 
 ## What is the story?
 

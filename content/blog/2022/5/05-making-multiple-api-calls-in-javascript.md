@@ -6,7 +6,10 @@ description: Different Patterns of Making Multiple API Calls
 tags:
 - javascript
 title: Making Multiple API Calls in Javascript
+canonical: https://tuts.alexmercedcoder.dev/2022/5/05-making-multiple-api-calls-in-javascript/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/5/05-making-multiple-api-calls-in-javascript/).
 
 (all examples will use the browser native fetch function using async/await syntax)
 

@@ -3,7 +3,10 @@ date: '2020-11-20T22:12:03.284Z'
 description: An Alternative to RESTFul API
 tags: []
 title: Tutorial - Writing Your First GraphQL API
+canonical: https://tuts.alexmercedcoder.dev/2020/graphql/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/graphql/).
 
 ## What is GraphQL?
 

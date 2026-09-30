@@ -3,7 +3,10 @@ date: '2020-12-19T22:12:03.284Z'
 description: Using Headless CMS's
 tags: []
 title: Building a Blog with Agility Headless CMS
+canonical: https://tuts.alexmercedcoder.dev/2020/agilitycmsblog/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/agilitycmsblog/).
 
 ## What is a Headless CMS
 

@@ -3,7 +3,10 @@ date: '2021-01-01T12:12:03.284Z'
 description: Thinking Recursively
 tags: []
 title: Javascript - Writing Map as a Recursive Function
+canonical: https://tuts.alexmercedcoder.dev/2021/1/recursivemap/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/recursivemap/).
 
 ## The Map Function
 

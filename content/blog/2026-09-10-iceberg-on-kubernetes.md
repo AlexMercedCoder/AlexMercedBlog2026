@@ -3,9 +3,10 @@ title: "Running an Iceberg Lakehouse on Kubernetes"
 date: 2026-09-10T09:00:00Z
 tags: ["Kubernetes", "Apache Iceberg", "Apache Polaris", "compaction", "platform engineering"]
 canonical: https://iceberglakehouse.com/posts/iceberg-on-kubernetes/
+description: "Catalog, maintenance, and compaction as Kubernetes workloads: scheduling classes, job structure, credential flow, and the failures that come from the interaction."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-on-kubernetes/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-on-kubernetes/).
 
 A team moves their lakehouse onto Kubernetes because everything else already runs there. The catalog goes into a Deployment, Spark jobs run through the Spark operator, and maintenance becomes a CronJob. Six weeks later the catalog is getting evicted to make room for batch executors, a compaction job that overlaps with the next night's ingestion is producing commit conflicts nobody is watching, and a credential that expires mid-job takes down a maintenance run that then retries from the beginning.
 

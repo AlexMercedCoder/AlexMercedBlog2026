@@ -2,7 +2,11 @@
 title: "The Context Layer for AI Agents"
 date: 2026-06-22T09:00:00Z
 tags: ["context-layer", "ai-agents", "semantic-lineage"]
+canonical: https://iceberglakehouse.com/posts/context-layer-semantic-lineage-quality-ai-agents/
+description: "A semantic layer is necessary, but agents also need lineage, quality, freshness, compliance, and ownership context."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/context-layer-semantic-lineage-quality-ai-agents/).
 
 # The Context Layer for AI Agents
 

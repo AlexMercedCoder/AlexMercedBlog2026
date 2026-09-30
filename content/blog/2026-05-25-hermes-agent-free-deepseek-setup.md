@@ -2,7 +2,11 @@
 title: "Use Hermes Agent for Free With DeepSeek V4 and Slack"
 date: 2026-05-25T12:00:00Z
 tags: ["ai-agents", "open-source", "tutorial", "hermes-agent"]
+canonical: https://iceberglakehouse.com/posts/2026-05-hermes-agent-free-deepseek-setup/
+description: "Install Hermes Agent, choose a current DeepSeek provider, and connect Slack through Socket Mode with the tokens, scopes, events, and allowlist Hermes requires."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-05-hermes-agent-free-deepseek-setup/).
 
 Most AI agent frameworks lock you into a paid model. Claude Code needs an Anthropic subscription. Codex needs an OpenAI plan. Cursor costs $20 a month. Hermes Agent from Nous Research works differently: it is a fully open-source agent framework that lets you plug in any inference provider you want.
 

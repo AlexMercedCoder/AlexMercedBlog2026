@@ -3,7 +3,10 @@ date: '2021-02-08T12:12:03.284Z'
 description: Learn How to use Streams
 tags: []
 title: Understanding Node Streams with Https.get
+canonical: https://tuts.alexmercedcoder.dev/2021/2/streams/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/2/streams/).
 
 ## What are Streams?
 

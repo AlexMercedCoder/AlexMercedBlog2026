@@ -3,9 +3,10 @@ title: "Table Maintenance Stopped Being a Product"
 date: 2026-07-25T09:00:00Z
 tags: ["apache iceberg", "compaction", "table maintenance", "lakehouse", "small files"]
 canonical: https://iceberglakehouse.com/posts/table-maintenance-economics/
+description: "Iceberg table maintenance commoditized when every platform started shipping it. What the six operations are, what they cost, and the observability you."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/table-maintenance-economics/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/table-maintenance-economics/).
 
 A team I worked with had a dashboard that loaded in three seconds in January and forty seconds in June. Data volume grew 20 percent over that period. Nobody changed the query, the engine, or the cluster size. The table had 340,000 data files where it should have had about 900, and 61,000 snapshots where 100 was the sane number. The query was not slow. The planning was slow, and the planning was slow because nobody had run compaction since the table was created.
 

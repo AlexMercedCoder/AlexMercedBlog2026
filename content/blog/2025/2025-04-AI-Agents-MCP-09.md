@@ -10,7 +10,10 @@ tags:
 - MCP
 - AI Agents
 title: A Journey from AI to LLMs and MCP - 9 - Tools in MCP  – Giving LLMs the Power to Act
+canonical: https://datalakehousehub.com/blog/2025-04-tools-in-mcp/
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/2025-04-tools-in-mcp/).
 
 ## Free Resources  
 - **[Free Apache Iceberg Course](https://hello.dremio.com/webcast-an-apache-iceberg-lakehouse-crash-course-reg.html?utm_source=ev_external_blog&utm_medium=influencer&utm_campaign=AItoLLMS&utm_content=alexmerced&utm_term=external_blog)**  

@@ -3,7 +3,10 @@ date: '2020-09-20T22:12:03.284Z'
 description: Props, Queries and Events oh my!
 tags: []
 title: Passing Data Between Components in Vue
+canonical: https://tuts.alexmercedcoder.dev/2020/vueprops/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/vueprops/).
 
 ## The dilemma
 

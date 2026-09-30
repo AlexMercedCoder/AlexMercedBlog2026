@@ -3,7 +3,10 @@ date: '2020-10-15T22:12:03.284Z'
 description: Context, Reducers and Hooks, yes!
 tags: []
 title: Rollout Application Level State Quickly with useDataStore
+canonical: https://tuts.alexmercedcoder.dev/2020/usedatastore/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/usedatastore/).
 
 ## What is useDataStore?
 

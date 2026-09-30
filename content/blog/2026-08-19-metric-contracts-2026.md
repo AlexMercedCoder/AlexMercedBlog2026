@@ -2,9 +2,10 @@
 title: "Metric Contracts in 2026: Standardizing Business Logic Across Multi-Agent Frameworks"
 date: 2026-08-19T09:00:00Z
 tags: ["metric contracts", "semantic layer", "AI agents", "governance"]
-canonical: "https://iceberglakehouse.com/posts/metric-contracts-2026/"
+canonical: https://iceberglakehouse.com/posts/metric-contracts-2026/
+description: "Metric contracts in 2026: versioned, testable definitions of business logic that let multi-agent frameworks compute revenue identically, with OSI interchange."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/metric-contracts-2026/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/metric-contracts-2026/).
 
 For twenty years, the cost of an ambiguous metric was a meeting. Two dashboards disagreed, two teams defended their numbers, someone scheduled the reconciliation call, and the organization paid in hours and mild embarrassment. In 2026 the cost structure changed, because the consumers changed: business logic is now executed by agents, dozens of them, built on different frameworks, answering thousands of questions a day, each one an opportunity to re-derive "revenue" slightly differently at machine speed for an audience that cannot check the work. The ambiguous metric stopped being a meeting and became a defect generator, and the artifact that fixes it has a name worth taking seriously: the metric contract.
 

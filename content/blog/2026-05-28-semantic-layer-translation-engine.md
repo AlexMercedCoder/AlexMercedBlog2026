@@ -2,7 +2,12 @@
 title: "The Semantic Layer as a Translation Engine: Bridging Natural Language and SQL"
 date: 2026-05-28T12:00:00Z
 tags: ["Semantic Layer Translation Engine"]
+canonical: https://datalakehousehub.com/blog/semantic-layer-translation-engine/
+description: "The semantic layer translates business language into accurate SQL for AI agents. Learn how virtual datasets, metric definitions, and wikis power agentic."
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/semantic-layer-translation-engine/).
+
 # The Semantic Layer as a Translation Engine: Bridging Natural Language and SQL
 
 "What was our revenue last quarter?" is a five-word question. The SQL that correctly answers it might be 40 lines long : joining three tables, applying a canonical metric definition, filtering by the right date boundaries, excluding specific transaction types, and handling currency normalization for international transactions.

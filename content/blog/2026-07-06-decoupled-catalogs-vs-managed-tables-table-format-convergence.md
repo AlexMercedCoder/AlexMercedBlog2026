@@ -3,8 +3,9 @@ title: "Decoupled Catalogs vs. Managed Tables: Architectural Freedom in the Age 
 date: 2026-07-06T09:00:00Z
 tags: ["catalogs", "table formats", "architecture"]
 canonical: https://iceberglakehouse.com/posts/decoupled-catalogs-vs-managed-tables-table-format-convergence/
+description: "Open table formats have changed buyer expectations. A few years ago, the question was whether an organization should put more analytical data into..."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/decoupled-catalogs-vs-managed-tables-table-format-convergence/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/decoupled-catalogs-vs-managed-tables-table-format-convergence/).
 
 # Decoupled Catalogs vs. Managed Tables: Architectural Freedom in the Age of Table Format Convergence
 

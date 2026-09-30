@@ -2,7 +2,11 @@
 title: "PyIceberg at Scale Without Apache Spark"
 date: 2026-06-22T09:00:00Z
 tags: ["pyiceberg", "high-concurrency", "no-spark"]
+canonical: https://iceberglakehouse.com/posts/pyiceberg-scale-high-concurrency-no-spark/
+description: "Python-first Iceberg work is useful when it stays honest about what Python should and should not do."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/pyiceberg-scale-high-concurrency-no-spark/).
 
 # PyIceberg at Scale Without Apache Spark
 

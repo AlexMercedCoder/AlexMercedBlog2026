@@ -8,7 +8,10 @@ tags:
 - backend
 - solidjs
 title: Implementing a GraphQL API with a Solid-Start Application
+canonical: https://tuts.alexmercedcoder.dev/2022/12/12-using-solid-start-with-a-graphql-api/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/12/12-using-solid-start-with-a-graphql-api/).
 
 # Implementing a GraphQL API with a Solid-Start Application
 ### by Alex Merced

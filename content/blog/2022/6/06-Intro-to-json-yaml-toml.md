@@ -6,7 +6,10 @@ description: Popular formats for configuration
 tags:
 - devop
 title: Guide to JSON, YAML and TOML
+canonical: https://tuts.alexmercedcoder.dev/2022/6/06-intro-to-json-yaml-toml/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/6/06-intro-to-json-yaml-toml/).
 
 In many frameworks, tools and more you often have to write configuration files that are often in JSON, YAML or TOML format here are some examples.
 

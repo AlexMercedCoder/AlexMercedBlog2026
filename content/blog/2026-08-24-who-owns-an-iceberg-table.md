@@ -2,9 +2,10 @@
 title: "Who Actually Owns an Iceberg Table? Managed, External, and the New Vocabulary of Lakehouse Control"
 date: 2026-08-24T09:00:00Z
 tags: ["Apache Iceberg", "catalogs", "governance", "managed tables"]
-canonical: "https://iceberglakehouse.com/posts/who-owns-an-iceberg-table/"
+canonical: https://iceberglakehouse.com/posts/who-owns-an-iceberg-table/
+description: "Managed and external Iceberg tables mean different things on every platform. Five ownership dimensions and a translation method for vendor vocabulary."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/who-owns-an-iceberg-table/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/who-owns-an-iceberg-table/).
 
 Two architects are arguing in a design review about whether to use "managed" Iceberg tables, and the argument is unresolvable, because they are using the same word for different things. One means tables whose storage the platform provisions and whose compaction the platform runs. The other means tables the platform's catalog governs, wherever the bytes live and whoever maintains them. Both usages are real, both appear in official documentation, from different vendors, both architects can cite their sources, and the meeting ends with an action item to "clarify the managed table question," which is this article's job description.
 

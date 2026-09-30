@@ -2,10 +2,11 @@
 title: "The Parquet Versioning Problem, and Why Iceberg Cares About It"
 date: 2026-07-28T09:00:00Z
 tags: ["Parquet", "Apache Iceberg", "Data Engineering", "File Formats"]
-canonical: "https://iceberglakehouse.com/posts/parquet-versioning-iceberg-v4/"
+canonical: https://iceberglakehouse.com/posts/parquet-versioning-iceberg-v4/
+description: "Parquet files have a version field that doesn't reliably signal feature requirements. A new versioning discipline is coming, borrowing from Iceberg's."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/parquet-versioning-iceberg-v4/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/parquet-versioning-iceberg-v4/).
 
 # The Parquet Versioning Problem, and Why Iceberg Cares About It
 

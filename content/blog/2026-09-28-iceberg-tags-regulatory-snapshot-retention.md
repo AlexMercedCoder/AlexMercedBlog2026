@@ -3,9 +3,10 @@ title: "Keeping Audit Snapshots Alive While Iceberg Snapshot Expiration Runs Eve
 date: 2026-09-28T09:00:00Z
 tags: ["Apache Iceberg", "Snapshot Expiration", "Data Governance", "Compliance", "Table Maintenance"]
 canonical: https://iceberglakehouse.com/posts/iceberg-tags-regulatory-snapshot-retention/
+description: "How Iceberg snapshot tags keep audit snapshots alive through nightly expiration: retention calendars, RETAIN semantics, compaction cost, and erasure conflicts."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-tags-regulatory-snapshot-retention/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-tags-regulatory-snapshot-retention/).
 
 To keep a specific Apache Iceberg snapshot through routine expiration, point a tag at it. Snapshot expiration never removes a snapshot that a live branch or tag references. A tag's `RETAIN` clause sets how long the tag itself lives, measured from the snapshot's own timestamp. A tag created without `RETAIN` lives until someone drops it.
 

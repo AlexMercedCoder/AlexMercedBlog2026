@@ -7,7 +7,10 @@ tags:
 - programming
 - rust
 title: In-Depth Guide to Working with Strings in Rust
+canonical: https://tuts.alexmercedcoder.dev/2024/2024-09-using-strings-in-rust/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2024/2024-09-using-strings-in-rust/).
 
 ## 1. String Types in Rust
 

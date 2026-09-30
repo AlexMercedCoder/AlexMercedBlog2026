@@ -3,8 +3,9 @@ title: "The State of Apache Arrow in 2026: Ten Years In, the Invisible Standard 
 date: 2026-07-06T12:00:00Z
 canonical: https://iceberglakehouse.com/posts/state-of-apache-arrow-2026/
 tags: ["Apache Arrow", "data engineering", "lakehouse architecture", "in-memory analytics", "ADBC", "Flight SQL"]
+description: "Apache Arrow at 10, ADBC, Flight SQL, nanoarrow, the AI reinterpretation, and how an in-memory standard eliminated the copy tax across the data stack."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/state-of-apache-arrow-2026/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/state-of-apache-arrow-2026/).
 
 # The State of Apache Arrow in 2026: Ten Years In, the Invisible Standard Is Everywhere
 

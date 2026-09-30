@@ -2,9 +2,10 @@
 title: "Goal-Directed Data Quality Agents: Anomaly Quarantine on Apache Iceberg"
 date: 2026-08-19T09:00:00Z
 tags: ["Apache Iceberg", "data quality", "AI agents", "anomaly detection"]
-canonical: "https://iceberglakehouse.com/posts/goal-directed-data-quality-agents-iceberg/"
+canonical: https://iceberglakehouse.com/posts/goal-directed-data-quality-agents-iceberg/
+description: "Goal-directed data quality agents that watch Apache Iceberg tables, detect anomalies, and quarantine suspect data safely with snapshot isolation and branches."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/goal-directed-data-quality-agents-iceberg/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/goal-directed-data-quality-agents-iceberg/).
 
 Every data platform has a quality system, and most of them are the same system: a few hundred rules, written after incidents, checking the failures somebody already lived through. Null checks on the columns that were null that one time. Row-count thresholds tuned to last year's volumes. A freshness alert per table, firing into a channel everyone muted in March. The system catches what it was told to catch, misses everything novel, and decays as the estate outgrows the rules, which is not a criticism of the teams that built it. It is the ceiling of the approach itself: rules encode known failures, and data finds new ways to be wrong faster than humans write rules.
 

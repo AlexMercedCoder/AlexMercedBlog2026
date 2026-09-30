@@ -2,10 +2,11 @@
 title: "Building Iceberg Pipelines in Python Without Standing Up Spark"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Python", "PyIceberg", "Data Pipelines"]
-canonical: "https://iceberglakehouse.com/posts/python-native-iceberg-pipelines/"
+canonical: https://iceberglakehouse.com/posts/python-native-iceberg-pipelines/
+description: "A large share of production transformations fit comfortably on one machine. PyIceberg, DuckDB, and branch isolation give you a production path that debugs."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/python-native-iceberg-pipelines/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/python-native-iceberg-pipelines/).
 
 # Building Iceberg Pipelines in Python Without Standing Up Spark
 

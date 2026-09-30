@@ -3,7 +3,10 @@ date: '2021-06-02T12:12:03.284Z'
 description: Learn Languages by see what's similar and different
 tags: []
 title: 10 Programming Languages Side by Side (JS, Python, Ruby, PHP, GO, Rust, Dart, C Sharp, Java, Ballerina)
+canonical: https://tuts.alexmercedcoder.dev/2021/6/10-programming-languages/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/6/10-programming-languages/).
 
 Using the below you can see the basics of 10 different languages. For most of these langauges you should be able to try them out by [generating a REPL](https//www.repl.it).
 

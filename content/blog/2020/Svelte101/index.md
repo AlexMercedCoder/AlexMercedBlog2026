@@ -3,7 +3,10 @@ date: '2020-10-05T22:12:03.284Z'
 description: Cybernetically Enhanced Web Apps!
 tags: []
 title: Learning Svelte 101
+canonical: https://tuts.alexmercedcoder.dev/2020/svelte101/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/svelte101/).
 
 **This tutorial will be using this codesandbox, so open it up and fork it**: https://codesandbox.io/s/welcome-to-svelte-is0hb
 

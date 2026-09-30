@@ -2,9 +2,10 @@
 title: "Query Routing at Machine Scale: Dynamic Workload Distribution Across Lakehouse Engines"
 date: 2026-08-25T09:00:00Z
 tags: ["query engines", "lakehouse", "routing", "AI agents"]
-canonical: "https://iceberglakehouse.com/posts/query-routing-lakehouse-engines/"
+canonical: https://iceberglakehouse.com/posts/query-routing-lakehouse-engines/
+description: "Route each lakehouse query by shape, not by sender. Signals, rules, and how to keep dashboards, batch jobs, and agents from sharing one engine."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/query-routing-lakehouse-engines/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/query-routing-lakehouse-engines/).
 
 At 9:15 on a Monday morning, a lakehouse receives four kinds of query in the same minute. An executive dashboard fires 40 sub-second lookups against a revenue view. A nightly transformation that ran late is still grinding through a 30-terabyte join. A data scientist submits an ad hoc query that will scan a year of events. And an AI agent, answering a question from a support rep, issues 22 small queries in a loop, each one shaped by the answer to the last. All four arrive at the same SQL endpoint, and the platform has to decide, in milliseconds, where each one runs.
 

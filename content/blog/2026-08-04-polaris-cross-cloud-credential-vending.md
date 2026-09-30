@@ -2,10 +2,11 @@
 title: "Cross-Cloud Credential Vending in Apache Polaris and the End of Permanent Storage Keys"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Polaris", "Credential Vending", "Security", "RBAC", "Multi-Cloud", "Apache Iceberg"]
-canonical: "https://iceberglakehouse.com/posts/polaris-cross-cloud-credential-vending/"
+canonical: https://iceberglakehouse.com/posts/polaris-cross-cloud-credential-vending/
+description: "How Apache Polaris vends short-lived, prefix-scoped storage credentials across AWS, Azure, and GCP, and how to retire permanent storage keys for good."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/polaris-cross-cloud-credential-vending/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/polaris-cross-cloud-credential-vending/).
 
 # Cross-Cloud Credential Vending in Apache Polaris and the End of Permanent Storage Keys
 

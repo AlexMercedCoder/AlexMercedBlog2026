@@ -2,9 +2,10 @@
 title: "Write-Audit-Publish with Apache Iceberg Branches: CI/CD for Your Data"
 date: 2026-08-19T09:00:00Z
 tags: ["Apache Iceberg", "write-audit-publish", "branches", "continuous-integration"]
-canonical: "https://iceberglakehouse.com/posts/write-audit-publish-iceberg-branches/"
+canonical: https://iceberglakehouse.com/posts/write-audit-publish-iceberg-branches/
+description: "Write-Audit-Publish with Apache Iceberg branches brings CI/CD to your data: stage, audit, then fast-forward to main so consumers never see unvalidated bytes."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/write-audit-publish-iceberg-branches/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/write-audit-publish-iceberg-branches/).
 
 Software engineering solved its most important quality problem decades ago with a single structural idea, applied everywhere and questioned nowhere: changes do not land on main until they have passed review somewhere that is not main. The branch, the pull request, the CI gate, the merge, every part of that ritual exists to guarantee one property, that what consumers depend on only ever moves from one good state to another good state, with the checking done in between, out of sight. Data engineering spent the same decades publishing directly to production and apologizing afterward: the pipeline writes to the table consumers read, the bad batch lands at 3 a.m., the dashboards drink it at 8, and the quality checks, where they exist, run after the damage in the morning's post-hoc sweep.
 

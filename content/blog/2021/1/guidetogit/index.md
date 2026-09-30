@@ -3,7 +3,10 @@ date: '2021-01-09T12:12:03.284Z'
 description: All The Commands in Words that Make Sense
 tags: []
 title: Git - A Guide to Understanding and Using Git
+canonical: https://tuts.alexmercedcoder.dev/2021/1/guidetogit/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/guidetogit/).
 
 - [VIDEO: Intro to Git](https://www.youtube.com/watch?v=L4zbgo7KFoA&list=PLY6oTPmKnKbYjGEm9nLowExbgkI-epIgg&index=7&t=9s)
 - [VIDEO: Working with Git Remotes](https://www.youtube.com/watch?v=TOsVVxXdtu8&list=PLY6oTPmKnKbYjGEm9nLowExbgkI-epIgg&index=9&t=2s)

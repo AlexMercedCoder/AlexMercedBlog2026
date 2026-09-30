@@ -2,10 +2,11 @@
 title: "When the Query Optimizer Starts Managing Its Own Materializations"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Query Optimization", "AI Agents", "Materialized Views"]
-canonical: "https://iceberglakehouse.com/posts/autonomous-reflections-agentic-lakehouse/"
+canonical: https://iceberglakehouse.com/posts/autonomous-reflections-agentic-lakehouse/
+description: "Autonomous materialized view management replaces quarterly review meetings with workload-driven scoring, and it's essential when AI agents generate."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/autonomous-reflections-agentic-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/autonomous-reflections-agentic-lakehouse/).
 
 # When the Query Optimizer Starts Managing Its Own Materializations
 

@@ -2,7 +2,11 @@
 title: "The Real-Time Lakehouse with Streaming and Iceberg"
 date: 2026-06-22T09:00:00Z
 tags: ["real-time-lakehouse", "streaming-sql", "iceberg-storage"]
+canonical: https://iceberglakehouse.com/posts/real-time-lakehouse-streaming-sql-cold-iceberg-storage/
+description: "The real-time lakehouse is not one engine. It is a contract between streams, table commits, query paths, and freshness expectations."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/real-time-lakehouse-streaming-sql-cold-iceberg-storage/).
 
 # The Real-Time Lakehouse with Streaming and Iceberg
 

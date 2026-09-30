@@ -5,7 +5,10 @@ title: "Overview of the Data Lakehouse, Dremio and Apache Iceberg"
 date: "2023-04-05T12:12:03.284Z"
 description: "Understanding the Cutting Edge of Data Engineering"
 
+canonical: https://tuts.alexmercedcoder.dev/2023/4/04-overview-of-the-data-lakehouse/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/4/04-overview-of-the-data-lakehouse/).
 
 In this article, I hope clarify the who, what, why, and how of:
 - The Data Lakehouse

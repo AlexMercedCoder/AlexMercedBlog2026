@@ -2,10 +2,11 @@
 title: "Federating Oracle With an Open Lakehouse Instead of Migrating It"
 date: 2026-07-28T09:00:00Z
 tags: ["Apache Iceberg", "Oracle", "Data Federation", "Lakehouse"]
-canonical: "https://iceberglakehouse.com/posts/oracle-lakehouse-federation/"
+canonical: https://iceberglakehouse.com/posts/oracle-lakehouse-federation/
+description: "Federate first so analytics work now, migrate what benefits from migrating, and leave the rest where it is indefinitely."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/oracle-lakehouse-federation/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/oracle-lakehouse-federation/).
 
 # Federating Oracle With an Open Lakehouse Instead of Migrating It
 

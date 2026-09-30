@@ -3,8 +3,9 @@ title: "Will AI Replace Data Engineers?"
 date: 2026-09-02T09:00:00Z
 tags: ["AI", "Data Engineering", "Careers", "Labor Economics"]
 canonical: https://iceberglakehouse.com/posts/will-ai-replace-data-engineers/
+description: "What the evidence shows about whether AI replaces data engineers, which parts of the job compress, and which parts do not."
 ---
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/will-ai-replace-data-engineers/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/will-ai-replace-data-engineers/).
 
 The question gets asked in two registers. One is genuine anxiety from people whose careers are in the balance, and it deserves a straight answer rather than reassurance. The other is a headline, usually attached to a vendor's productivity claim or a chief executive's remark about hiring, and it deserves skepticism.
 

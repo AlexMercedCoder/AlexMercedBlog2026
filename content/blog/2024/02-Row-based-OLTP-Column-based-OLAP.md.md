@@ -6,7 +6,10 @@ description: The Fundamentals of Data Systems
 tags:
 - Database
 title: Columnar vs. Row-based Data Structures in OLTP and OLAP Systems
+canonical: https://datalakehousehub.com/blog/2024/2024-02-row-based-oltp-column-based-olapmd/
 ---
+
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/2024/2024-02-row-based-oltp-column-based-olapmd/).
 
 [Follow my Data Youtube Channel](https://www.youtube.com/@alexmerceddata)
 

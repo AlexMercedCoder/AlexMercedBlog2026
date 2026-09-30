@@ -3,7 +3,10 @@ date: '2021-01-07T12:12:03.284Z'
 description: Cool React Tips
 tags: []
 title: 5 Cool Things You Can Do In React
+canonical: https://tuts.alexmercedcoder.dev/2021/1/10reacttips/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/1/10reacttips/).
 
 ## 1 - Spreading Props
 

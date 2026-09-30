@@ -7,7 +7,10 @@ tags:
 - Javascript
 - OOP
 title: OOP Design Patterns in Javascript
+canonical: https://tuts.alexmercedcoder.dev/2023/11/11-oop-design-patterns-javascript/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/11/11-oop-design-patterns-javascript/).
 
 # Understanding Design Patterns in JavaScript
 

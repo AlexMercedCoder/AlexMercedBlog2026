@@ -2,10 +2,11 @@
 title: "How Iceberg V3 Deletion Vectors Fixed Merge-on-Read for Streaming Tables"
 date: 2026-08-04T09:00:00Z
 tags: ["Apache Iceberg", "Iceberg V3", "Deletion Vectors", "Merge-on-Read", "CDC", "Streaming"]
-canonical: "https://iceberglakehouse.com/posts/iceberg-v3-deletion-vectors-merge-on-read/"
+canonical: https://iceberglakehouse.com/posts/iceberg-v3-deletion-vectors-merge-on-read/
+description: "How Iceberg V3 deletion vectors replaced accumulating positional delete files and made merge-on-read viable for streaming and CDC tables."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/iceberg-v3-deletion-vectors-merge-on-read/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/iceberg-v3-deletion-vectors-merge-on-read/).
 
 # How Iceberg V3 Deletion Vectors Fixed Merge-on-Read for Streaming Tables
 

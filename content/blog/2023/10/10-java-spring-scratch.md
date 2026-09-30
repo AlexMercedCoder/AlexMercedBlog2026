@@ -6,7 +6,10 @@ tags:
 - java
 - spring
 title: How to build a Java Spring JSON API from scratch
+canonical: https://tuts.alexmercedcoder.dev/2023/10/10-java-spring-scratch/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/10/10-java-spring-scratch/).
 
 ## Step 1: Set Up the Maven Project
 

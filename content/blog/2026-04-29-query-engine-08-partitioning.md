@@ -2,7 +2,11 @@
 title: "Partitioning, Sharding, and Data Distribution Strategies"
 date: 2026-04-29T13:07:00Z
 tags: ["query-engine", "database"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-query-engine-08/
+description: "Hash partitioning distributes data evenly. Range partitioning enables fast range scans. Both create tradeoffs."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-query-engine-08/).
 
 <!-- Meta Description: Hash partitioning distributes data evenly. Range partitioning enables fast range scans. Both create tradeoffs. Here is how databases divide data across storage and nodes. -->
 <!-- Primary Keyword: data partitioning -->

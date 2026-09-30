@@ -3,7 +3,10 @@ date: '2021-03-04T12:12:03.284Z'
 description: Buffalo, The Rails of the Go World
 tags: []
 title: API With GO Buffalo, from zero to deploy
+canonical: https://tuts.alexmercedcoder.dev/2021/3/introtogobuffalo/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/3/introtogobuffalo/).
 
 Go is becoming a popular choice for those who need to increase the speed of their web server and microservices. Buffalo is a framework to allow rapid development in GO similar to Ruby on Rails. In this tutorial, we will make a basic API with buffalo and deploy it to Heroku.
 

@@ -3,9 +3,10 @@ title: "The Whole Lakehouse Fits on Your Laptop Now"
 date: 2026-07-25T09:00:00Z
 tags: ["duckdb", "apache iceberg", "datafusion", "local development", "lakehouse"]
 canonical: https://iceberglakehouse.com/posts/laptop-scale-lakehouse/
+description: "Consumer hardware, columnar formats, single-node engines, and the Iceberg REST catalog crossed a threshold: a large share of cluster work now runs locally."
 ---
 
-> **Cross-posted.** This article's canonical home is [iceberglakehouse.com](https://iceberglakehouse.com/posts/laptop-scale-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/laptop-scale-lakehouse/).
 
 A colleague spent forty minutes last month provisioning a cluster to profile a 90 GB Parquet dataset. Startup, dependency resolution, a permissions error, another restart, then the actual work, which took four minutes. I ran the same profiling on a laptop in under two, including the download.
 

@@ -3,7 +3,10 @@ date: '2020-11-12T22:12:03.284Z'
 description: Deploy a Full Crud API Quickly!
 tags: []
 title: Ruby on Rails Tutorial - Heroku API Deployment
+canonical: https://tuts.alexmercedcoder.dev/2020/railsdeployment/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/railsdeployment/).
 
 **My Learning Ruby on Rails Video Playlist:** https://www.youtube.com/playlist?list=PLY6oTPmKnKbYlAqVHgzZl5lou54bizdbV
 

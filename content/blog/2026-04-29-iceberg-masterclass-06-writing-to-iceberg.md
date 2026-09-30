@@ -2,7 +2,12 @@
 title: "Writing to an Apache Iceberg Table: How Commits and ACID Actually Work"
 date: 2026-04-29T12:05:00Z
 tags: ["iceberg", "data-lake"]
+canonical: https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-06/
+description: "Here is exactly how an engine writes to an Iceberg table, step by step, from data files through the atomic commit that makes ACID guarantees possible."
 ---
+
+> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/2026-04-29-iceberg-masterclass-06/).
+
 <!-- Meta Description: Here is exactly how an engine writes to an Iceberg table, step by step, from data files through the atomic commit that makes ACID guarantees possible. -->
 <!-- Primary Keyword: writing to Apache Iceberg -->
 <!-- Secondary Keywords: Iceberg ACID transactions, atomic commit, optimistic concurrency -->

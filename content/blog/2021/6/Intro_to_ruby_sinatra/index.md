@@ -3,7 +3,10 @@ date: '2021-06-03T12:12:03.284Z'
 description: Minimalist Ruby Web Framework
 tags: []
 title: Intro to Ruby Sinatra
+canonical: https://tuts.alexmercedcoder.dev/2021/6/intro_to_ruby_sinatra/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2021/6/intro_to_ruby_sinatra/).
 
 In Python there is Django, the big batteries included web framework. There there is Flask, the minimalist web framework similar ExpressJS on node. In the Ruby world, along with the batteries included Rails framework, there is the Sinatra web framework. Let's take it for a spin.
 

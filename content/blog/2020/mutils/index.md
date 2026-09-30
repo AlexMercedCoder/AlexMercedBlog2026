@@ -3,7 +3,10 @@ date: '2020-10-17T22:12:03.284Z'
 description: Arrays with superpowers!
 tags: []
 title: Using mutils to supercharge arrays!
+canonical: https://tuts.alexmercedcoder.dev/2020/mutils/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2020/mutils/).
 
 ## What is mutils?
 

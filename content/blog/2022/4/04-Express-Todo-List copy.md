@@ -8,7 +8,10 @@ tags:
 - javascript
 - node
 title: ExpressJS Cheatsheet 2022
+canonical: https://tuts.alexmercedcoder.dev/2022/4/04-express-todo-list%20copy/
 ---
+
+> **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2022/4/04-express-todo-list%20copy/).
 
 This article assumes basic knowledge of ExpressJS, if your new to Express I recommend starting with the following Video Playlist:
 
