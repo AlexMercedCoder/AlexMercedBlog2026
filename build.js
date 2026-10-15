@@ -1888,7 +1888,9 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
     }
 
     // SEO & Metadata Construction
-    const fullTitle = `${pageTitle} | ${config.site_title}`;
+    // An explicit seo.title wins. Otherwise keep the title under about 60
+    // characters: full site suffix if it fits, then a short one, then none.
+    const fullTitle = seo.title || [`${pageTitle} | ${config.site_title}`, `${pageTitle} | Alex Merced`, pageTitle].find(s => s.length <= 60) || pageTitle;
     const description = seo.description || config.site_description;
     const url = seo.path ? `${config.domain}${seo.path}` : config.domain;
     const canonicalUrl = /^https:\/\/[^\s]+$/.test(seo.canonical || '') ? seo.canonical : url;
@@ -1968,7 +1970,9 @@ function renderLayout(bodyContent, pageTitle, config, assets, seo = {}) {
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="${assets.fontsUrl}">
+    <!-- Web fonts load without blocking first paint; the CSS stacks have system fallbacks and display=swap. -->
+    <link rel="stylesheet" href="${assets.fontsUrl}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="${assets.fontsUrl}"></noscript>
 
     <!-- Styles -->
     <link rel="stylesheet" href="${assets.cssHref}">
@@ -2372,6 +2376,7 @@ async function build() {
 
         const pageHtml = renderLayout(body, data.title, config, assets, {
             path: `/${slug}.html`,
+            title: data.seo_title || null,
             description: data.description
         });
 
@@ -2388,6 +2393,8 @@ async function build() {
     let showRecent = true;
     let heroImage = null;
     let heroAlt = '';
+    let homeSeoTitle = null;
+    let homeDescription = null;
     let booksCount = null;
 
     if (await fs.pathExists(homePath)) {
@@ -2396,6 +2403,8 @@ async function build() {
         showRecent = data.show_recent_blog_posts !== false;
         heroImage = data.hero_image || null;
         heroAlt = data.hero_image_alt || '';
+        homeSeoTitle = data.seo_title || null;
+        homeDescription = data.description || null;
         booksCount = data.books_count !== undefined && data.books_count !== null ? String(data.books_count) : null;
 
         // Promote the document's own H1 into the hero so each page keeps exactly one <h1>.
@@ -2420,7 +2429,7 @@ async function build() {
         ? ` style="--hero-ratio: ${heroArt.natural.w} / ${heroArt.natural.h}"`
         : '';
     const artHtml = heroArt ? `
-        <div class="hero__art reveal"${ratioStyle}>
+        <div class="hero__art"${ratioStyle}>
             <picture>
                 ${heroArt.webp ? `<source srcset="${heroArt.webp}" type="image/webp">` : ''}
                 <img src="${heroArt.fallback}" alt="${escapeHtml(heroAlt)}" ${dims} fetchpriority="high" decoding="async">
@@ -2505,7 +2514,7 @@ async function build() {
             </section>`;
     }
 
-    const fullHomeHtml = renderLayout(homeHtml, 'Home', config, assets, { path: '/' });
+    const fullHomeHtml = renderLayout(homeHtml, 'Home', config, assets, { path: '/', title: homeSeoTitle, description: homeDescription });
     await fs.outputFile(path.join(DIST_DIR, 'index.html'), fullHomeHtml);
     console.log('🏠 Built Home Page.');
 
@@ -2950,7 +2959,41 @@ Sitemap: ${domain}/sitemap.xml`;
     await fs.outputFile(path.join(DIST_DIR, 'search.json'), JSON.stringify(searchIndex));
     console.log('🔍 Built search.json');
 
+    // 10. One URL form per page. Netlify serves every page lowercase and
+    // extensionless with a 200 (mixed case 301s to lowercase), so canonicals,
+    // og:url, JSON-LD, the sitemap, the feed, llms.txt, search.json and
+    // internal links all use that form: /about, /blog/, /tags/x, /blog/<slug>.
+    await prettifySiteUrls(domain);
+
     console.log('✅ Build Complete!');
+}
+
+// '/blog/index.html' -> '/blog/', '/About.html' -> '/about'. Other paths pass through.
+function prettyPagePath(p) {
+    if (!/\.html$/i.test(p)) return p;
+    const lower = p.toLowerCase();
+    return lower.endsWith('/index.html') ? lower.slice(0, -'index.html'.length) : lower.slice(0, -'.html'.length);
+}
+
+async function prettifySiteUrls(domain) {
+    const esc = domain.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Absolute URLs on this domain anywhere (canonical, og:url, JSON-LD, sitemap, feed, llms).
+    const absRe = new RegExp(`${esc}(/[^\\s"'<>()#?]*?\\.html)(?=[#?"'<>()\\s]|$)`, 'gi');
+    // Root-relative links in href attributes (code samples are HTML-escaped, so never match).
+    const hrefRe = /(href=["'])(\/[^"'#?\s]*?\.html)(?=[#?"'])/gi;
+    // search.json entries.
+    const jsonRe = /("url":")(\/[^"#?]*?\.html)(?=[#?"])/g;
+    const files = (await getFiles(DIST_DIR)).filter(f => /\.(html|xml|json|txt)$/.test(f));
+    let changed = 0;
+    for (const f of files) {
+        const src = await fs.readFile(f, 'utf-8');
+        const out = src
+            .replace(absRe, (m, p) => domain + prettyPagePath(p))
+            .replace(hrefRe, (m, a, p) => a + prettyPagePath(p))
+            .replace(jsonRe, (m, a, p) => a + prettyPagePath(p));
+        if (out !== src) { await fs.writeFile(f, out); changed++; }
+    }
+    console.log(`🔗 Extensionless lowercase URLs in ${changed} files.`);
 }
 
 async function getAllPosts(config, theme) {

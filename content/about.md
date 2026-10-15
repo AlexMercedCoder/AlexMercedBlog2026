@@ -1,6 +1,7 @@
 ---
 title: About Me
-description: Learn more about Alex Merced, Head of Developer Relations at Dremio.
+seo_title: "About Alex Merced | Data, Dev and AI Blog"
+description: "Alex Merced is Head of Developer Relations at Dremio, a conference speaker on open table formats and lakehouses, and the author of 77 books on data and AI."
 eyebrow: About the author
 elsewhere_title: Find me elsewhere
 elsewhere:

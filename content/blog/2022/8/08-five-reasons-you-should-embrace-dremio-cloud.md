@@ -94,4 +94,4 @@ With these granular controls to organize and secure your data Dremio can satisfy
 **Other Resources for Learning about Data Lakehouses**
 - [Subsurface Data Lakehouse Community Blog](https://www.dremio.com/subsurface/)
 - [Subsurface Meetup Group](https://www.meetup.com/subsurface-global/)
-- Twitter: [Dremio](https://twitter.com/dremio), [Subsurface]([https://twitter.com/Dipankartnt](https://twitter.com/SubsurfaceComm)), [Alex Merced](https://twitter.com/AMdatalakehouse), [Dipankar Mazumdar](https://twitter.com/Dipankartnt)
+- Twitter: [Dremio](https://twitter.com/dremio), [Subsurface](https://twitter.com/SubsurfaceComm), [Alex Merced](https://twitter.com/AMdatalakehouse), [Dipankar Mazumdar](https://twitter.com/Dipankartnt)

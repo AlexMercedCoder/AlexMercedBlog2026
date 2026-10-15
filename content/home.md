@@ -1,5 +1,7 @@
 ---
 title: Welcome to Alex Merced's Data Lakehouse & AI Hub
+seo_title: "Alex Merced's Blog: Data Lakehouses, AI and Software"
+description: "Alex Merced writes about data lakehouse architecture, Apache Iceberg, agentic AI and software development: tutorials, release notes and a list of his books."
 hero_image: /assets/AlexBlogBannerNight.webp
 hero_image_alt: "Illustration of Alex Merced working at a laptop at night, with glowing teal data charts drawn across the window and a valley of city lights below the mountains beyond it."
 show_recent_blog_posts: true
