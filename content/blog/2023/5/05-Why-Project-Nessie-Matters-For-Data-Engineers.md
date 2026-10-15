@@ -12,6 +12,8 @@ canonical: https://tuts.alexmercedcoder.dev/2023/5/05-why-project-nessie-matters
 
 > **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/5/05-why-project-nessie-matters-for-data-engineers/).
 
+> **Update (October 2026):** Dremio Arctic has since become Dremio Catalog, which is built on Apache Polaris. Project Nessie continues as its own open source project.
+
 We need to establish a few things to understand why the open-source data catalog, Project Nessie, matters so much.
 
 ## Why do Data Lakehouses Matter?

@@ -10,6 +10,8 @@ canonical: https://tuts.alexmercedcoder.dev/2023/4/04-overview-of-the-data-lakeh
 
 > **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/4/04-overview-of-the-data-lakehouse/).
 
+> **Update (October 2026):** Dremio Arctic has since become Dremio Catalog, which is built on Apache Polaris. Project Nessie continues as its own open source project.
+
 In this article, I hope clarify the who, what, why, and how of:
 - The Data Lakehouse
 - Dremio

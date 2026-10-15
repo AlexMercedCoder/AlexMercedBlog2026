@@ -12,6 +12,8 @@ canonical: https://tuts.alexmercedcoder.dev/2023/9/09-architecting-low-cost-fast
 
 > **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/9/09-architecting-low-cost-fast-self-service-lakehouse/).
 
+> **Update (October 2026):** Dremio Arctic has since become Dremio Catalog, which is built on Apache Polaris. Project Nessie continues as its own open source project.
+
 There are several goals data architects are perpetually trying to improve upon:
 
 

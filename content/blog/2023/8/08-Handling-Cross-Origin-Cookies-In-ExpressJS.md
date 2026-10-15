@@ -12,6 +12,8 @@ canonical: https://tuts.alexmercedcoder.dev/2023/8/08-handling-cross-origin-cook
 
 > **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/8/08-handling-cross-origin-cookies-in-expressjs/).
 
+> **Update (October 2026):** Dremio Arctic has since become Dremio Catalog, which is built on Apache Polaris. Project Nessie continues as its own open source project.
+
 Data is becoming the cornerstone of modern businesses. As businesses scale, so does their data, and this leads to the need for efficient data storage, retrieval, and processing systems. This is where Data Lakehouses come into the picture.
 
 ## What is a Data Lakehouse?

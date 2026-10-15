@@ -13,6 +13,8 @@ canonical: https://tuts.alexmercedcoder.dev/2023/5/05-dremio-arctic-project-ness
 
 > **Cross-posted.** This article's canonical home is [Coding Tutorials Blog](https://tuts.alexmercedcoder.dev/2023/5/05-dremio-arctic-project-nessie-resources.md/).
 
+> **Update (October 2026):** Dremio Arctic has since become Dremio Catalog, which is built on Apache Polaris. Project Nessie continues as its own open source project.
+
 Data Quality, Governance, Observability, and Disaster Recovery are issues that are still trying to discover best practices in the world of the data lakehouse. A new trend is rising, borrowing from the practices used by software developers to manage these issues with code bases. This trend is called "Data as Code". Many of the practices this trend is trying to bring to the Lakehouse include:
 
 - Versioning to enable isolating work on branches or marking particular reproducible states through tagging
