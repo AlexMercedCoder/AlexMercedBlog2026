@@ -3,10 +3,10 @@ title: "Semantic Caching for Data Agents Without Serving Stale or Leaked Numbers
 description: "Cache data agent results safely with canonical query keys, Iceberg snapshot freshness checks, and permission-aware cache keys."
 date: 2026-10-05T09:00:00Z
 tags: ["caching", "AI agents", "Apache Iceberg", "semantic layer"]
-canonical: https://iceberglakehouse.com/posts/semantic-caching-data-agents/
+canonical: https://datalakehousehub.com/blog/semantic-caching-data-agents/
 ---
 
-> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/semantic-caching-data-agents/).
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/semantic-caching-data-agents/).
 
 A data agent gets the same question forty times before lunch. The finance team asks for net revenue by region this quarter. A regional manager asks for EMEA revenue this quarter. An executive asks how the quarter is tracking. A dashboard assistant asks the same thing on behalf of six people who opened the same report. Each request runs the full pipeline: model calls to understand the question, a semantic query, a scan of Iceberg tables, and another model call to explain six rows.
 

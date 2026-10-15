@@ -3,10 +3,10 @@ title: "When a Data Agent Gives a Wrong Number: Incident Response for Agentic An
 description: "A plan for when a data agent gives a wrong number: severity levels, containment, Iceberg time travel reproduction, and blast radius queries."
 date: 2026-10-05T09:00:00Z
 tags: ["incident response", "AI agents", "Apache Iceberg", "data quality"]
-canonical: https://iceberglakehouse.com/posts/data-agent-wrong-number-incident-response/
+canonical: https://datalakehousehub.com/blog/data-agent-wrong-number-incident-response/
 ---
 
-> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/data-agent-wrong-number-incident-response/).
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/data-agent-wrong-number-incident-response/).
 
 A regional director pastes a number from the company's AI analyst into a board deck. Net revenue for the quarter, broken down by region. Three days later, the finance team reconciles the deck against the close numbers and finds that the director's region is overstated by 11 percent. The agent did not crash. It did not throw an error. It answered confidently, the number looked reasonable, and it was wrong.
 

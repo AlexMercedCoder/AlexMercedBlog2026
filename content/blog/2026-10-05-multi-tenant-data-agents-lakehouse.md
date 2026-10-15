@@ -3,10 +3,10 @@ title: "Multi-Tenant Data Agents: Serving Many Customers From One Lakehouse"
 description: "Serve many customers from one lakehouse without leaking between them: isolation models, Polaris grants, and tenant-scoped agent state."
 date: 2026-10-05T09:00:00Z
 tags: ["multi-tenant", "Apache Polaris", "AI agents", "data isolation"]
-canonical: https://iceberglakehouse.com/posts/multi-tenant-data-agents-lakehouse/
+canonical: https://datalakehousehub.com/blog/multi-tenant-data-agents-lakehouse/
 ---
 
-> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/multi-tenant-data-agents-lakehouse/).
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/multi-tenant-data-agents-lakehouse/).
 
 A software company adds an AI analyst to its product. Every customer gets a chat box that answers questions about their own usage, billing, and performance data. The demo uses one customer's data and looks great. Then the team starts planning the rollout to 800 customers, and the questions get uncomfortable. Where does each customer's data live? How does the agent know which customer is asking? What stops a cleverly worded prompt from pulling another customer's numbers? What happens to the few-shot examples, the cached results, and the conversation memory that the agent builds up over time?
 

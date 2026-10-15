@@ -3,10 +3,10 @@ title: "Release Management for Data Agents: Shipping Prompts, Tools, Models, and
 description: "Ship prompts, tools, models, and metric changes without breaking answers: agent manifests, shadow mode, canaries, and rollback."
 date: 2026-10-05T09:00:00Z
 tags: ["release management", "AI agents", "evaluation", "semantic layer"]
-canonical: https://iceberglakehouse.com/posts/release-management-data-agents/
+canonical: https://datalakehousehub.com/blog/release-management-data-agents/
 ---
 
-> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/release-management-data-agents/).
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/release-management-data-agents/).
 
 A data agent that worked on Friday gives a different answer on Monday. Nobody deployed anything. The model provider updated the model behind the same name over the weekend. Or a data engineer merged a small change to a metric description, and the agent's retrieval now prefers a sibling metric. Or someone rebuilt the metadata index with a newer embedding model, and the neighbors shifted. The agent's code did not change. Its behavior did.
 

@@ -3,10 +3,10 @@ title: "How to Build a Golden-Question Benchmark for Your Data Agents"
 description: "Build a golden-question benchmark for data agents: frozen Iceberg tags, execution-based scoring with Arrow, and CI gates."
 date: 2026-10-05T09:00:00Z
 tags: ["evaluation", "AI agents", "Apache Iceberg", "benchmarks"]
-canonical: https://iceberglakehouse.com/posts/data-agent-golden-question-benchmark/
+canonical: https://datalakehousehub.com/blog/data-agent-golden-question-benchmark/
 ---
 
-> **Cross-posted.** This article's canonical home is [Alex Merced's Lakehouse Blog](https://iceberglakehouse.com/posts/data-agent-golden-question-benchmark/).
+> **Cross-posted.** This article's canonical home is [Data Lakehouse Hub](https://datalakehousehub.com/blog/data-agent-golden-question-benchmark/).
 
 A data agent passes its demo. It answers revenue by region, top customers by margin, and churn by cohort, and the numbers match the dashboard. Two weeks later someone changes the system prompt, upgrades the model, and renames a metric in the semantic layer. The agent still answers every question with confidence. Nobody knows whether the answers are still right, because nobody wrote down what right looked like.
 
