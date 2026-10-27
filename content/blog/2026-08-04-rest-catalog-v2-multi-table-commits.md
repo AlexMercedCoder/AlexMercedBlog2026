@@ -56,7 +56,7 @@ The spec also enables lazy snapshot loading, so a client that needs current stat
 
 ## Multi-table atomic commits
 
-This is the capability that turns a catalog into a transaction coordinator.
+This is the capability that turns a catalog into a transaction coordinator. The endpoint itself gets a full treatment in [Inside the Iceberg REST Catalog's Multi-Table Commit Endpoint](https://iceberglakehouse.com/posts/iceberg-rest-multi-table-commit-transactions/): request shape, requirement checks, error codes, idempotency, and what atomic commit does not guarantee.
 
 The Iceberg REST spec defines `POST /v1/transactions/commit` for atomic commits across multiple tables. The Java implementation has supported it since Iceberg 1.4 through `RESTSessionCatalog.commitTransaction`. Other language implementations have been catching up, with the Go client tracking a transactional catalog interface as an open request.
 

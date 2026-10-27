@@ -42,7 +42,7 @@ That works, and every engine that reads Iceberg can read it. It has three drawba
 
 **Useless statistics.** Parquet and Iceberg collect min and max statistics per column. For an embedding column, those statistics describe individual coordinates across all vectors, which tells a planner nothing useful. They cost space and write time and prune nothing.
 
-**Encoding overhead.** Repetition and definition levels add bytes and decode work for data that has a fixed shape by construction.
+**Encoding overhead.** Repetition and definition levels add bytes and decode work for data that has a fixed shape by construction. Squeezing the column with lossy codes is the next step once the float copy gets expensive: [Storing Quantized Embeddings in Apache Iceberg](https://iceberglakehouse.com/posts/quantized-embeddings-iceberg-sq8-pq/) covers SQ8 and product quantization, including where the codebooks live.
 
 The Parquet community has been working through this in public. In February 2026, a dev list thread asked how to tune Parquet for embeddings, and Micah Kornfield, a long-time Parquet contributor, offered practical guidance that still holds. Disable statistics on vector columns, since they are not useful. Try the BYTE_STREAM_SPLIT encoding combined with compression, which he had heard works reasonably well for embedding data. Expect dictionary and run-length encodings to fall back to plain encoding quickly on high-cardinality floats. And pack at least on the order of 100 KB into a page, since one vector per page is far too small.
 

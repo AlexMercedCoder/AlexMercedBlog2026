@@ -150,7 +150,7 @@ Engines that query Iceberg (Spark, Trino, Flink, DuckDB, Dremio, and the rest) e
 
 ## Preparing Your Embedding Columns Today
 
-The vector type is not in a released spec yet, so the practical question is what to do with the embedding columns you write this quarter. The answer is to behave as if the type already exists. Store vectors in the closest legal representation, enforce the vector rules at write time, and record the dimension where tools find it. When the type ships, your data already satisfies it, and migration becomes a schema change instead of a cleanup project.
+The vector type is not in a released spec yet, so the practical question is what to do with the embedding columns you write this quarter. The answer is to behave as if the type already exists. Store vectors in the closest legal representation, enforce the vector rules at write time, and record the dimension where tools find it. When the type ships, your data already satisfies it, and migration becomes a schema change instead of a cleanup project. This piece covers the spec debate and the type itself. Storing compressed codes, their codebooks, and codebook versioning inside a table is a separate design problem, covered in [Storing Quantized Embeddings in Apache Iceberg](https://iceberglakehouse.com/posts/quantized-embeddings-iceberg-sq8-pq/).
 
 Start with an audit. This Spark SQL query checks an existing table for every violation the vector type forbids. Run it before you assume your embeddings are clean.
 

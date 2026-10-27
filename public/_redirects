@@ -5,3 +5,6 @@
 /blog/2020/Ruby%20on%20Rails/*              /blog/2020/ruby-on-rails-reference/        301!
 /blog/2022/4/04-Express-Todo-List%20copy.html  /blog/2022/4/04-expressjs-cheatsheet-2022  301!
 /blog/2022/4/04-Express-Todo-List%20copy    /blog/2022/4/04-expressjs-cheatsheet-2022  301!
+# Consolidated into the Aug 19 primaries (Oct 2026 maintenance pass).
+/blog/2026-08-25-serverless-iceberg-microbatch-pyiceberg-duckdb.html  /blog/2026-08-19-serverless-iceberg-ingestion-pyiceberg-duckdb.html  301!
+/blog/2026-08-25-zero-copy-legacy-db-to-iceberg.html  /blog/2026-08-19-zero-copy-warehouse-modernization-iceberg.html  301!

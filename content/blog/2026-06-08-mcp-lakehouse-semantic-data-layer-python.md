@@ -116,7 +116,7 @@ Fifth, publish the limits. If a feature is read-only in one engine, say so. If w
 
 ## Identity and access review
 
-For MCP lakehouse, I would run one full dry run with production-like identities. Use an analyst identity, a service account, and the intended agent identity. Confirm that each identity sees only the expected semantic objects, receives predictable errors, and leaves useful audit records. That test catches policy gaps before they become production incidents.
+For MCP lakehouse, I would run one full dry run with production-like identities. Use an analyst identity, a service account, and the intended agent identity. Confirm that each identity sees only the expected semantic objects, receives predictable errors, and leaves useful audit records. That test catches policy gaps before they become production incidents. The wider control set for regulated deployments, registries, gateways, delegated identity, and audit, is mapped in [MCP in Regulated Environments](https://datalakehousehub.com/blog/mcp-regulated-environments-toronto-2026/).
 
 The agent identity matters most because it is easy to over-permission during a pilot. If the agent only needs a certified revenue view, do not give it namespace-wide table discovery. If the agent needs row-level access for one geography, test that a second geography returns a denial instead of silent leakage.
 
